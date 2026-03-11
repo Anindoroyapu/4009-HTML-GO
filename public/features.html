@@ -3,9 +3,1052 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Features - SaaS Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- General Sans placeholder - using Inter as fallback if not available, but I'll try to find a similar font or just use Inter -->
+    <style>
+        :root {
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --text-main: #2E2E2E;
+            --text-muted: #767474;
+            --brand-orange: #F15C2A;
+            --border-color: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Decorative Backgrounds */
+        .bg-rect-5 {
+            position: absolute;
+            width: 748px;
+            height: 202px;
+            left: 28px;
+            top: 480px;
+            background: #F1FFFF;
+            filter: blur(150px);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            z-index: -1;
+        }
+
+        .bg-rect-8 {
+            position: absolute;
+            width: 536px;
+            height: 144px;
+            left: 56px;
+            top: 514px;
+            background: #FFFFFF;
+            filter: blur(150px);
+            transform: matrix(-1, 0, 0, 1, 0, 0);
+            z-index: -1;
+        }
+
+        .bg-texture {
+            position: absolute;
+            width: 1400px;
+            height: 677px;
+            left: calc(50% - 1400px/2);
+            top: 148px;
+            background: linear-gradient(180deg, rgba(241, 92, 42, 0.08) 0%, rgba(255, 255, 255, 0.08) 70.09%);
+            filter: blur(224px);
+            z-index: -1;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 95%;
+            max-width: 1400px;
+            height: 76px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 12px 12px 24px;
+            gap: 48px;
+            margin-top: 24px;
+            margin-bottom: 80px;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 73.31px;
+            height: 43.99px;
+            background: #F15C2A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-item {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #5A5A5A;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-item.active {
+            color: #F15C2A;
+        }
+
+        .divider {
+            width: 1px;
+            height: 8px;
+            background: #E1E1E1;
+        }
+
+        .nav-actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            background: #FAFAFA;
+            backdrop-filter: blur(20px);
+            border-radius: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sign-in-btn {
+            width: 98px;
+            height: 52px;
+            background: #2E2E2E;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Features Hero Section */
+        .features-hero {
+            width: 95%;
+            max-width: 1400px;
+            height: 494.17px;
+            background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.1) 100%);
+            border-radius: 16px 16px 0px 0px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-bottom: 48px;
+        }
+
+        .hero-inner {
+            width: 90%;
+            max-width: 1280px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .hero-text {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .hero-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            width: fit-content;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+        }
+
+        .badge-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--brand-orange);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #2E2E2E;
+        }
+
+        .hero-title {
+            font-size: 60px;
+            font-weight: 600;
+            line-height: 70px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .hero-desc {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #767474;
+        }
+
+        .hero-illustration {
+            width: 412px;
+            height: 374px;
+            position: relative;
+        }
+
+        /* Feature Cards Grid */
+        .feature-cards-grid {
+            width: 95%;
+            max-width: 1326px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+
+        .feature-card {
+            width: 100%;
+            max-width: 648px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .card-top {
+            height: 400px;
+            background: #FFFFFF;
+            border-radius: 20px 20px 0px 0px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card-bottom {
+            padding: 30px;
+            background: #FFFFFF;
+            border-radius: 0px 0px 20px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .card-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .card-badge {
+            padding: 8px 16px;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(241, 92, 42, 0.12);
+            border-radius: 18px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #F15C2A;
+        }
+
+        .card-title {
+            font-size: 30px;
+            font-weight: 600;
+            line-height: 37px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .card-desc {
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 26px;
+            color: #767474;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .tag {
+            padding: 8px 16px;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(46, 46, 46, 0.12);
+            border-radius: 18px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #2E2E2E;
+            transition: transform 0.2s ease;
+        }
+
+        .tag:hover {
+            transform: scale(1.05);
+        }
+
+        .tag.rotate-6 { transform: rotate(6deg); }
+        .tag.rotate-neg-6 { transform: rotate(-6deg); }
+        .tag.rotate-neg-4 { transform: rotate(-4deg); }
+
+        /* Complete Feature Set */
+        .complete-features {
+            width: 100%;
+            background: #FFFFFF;
+            padding: 80px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 60px;
+        }
+
+        .section-header {
+            width: 95%;
+            max-width: 512px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 62px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .section-desc {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #767474;
+        }
+
+        .features-small-grid {
+            width: 95%;
+            max-width: 1124px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .small-feature-card {
+            width: 270px;
+            height: 158px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 22px;
+        }
+
+        .small-card-icon {
+            width: 30px;
+            height: 30px;
+        }
+
+        .small-card-text {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .small-card-title {
+            font-size: 20px;
+            font-weight: 600;
+            line-height: 30px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .small-card-desc {
+            font-size: 14px;
+            font-weight: 500;
+            color: #767474;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            width: 100%;
+            background: linear-gradient(180deg, #F5F5F5 0%, rgba(255, 255, 255, 0) 46.63%);
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta-card {
+            width: 95%;
+            max-width: 1396px;
+            height: 361px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 20px;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .cta-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+        }
+
+        .cta-title {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 62px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .cta-desc {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #767474;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            padding: 14px 24px;
+            background: #F15C2A;
+            border: 1.5px solid #F1762A;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary {
+            padding: 14px 24px;
+            background: #FFFFFF;
+            border: 1.5px solid #F0F0F0;
+            border-radius: 10px;
+            color: #2E2E2E;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        /* Footer Section */
+        .footer {
+            width: 100%;
+            background: #101828;
+            padding: 260px 0 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            position: relative;
+            margin-top: -180px;
+        }
+
+        .footer-content {
+            width: 95%;
+            max-width: 1390px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            width: 470px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .footer-brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            width: fit-content;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1.5px solid rgba(255, 255, 255, 0.16);
+            border-radius: 18px;
+        }
+
+        .footer-brand-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .footer-brand-desc {
+            font-size: 20px;
+            color: #AAAAAA;
+            line-height: 30px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1.5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 48px;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-col-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .footer-col-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link {
+            font-size: 16px;
+            color: #AAAAAA;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            width: 95%;
+            max-width: 1390px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        .copyright {
+            color: #767474;
+            font-size: 16px;
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .legal-link {
+            color: #767474;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.24);
+        }
+
+        /* Illustration Elements */
+        .woman-img {
+            width: 100%;
+            height: 100%;
+            background: url('https://picsum.photos/seed/woman/600/800') center/cover;
+            border-radius: 20px;
+        }
+
+        .emoji-badge {
+            position: absolute;
+            right: 10px;
+            top: 20px;
+            width: 40px;
+            height: 40px;
+            background: #F15C2A;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 20px;
+        }
+
+        .rating-card {
+            position: absolute;
+            left: -40px;
+            top: 40px;
+            background: #FFF2E1;
+            padding: 10px;
+            border-radius: 10px;
+            display: flex;
+            gap: 4px;
+        }
+
+        .chat-bubble {
+            position: absolute;
+            right: -20px;
+            bottom: 100px;
+            background: #E2F0FB;
+            padding: 12px;
+            border-radius: 12px;
+            width: 120px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="bg-rect-5"></div>
+    <div class="bg-rect-8"></div>
+    <div class="bg-texture"></div>
+
+    <nav class="navbar">
+        <div class="logo">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="nav-links">
+            <a href="/public/index.html" class="nav-item">Home Page</a>
+            <div class="divider"></div>
+            <a href="/public/about.html" class="nav-item">About Platform</a>
+            <div class="divider"></div>
+            <a href="/public/features.html" class="nav-item active">Feature’s</a>
+            <div class="divider"></div>
+            <a href="/public/pricing.html" class="nav-item">Pricing</a>
+            <div class="divider"></div>
+            <a href="/public/contact.html" class="nav-item">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <a href="/public/sign-in.html" class="sign-in-btn">Sign in</a>
+        </div>
+    </nav>
+
+    <section class="features-hero">
+        <div class="hero-inner">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <div class="badge-icon">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 3v18M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"/></svg>
+                    </div>
+                    <span class="badge-text">Our Feature’s</span>
+                </div>
+                <h1 class="hero-title">All the Tools You Need to Grow Faster and Achieve More</h1>
+                <p class="hero-desc">Work smarter, scale quicker, and stay organized with tools created to support your business at every stage of success.</p>
+            </div>
+            <div class="hero-illustration">
+                <div class="woman-img"></div>
+                <div class="emoji-badge">😊</div>
+                <div class="rating-card">
+                    <span style="color: #F15C2A;">★</span>
+                    <span style="color: #F15C2A;">★</span>
+                    <span style="color: #F15C2A;">★</span>
+                    <span style="color: #F15C2A;">★</span>
+                    <span style="color: #CECECE;">★</span>
+                </div>
+                <div class="chat-bubble">
+                    <div style="width: 40px; height: 4px; background: #048FFF; margin-bottom: 4px;"></div>
+                    <div style="width: 80px; height: 4px; background: #048FFF; margin-bottom: 4px;"></div>
+                    <div style="width: 60px; height: 4px; background: #048FFF;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="feature-cards-grid">
+        <!-- Analytics & Reporting -->
+        <div class="feature-card">
+            <div class="card-top">
+                <!-- Placeholder for Chart -->
+                <div style="width: 80%; height: 80%; background: #F8F8FF; border-radius: 16px; position: relative;">
+                    <div style="position: absolute; left: 20px; bottom: 20px; width: 40px; height: 100px; background: #962DFF;"></div>
+                    <div style="position: absolute; left: 80px; bottom: 20px; width: 40px; height: 150px; background: #FCB5C3;"></div>
+                    <div style="position: absolute; left: 140px; bottom: 20px; width: 40px; height: 80px; background: #962DFF;"></div>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <div class="card-info">
+                    <div class="card-badge">Analytics & Reporting</div>
+                    <h2 class="card-title">Advanced Analytics & Reporting.</h2>
+                    <p class="card-desc">Get real-time insights into your business performance with our powerful analytics suite. Track KPIs, generate custom reports, and make data-driven decisions.</p>
+                </div>
+                <div class="card-tags">
+                    <div class="tag rotate-6">Custom Dashboard</div>
+                    <div class="tag">Data Visualization</div>
+                    <div class="tag">Report Builder</div>
+                    <div class="tag rotate-neg-6">Scheduled Reports</div>
+                    <div class="tag">Data Export</div>
+                    <div class="tag rotate-6">Trend Analysis</div>
+                    <div class="tag rotate-neg-4">Predictive Insights</div>
+                    <div class="tag">Advanced Filtering</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Team Collaboration -->
+        <div class="feature-card">
+            <div class="card-top">
+                <!-- Placeholder for Collaboration UI -->
+                <div style="width: 80%; height: 80%; background: #E5EAFC; border-radius: 16px; position: relative;">
+                    <div style="position: absolute; left: 20px; top: 20px; width: 40px; height: 40px; border-radius: 50%; background: #93AAFD;"></div>
+                    <div style="position: absolute; left: 70px; top: 30px; width: 100px; height: 10px; background: #93AAFD;"></div>
+                    <div style="position: absolute; left: 20px; top: 80px; width: 200px; height: 100px; background: white; border-radius: 8px;"></div>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <div class="card-info">
+                    <div class="card-badge">Team Collaboration</div>
+                    <h2 class="card-title">Seamless Team Collaboration.</h2>
+                    <p class="card-desc">Work together effortlessly with tools designed for modern teams. Share files, communicate in real-time, and keep everyone on the same page.</p>
+                </div>
+                <div class="card-tags">
+                    <div class="tag rotate-6">Real-time Chat</div>
+                    <div class="tag">Video Calls</div>
+                    <div class="tag">Shared Workspace</div>
+                    <div class="tag rotate-6">File Storage</div>
+                    <div class="tag">Task Tracking</div>
+                    <div class="tag rotate-6">Team Calendar</div>
+                    <div class="tag rotate-neg-4">Comments & Mentions</div>
+                    <div class="tag rotate-6">Activity Feed</div>
+                    <div class="tag">Cross-Team Tools</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Automation -->
+        <div class="feature-card">
+            <div class="card-top">
+                <!-- Placeholder for Automation UI -->
+                <div style="width: 80%; height: 80%; background: #F6FEF6; border-radius: 16px; position: relative;">
+                    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100px; height: 100px; border: 4px dashed #0ED70E; border-radius: 50%;"></div>
+                    <div style="position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 60px; height: 60px; background: #0ED70E; border-radius: 12px;"></div>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <div class="card-info">
+                    <div class="card-badge">Automation</div>
+                    <h2 class="card-title">Powerful Automation.</h2>
+                    <p class="card-desc">Save time and reduce errors with intelligent automation. Create custom workflows that handle repetitive tasks automatically.</p>
+                </div>
+                <div class="card-tags">
+                    <div class="tag rotate-6">Workflow Builder</div>
+                    <div class="tag">Automation Templates</div>
+                    <div class="tag">Conditional Logic</div>
+                    <div class="tag rotate-neg-6">Multi-Step Automations</div>
+                    <div class="tag rotate-6">App Integrations</div>
+                    <div class="tag rotate-4">Webhook Support</div>
+                    <div class="tag">Scheduled & Triggered Flows</div>
+                    <div class="tag rotate-6">Automation Logs</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Security -->
+        <div class="feature-card">
+            <div class="card-top">
+                <!-- Placeholder for Security UI -->
+                <div style="width: 80%; height: 80%; background: #F8F8FF; border-radius: 16px; position: relative;">
+                    <div style="position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); width: 80px; height: 100px; border: 4px solid #2F6BED; border-radius: 10px;"></div>
+                    <div style="position: absolute; left: 50%; top: 20%; transform: translateX(-50%); width: 40px; height: 40px; border: 4px solid #2F6BED; border-radius: 50% 50% 0 0;"></div>
+                </div>
+            </div>
+            <div class="card-bottom">
+                <div class="card-info">
+                    <div class="card-badge">Security</div>
+                    <h2 class="card-title">Enterprise-Grade Security.</h2>
+                    <p class="card-desc">Protect your data with bank-level security. We take security seriously so you can focus on growing your business.</p>
+                </div>
+                <div class="card-tags">
+                    <div class="tag rotate-6">End-to-End Encryption</div>
+                    <div class="tag">Two-Factor Auth</div>
+                    <div class="tag">SSO Support</div>
+                    <div class="tag rotate-6">Role-Based Access</div>
+                    <div class="tag">Audit Logs</div>
+                    <div class="tag rotate-6">GDPR & SOC 2</div>
+                    <div class="tag rotate-neg-4">Auto Backups</div>
+                    <div class="tag">Threat Detection</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="complete-features">
+        <div class="section-header">
+            <h2 class="section-title">Complete Feature Set</h2>
+            <p class="section-desc">Explore all the powerful features included in our platform.</p>
+        </div>
+        <div class="features-small-grid">
+            <div class="small-feature-card">
+                <div class="small-card-icon">📊</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Advanced Analytics</h3>
+                    <p class="small-card-desc">Comprehensive data insights</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">👥</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Team Management</h3>
+                    <p class="small-card-desc">Organize and manage teams</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">📅</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Smart Scheduling</h3>
+                    <p class="small-card-desc">Automated calendar management</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">💬</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Real-time Chat</h3>
+                    <p class="small-card-desc">Instant team communication</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">📄</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Document Management</h3>
+                    <p class="small-card-desc">Centralized file storage</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">🛡️</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Security Controls</h3>
+                    <p class="small-card-desc">Advanced security features</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">🌐</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Multi-language Support</h3>
+                    <p class="small-card-desc">Automate repetitive tasks</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">⚙️</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Workflow Automation</h3>
+                    <p class="small-card-desc">Available in 20+ languages</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">📱</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Mobile Apps</h3>
+                    <p class="small-card-desc">iOS and Android apps</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">📥</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Data Import/Export</h3>
+                    <p class="small-card-desc">Easy data migration</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">🔑</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Access Control</h3>
+                    <p class="small-card-desc">Granular permissions</p>
+                </div>
+            </div>
+            <div class="small-feature-card">
+                <div class="small-card-icon">☁️</div>
+                <div class="small-card-text">
+                    <h3 class="small-card-title">Cloud Storage</h3>
+                    <p class="small-card-desc">Unlimited cloud storage</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-card">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <div class="badge-icon">👆</div>
+                    <span class="badge-text">Simple, Transparent Pricing</span>
+                </div>
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-desc">Try all these features free for 14 days. No credit card required.</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Start for free trial <span>→</span></a>
+                <a href="#" class="btn-secondary">Schedule a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-brand-text">
+                    <div class="footer-badge">
+                        <div class="badge-icon">🔗</div>
+                        <span class="badge-text" style="color: white;">Ready to Transform Your SaaS?</span>
+                    </div>
+                    <h3 class="footer-brand-title">Ready to Launch Your SaaS Faster?</h3>
+                    <p class="footer-brand-desc">The all-in-one platform for launching, growing, and scaling your SaaS—without the overwhelm.</p>
+                </div>
+                <div class="footer-socials">
+                    <div class="social-icon">in</div>
+                    <div class="social-icon">X</div>
+                    <div class="social-icon">G</div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Product</h4>
+                    <div class="footer-col-links">
+                        <a href="#" class="footer-link">Feature</a>
+                        <a href="#" class="footer-link">Pricing</a>
+                        <a href="#" class="footer-link">Integration</a>
+                        <a href="#" class="footer-link">API</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <div class="footer-col-links">
+                        <a href="#" class="footer-link">About</a>
+                        <a href="#" class="footer-link">Blog</a>
+                        <a href="#" class="footer-link">Career</a>
+                        <a href="#" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Resources</h4>
+                    <div class="footer-col-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">Community</a>
+                        <a href="#" class="footer-link">Template</a>
+                        <a href="#" class="footer-link">Guides</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 SaaSPlatform. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#" class="legal-link">Privacy Policy</a>
+                <div class="footer-divider"></div>
+                <a href="#" class="legal-link">Terms & Condition</a>
+                <div class="footer-divider"></div>
+                <a href="#" class="legal-link">Security</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
