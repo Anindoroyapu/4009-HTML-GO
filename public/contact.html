@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - SaaS Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --text-main: #2E2E2E;
+            --text-muted: #767474;
+            --brand-orange: #F15C2A;
+            --brand-purple: #7B19D8;
+            --brand-blue: #477BFF;
+            --brand-green: #0ED70E;
+            --border-color: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 95%;
+            max-width: 1400px;
+            height: 76px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 12px 12px 24px;
+            gap: 48px;
+            margin-top: 24px;
+            margin-bottom: 48px;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 73.31px;
+            height: 43.99px;
+            background: #F15C2A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-item {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #5A5A5A;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-item.active {
+            color: #F15C2A;
+        }
+
+        .divider {
+            width: 1px;
+            height: 8px;
+            background: #E1E1E1;
+        }
+
+        .nav-actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            background: #FAFAFA;
+            backdrop-filter: blur(20px);
+            border-radius: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sign-in-btn {
+            width: 98px;
+            height: 52px;
+            background: #2E2E2E;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Contact Hero */
+        .contact-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            margin-bottom: 48px;
+            background: linear-gradient(180deg, #FFFFFF 0%, #F5F5F5 71.6%);
+            width: 100%;
+            padding: 40px 0;
+        }
+
+        .hero-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+        }
+
+        .badge-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--brand-orange);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #2E2E2E;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 62px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .hero-desc {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #767474;
+            max-width: 595px;
+        }
+
+        /* Contact Content Grid */
+        .contact-container {
+            width: 95%;
+            max-width: 1216px;
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .contact-methods {
+            width: 600px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 0;
+        }
+
+        .method-card {
+            width: 300px;
+            height: 334px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 24px;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .method-icon-box {
+            width: 62px;
+            height: 62px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .method-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2E2E2E;
+            margin-bottom: 16px;
+            letter-spacing: -0.03em;
+        }
+
+        .method-desc {
+            font-size: 16px;
+            color: #767474;
+            line-height: 24px;
+            margin-bottom: 16px;
+        }
+
+        .method-link {
+            font-size: 14px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        /* Contact Form */
+        .contact-form-container {
+            width: 600px;
+            background: #FAFAFA;
+            border: 1.5px solid #F0F0F0;
+            border-radius: 16px;
+            padding: 24px;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-bottom: 16px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-label {
+            font-size: 14px;
+            font-weight: 500;
+            color: #000000;
+        }
+
+        .form-input {
+            width: 100%;
+            height: 53px;
+            background: #FFFFFF;
+            border: 1.5px solid #F2F2F2;
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 14px;
+            color: #2E2E2E;
+            outline: none;
+        }
+
+        .form-input::placeholder {
+            color: #6B7280;
+        }
+
+        .form-textarea {
+            width: 100%;
+            height: 116px;
+            background: #FFFFFF;
+            border: 1.5px solid #F2F2F2;
+            border-radius: 12px;
+            padding: 16px 20px;
+            font-size: 14px;
+            color: #2E2E2E;
+            outline: none;
+            resize: none;
+        }
+
+        .submit-btn {
+            width: 100%;
+            height: 52px;
+            background: #F15C2A;
+            border: 1.5px solid #F1762A;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        /* Locations Section */
+        .locations-container {
+            width: 95%;
+            max-width: 1216px;
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+
+        .location-card {
+            flex: 1;
+            height: 281px;
+            background: #FBF8FE;
+            border: 1.5px solid #F0F0F0;
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+
+        .location-icon-box {
+            width: 60px;
+            height: 60px;
+            background: rgba(123, 25, 216, 0.08);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+
+        .location-city {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2E2E2E;
+            margin-bottom: 4px;
+            letter-spacing: -0.03em;
+        }
+
+        .location-address {
+            font-size: 16px;
+            color: #767474;
+        }
+
+        .location-country-badge {
+            padding: 8px 16px;
+            background: #FFFFFF;
+            border: 1.5px solid rgba(123, 25, 216, 0.12);
+            border-radius: 18px;
+            color: #7B19D8;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Business Hours Section */
+        .hours-card {
+            width: 600px;
+            height: 281px;
+            background: #FAFAFA;
+            border: 1.5px solid #F0F0F0;
+            border-radius: 16px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .hours-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #2E2E2E;
+            letter-spacing: -0.03em;
+        }
+
+        .hours-list {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .hours-row {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+        }
+
+        .hours-day {
+            font-weight: 500;
+            color: #2E2E2E;
+        }
+
+        .hours-time {
+            color: #767474;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            width: 100%;
+            background: linear-gradient(180deg, #F5F5F5 0%, rgba(255, 255, 255, 0) 46.63%);
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta-card {
+            width: 95%;
+            max-width: 1396px;
+            height: 361px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 20px;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .cta-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+        }
+
+        .cta-title {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 62px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .cta-desc {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #767474;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            padding: 14px 24px;
+            background: #F15C2A;
+            border: 1.5px solid #F1762A;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary {
+            padding: 14px 24px;
+            background: #FFFFFF;
+            border: 1.5px solid #F0F0F0;
+            border-radius: 10px;
+            color: #2E2E2E;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        /* Footer Section */
+        .footer {
+            width: 100%;
+            background: #101828;
+            padding: 260px 0 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            position: relative;
+            margin-top: -180px;
+        }
+
+        .footer-content {
+            width: 95%;
+            max-width: 1390px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            width: 470px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .footer-brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            width: fit-content;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1.5px solid rgba(255, 255, 255, 0.16);
+            border-radius: 18px;
+        }
+
+        .footer-brand-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .footer-brand-desc {
+            font-size: 20px;
+            color: #AAAAAA;
+            line-height: 30px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1.5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 48px;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-col-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .footer-col-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link {
+            font-size: 16px;
+            color: #AAAAAA;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            width: 95%;
+            max-width: 1390px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        .copyright {
+            color: #767474;
+            font-size: 16px;
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .legal-link {
+            color: #767474;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.24);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="nav-links">
+            <a href="/public/index.html" class="nav-item">Home Page</a>
+            <div class="divider"></div>
+            <a href="/public/about.html" class="nav-item">About Platform</a>
+            <div class="divider"></div>
+            <a href="/public/features.html" class="nav-item">Feature’s</a>
+            <div class="divider"></div>
+            <a href="/public/pricing.html" class="nav-item">Pricing</a>
+            <div class="divider"></div>
+            <a href="/public/contact.html" class="nav-item active">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <a href="/public/sign-in.html" class="sign-in-btn">Sign in</a>
+        </div>
+    </nav>
+
+    <header class="contact-hero">
+        <div class="hero-badge">
+            <div class="badge-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            </div>
+            <span class="badge-text">Contact Us</span>
+        </div>
+        <h1 class="hero-title">Get in Touch</h1>
+        <p class="hero-desc">Have a question or want to learn more? We'd love to hear from you.</p>
+    </header>
+
+    <div class="contact-container">
+        <div class="contact-methods">
+            <!-- Email -->
+            <div class="method-card">
+                <div class="method-icon-box" style="background: rgba(241, 118, 42, 0.08);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#F1762A" stroke-width="2.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M22 6l-10 7L2 6"/></svg>
+                </div>
+                <div>
+                    <h3 class="method-title">Email Us</h3>
+                    <p class="method-desc">Our team will respond within 24 hours.</p>
+                    <a href="mailto:hello@example.com" class="method-link" style="color: #F1762A;">hello@example.com</a>
+                </div>
+            </div>
+            <!-- Phone -->
+            <div class="method-card">
+                <div class="method-icon-box" style="background: rgba(71, 123, 255, 0.08);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#477BFF" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                    <h3 class="method-title">Phone Call Us</h3>
+                    <p class="method-desc">Mon-Fri from 8am to 6pm EST.</p>
+                    <a href="tel:+15551234567" class="method-link" style="color: #477BFF;">+1 (555) 123-4567</a>
+                </div>
+            </div>
+            <!-- Visit -->
+            <div class="method-card">
+                <div class="method-icon-box" style="background: rgba(123, 25, 216, 0.08);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#7B19D8" stroke-width="2.5"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                </div>
+                <div>
+                    <h3 class="method-title">Visit Us</h3>
+                    <p class="method-desc">Come say hi at our office.</p>
+                    <a href="#" class="method-link" style="color: #7B19D8;">123 Business St, San Francisco, CA 94102</a>
+                </div>
+            </div>
+            <!-- Chat -->
+            <div class="method-card">
+                <div class="method-icon-box" style="background: rgba(14, 215, 14, 0.08);">
+                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#0ED70E" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                </div>
+                <div>
+                    <h3 class="method-title">Live Chat</h3>
+                    <p class="method-desc">Available 24/7 for instant support.</p>
+                    <a href="#" class="method-link" style="color: #0ED70E;">Start a conversation</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact-form-container">
+            <form>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label class="form-label">First Name</label>
+                        <input type="text" class="form-input" placeholder="Enter your first name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Last Name</label>
+                        <input type="text" class="form-input" placeholder="Enter your last name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-input" placeholder="Enter your email address">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-input" placeholder="Enter your phone numbre">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Company Name</label>
+                        <input type="text" class="form-input" placeholder="Enter your company Name">
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label">Subject</label>
+                        <input type="text" class="form-input" placeholder="Enter your subject">
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label">Company Location</label>
+                        <input type="text" class="form-input" placeholder="Enter your full location">
+                    </div>
+                    <div class="form-group full-width">
+                        <label class="form-label">Write Message</label>
+                        <textarea class="form-textarea" placeholder="Text here..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">Send Request <span>→</span></button>
+            </form>
+        </div>
+    </div>
+
+    <div class="locations-container">
+        <!-- SF -->
+        <div class="location-card">
+            <div>
+                <div class="location-icon-box">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7B19D8" stroke-width="2.125"><path d="M3 21h18M3 7v14M21 7v14M9 21V3h6v18M9 7h6M9 11h6M9 15h6"/></svg>
+                </div>
+                <h3 class="location-city">San Francisco</h3>
+                <p class="location-address">123 Business Street.</p>
+            </div>
+            <span class="location-country-badge">United States</span>
+        </div>
+        <!-- London -->
+        <div class="location-card">
+            <div>
+                <div class="location-icon-box">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7B19D8" stroke-width="2.125"><path d="M3 21h18M3 7v14M21 7v14M9 21V3h6v18M9 7h6M9 11h6M9 15h6"/></svg>
+                </div>
+                <h3 class="location-city">London</h3>
+                <p class="location-address">456 Tech Avenue</p>
+            </div>
+            <span class="location-country-badge">United Kingdom</span>
+        </div>
+        <!-- Tokyo -->
+        <div class="location-card">
+            <div>
+                <div class="location-icon-box">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#7B19D8" stroke-width="2.125"><path d="M3 21h18M3 7v14M21 7v14M9 21V3h6v18M9 7h6M9 11h6M9 15h6"/></svg>
+                </div>
+                <h3 class="location-city">Tokyo</h3>
+                <p class="location-address">789 Innovation Road.</p>
+            </div>
+            <span class="location-country-badge">Japan</span>
+        </div>
+        <!-- Hours -->
+        <div class="hours-card">
+            <div class="location-icon-box" style="background: rgba(241, 92, 42, 0.08);">
+                <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#F15C2A" stroke-width="2.125"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
+            <h3 class="hours-title">Business Hours</h3>
+            <div class="hours-list">
+                <div class="hours-row">
+                    <span class="hours-day">Monday - Friday:</span>
+                    <span class="hours-time">8:00 AM - 6:00 PM EST</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Saturday:</span>
+                    <span class="hours-time">10:00 AM - 4:00 PM EST</span>
+                </div>
+                <div class="hours-row">
+                    <span class="hours-day">Sunday:</span>
+                    <span class="hours-time">Closed</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="cta-section">
+        <div class="cta-card">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <div class="badge-icon">👆</div>
+                    <span class="badge-text">Simple, Transparent Pricing</span>
+                </div>
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-desc">Try all these features free for 14 days. No credit card required.</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Start for free trial <span>→</span></a>
+                <a href="#" class="btn-secondary">Schedule a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-brand-text">
+                    <div class="footer-badge">
+                        <div class="badge-icon">🔗</div>
+                        <span class="badge-text" style="color: white;">Ready to Transform Your SaaS?</span>
+                    </div>
+                    <h3 class="footer-brand-title">Ready to Launch Your SaaS Faster?</h3>
+                    <p class="footer-brand-desc">The all-in-one platform for launching, growing, and scaling your SaaS—without the overwhelm.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">X</a>
+                    <a href="#" class="social-icon">G</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Product</h4>
+                    <div class="footer-col-links">
+                        <a href="/features.html" class="footer-link">Feature</a>
+                        <a href="/pricing.html" class="footer-link">Pricing</a>
+                        <a href="#" class="footer-link">Integration</a>
+                        <a href="#" class="footer-link">API</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <div class="footer-col-links">
+                        <a href="#" class="footer-link">About</a>
+                        <a href="#" class="footer-link">Blog</a>
+                        <a href="#" class="footer-link">Career</a>
+                        <a href="/contact.html" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Resources</h4>
+                    <div class="footer-col-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">Community</a>
+                        <a href="#" class="footer-link">Template</a>
+                        <a href="#" class="footer-link">Guides</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 SaaSPlatform. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#" class="legal-link">Privacy Policy</a>
+                <div class="footer-divider"></div>
+                <a href="#" class="legal-link">Terms & Condition</a>
+                <div class="footer-divider"></div>
+                <a href="#" class="legal-link">Security</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
