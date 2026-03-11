@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - SaaS Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #F5F5F5;
+            --card-bg: #FFFFFF;
+            --text-main: #2E2E2E;
+            --text-muted: #767474;
+            --brand-orange: #F15C2A;
+            --border-color: #F5F5F5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            width: 95%;
+            max-width: 1400px;
+            height: 76px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 12px 12px 24px;
+            gap: 48px;
+            margin-top: 24px;
+            margin-bottom: 48px;
+            z-index: 10;
+        }
+
+        .logo {
+            width: 73.31px;
+            height: 43.99px;
+            background: #F15C2A;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 8px;
+        }
+
+        .nav-links {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-item {
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            color: #5A5A5A;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .nav-item.active {
+            color: #F15C2A;
+        }
+
+        .divider {
+            width: 1px;
+            height: 8px;
+            background: #E1E1E1;
+        }
+
+        .nav-actions {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .theme-toggle {
+            width: 40px;
+            height: 40px;
+            background: #FAFAFA;
+            backdrop-filter: blur(20px);
+            border-radius: 1000px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            cursor: pointer;
+        }
+
+        .sign-in-btn {
+            width: 98px;
+            height: 52px;
+            background: #2E2E2E;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Pricing Hero */
+        .pricing-hero {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .hero-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+        }
+
+        .badge-icon {
+            width: 24px;
+            height: 24px;
+            background: var(--brand-orange);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .badge-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: #2E2E2E;
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 62px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+            max-width: 794px;
+        }
+
+        .hero-desc {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #767474;
+            max-width: 579px;
+        }
+
+        /* Billing Toggle */
+        .billing-toggle {
+            display: flex;
+            flex-direction: row;
+            padding: 4px;
+            gap: 4px;
+            background: #FFFFFF;
+            border-radius: 10px;
+            margin-bottom: 48px;
+        }
+
+        .toggle-btn {
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 500;
+            border-radius: 8px;
+            cursor: pointer;
+            border: none;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .toggle-btn.active {
+            background: #F15C2A;
+            color: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+        }
+
+        .toggle-btn.inactive {
+            background: transparent;
+            color: #2E2E2E;
+        }
+
+        .discount-badge {
+            padding: 4px 8px;
+            background: #0ED70E;
+            border-radius: 100px;
+            color: #FFFFFF;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        /* Pricing Cards */
+        .pricing-grid {
+            width: 95%;
+            max-width: 1272px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 0;
+            border-radius: 24px;
+            overflow: hidden;
+            margin-bottom: 48px;
+        }
+
+        .pricing-card {
+            flex: 1;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .card-header {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .card-label {
+            font-size: 14px;
+            color: #767474;
+        }
+
+        .card-plan-name {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 24px;
+            font-weight: 600;
+            color: #2E2E2E;
+        }
+
+        .card-price {
+            font-size: 48px;
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .card-desc {
+            font-size: 16px;
+            color: #767474;
+            line-height: 26px;
+        }
+
+        .card-btn {
+            width: 100%;
+            padding: 14px 24px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.2s ease;
+        }
+
+        .btn-outline {
+            background: #FFFFFF;
+            border: 1.5px solid #F0F0F0;
+            color: #2E2E2E;
+        }
+
+        .btn-solid {
+            background: #F15C2A;
+            border: 1.5px solid #F1762A;
+            color: #FFFFFF;
+        }
+
+        .feature-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+            color: #2E2E2E;
+        }
+
+        .feature-item.disabled {
+            opacity: 0.3;
+        }
+
+        .check-icon {
+            width: 24px;
+            height: 24px;
+            color: #767474;
+        }
+
+        /* Feature Highlights Bar */
+        .highlights-bar {
+            width: 95%;
+            max-width: 787.8px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
+            border-radius: 12px;
+            padding: 20px 30px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 80px;
+        }
+
+        .highlight-item {
+            font-size: 16px;
+            font-weight: 500;
+            color: #637381;
+        }
+
+        .highlight-divider {
+            width: 1.2px;
+            height: 12px;
+            background: #E1E1E1;
+        }
+
+        .faq-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #477BFF;
+            text-decoration: underline;
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        /* Comparison Section */
+        .comparison-section {
+            width: 95%;
+            max-width: 1398px;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 80px;
+        }
+
+        .comparison-labels {
+            width: 496px;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .comparison-title {
+            font-size: 48px;
+            font-weight: 600;
+            color: #FF5820;
+            line-height: 62px;
+        }
+
+        .comparison-subtitle {
+            font-size: 20px;
+            color: #767474;
+        }
+
+        .comparison-grid {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .comparison-col {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: #FAFAFA;
+        }
+
+        .comparison-col.highlighted {
+            background: #FFFFFF;
+        }
+
+        .col-header {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+            text-align: center;
+        }
+
+        .col-price {
+            font-size: 48px;
+            font-weight: 600;
+            color: #2E2E2E;
+        }
+
+        .feature-group {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .group-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #2E2E2E;
+        }
+
+        .feature-row {
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            color: #2E2E2E;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            width: 100%;
+            background: linear-gradient(180deg, #F5F5F5 0%, rgba(255, 255, 255, 0) 46.63%);
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cta-card {
+            width: 95%;
+            max-width: 1396px;
+            height: 361px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 20px;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            text-align: center;
+            z-index: 1;
+        }
+
+        .cta-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            background: #FFFFFF;
+            border: 1.5px solid #F5F5F5;
+            border-radius: 18px;
+        }
+
+        .cta-title {
+            font-size: 48px;
+            font-weight: 600;
+            line-height: 62px;
+            letter-spacing: -0.03em;
+            color: #2E2E2E;
+        }
+
+        .cta-desc {
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 30px;
+            color: #767474;
+        }
+
+        .cta-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 16px;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            padding: 14px 24px;
+            background: #F15C2A;
+            border: 1.5px solid #F1762A;
+            border-radius: 10px;
+            color: #FFFFFF;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-secondary {
+            padding: 14px 24px;
+            background: #FFFFFF;
+            border: 1.5px solid #F0F0F0;
+            border-radius: 10px;
+            color: #2E2E2E;
+            font-size: 16px;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        /* Footer Section */
+        .footer {
+            width: 100%;
+            background: #101828;
+            padding: 260px 0 40px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 80px;
+            position: relative;
+            margin-top: -180px;
+        }
+
+        .footer-content {
+            width: 95%;
+            max-width: 1390px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            z-index: 1;
+        }
+
+        .footer-brand {
+            width: 470px;
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .footer-brand-text {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-badge {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 6px 16px 6px 6px;
+            gap: 12px;
+            width: fit-content;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1.5px solid rgba(255, 255, 255, 0.16);
+            border-radius: 18px;
+        }
+
+        .footer-brand-title {
+            font-size: 30px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .footer-brand-desc {
+            font-size: 20px;
+            color: #AAAAAA;
+            line-height: 30px;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.16);
+            border: 1.5px solid rgba(255, 255, 255, 0.12);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 48px;
+        }
+
+        .footer-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .footer-col-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #FFFFFF;
+        }
+
+        .footer-col-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .footer-link {
+            font-size: 16px;
+            color: #AAAAAA;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            width: 95%;
+            max-width: 1390px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            z-index: 1;
+        }
+
+        .copyright {
+            color: #767474;
+            font-size: 16px;
+        }
+
+        .legal-links {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .legal-link {
+            color: #767474;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .footer-divider {
+            width: 1px;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.24);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+        </div>
+        <div class="nav-links">
+            <a href="/public/index.html" class="nav-item">Home Page</a>
+            <div class="divider"></div>
+            <a href="/public/about.html" class="nav-item">About Platform</a>
+            <div class="divider"></div>
+            <a href="/public/features.html" class="nav-item">Feature’s</a>
+            <div class="divider"></div>
+            <a href="/public/pricing.html" class="nav-item active">Pricing</a>
+            <div class="divider"></div>
+            <a href="/public/contact.html" class="nav-item">Contact</a>
+        </div>
+        <div class="nav-actions">
+            <button class="theme-toggle">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+            </button>
+            <a href="/public/signin.html" class="sign-in-btn">Sign in</a>
+        </div>
+    </nav>
+
+    <header class="pricing-hero">
+        <div class="hero-badge">
+            <div class="badge-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M15 7h3a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2h-3m0 0v4a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-4m7 0H8m0 0V4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3m-7 0H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h4"/></svg>
+            </div>
+            <span class="badge-text">Simple, Transparent Pricing</span>
+        </div>
+        <h1 class="hero-title">Choose the Plan That Fits Your Stage</h1>
+        <p class="hero-desc">Start free, scale when you're ready. No hidden fees, no surprises.</p>
+    </header>
+
+    <div class="billing-toggle">
+        <button class="toggle-btn active">Monthly</button>
+        <button class="toggle-btn inactive">
+            Annual
+            <span class="discount-badge">-20%</span>
+        </button>
+    </div>
+
+    <div class="pricing-grid">
+        <!-- Starter Plan -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <span class="card-label">14-day free trial</span>
+                <div class="card-plan-name">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F15C2A" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Starter
+                </div>
+            </div>
+            <div class="card-price">$19/mo</div>
+            <p class="card-desc">Everything you need to validate your idea and get your first customers.</p>
+            <a href="#" class="card-btn btn-outline">Start for free trial <span>→</span></a>
+            <div class="feature-list">
+                <div class="feature-item"><span class="check-icon">✓</span> Everything in Growth</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Unlimited users</div>
+                <div class="feature-item"><span class="check-icon">✓</span> White-label solution</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Dedicated account manager</div>
+                <div class="feature-item"><span class="check-icon">✓</span> 24/7 phone support</div>
+                <div class="feature-item disabled"><span class="check-icon">✓</span> Custom integrations</div>
+                <div class="feature-item disabled"><span class="check-icon">✓</span> SLA guarantee 99.99%</div>
+                <div class="feature-item disabled"><span class="check-icon">✓</span> Advanced security (SSO, SAML)</div>
+                <div class="feature-item disabled"><span class="check-icon">✓</span> Custom contracts & invoicing</div>
+                <div class="feature-item disabled"><span class="check-icon">✓</span> Onboarding assistance</div>
+            </div>
+        </div>
+
+        <!-- Growth Plan -->
+        <div class="pricing-card" style="border-color: var(--brand-orange);">
+            <div class="card-header">
+                <span class="card-label">Most value for money</span>
+                <div class="card-plan-name">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F15C2A" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Growth
+                </div>
+            </div>
+            <div class="card-price">$49/mo</div>
+            <p class="card-desc">Everything you need to validate your idea and get your first customers.</p>
+            <a href="#" class="card-btn btn-solid">Start for free trial <span>→</span></a>
+            <div class="feature-list">
+                <div class="feature-item"><span class="check-icon">✓</span> Everything in Growth</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Unlimited users</div>
+                <div class="feature-item"><span class="check-icon">✓</span> White-label solution</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Dedicated account manager</div>
+                <div class="feature-item"><span class="check-icon">✓</span> 24/7 phone support</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Custom integrations</div>
+                <div class="feature-item"><span class="check-icon">✓</span> SLA guarantee 99.99%</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Advanced security (SSO, SAML)</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Custom contracts & invoicing</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Onboarding assistance</div>
+            </div>
+        </div>
+
+        <!-- Scale Plan -->
+        <div class="pricing-card">
+            <div class="card-header">
+                <span class="card-label">Volume discounts available</span>
+                <div class="card-plan-name">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#F15C2A" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                    Scale
+                </div>
+            </div>
+            <div class="card-price">Custom</div>
+            <p class="card-desc">Everything you need to validate your idea and get your first customers.</p>
+            <a href="#" class="card-btn btn-outline">Contact Sales <span>→</span></a>
+            <div class="feature-list">
+                <div class="feature-item"><span class="check-icon">✓</span> Everything in Growth</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Unlimited users</div>
+                <div class="feature-item"><span class="check-icon">✓</span> White-label solution</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Dedicated account manager</div>
+                <div class="feature-item"><span class="check-icon">✓</span> 24/7 phone support</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Custom integrations</div>
+                <div class="feature-item"><span class="check-icon">✓</span> SLA guarantee 99.99%</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Advanced security (SSO, SAML)</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Custom contracts & invoicing</div>
+                <div class="feature-item"><span class="check-icon">✓</span> Onboarding assistance</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="highlights-bar">
+        <span class="highlight-item">SSL certificates</span>
+        <div class="highlight-divider"></div>
+        <span class="highlight-item">Daily backups</span>
+        <div class="highlight-divider"></div>
+        <span class="highlight-item">GDPR compliance</span>
+        <div class="highlight-divider"></div>
+        <span class="highlight-item">API access</span>
+        <div class="highlight-divider"></div>
+        <a href="#" class="faq-link">Check our FAQ’s <span>❓</span></a>
+    </div>
+
+    <section class="comparison-section">
+        <div class="comparison-labels">
+            <div class="comparison-header">
+                <h2 class="comparison-title">Compare All Features</h2>
+                <p class="comparison-subtitle">See exactly what's included in each plan</p>
+            </div>
+            <div class="feature-group-labels">
+                <h3 class="group-title" style="margin-bottom: 30px;">Our Features.</h3>
+                <div class="feature-list" style="gap: 30px;">
+                    <div class="feature-row" style="justify-content: flex-start;">Team members</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Storage</div>
+                    <div class="feature-row" style="justify-content: flex-start;">API calls</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Projects</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Custom domains</div>
+                </div>
+            </div>
+            <div class="feature-group-labels" style="margin-top: 48px;">
+                <h3 class="group-title" style="margin-bottom: 30px;">Analytics & Reporting.</h3>
+                <div class="feature-list" style="gap: 30px;">
+                    <div class="feature-row" style="justify-content: flex-start;">Basic analytics</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Advanced analytics</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Custom reports</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Data export</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Real-time dashboards</div>
+                    <div class="feature-row" style="justify-content: flex-start;">Predictive analytics</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="comparison-grid">
+            <!-- Starter Col -->
+            <div class="comparison-col">
+                <div class="col-header">
+                    <div class="card-plan-name">Starter</div>
+                    <span class="card-label">14-day free trial</span>
+                    <div class="col-price">$19/mo</div>
+                    <a href="#" class="card-btn btn-outline" style="width: 240px;">Start for free trial</a>
+                </div>
+                <div class="feature-group">
+                    <div class="feature-row">5</div>
+                    <div class="feature-row">10 GB</div>
+                    <div class="feature-row">50/day</div>
+                    <div class="feature-row">10</div>
+                    <div class="feature-row">1</div>
+                </div>
+                <div class="feature-group" style="margin-top: 48px;">
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✕</div>
+                    <div class="feature-row">✕</div>
+                    <div class="feature-row">✕</div>
+                    <div class="feature-row">✕</div>
+                    <div class="feature-row">✕</div>
+                </div>
+            </div>
+
+            <!-- Growth Col -->
+            <div class="comparison-col highlighted">
+                <div class="col-header">
+                    <div class="card-plan-name">Growth</div>
+                    <span class="card-label">Most value for money</span>
+                    <div class="col-price">$49/mo</div>
+                    <a href="#" class="card-btn btn-solid" style="width: 240px;">Start for free trial</a>
+                </div>
+                <div class="feature-group">
+                    <div class="feature-row">25</div>
+                    <div class="feature-row">100 GB</div>
+                    <div class="feature-row">Unlimited</div>
+                    <div class="feature-row">100</div>
+                    <div class="feature-row">5</div>
+                </div>
+                <div class="feature-group" style="margin-top: 48px;">
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✕</div>
+                    <div class="feature-row">✕</div>
+                </div>
+            </div>
+
+            <!-- Scale Col -->
+            <div class="comparison-col">
+                <div class="col-header">
+                    <div class="card-plan-name">Scale</div>
+                    <span class="card-label">Volume discounts available</span>
+                    <div class="col-price">Custom</div>
+                    <a href="#" class="card-btn btn-outline" style="width: 240px;">Contact Sales</a>
+                </div>
+                <div class="feature-group">
+                    <div class="feature-row">Unlimited</div>
+                    <div class="feature-row">Unlimited</div>
+                    <div class="feature-row">Unlimited</div>
+                    <div class="feature-row">Unlimited</div>
+                    <div class="feature-row">Unlimited</div>
+                </div>
+                <div class="feature-group" style="margin-top: 48px;">
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                    <div class="feature-row">✓</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="cta-card">
+            <div class="cta-content">
+                <div class="cta-badge">
+                    <div class="badge-icon">👆</div>
+                    <span class="badge-text">Simple, Transparent Pricing</span>
+                </div>
+                <h2 class="cta-title">Ready to Get Started?</h2>
+                <p class="cta-desc">Try all these features free for 14 days. No credit card required.</p>
+            </div>
+            <div class="cta-buttons">
+                <a href="#" class="btn-primary">Start for free trial <span>→</span></a>
+                <a href="#" class="btn-secondary">Schedule a Demo</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-brand-text">
+                    <div class="footer-badge">
+                        <div class="badge-icon">🔗</div>
+                        <span class="badge-text" style="color: white;">Ready to Transform Your SaaS?</span>
+                    </div>
+                    <h3 class="footer-brand-title">Ready to Launch Your SaaS Faster?</h3>
+                    <p class="footer-brand-desc">The all-in-one platform for launching, growing, and scaling your SaaS—without the overwhelm.</p>
+                </div>
+                <div class="footer-socials">
+                    <a href="#" class="social-icon">in</a>
+                    <a href="#" class="social-icon">X</a>
+                    <a href="#" class="social-icon">G</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Product</h4>
+                    <div class="footer-col-links">
+                        <a href="/features.html" class="footer-link">Feature</a>
+                        <a href="/pricing.html" class="footer-link">Pricing</a>
+                        <a href="#" class="footer-link">Integration</a>
+                        <a href="#" class="footer-link">API</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Company</h4>
+                    <div class="footer-col-links">
+                        <a href="#" class="footer-link">About</a>
+                        <a href="#" class="footer-link">Blog</a>
+                        <a href="#" class="footer-link">Career</a>
+                        <a href="#" class="footer-link">Contact</a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 class="footer-col-title">Resources</h4>
+                    <div class="footer-col-links">
+                        <a href="#" class="footer-link">Help Center</a>
+                        <a href="#" class="footer-link">Community</a>
+                        <a href="#" class="footer-link">Template</a>
+                        <a href="#" class="footer-link">Guides</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2025 SaaSPlatform. All rights reserved.</p>
+            <div class="legal-links">
+                <a href="#" class="legal-link">Privacy Policy</a>
+                <div class="footer-divider"></div>
+                <a href="#" class="legal-link">Terms & Condition</a>
+                <div class="footer-divider"></div>
+                <a href="#" class="legal-link">Security</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
