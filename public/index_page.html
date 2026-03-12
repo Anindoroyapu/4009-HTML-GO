@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SaaS Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        :root {
+    --primary-orange: #F15C2A;
+    --dark-text: #2E2E2E;
+    --grey-text: #767474;
+    --border-color: #F5F5F5;
+    --font-main: 'General Sans', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-main);
+    background-color: #FAFAFA;
+}
+
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px 0 80px;
+    gap: 60px;
+    width: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1100px;
+    height: 76px;
+    padding: 12px 12px 12px 24px;
+    background: #FFFFFF;
+    border: 1.5px solid var(--border-color);
+    border-radius: 18px;
+    box-sizing: border-box;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--grey-text);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.nav-links a.active { color: var(--primary-orange); }
+
+.divider { color: #E1E1E1; font-size: 8px; }
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 1100px;
+    gap: 24px;
+}
+
+.badge {
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    gap: 12px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 18px;
+    background: #FFF;
+}
+
+.badge-new {
+    background: var(--primary-orange);
+    color: white;
+    padding: 2px 8px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.hero-title {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: var(--dark-text);
+    max-width: 1100px;
+    margin: 0;
+}
+
+.hero-subtitle {
+    font-size: 20px;
+    color: var(--grey-text);
+    max-width: 1100px;
+    line-height: 1.5;
+}
+
+/* Buttons */
+.btn-primary-dark {
+    background: var(--dark-text);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-cta-orange {
+    background: var(--primary-orange);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    border: 1.5px solid #F1762A;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+/* Metric Cards */
+.metric-card {
+    background: white;
+    border: 1.5px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
+    width: 160px;
+}
+
+.card-value {
+    font-size: 30px;
+    font-weight: 600;
+    color: var(--dark-text);
+    margin: 8px 0;
+}
+
+.card-trend.positive { color: #0ED70E; }
+.card-trend.negative { color: #FF0000; }
+    </style>
+</head>
+<body>
+    <div class="main-wrapper">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo"></div>
+            <div class="nav-links">
+                <a href="#" class="active">Home page</a>
+                <span class="divider">|</span>
+                <a href="#">About Platform</a>
+                <span class="divider">|</span>
+                <a href="#">Features</a>
+                <span class="divider">|</span>
+                <a href="#">Pricing</a>
+                <span class="divider">|</span>
+                <a href="#">Contact</a>
+            </div>
+            <div class="nav-actions">
+                <button class="btn-icon"><i class="moon-icon"></i></button>
+                <button class="btn-primary-dark">Sign in</button>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <div class="badge">
+                <span class="badge-new">New</span>
+                <span class="badge-text">The All-in-One SaaS Platform</span>
+            </div>
+            
+            <h1 class="hero-title">Launch, Grow & Scale Your SaaS— Without the Overwhelm</h1>
+            <p class="hero-subtitle">Build smarter, onboard faster, and scale confidently with a platform designed for modern SaaS teams. Everything you need in one place.</p>
+            
+            <div class="cta-group">
+                <button class="btn-cta-orange">Start for free trial <i class="arrow-right"></i></button>
+                <button class="btn-cta-white">Book a Demo <i class="file-icon"></i></button>
+            </div>
+
+            <div class="feature-bullets">
+                <span><i class="check-green"></i> No credit card needed</span>
+                <span class="bullet-divider">|</span>
+                <span><i class="access-blue"></i> 14-day unlimited access</span>
+                <span class="bullet-divider">|</span>
+                <span><i class="cancel-red"></i> Cancel anytime</span>
+            </div>
+        </header>
+
+        <!-- Metrics Dashboard Area -->
+        <section class="dashboard-preview">
+            <div class="metric-card mrr">
+                <div class="card-label">MRR</div>
+                <div class="card-value">$12,450</div>
+                <div class="card-trend positive">23.5% ↑</div>
+            </div>
+            
+            <div class="analytics-main">
+                <div class="chart-header">
+                    <h3>Analytics Dashboard</h3>
+                    <p>3,847 SaaS apps launched this month</p>
+                </div>
+                <div class="chart-placeholder">
+                    <!-- SVG Chart Logic Here -->
+                </div>
+            </div>
+
+            <div class="metric-card churn">
+                <div class="card-label">Churn Rate</div>
+                <div class="card-value">2.3%</div>
+                <div class="card-trend negative">0.5% ↓</div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
