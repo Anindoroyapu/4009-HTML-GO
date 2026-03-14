@@ -140,7 +140,8 @@ justify-content:center;
 gap:30px;
 color:#767474;
 font-size:16px;
-}.mrr-card{
+}
+.mrr-card{
 width:151px;
 height:175px;
 background:#fff;
@@ -149,7 +150,6 @@ border-radius:12px;
 padding:24px;
 display:flex;
 flex-direction:column;
-gap:24px;
 
 box-shadow:0 0 68px -16px rgba(241,92,42,0.07);
 }
@@ -157,12 +157,10 @@ box-shadow:0 0 68px -16px rgba(241,92,42,0.07);
 .mrr-header{
 display:flex;
 align-items:center;
-gap:10px;
+
 }
 
 .icon{
-width:30px;
-height:30px;
 display:flex;
 align-items:center;
 justify-content:center;
@@ -205,7 +203,6 @@ background:#ffffff;
 border:1.5px solid #F5F5F5;
 border-radius:12px;
 padding:24px;
-
 display:flex;
 flex-direction:column;
 gap:24px;
@@ -329,10 +326,7 @@ color:#637381;
 }
 
 
-body{
-font-family:"General Sans", sans-serif;
-background:#f8f8f8;
-}
+
 
 .stats-wrapper{
 display:flex;
