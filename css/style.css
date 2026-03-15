@@ -597,11 +597,13 @@ height: fit-content;
 }
 
 .dashboard-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
   position: relative;
+  width: fit-content;
 }
 
 .card {
