@@ -185,7 +185,7 @@
       align-items: center;
       gap: 50px;
       width: max-content;
-      animation: scroll 20s linear infinite;
+      animation: scroll 10s linear infinite;
     }
 
     .logo {
@@ -193,19 +193,16 @@
       width: auto;
     }
 
-    .star {
-      font-size: 28px;
-      animation: spin 15s linear infinite;
-    }
+    
 
     /* scrolling animation */
     @keyframes scroll {
       from {
-        transform: translateX(0);
+        transform: translateX(100);
       }
 
       to {
-        transform: translateX(-50%);
+        transform: translateX(-10%);
       }
     }
 
@@ -287,13 +284,12 @@
         </h1>
         <div style="">
           <img src="./assets/images/green-long-arrow.svg" alt="">
-
         </div>
       </div>
       <div style=" display: flex; align-items: center; justify-content: center; ">
         <div>
           <div
-            style="box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:24px; gap:8px; position:absolute; width:236px; height:138px; right:80%; top:466.29px; background:#FFFFFF; border:1.5px solid #F5F5F5; border-radius:12px; transform:rotate(-6deg);">
+            style="box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:24px; gap:8px; position:absolute; width:236px; height:138px; left:50%; margin-left: -618px; top:466.29px; background:#FFFFFF; border:1.5px solid #F5F5F5; border-radius:12px; transform:rotate(-6deg);">
             <div style="width:24px; height:24px;  position:relative;">
               <img src="./assets/icon/new-user.svg" alt="New User">
             </div>
@@ -329,7 +325,7 @@
         </div>
         <div>
           <div
-            style="box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:24px; gap:8px; position:absolute; width:186px; height:138px; left: 78%;   top:466.29px; background:#FFFFFF; border:1.5px solid #F5F5F5; border-radius:12px; transform:rotate(6deg);">
+            style="box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:24px; gap:8px; position:absolute; width:186px; height:138px; left: 50%; margin-left: 482px; top:466.29px; background:#FFFFFF; border:1.5px solid #F5F5F5; border-radius:12px; transform:rotate(6deg);">
             <div style="width:24px; height:24px;  position:relative;">
               <img src="./assets/icon/payment-icon.svg" alt="">
             </div>
@@ -537,51 +533,70 @@
           Join the fastest-growing SaaS community
         </span>
       </div>
-      <h2 style="  line-height: 38px; font-size: 30px;">
+      <h2 style=" line-height: 38px; font-size: 30px;">
         Trusted by <span style="  color:#F15C2A;">3,500+ Startups,</span>
         <br> Founders & Tech Teams Worldwide
       </h2>
     </div>
-    <div class="logos">
-      <div class="marquee">
+    <div class="logos" style=" position: relative;width: 100%;  margin: 60px auto; overflow: hidden;">
+      <div style=" position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 10%; height: 60px; background: linear-gradient(90deg, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%); z-index: 1;">
+
+      </div>
+      <div class="marquee" style="">
         <div class="marquee-track" id="marqueeTrack" style=" display: flex; gap: 48px;">
           <div>
             <img src="./assets/images/mar-logo-1.svg" alt="">
-
           </div>
           <div>
             <img src="./assets/images/mar-logo-2.svg" alt="">
-
           </div>
           <div>
-
             <img src="./assets/images/mar-logo-3.svg" alt="">
-
           </div>
           <div>
             <img src="./assets/images/mar-logo-4.svg" alt="">
           </div>
-
           <div>
             <img src="./assets/images/mar-logo-5.svg" alt="">
-
           </div>
           <div>
             <img src="./assets/images/mar-logo-6.svg" alt="">
-
           </div>
-
           <div>
             <img src="./assets/images/mar-logo-7.svg" alt="">
-
           </div>
           <div>
-
-
-
+            <img src="./assets/images/mar-logo-8.svg" alt="">
+          </div> 
+          <div>
+            <img src="./assets/images/mar-logo-1.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/images/mar-logo-2.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/images/mar-logo-3.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/images/mar-logo-4.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/images/mar-logo-5.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/images/mar-logo-6.svg" alt="">
+          </div>
+          <div>
+            <img src="./assets/images/mar-logo-7.svg" alt="">
+          </div>
+          <div>
             <img src="./assets/images/mar-logo-8.svg" alt="">
           </div>
         </div>
+      </div>
+
+       <div style=" position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 10%; height: 60px; background: linear-gradient(-90deg,rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%); z-index: 1;">
+
       </div>
     </div>
     </div>
@@ -594,8 +609,6 @@
         </svg>
         <span style="text-wrap: nowrap;"> 156 countries</span>
       </div>
-
-
       <div class="stat">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path
