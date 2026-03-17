@@ -8,6 +8,148 @@
 
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
   <style>
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .navbar {
+        width: 90% !important;
+        padding: 12px !important;
+        margin: 12px auto !important;
+        flex-direction: column;
+        height: auto;
+        gap: 12px !important;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .nav-actions {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .hero {
+        width: 95% !important;
+        padding: 20px !important;
+        margin: 20px auto !important;
+      }
+
+      h1 {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+      }
+
+      .hero p {
+        font-size: 16px !important;
+      }
+
+      .hero-buttons {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+
+      .primary, .secondary {
+        width: 100%;
+      }
+
+      .cards-wrapper {
+        flex-direction: column !important;
+      }
+
+      .analytics-card {
+        width: 100% !important;
+      }
+
+      .features-section {
+        padding: 40px 20px !important;
+      }
+
+      .features-section-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .feature-section-card {
+        max-width: 100% !important;
+        border-radius: 20px !important;
+      }
+
+      .dashboard-features {
+        padding: 40px 20px !important;
+      }
+
+      .dashboard-cards {
+        grid-template-columns: 1fr !important;
+      }
+
+      .card {
+        width: 100% !important;
+      }
+
+      .frame-main {
+        width: 95% !important;
+        padding: 20px !important;
+      }
+
+      .comparison-table {
+        width: 100% !important;
+      }
+
+      .col-concept, .col-new-way, .col-old-way {
+        font-size: 12px !important;
+        padding: 8px !important;
+      }
+
+      .hero-cta {
+        width: 100% !important;
+        padding: 20px !important;
+      }
+
+      .trusted-section {
+        padding: 40px 20px !important;
+      }
+
+      .stats-bar {
+        flex-direction: column !important;
+        gap: 12px !important;
+      }
+
+      .logos {
+        gap: 24px !important;
+      }
+
+      footer {
+        padding: 40px 20px !important;
+      }
+
+      .onboarding-hero, .hero-dashboard {
+        width: 100% !important;
+        height: auto !important;
+        padding: 20px !important;
+      }
+
+      .metrics-container {
+        width: 100% !important;
+      }
+
+      .metric-graph {
+        width: 100% !important;
+      }
+
+      .dashboard-header h2 {
+        font-size: 28px !important;
+      }
+
+      .features-hero h1 {
+        font-size: 28px !important;
+      }
+    }
+
     /* Navbar Styles */
     .navbar {
       width: 100%;
@@ -2838,7 +2980,7 @@ h1 {
 
           <!-- Email Button -->
           <button style="display: flex; justify-content: center; align-items: center; width: 152px; height: 52px; background: #FFFFFF; border: 1.5px solid #F0F0F0; border-radius: 10px; padding: 14px 24px; gap: 10px; box-sizing: border-box; cursor: pointer;">
-            <span style="font-weight: 500; font-size: 16px; line-height: 24px; color: #2E2E2E;">Send us Email</span>
+            <span style=" text-wrap: nowrap;  font-weight: 500; font-size: 16px; line-height: 24px; color: #2E2E2E;">Send us Email</span>
           </button>
         </div>
 
@@ -2941,7 +3083,7 @@ h1 {
         </div>
 
         <!-- Footer Bottom Bar -->
-        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 1390px; height: 24px; box-sizing: border-box; gap: 10px; padding-top: 15px; margin-top: 40px;">
+        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 1390px; height: 24px; box-sizing: border-box; gap: 10px; padding-top: 15px; margin-top: 10px;">
           <!-- Copyright -->
           <div style="width: 296px; height: 24px; font-family: 'General Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #767474;">
             © 2025 SaaSPlatform. All rights reserved.
