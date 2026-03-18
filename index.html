@@ -14,6 +14,9 @@
   <style>
     /* Mobile Responsive */
     @media (max-width: 375px) {
+      .display-none-mobile {
+        display: none !important;
+      }
 
       h1 {
         font-size: 24px !important;
@@ -29,16 +32,7 @@
         font-size: 14px !important;
         line-height: 1.5 !important;
       }
-      .navbar {
-        width: 95% !important;
-        padding: 10px !important;
-        gap: 8px !important;
-      }
-
-      .nav-actions {
-        flex-direction: column !important;
-        gap: 8px !important;
-      }
+      
 
       .hero {
         width: 100% !important;
@@ -135,24 +129,13 @@
     }
 
     @media (max-width: 768px) {
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+       .display-none-mobile {
+        display: none !important;
       }
-
-      .navbar {
-        width: 90% !important;
-        padding: 12px !important;
-        margin: 12px auto !important;
-        flex-direction: column;
-        height: auto;
-        gap: 12px !important;
-      }
-
-      .nav-links {
-        display: none;
-      }
+.web-header {
+  
+  display: none !important;}
+       
 
       .nav-actions {
         width: 100%;
@@ -279,23 +262,6 @@
       }
     }
 
-    /* Navbar Styles */
-    .navbar {
-      width: 100%;
-      max-width: 1100px;
-      height: 76px;
-      background: #FFFFFF;
-      border: 1.5px solid #F5F5F5;
-      border-radius: 18px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 12px 12px 24px;
-      gap: 48px;
-      margin-bottom: 40px;
-
-    }
 
     .logo {
       width: 73.31px;
@@ -464,36 +430,49 @@
       width: auto;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: sans-serif;
-    }
+  /* Default: HIDE on desktop */
+.mobile-header {
+  display: none;
+}
 
-    body {
-      background: #f5f1f0;
-    }
 
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 0px;
-    }
+/* SHOW only on tablet + mobile */
+@media (max-width: 768px) {
+  .mobile-header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin-top: 5px;
 
-    /* Navbar */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #fff;
+    z-index: 999;
+    padding: 8px 12px;
+  }
+}
+
+
+  
+    /* Navbar Styles */
     .navbar {
-      width: 1100px;
-      margin: 24px auto;
+      width: 100%;
+      max-width: 1100px;
+      height: 76px;
+      background: #FFFFFF;
+      box-shadow: 0 0 68px -16px rgba(241, 92, 42, 0.07);
+      border: 1.5px solid #F5F5F5;
+      border-radius: 18px;
       display: flex;
-      display: fixed;
+      flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      background: white;
       padding: 12px 24px;
-      /* border-radius:18px;
-border:1px solid #f0f0f0; */
-      box-shadow: 0 0 68px -16px rgba(241, 92, 42, 0.07);
+      gap: 48px;
+      margin: 24px auto;
+
     }
 
     .logo {
@@ -2182,9 +2161,9 @@ border:1px solid #f0f0f0; */
 
 <body>
   <!-- Navbar -->
-  <!-- <div style="width: 100%; position:fixed; top: 0; z-index: 1000;   ">
-    <nav class="navbar" style="backdrop-filter: blur(15px);">
-      <a class="" href="/index.html">
+  <div class="web-header" style="width: 100%; position:fixed; top: 0; z-index: 1000;  margin: 0 auto ;  ">
+    <nav class="navbar" style="backdrop-filter: blur(50px);">
+      <a class="" href="/index.html"> 
         <img src="./assets/main-logo.svg" alt="">
       </a>
       <div class="nav-links">
@@ -2207,7 +2186,7 @@ border:1px solid #f0f0f0; */
         <a href="/sign-in.html" class="sign-in-btn">Sign in</a>
       </div>
     </nav>
-  </div> -->
+  </div>  
 
   <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none ;  " id="mySidebar">
     <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; ">
@@ -2224,21 +2203,20 @@ border:1px solid #f0f0f0; */
     </div>
   </div>
   
-  <!-- Page Content -->
-  <div class="w3-white" style="margin-top:5px; display: flex; align-items: center; justify-content: space-between; ">
-    <a class="" href="/index.html" style=" padding-left: 10px;">
-      <img src="./assets/main-logo.svg" alt="">
-    </a>
-    <button class="w3-button w3-gray-500 w3-xlarge" onclick="w3_open()">☰</button>
-  
-  </div>
+<div class="mobile-header w3-white">
+  <a href="/index.html" style="padding-left: 10px;">
+    <img src="./assets/main-logo.svg" alt="">
+  </a>
+
+  <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+</div>
 
 
 
 
 
   <!-- Hero Section -->
-  <section class="hero" style=" padding-top:100px ;">
+  <section class="hero" style=" padding-top:100px ; overflow: hidden;">
 
     <div class=" " style=" padding: 0px 280px 0px 0px;">
 
@@ -2272,8 +2250,8 @@ border:1px solid #f0f0f0; */
           <img src="./assets/images/green-long-arrow.svg" alt="">
         </div>
       </div>
-      <div style=" display: flex; align-items: center; justify-content: center; ">
-        <div>
+      <div class="" style=" display: flex; align-items: center; justify-content: center; ">
+        <div class="display-none-mobile">
           <div
             style="box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:24px; gap:8px; position:absolute; width:236px; height:138px; left:50%; margin-left: -618px; top:466.29px; background:#FFFFFF; border:1.5px solid #F5F5F5; border-radius:12px; transform:rotate(-6deg);">
             <div style="width:24px; height:24px;  position:relative;">
@@ -2309,7 +2287,7 @@ border:1px solid #f0f0f0; */
             </button>
           </div>
         </div>
-        <div>
+        <div class="display-none-mobile">
           <div
             style="box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:24px; gap:8px; position:absolute; width:186px; height:138px; left: 50%; margin-left: 482px; top:466.29px; background:#FFFFFF; border:1.5px solid #F5F5F5; border-radius:12px; transform:rotate(6deg);">
             <div style="width:24px; height:24px;  position:relative;">
