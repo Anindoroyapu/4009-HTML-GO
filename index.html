@@ -2020,116 +2020,754 @@
       }
     }
 
+    /* Figma Pricing Section (Node 18:1392) */
+    .pricing-figma {
+      position: relative;
+      padding: 80px 20px;
+      background: #f5f5f5;
+      overflow: hidden;
+    }
+
+    .pricing-figma-inner {
+      max-width: 1272px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 48px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .pricing-figma-arcs {
+      position: absolute;
+      top: 118px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: min(1272px, 92vw);
+      opacity: 0.9;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .pricing-figma-header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
+    .pricing-figma-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 16px 6px 6px;
+      border: 1.5px solid #f5f5f5;
+      border-radius: 18px;
+      background: #fff;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2e2e2e;
+      line-height: 20px;
+    }
+
+    .pricing-figma-badge-icon {
+      width: 24px;
+      height: 24px;
+      border-radius: 20px;
+      background: #f15c2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4px;
+    }
+
+    .pricing-figma-title {
+      margin: 0;
+      font-size: 48px;
+      line-height: 62px;
+      letter-spacing: -0.03em;
+      color: #2e2e2e;
+      font-weight: 600;
+    }
+
+    .pricing-figma-title .accent {
+      color: #f15c2a;
+    }
+
+    .pricing-figma-subtitle {
+      margin: 0;
+      font-size: 20px;
+      line-height: 30px;
+      color: #767474;
+    }
+
+    .pricing-figma-toggle {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px;
+      background: #fff;
+      border-radius: 10px;
+      z-index: 3;
+    }
+
+    .pricing-toggle-pill {
+      border: none;
+      border-radius: 8px;
+      padding: 6px 16px;
+      background: transparent;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2e2e2e;
+      line-height: 20px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .pricing-toggle-pill.active {
+      background: #f15c2a;
+      color: #fff;
+    }
+
+    .pricing-toggle-save {
+      background: #0ed70e;
+      color: #fff;
+      border-radius: 100px;
+      font-size: 12px;
+      line-height: 12px;
+      padding: 4px 6px;
+      font-weight: 500;
+    }
+
+    .pricing-figma-grid {
+      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      border: 1.5px solid #f5f5f5;
+      border-radius: 24px;
+      background: #fff;
+      overflow: hidden;
+    }
+
+    .pricing-plan {
+      padding: 30px;
+      border-right: 1.5px solid #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      background: #fff;
+    }
+
+    .pricing-plan:last-child {
+      border-right: none;
+    }
+
+    .pricing-plan-top {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .pricing-plan-note {
+      font-size: 14px;
+      color: #767474;
+      line-height: 22px;
+      margin: 0;
+    }
+
+    .pricing-plan-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 24px;
+      font-weight: 600;
+      color: #2e2e2e;
+      letter-spacing: -0.03em;
+      line-height: 32px;
+      margin: 0;
+    }
+
+    .pricing-plan-title img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .pricing-plan-price {
+      margin: 0;
+      color: #2e2e2e;
+      font-size: 48px;
+      line-height: 62px;
+      letter-spacing: -0.03em;
+      font-weight: 600;
+    }
+
+    .pricing-plan-price span {
+      color: #767474;
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 400;
+      margin-left: 2px;
+    }
+
+    .pricing-plan-desc {
+      margin: 0;
+      color: #767474;
+      font-size: 16px;
+      line-height: 26px;
+    }
+
+    .pricing-plan-btn {
+      width: 100%;
+      height: 52px;
+      border-radius: 10px;
+      border: 1.5px solid #f0f0f0;
+      background: #fff;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      color: #2e2e2e;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      cursor: pointer;
+    }
+
+    .pricing-plan-btn.featured {
+      background: #f15c2a;
+      border-color: #f1762a;
+      color: #fff;
+    }
+
+    .pricing-plan-btn img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .pricing-features-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .pricing-features-list li {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 20px;
+      line-height: 32px;
+      color: #2e2e2e;
+    }
+
+    .pricing-features-list li img {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+    }
+
+    .pricing-features-list li.muted {
+      opacity: 0.3;
+    }
+
+    .pricing-figma-foot {
+      display: inline-flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 30px;
+      border: 1.5px solid #f5f5f5;
+      border-radius: 12px;
+      background: #fff;
+      box-shadow: 0 0 68px -16px rgba(241, 92, 42, 0.07);
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .pricing-figma-foot span,
+    .pricing-figma-foot a {
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: 500;
+      color: #637381;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      white-space: nowrap;
+    }
+
+    .pricing-figma-foot a {
+      color: #477bff;
+      text-decoration: underline;
+    }
+
+    .pricing-figma-foot .v-divider {
+      width: 1.2px;
+      height: 12px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.7;
+    }
+
+    .pricing-figma-foot .v-divider img {
+      width: 1.2px;
+      height: 12px;
+    }
+
+    @media (max-width: 1024px) {
+      .pricing-figma-title {
+        font-size: 42px;
+        line-height: 1.2;
+      }
+
+      .pricing-figma-subtitle {
+        font-size: 18px;
+      }
+
+      .pricing-figma-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-plan {
+        border-right: none;
+        border-bottom: 1.5px solid #f5f5f5;
+      }
+
+      .pricing-plan:last-child {
+        border-bottom: none;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .pricing-figma {
+        padding: 48px 14px;
+      }
+
+      .pricing-figma-arcs {
+        top: 170px;
+      }
+
+      .pricing-figma-title {
+        font-size: 32px;
+      }
+
+      .pricing-figma-subtitle {
+        font-size: 16px;
+        line-height: 1.55;
+      }
+
+      .pricing-figma-toggle {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .pricing-plan {
+        padding: 20px;
+        gap: 20px;
+      }
+
+      .pricing-plan-price {
+        font-size: 42px;
+        line-height: 1.15;
+      }
+
+      .pricing-features-list li {
+        font-size: 17px;
+        line-height: 1.5;
+        gap: 12px;
+      }
+
+      .pricing-figma-foot {
+        padding: 16px;
+        gap: 12px;
+      }
+
+      .pricing-figma-foot span,
+      .pricing-figma-foot a {
+        font-size: 14px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .pricing-figma {
+        padding: 40px 10px;
+      }
+
+      .pricing-figma-title {
+        font-size: 27px;
+      }
+
+      .pricing-toggle-pill {
+        padding: 6px 12px;
+        font-size: 13px;
+      }
+
+      .pricing-plan-title {
+        font-size: 22px;
+      }
+
+      .pricing-plan-price {
+        font-size: 36px;
+      }
+
+      .pricing-plan-price span {
+        font-size: 17px;
+      }
+
+      .pricing-plan-desc {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+
+      .pricing-plan-btn {
+        font-size: 14px;
+      }
+
+      .pricing-features-list li {
+        font-size: 15px;
+      }
+
+      .pricing-figma-foot {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .pricing-figma-foot .v-divider {
+        display: none;
+      }
+    }
+
 
 
 
 
     .faq-section {
       padding: 80px 20px;
-      background: #fff;
+      background: #ffffff;
     }
 
     .faq-container {
-      max-width: 1200px;
-      margin: auto;
+      max-width: 1300px;
+      margin: 0 auto;
       display: flex;
-      gap: 60px;
       align-items: flex-start;
+      justify-content: space-between;
+      gap: 34px;
+      position: relative;
     }
 
-    /* LEFT */
     .faq-left {
-      flex: 1;
+      width: 44%;
+      max-width: 520px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      position: relative;
+      z-index: 2;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 6px 16px;
-      border: 1px solid #eee;
+    .faq-badge {
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 6px 16px 6px 6px;
+      border: 1.5px solid #f5f5f5;
+      border-radius: 18px;
+      background: #ffffff;
+      font-size: 14px;
+      font-weight: 500;
+      color: #2e2e2e;
+      line-height: 20px;
+    }
+
+    .faq-badge-icon {
+      width: 24px;
+      height: 24px;
       border-radius: 20px;
-      margin-bottom: 20px;
+      background: #f15c2a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
     }
 
     .faq-left h2 {
-      font-size: 48px;
-      margin: 10px 0;
+      font-size: 58px;
+      line-height: 1.12;
+      letter-spacing: -0.03em;
+      color: #2e2e2e;
+      margin: 0;
+      max-width: 420px;
     }
 
     .faq-left p {
-      font-size: 18px;
+      margin: 0;
+      font-size: 20px;
+      line-height: 30px;
       color: #767474;
+      max-width: 420px;
     }
 
     .contact-btn {
-      margin-top: 20px;
-      padding: 12px 20px;
-      background: #F15C2A;
+      margin-top: 10px;
+      width: fit-content;
+      padding: 14px 24px;
+      background: #f15c2a;
+      border: 1.5px solid #f1762a;
       color: #fff;
-      border: none;
       border-radius: 10px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
       cursor: pointer;
     }
 
-    /* RIGHT */
+    .faq-divider-art {
+      width: 170px;
+      min-height: 420px;
+      position: relative;
+      flex-shrink: 0;
+      opacity: 0.85;
+    }
+
+    .faq-divider-art::before,
+    .faq-divider-art::after {
+      content: "";
+      position: absolute;
+      border: 1.5px solid rgba(241, 92, 42, 0.18);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .faq-divider-art::before {
+      width: 720px;
+      height: 720px;
+      left: -560px;
+      top: -210px;
+    }
+
+    .faq-divider-art::after {
+      width: 620px;
+      height: 620px;
+      left: -505px;
+      top: -160px;
+    }
+
+    .faq-divider-art svg {
+      position: absolute;
+      left: 10px;
+      bottom: 66px;
+    }
+
     .faq-right {
-      flex: 1.2;
+      width: 56%;
+      max-width: 700px;
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      z-index: 2;
     }
 
     .faq-item {
-      border-bottom: 1px solid #eee;
-      padding: 16px 0;
+      border-bottom: 1px solid #efefef;
+      padding: 0;
     }
 
     .faq-question {
+      width: 100%;
+      border: none;
+      background: transparent;
+      padding: 16px 0;
       display: flex;
-      justify-content: space-between;
-      font-size: 18px;
+      align-items: flex-start;
+      gap: 16px;
+      text-align: left;
       cursor: pointer;
     }
 
+    .faq-item-icon {
+      width: 24px;
+      height: 24px;
+      min-width: 24px;
+      border-radius: 50%;
+      border: 1.5px solid #d7d7d7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #8c8c8c;
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .faq-item.active .faq-item-icon {
+      border-color: rgba(241, 92, 42, 0.3);
+      color: #f15c2a;
+      background: rgba(241, 92, 42, 0.06);
+    }
+
+    .faq-question-text {
+      flex: 1;
+      min-width: 0;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 28px;
+      letter-spacing: -0.03em;
+      color: #2e2e2e;
+    }
+
+    .faq-arrow {
+      width: 28px;
+      min-width: 28px;
+      color: #9b9b9b;
+      font-size: 22px;
+      line-height: 22px;
+      transform: rotate(0deg);
+      transition: transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 2px;
+    }
+
+    .faq-item.active .faq-arrow {
+      transform: rotate(180deg);
+      color: #7f7f7f;
+    }
+
     .faq-answer {
-      margin-top: 10px;
-      font-size: 14px;
+      display: none;
+      padding: 0 44px 16px 40px;
+      font-size: 16px;
+      line-height: 24px;
       color: #767474;
+      margin: 0;
     }
 
-    /* 🔥 TABLET */
-    @media (max-width: 768px) {
-      .faq-container {
-        flex-direction: column;
-        gap: 30px;
-      }
-
-      .faq-left h2 {
-        font-size: 32px;
-      }
+    .faq-item.active .faq-answer {
+      display: block;
     }
 
-    /* 🔥 MOBILE (375px) */
-    @media (max-width: 375px) {
-
-      .faq-section {
-        padding: 40px 16px;
-      }
-
+    @media (max-width: 1024px) {
       .faq-left h2 {
-        font-size: 24px;
+        font-size: 44px;
       }
 
       .faq-left p {
-        font-size: 14px;
+        font-size: 18px;
+      }
+
+      .faq-question-text {
+        font-size: 18px;
+      }
+
+      .faq-divider-art {
+        width: 90px;
+      }
+
+      .faq-divider-art::before {
+        width: 520px;
+        height: 520px;
+        left: -440px;
+        top: -110px;
+      }
+
+      .faq-divider-art::after {
+        width: 430px;
+        height: 430px;
+        left: -395px;
+        top: -65px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .faq-section {
+        padding: 44px 16px !important;
+      }
+
+      .faq-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .faq-left,
+      .faq-right {
+        width: 100%;
+        max-width: 100%;
+      }
+
+      .faq-left {
+        gap: 16px;
+      }
+
+      .faq-left h2 {
+        font-size: 34px !important;
+        max-width: 100%;
+      }
+
+      .faq-left p {
+        font-size: 16px !important;
+        line-height: 26px;
+        max-width: 100%;
+      }
+
+      .faq-divider-art {
+        display: none;
       }
 
       .faq-question {
-        font-size: 16px;
+        padding: 14px 0;
+      }
+
+      .faq-question-text {
+        font-size: 17px;
+        line-height: 1.45;
       }
 
       .faq-answer {
-        font-size: 13px;
+        padding: 0 0 14px 40px;
+        font-size: 15px;
       }
 
       .contact-btn {
         width: 100%;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .faq-section {
+        padding: 36px 12px !important;
+      }
+
+      .faq-left h2 {
+        font-size: 28px !important;
+      }
+
+      .faq-badge {
+        font-size: 13px;
+      }
+
+      .faq-question {
+        gap: 12px;
+      }
+
+      .faq-question-text {
+        font-size: 16px;
+      }
+
+      .faq-answer {
+        padding-left: 36px;
+        font-size: 14px;
       }
     }
 
@@ -2437,6 +3075,145 @@
 
       [style*="width: 1px; height: 8px; background: rgba(255, 255, 255, 0.24)"] {
         display: none !important;
+      }
+    }
+
+    /* Powerful Features section responsive rules */
+    @media (max-width: 1024px) {
+      .powerful-features-section .pf-inner {
+        padding: 56px 20px !important;
+      }
+
+      .powerful-features-section .pf-heading {
+        width: 100% !important;
+        max-width: 760px !important;
+      }
+
+      .powerful-features-section .pf-heading h2 {
+        white-space: normal !important;
+        font-size: 40px !important;
+        line-height: 1.2 !important;
+      }
+
+      .powerful-features-section .pf-grid-top,
+      .powerful-features-section .pf-grid-bottom {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+      }
+
+      .powerful-features-section .pf-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      .powerful-features-section [style*="width:540px"],
+      .powerful-features-section [style*="width: 540px"],
+      .powerful-features-section [style*="width:610px"],
+      .powerful-features-section [style*="width: 610px"],
+      .powerful-features-section [style*="width:408px"],
+      .powerful-features-section [style*="width: 408px"],
+      .powerful-features-section [style*="width:456px"],
+      .powerful-features-section [style*="width: 456px"],
+      .powerful-features-section [style*="width:689px"],
+      .powerful-features-section [style*="width: 689px"] {
+        width: 100% !important;
+        max-width: 100% !important;
+      }
+
+      .powerful-features-section [style*="height:480px"],
+      .powerful-features-section [style*="height: 480px"] {
+        height: auto !important;
+      }
+
+      .powerful-features-section img[src*="flows-img.svg"] {
+        width: 100% !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .powerful-features-section .pf-inner {
+        padding: 44px 14px !important;
+      }
+
+      .powerful-features-section .pf-heading {
+        gap: 14px !important;
+      }
+
+      .powerful-features-section .pf-heading h2 {
+        font-size: 32px !important;
+      }
+
+      .powerful-features-section .pf-heading p {
+        font-size: 16px !important;
+        line-height: 1.55 !important;
+      }
+
+      .powerful-features-section .pf-card {
+        padding: 20px !important;
+      }
+
+      .powerful-features-section .pf-card-integrations [style*="margin-top: 302px"],
+      .powerful-features-section .pf-card-hosting [style*="margin-top: 40px"] {
+        margin-top: 170px !important;
+      }
+
+      .powerful-features-section .pf-card-automation {
+        gap: 36px !important;
+        padding-top: 28px !important;
+      }
+
+      .powerful-features-section .pf-card-automation > div[style*="position:absolute"] {
+        position: static !important;
+        width: 100% !important;
+        height: auto !important;
+      }
+
+      .powerful-features-section .pf-card-automation > div[style*="display:flex;    justify-content:center"] {
+        width: 100% !important;
+        justify-content: space-between !important;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .powerful-features-section .pf-inner {
+        padding: 36px 10px !important;
+        gap: 10px !important;
+      }
+
+      .powerful-features-section .pf-heading h2 {
+        font-size: 26px !important;
+      }
+
+      .powerful-features-section .pf-heading p {
+        font-size: 15px !important;
+      }
+
+      .powerful-features-section .pf-card {
+        border-radius: 16px !important;
+      }
+
+      .powerful-features-section .pf-card-integrations [style*="margin-top: 302px"],
+      .powerful-features-section .pf-card-hosting [style*="margin-top: 40px"] {
+        margin-top: 145px !important;
+      }
+
+      .powerful-features-section .pf-card-analytics [style*="margin-left: 50px"] {
+        margin-left: 0 !important;
+      }
+
+      .powerful-features-section .pf-card [style*="font-size:24px"],
+      .powerful-features-section .pf-card [style*="font-size: 24px"] {
+        font-size: 20px !important;
+      }
+
+      .powerful-features-section .pf-card [style*="font-size:16px"],
+      .powerful-features-section .pf-card [style*="font-size: 16px"] {
+        font-size: 14px !important;
+        line-height: 1.5 !important;
       }
     }
 
@@ -2990,7 +3767,6 @@
       <div class="feature-section-card">
         <div class=" ">
           <img src="./assets/icon/built-icon.svg" alt="">
-
         </div>
         <h3>Built to Scale</h3>
         <p>
@@ -3103,11 +3879,11 @@
     </div>
   </section>
 
-  <section class="" style=" background-color: #f5f5f5 ; width: 100%;">
-    <div
+  <section class="powerful-features-section" style=" background-color: #f5f5f5 ; width: 100%;">
+    <div class="pf-inner"
       style="display:flex;flex-direction:column;align-items:center;padding:80px 262px;gap: 12px;position:relative;background:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)),url('12151157_4872588.jpg');background-size:cover;background-position:center;">
       <!-- Heading Area -->
-      <div style="display:flex;flex-direction:column;align-items:center;gap:20px;width:726px;">
+      <div class="pf-heading" style="display:flex;flex-direction:column;align-items:center;gap:20px;width:726px;">
         <!-- Badge -->
         <div
           style="display:flex;align-items:center;padding:6px 16px 6px 6px;gap:12px;background:#fff;border:1.5px solid #F5F5F5;border-radius:18px;">
@@ -3135,9 +3911,9 @@
 
       </div>
       <!-- Cards Area -->
-      <div style="display:flex;gap:12px;justify-content:center;max-width:1392px;">
+      <div class="pf-grid-top" style="display:flex;gap:12px;justify-content:center;max-width:1392px;">
         <!-- Card -->
-        <div class="" style=" display: flex; ">
+        <div class="pf-card pf-card-onboarding" style=" display: flex; ">
           <div
             style="box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:0px 24px 24px;gap:0px;width:689px;height:480px;background:#FFFFFF;border-radius:20px;">
             <!-- Step Flow -->
@@ -3163,7 +3939,7 @@
           </div>
         </div>
         <!-- Stats Section -->
-        <div class=" "
+        <div class="pf-card pf-card-analytics"
           style=" display: grid; align-items: center; justify-content: space-between;padding:0px 24px 24px; background-color: #FFFFFF; border-radius:20px;">
           <div style="width:540px;display:flex;flex-direction:column;gap:30px;">
             <div style="display:flex;align-items:center;gap:6px; margin-left: 50px;">
@@ -3205,8 +3981,8 @@
 
 
 
-      <div style="display:flex; align-items:center; gap: 12px; width: 100%; justify-content: center;">
-        <div
+      <div class="pf-grid-bottom" style="display:flex; align-items:center; gap: 12px; width: 100%; justify-content: center;">
+        <div class="pf-card pf-card-integrations"
           style=" width: 456px; height: 480px;  display: grid;  align-items: center; justify-content: space-between;  padding: 0px 24px 24px;background: #FFFFFF; border-radius: 20px; ">
           <!-- Main Hero Container -->
           <div style="box-sizing: border-box;  position: relative;  ">
@@ -3286,7 +4062,7 @@
             </div>
           </div>
         </div>
-        <div
+        <div class="pf-card pf-card-automation"
           style="
               box-sizing:border-box;
               display:flex;flex-direction:column;justify-content:space-between;align-items:center;padding:80px 24px 24px;gap:112px;position:relative;width:456px;height:480px;background:#FFFFFF;border-radius:20px;">
@@ -3343,7 +4119,7 @@
             </div>
           </div>
         </div>
-        <div style=" width: 456px; height: 480px;    background: #FFFFFF; border-radius: 20px; ">
+        <div class="pf-card pf-card-hosting" style=" width: 456px; height: 480px;    background: #FFFFFF; border-radius: 20px; ">
           <div style=" margin: 70px 48px;">
             <div style="display:flex;align-items:center; justify-content:space-between; margin-bottom: 16px;">
               <div style="display:flex;align-items:center;gap:6px; ">
@@ -3850,125 +4626,103 @@
 
 
 
-  <section class="pricing">
-    <div class="container">
+  <section class="pricing-figma">
+    <img class="pricing-figma-arcs" src="./assets/figma/pricing/group-arcs.svg" alt="" aria-hidden="true">
 
-      <!-- Header -->
-      <div class="pricing-header">
-        <div class="badge">Simple, Transparent Pricing</div>
-        <h2>Choose the Plan That Fits Your Stage</h2>
-        <p>Start free, scale when you're ready. No hidden fees.</p>
-      </div>
-
-      <!-- Toggle -->
-      <div class="pricing-toggle">
-        <button class="active">Monthly</button>
-        <button>Annual <span class="save">-20%</span></button>
-      </div>
-
-      <!-- Cards -->
-      <div class="pricing-cards">
-
-        <!-- Starter -->
-        <div class="pricing-card">
-
-  <p class="trial">14-day free trial</p>
-
-  <!-- Title -->
-  <div class="plan-title">
-    <img src="./assets/icon/idea.svg" alt="">
-    <h3>Starter</h3>
-  </div>
-
-  <!-- Price -->
-  <h1 class="price">$19<span>/mo</span></h1>
-
-  <!-- Description -->
-  <p class="desc">
-    Everything you need to validate your idea and get your first customers.
-  </p>
-
-  <!-- Button -->
-  <button class="btn-outline">
-    Start free trial →
-  </button>
-
-  <!-- Features -->
-  <div class="features">
-
-    <div class="feature">
-      <span class="check"></span>
-      <p>Everything in Growth</p>
-    </div>
-
-    <div class="feature">
-      <span class="check"></span>
-      <p>Unlimited users</p>
-    </div>
-
-    <div class="feature">
-      <span class="check"></span>
-      <p>White-label solution</p>
-    </div>
-
-    <div class="feature">
-      <span class="check"></span>
-      <p>Dedicated account manager</p>
-    </div>
-
-    <div class="feature">
-      <span class="check"></span>
-      <p>24/7 phone support</p>
-    </div>
-
-    <!-- disabled -->
-    <div class="feature disabled">
-      <span class="check"></span>
-      <p>Custom integrations</p>
-    </div>
-
-    <div class="feature disabled">
-      <span class="check"></span>
-      <p>SLA guarantee 99.99%</p>
-    </div>
-
-    <div class="feature disabled">
-      <span class="check"></span>
-      <p>Advanced security (SSO, SAML)</p>
-    </div>
-
-    <div class="feature disabled">
-      <span class="check"></span>
-      <p>Custom contracts & invoicing</p>
-    </div>
-
-    <div class="feature disabled">
-      <span class="check"></span>
-      <p>Onboarding assistance</p>
-    </div>
-
-  </div>
-
-</div>
-
-        <!-- Growth -->
-        <div class="card highlight">
-          <h3>Growth</h3>
-          <h1>$49/mo</h1>
-          <p>Most value for money</p>
-          <button class="btn-primary">Start free trial</button>
+    <div class="pricing-figma-inner">
+      <div class="pricing-figma-header">
+        <div class="pricing-figma-badge">
+          <span class="pricing-figma-badge-icon"><img src="./assets/figma/pricing/badge-icon.svg" alt=""></span>
+          <span>Simple, Transparent Pricing</span>
         </div>
-
-        <!-- Scale -->
-        <div class="card">
-          <h3>Scale</h3>
-          <h1>Custom</h1>
-          <p>Advanced & enterprise features</p>
-          <button class="btn-outline">Contact sales</button>
-        </div>
-
+        <h2 class="pricing-figma-title">Choose the <span class="accent">Plan</span> That <span class="accent">Fits</span> Your <span class="accent">Stage</span></h2>
+        <p class="pricing-figma-subtitle">Start free, scale when you&rsquo;re ready. No hidden fees, no surprises.</p>
       </div>
 
+      <div class="pricing-figma-toggle">
+        <button class="pricing-toggle-pill active" type="button">Monthly</button>
+        <button class="pricing-toggle-pill" type="button">Annual <span class="pricing-toggle-save">-20%</span></button>
+      </div>
+
+      <div class="pricing-figma-grid">
+        <article class="pricing-plan">
+          <div class="pricing-plan-top">
+            <p class="pricing-plan-note">14-day free trial</p>
+            <h3 class="pricing-plan-title"><img src="./assets/figma/pricing/plan-icon.svg" alt="">Starter</h3>
+          </div>
+          <p class="pricing-plan-price">$19<span>/mo</span></p>
+          <p class="pricing-plan-desc">Everything you need to validate your idea and get your first customers.</p>
+          <button class="pricing-plan-btn" type="button">Start for free trial <img src="./assets/figma/pricing/arrow-dark.svg" alt=""></button>
+          <ul class="pricing-features-list">
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Everything in Growth</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Unlimited users</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">White-label solution</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Dedicated account manager</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">24/7 phone support</li>
+            <li class="muted"><img src="./assets/figma/pricing/check-circle.svg" alt="">Custom integrations</li>
+            <li class="muted"><img src="./assets/figma/pricing/check-circle.svg" alt="">SLA guarantee 99.99%</li>
+            <li class="muted"><img src="./assets/figma/pricing/check-circle.svg" alt="">Advanced security (SSO, SAML)</li>
+            <li class="muted"><img src="./assets/figma/pricing/check-circle.svg" alt="">Custom contracts &amp; invoicing</li>
+            <li class="muted"><img src="./assets/figma/pricing/check-circle.svg" alt="">Onboarding assistance</li>
+          </ul>
+        </article>
+
+        <article class="pricing-plan">
+          <div class="pricing-plan-top">
+            <p class="pricing-plan-note">Most value for money</p>
+            <h3 class="pricing-plan-title"><img src="./assets/figma/pricing/plan-icon.svg" alt="">Growth</h3>
+          </div>
+          <p class="pricing-plan-price">$49<span>/mo</span></p>
+          <p class="pricing-plan-desc">Everything you need to validate your idea and get your first customers.</p>
+          <button class="pricing-plan-btn featured" type="button">Start for free trial <img src="./assets/figma/pricing/arrow-light.svg" alt=""></button>
+          <ul class="pricing-features-list">
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Everything in Growth</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Unlimited users</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">White-label solution</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Dedicated account manager</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">24/7 phone support</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Custom integrations</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">SLA guarantee 99.99%</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Advanced security (SSO, SAML)</li>
+            <li class="muted"><img src="./assets/figma/pricing/check-circle.svg" alt="">Custom contracts &amp; invoicing</li>
+            <li class="muted"><img src="./assets/figma/pricing/check-circle.svg" alt="">Onboarding assistance</li>
+          </ul>
+        </article>
+
+        <article class="pricing-plan">
+          <div class="pricing-plan-top">
+            <p class="pricing-plan-note">Volume discounts available</p>
+            <h3 class="pricing-plan-title"><img src="./assets/figma/pricing/plan-icon.svg" alt="">Scale</h3>
+          </div>
+          <p class="pricing-plan-price">Custom</p>
+          <p class="pricing-plan-desc">Everything you need to validate your idea and get your first customers.</p>
+          <button class="pricing-plan-btn" type="button">Contact Sales <img src="./assets/figma/pricing/arrow-dark.svg" alt=""></button>
+          <ul class="pricing-features-list">
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Everything in Growth</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Unlimited users</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">White-label solution</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Dedicated account manager</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">24/7 phone support</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Custom integrations</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">SLA guarantee 99.99%</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Advanced security (SSO, SAML)</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Custom contracts &amp; invoicing</li>
+            <li><img src="./assets/figma/pricing/check-circle.svg" alt="">Onboarding assistance</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="pricing-figma-foot">
+        <span>SSL certificates</span>
+        <span class="v-divider"><img src="./assets/figma/pricing/divider.svg" alt=""></span>
+        <span>Daily backups</span>
+        <span class="v-divider"><img src="./assets/figma/pricing/divider.svg" alt=""></span>
+        <span>GDPR compliance</span>
+        <span class="v-divider"><img src="./assets/figma/pricing/divider.svg" alt=""></span>
+        <span>API access</span>
+        <span class="v-divider"><img src="./assets/figma/pricing/divider.svg" alt=""></span>
+        <a href="#">Check our FAQ&rsquo;s <img src="./assets/figma/pricing/faq-link-icon.svg" alt=""></a>
+      </div>
     </div>
   </section>
 
@@ -3984,7 +4738,8 @@
 
       <!-- LEFT CONTENT -->
       <div class="faq-left">
-        <div class="badge">
+        <div class="faq-badge">
+          <span class="faq-badge-icon">?</span>
           <span>Questions? Answered.</span>
         </div>
 
@@ -3994,45 +4749,60 @@
         <button class="contact-btn">Contact Us</button>
       </div>
 
+      <div class="faq-divider-art" aria-hidden="true">
+        <svg width="160" height="86" viewBox="0 0 160 86" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M3 43C14 58 31 62 50 54C65 48 77 30 94 33C112 36 116 63 133 66C145 68 153 61 157 49" stroke="#F15C2A" stroke-width="2.5" stroke-linecap="round"/>
+          <circle cx="95" cy="33" r="14" stroke="#F15C2A" stroke-width="2"/>
+          <circle cx="118" cy="44" r="13" stroke="#F15C2A" stroke-width="2"/>
+          <path d="M149 39L157 49L145 50" stroke="#F15C2A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+
       <!-- RIGHT FAQ -->
       <div class="faq-right">
 
-        <div class="faq-item active">
-          <div class="faq-question">
-            <span>Do I need a credit card to start?</span>
-            <span class="icon">⌄</span>
-          </div>
+        <div class="faq-item">
+          <button class="faq-question" type="button">
+            <span class="faq-item-icon">?</span>
+            <span class="faq-question-text">Do I need a credit card to start?</span>
+            <span class="faq-arrow">⌄</span>
+          </button>
         </div>
 
         <div class="faq-item active">
-          <div class="faq-question">
-            <span>Is there really a free trial?</span>
-            <span class="icon">⌃</span>
-          </div>
+          <button class="faq-question" type="button">
+            <span class="faq-item-icon">?</span>
+            <span class="faq-question-text">Is there really a free trial?</span>
+            <span class="faq-arrow">⌄</span>
+          </button>
           <div class="faq-answer">
-            Yes! Get full access to any plan for 14 days—no credit card required.
+            Yes! Get full access to any plan for 14 days, no credit card required. Cancel anytime if it's not the
+            right fit.
           </div>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">
-            <span>Can I cancel anytime?</span>
-            <span class="icon">⌄</span>
-          </div>
+          <button class="faq-question" type="button">
+            <span class="faq-item-icon">?</span>
+            <span class="faq-question-text">Can I cancel anytime?</span>
+            <span class="faq-arrow">⌄</span>
+          </button>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">
-            <span>What kind of support do you offer?</span>
-            <span class="icon">⌄</span>
-          </div>
+          <button class="faq-question" type="button">
+            <span class="faq-item-icon">?</span>
+            <span class="faq-question-text">What kind of support do you offer?</span>
+            <span class="faq-arrow">⌄</span>
+          </button>
         </div>
 
         <div class="faq-item">
-          <div class="faq-question">
-            <span>How quickly can I get started?</span>
-            <span class="icon">⌄</span>
-          </div>
+          <button class="faq-question" type="button">
+            <span class="faq-item-icon">?</span>
+            <span class="faq-question-text">How quickly can I get started?</span>
+            <span class="faq-arrow">⌄</span>
+          </button>
         </div>
 
       </div>
@@ -4248,12 +5018,16 @@
 
 
   <script>
-    document.querySelectorAll(".faq-question").forEach(q => {
-      q.addEventListener("click", () => {
-        q.parentElement.classList.toggle("active");
-        const answer = q.nextElementSibling;
-        if (answer) {
-          answer.style.display = answer.style.display === "block" ? "none" : "block";
+    document.querySelectorAll(".faq-question").forEach((button) => {
+      button.addEventListener("click", () => {
+        const currentItem = button.closest(".faq-item");
+        if (!currentItem) return;
+
+        const isOpen = currentItem.classList.contains("active");
+        document.querySelectorAll(".faq-item").forEach((item) => item.classList.remove("active"));
+
+        if (!isOpen) {
+          currentItem.classList.add("active");
         }
       });
     });
