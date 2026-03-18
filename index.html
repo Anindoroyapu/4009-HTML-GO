@@ -7,6 +7,10 @@
   <title>GO</title>
 
   <link rel="icon" type="image/x-icon" href="./favicon.ico">
+
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+
   <style>
     /* Mobile Responsive */
     @media (max-width: 375px) {
@@ -25,7 +29,6 @@
         font-size: 14px !important;
         line-height: 1.5 !important;
       }
-
       .navbar {
         width: 95% !important;
         padding: 10px !important;
@@ -2179,7 +2182,7 @@ border:1px solid #f0f0f0; */
 
 <body>
   <!-- Navbar -->
-  <div style="width: 100%; position:fixed; top: 0; z-index: 1000;   ">
+  <!-- <div style="width: 100%; position:fixed; top: 0; z-index: 1000;   ">
     <nav class="navbar" style="backdrop-filter: blur(15px);">
       <a class="" href="/index.html">
         <img src="./assets/main-logo.svg" alt="">
@@ -2204,7 +2207,35 @@ border:1px solid #f0f0f0; */
         <a href="/sign-in.html" class="sign-in-btn">Sign in</a>
       </div>
     </nav>
+  </div> -->
+
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none ;  " id="mySidebar">
+    <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; ">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <a href="/index.html" class="nav-item active">Home Page</a>
+  
+      <a href="/about.html" class="nav-item ">About Platform</a>
+  
+      <a href="/features.html" class="nav-item">Feature’s</a>
+  
+      <a href="/pricing.html" class="nav-item">Pricing</a>
+  
+      <a href="/contact.html" class="nav-item">Contact</a>
+    </div>
   </div>
+  
+  <!-- Page Content -->
+  <div class="w3-white" style="margin-top:5px; display: flex; align-items: center; justify-content: space-between; ">
+    <a class="" href="/index.html" style=" padding-left: 10px;">
+      <img src="./assets/main-logo.svg" alt="">
+    </a>
+    <button class="w3-button w3-gray-500 w3-xlarge" onclick="w3_open()">☰</button>
+  
+  </div>
+
+
+
+
 
   <!-- Hero Section -->
   <section class="hero" style=" padding-top:100px ;">
@@ -3943,7 +3974,16 @@ border:1px solid #f0f0f0; */
         }
       });
     });
-  </script>
+ 
+
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
 </body>
 
 </html>
