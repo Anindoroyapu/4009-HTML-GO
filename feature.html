@@ -1,893 +1,1905 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feature's Page - SaaS Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            color: #2E2E2E;
-            font-size: 60px;
-            font-family: "Inter", sans-serif;
-            font-weight: 600;
-            line-height: 70px;
-            word-wrap: break-word
+      *,
+      *::before,
+      *::after {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --primary: #f15c2a;
+        --primary-border: #f1762a;
+        --dark: #2e2e2e;
+        --text-gray: #767474;
+        --text-gray-light: #5a5a5a;
+        --bg: #f5f5f5;
+        --white: #ffffff;
+        --footer-bg: #101828;
+        --aaa: #aaaaaa;
+        --border-light: rgba(46, 46, 46, 0.12);
+        --border-orange-light: rgba(241, 92, 42, 0.12);
+        --shadow-card: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
+      }
+
+      body {
+        font-family:
+          "General Sans",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        background-color: var(--bg);
+        color: var(--dark);
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      /* ==================== HEADER SECTION ==================== */
+      .header-wrapper {
+        position: relative;
+        z-index: 1;
+        padding: 24px 260px 0;
+        overflow: hidden;
+      }
+
+      .navbar {
+        position: relative;
+        z-index: 10;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
+        border-radius: 18px;
+        padding: 12px 12px 12px 24px;
+      }
+
+      .nav-logo img {
+        height: 44px;
+        width: auto;
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        list-style: none;
+      }
+
+      .nav-links a {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-gray-light);
+        white-space: nowrap;
+      }
+
+      .nav-links a.active {
+        color: var(--primary);
+      }
+
+      .nav-separator {
+        width: 1px;
+        height: 8px;
+        background: #ccc;
+      }
+
+      .nav-actions {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .btn-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 1000px;
+        background: #fafafa;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        cursor: pointer;
+        backdrop-filter: blur(20px);
+      }
+
+      .btn-icon img {
+        width: 20px;
+        height: 20px;
+      }
+
+      .btn-signin {
+        background: var(--dark);
+        color: var(--white);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 14px 24px;
+        border-radius: 10px;
+        border: none;
+        cursor: pointer;
+        white-space: nowrap;
+        font-family: inherit;
+        backdrop-filter: blur(20px);
+      }
+
+      /* ==================== HERO SECTION ==================== */
+      .hero-section {
+        position: relative;
+        z-index: 1;
+        padding: 80px 260px 0;
+      }
+
+      .hero-card {
+        background: linear-gradient(
+          to bottom,
+          #ffffff,
+          rgba(255, 255, 255, 0.1)
+        );
+        border-radius: 16px 16px 0 0;
+        overflow: hidden;
+        position: relative;
+        min-height: 494px;
+      }
+
+      .hero-inner {
+        max-width: 1280px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        padding: 60px 30px;
+        min-height: 494px;
+      }
+
+      .hero-text {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .hero-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
+        border-radius: 18px;
+        padding: 6px 16px 6px 6px;
+        width: fit-content;
+      }
+
+      .hero-badge-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 20px;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+      }
+
+      .hero-badge-icon img {
+        width: 16px;
+        height: 16px;
+      }
+
+      .hero-badge span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--dark);
+      }
+
+      .hero-title {
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 70px;
+        letter-spacing: -1.8px;
+        color: var(--dark);
+      }
+
+      .hero-title .accent {
+        color: var(--primary);
+      }
+
+      .hero-description {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--text-gray);
+      }
+
+      /* Hero illustration - CSS Grid overlap (matches Figma) */
+      .hero-illustration {
+        flex-shrink: 0;
+        display: inline-grid;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content;
+        place-items: start;
+        line-height: 0;
+      }
+
+      .hero-illustration > * {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero-illustration .illus-woman {
+        width: 317.35px;
+        height: 314.41px;
+        margin-left: 94.65px;
+        margin-top: 59.76px;
+      }
+
+      .hero-illustration .illus-emojis {
+        display: inline-grid;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content;
+        place-items: start;
+        margin-left: 241.99px;
+        margin-top: 0;
+      }
+
+      .hero-illustration .illus-emojis > * {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero-illustration .illus-emoji1 {
+        width: 50.11px;
+        height: 48.88px;
+      }
+
+      .hero-illustration .illus-emoji2 {
+        width: 50.11px;
+        height: 48.88px;
+        margin-left: 103.75px;
+        margin-top: 39.56px;
+      }
+
+      .hero-illustration .illus-rating-group {
+        display: inline-grid;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content;
+        place-items: start;
+        margin-top: 37.6px;
+      }
+
+      .hero-illustration .illus-rating-group > * {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .hero-illustration .illus-rating {
+        width: 233.49px;
+        height: 54.55px;
+      }
+
+      .hero-illustration .illus-bubble {
+        width: 111.07px;
+        height: 52.03px;
+        margin-left: 145.06px;
+        margin-top: 47.77px;
+      }
+
+      .hero-illustration .illus-ornament {
+        width: 375.91px;
+        height: 89.63px;
+        margin-left: 32.24px;
+        margin-top: 102.43px;
+      }
+
+      .hero-illustration img {
+        width: 100%;
+        height: 100%;
+      }
+
+      /* ==================== FEATURE CARDS GRID ==================== */
+      .features-grid {
+        padding: 48px 260px 80px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .features-grid-inner {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        max-width: 1326px;
+        margin: 0 auto;
+      }
+
+      .feature-card {
+        width: calc(50% - 15px);
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .feature-card-preview {
+        background: var(--white);
+        border-radius: 20px 20px 0 0;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .feature-card-preview img {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -105px;
+        width: 588px;
+        height: auto;
+        max-width: none;
+      }
+
+      .feature-card-preview.chart3 img {
+        bottom: -106px;
+        width: 588px;
+        height: 476px;
+        object-fit: contain;
+      }
+
+      .feature-card-preview.chart65 img {
+        bottom: -47px;
+        width: 588px;
+        height: 417px;
+        object-fit: contain;
+      }
+
+      .feature-card-content {
+        background: var(--white);
+        border-radius: 0 0 20px 20px;
+        padding: 30px;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+      }
+
+      .feature-card-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        width: 100%;
+      }
+
+      .category-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        background: var(--white);
+        border: 1.5px solid var(--border-orange-light);
+        border-radius: 18px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary);
+        white-space: nowrap;
+      }
+
+      .feature-card-title {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36.8px;
+        letter-spacing: -0.9px;
+        color: var(--dark);
+        text-align: center;
+        width: 100%;
+      }
+
+      .feature-card-desc {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 26px;
+        color: var(--text-gray);
+        text-align: center;
+        width: 100%;
+      }
+
+      .tag-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2px;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .tag-pill {
+        display: inline-flex;
+        align-items: center;
+        padding: 8px 16px;
+        background: var(--white);
+        border: 1.5px solid var(--border-light);
+        border-radius: 18px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--dark);
+        white-space: nowrap;
+        height: 36px;
+      }
+
+      .tag-pill.rotated-pos {
+        transform: rotate(6deg);
+      }
+
+      .tag-pill.rotated-neg {
+        transform: rotate(-6deg);
+      }
+
+      .tag-pill.rotated-neg4 {
+        transform: rotate(-4deg);
+      }
+
+      .tag-pill.rotated-pos4 {
+        transform: rotate(4deg);
+      }
+
+      /* ==================== COMPLETE FEATURE SET ==================== */
+      .complete-features {
+        background: var(--white);
+        padding: 80px 260px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .complete-features-header {
+        text-align: center;
+        margin-bottom: 60px;
+      }
+
+      .complete-features-header h2 {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62.4px;
+        letter-spacing: -1.44px;
+        color: var(--dark);
+        margin-bottom: 16px;
+      }
+
+      .complete-features-header h2 .accent {
+        color: var(--primary);
+      }
+
+      .complete-features-header p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--text-gray);
+      }
+
+      .feature-grid-12 {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        justify-content: center;
+        max-width: 1124px;
+        margin: 0 auto;
+      }
+
+      .feature-item {
+        width: 270px;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
+        border-radius: 12px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 22px;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+      }
+
+      .feature-item-icon {
+        width: 30px;
+        height: 30px;
+        flex-shrink: 0;
+      }
+
+      .feature-item-icon img {
+        width: 100%;
+        height: 100%;
+      }
+
+      .feature-item-text {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .feature-item-text h4 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: -0.6px;
+        color: var(--dark);
+        white-space: nowrap;
+      }
+
+      .feature-item-text p {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-gray);
+      }
+
+      /* ==================== CTA SECTION ==================== */
+      .cta-footer-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-section {
+        position: relative;
+        z-index: 2;
+        padding: 60px 262px;
+        background: linear-gradient(
+          to bottom,
+          var(--bg) 0%,
+          rgba(255, 255, 255, 0) 46.635%
+        );
+      }
+
+      .cta-card {
+        background: var(--white);
+        border: 1.5px solid var(--bg);
+        border-radius: 20px;
+        padding: 48px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 48px;
+        overflow: hidden;
+        position: relative;
+        min-height: 361px;
+      }
+
+      .cta-card-bg-tl {
+        position: absolute;
+        left: -1.5px;
+        top: -1.5px;
+        width: 443px;
+        height: 441px;
+        pointer-events: none;
+        transform: rotate(180deg);
+      }
+
+      .cta-card-bg-tr {
+        position: absolute;
+        right: -1.5px;
+        top: -1.5px;
+        width: 443px;
+        height: 441px;
+        pointer-events: none;
+        transform: scaleY(-1);
+      }
+
+      .cta-card-bg-bl {
+        position: absolute;
+        left: -1.5px;
+        bottom: -1.5px;
+        width: 189px;
+        height: 249px;
+        pointer-events: none;
+      }
+
+      .cta-card-bg-br {
+        position: absolute;
+        right: -22px;
+        bottom: -25px;
+        width: 194px;
+        height: 281px;
+        pointer-events: none;
+      }
+
+      .cta-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
+        border-radius: 18px;
+        padding: 6px 16px 6px 6px;
+      }
+
+      .cta-badge-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 20px;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+      }
+
+      .cta-badge-icon img {
+        width: 16px;
+        height: 16px;
+      }
+
+      .cta-badge span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--dark);
+      }
+
+      .cta-title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62.4px;
+        letter-spacing: -1.44px;
+        color: var(--dark);
+        text-align: center;
+      }
+
+      .cta-desc {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--text-gray);
+        text-align: center;
+      }
+
+      .cta-buttons {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .btn-primary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        background: var(--primary);
+        border: 1.5px solid var(--primary-border);
+        border-radius: 10px;
+        padding: 14px 24px;
+        color: var(--white);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: nowrap;
+        cursor: pointer;
+        font-family: inherit;
+        text-decoration: none;
+      }
+
+      .btn-primary img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .btn-secondary {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--white);
+        border: 1.5px solid #f0f0f0;
+        border-radius: 10px;
+        padding: 14px 24px;
+        color: var(--dark);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: nowrap;
+        cursor: pointer;
+        font-family: inherit;
+        text-decoration: none;
+      }
+
+      /* ==================== FOOTER ==================== */
+      .footer {
+        background: var(--footer-bg);
+        padding: 40px 260px;
+        padding-top: 260px;
+        position: relative;
+        overflow: hidden;
+        margin-top: -243px;
+      }
+
+      .footer-decor-left {
+        position: absolute;
+        left: -100px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 338px;
+        height: 473px;
+        pointer-events: none;
+      }
+
+      .footer-decor-right {
+        position: absolute;
+        right: -100px;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg) scaleY(-1);
+        width: 338px;
+        height: 473px;
+        pointer-events: none;
+      }
+
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 24px;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-left {
+        max-width: 470px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
+      }
+
+      .footer-left-info {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .footer-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background: rgba(255, 255, 255, 0.16);
+        border: 1.5px solid rgba(255, 255, 255, 0.16);
+        border-radius: 18px;
+        padding: 6px 16px 6px 6px;
+        width: fit-content;
+      }
+
+      .footer-badge-icon {
+        width: 24px;
+        height: 24px;
+        border-radius: 20px;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px;
+      }
+
+      .footer-badge-icon img {
+        width: 16px;
+        height: 16px;
+      }
+
+      .footer-badge span {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--white);
+      }
+
+      .footer-heading {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 36.8px;
+        letter-spacing: -0.9px;
+        color: var(--white);
+      }
+
+      .footer-sub-text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--aaa);
+      }
+
+      .footer-social {
+        display: flex;
+        gap: 4px;
+        align-items: center;
+      }
+
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.16);
+        border: 1.5px solid rgba(255, 255, 255, 0.12);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
+      }
+
+      .social-icon.rotated-neg {
+        transform: rotate(-4deg);
+      }
+
+      .social-icon.rotated-pos {
+        transform: rotate(4deg);
+      }
+
+      .social-icon img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .footer-right {
+        display: flex;
+        gap: 48px;
+      }
+
+      .footer-col h5 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 30px;
+        color: var(--white);
+        margin-bottom: 20px;
+      }
+
+      .footer-col ul {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .footer-col ul li a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--aaa);
+      }
+
+      .footer-col ul li a:hover {
+        color: var(--white);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+        z-index: 1;
+      }
+
+      .footer-copyright {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-gray);
+      }
+
+      .footer-legal {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .footer-legal a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-gray);
+      }
+
+      .footer-legal a:hover {
+        color: var(--white);
+      }
+
+      .footer-legal-sep {
+        width: 1px;
+        height: 8px;
+        background: var(--text-gray);
+      }
+
+      /* ==================== RESPONSIVE ==================== */
+      @media (max-width: 1600px) {
+        .header-wrapper,
+        .hero-section,
+        .features-grid {
+          padding-left: 120px;
+          padding-right: 120px;
         }
+        .complete-features {
+          padding-left: 120px;
+          padding-right: 120px;
+        }
+        .cta-section {
+          padding-left: 120px;
+          padding-right: 120px;
+        }
+        .footer {
+          padding-left: 120px;
+          padding-right: 120px;
+        }
+      }
+
+      @media (max-width: 1400px) {
+        .header-wrapper,
+        .hero-section,
+        .features-grid {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        .complete-features {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        .cta-section {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        .footer {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        .hero-title {
+          font-size: 48px;
+          line-height: 58px;
+        }
+        .hero-illustration {
+          transform: scale(0.85);
+          transform-origin: center;
+        }
+        .features-grid-inner {
+          max-width: 100%;
+        }
+        .feature-grid-12 {
+          max-width: 100%;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .header-wrapper,
+        .hero-section,
+        .features-grid {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        .complete-features {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        .cta-section {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        .footer {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        .hero-card {
+          min-height: auto;
+        }
+        .hero-inner {
+          flex-direction: column;
+          text-align: center;
+          gap: 40px;
+          min-height: auto;
+        }
+        .hero-text {
+          align-items: center;
+        }
+        .hero-title {
+          font-size: 42px;
+          line-height: 52px;
+        }
+        .hero-illustration {
+          transform: scale(0.75);
+          transform-origin: top center;
+          margin-bottom: -80px;
+        }
+        .feature-card {
+          width: 100%;
+        }
+        .feature-item {
+          width: calc(33.33% - 6px);
+        }
+        .cta-title {
+          font-size: 36px;
+          line-height: 48px;
+        }
+        .complete-features-header h2 {
+          font-size: 36px;
+          line-height: 48px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .nav-links {
+          display: none;
+        }
+        .hero-title {
+          font-size: 36px;
+          line-height: 46px;
+        }
+        .hero-description {
+          font-size: 18px;
+        }
+        .hero-illustration {
+          transform: scale(0.65);
+          transform-origin: top center;
+          margin-bottom: -120px;
+        }
+        .feature-item {
+          width: calc(50% - 4px);
+        }
+        .footer-top {
+          flex-direction: column;
+          gap: 48px;
+        }
+        .footer-right {
+          flex-wrap: wrap;
+          gap: 32px;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 16px;
+          text-align: center;
+        }
+        .feature-card-preview {
+          height: 300px;
+        }
+        .feature-card-preview img,
+        .feature-card-preview.chart3 img,
+        .feature-card-preview.chart65 img {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          /* bottom: -60px; */
+        }
+        .cta-title {
+          font-size: 32px;
+          line-height: 42px;
+        }
+        .cta-card-bg-tl,
+        .cta-card-bg-tr {
+          width: 250px;
+          height: 250px;
+        }
+        .cta-card-bg-bl,
+        .cta-card-bg-br {
+          width: 120px;
+          height: 160px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .header-wrapper,
+        .hero-section,
+        .features-grid {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .complete-features {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .cta-section {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .footer {
+          padding-left: 20px;
+          padding-right: 20px;
+        }
+        .navbar {
+          padding: 8px 12px 8px 16px;
+        }
+        .hero-section {
+          padding-top: 40px;
+        }
+        .hero-title {
+          font-size: 30px;
+          line-height: 40px;
+          letter-spacing: -1px;
+        }
+        .hero-description {
+          font-size: 16px;
+          line-height: 26px;
+        }
+        .hero-illustration {
+          transform: scale(0.55);
+          transform-origin: top center;
+          margin-bottom: -150px;
+        }
+        .feature-card-title {
+          font-size: 24px;
+          line-height: 32px;
+        }
+        .feature-card-desc {
+          font-size: 14px;
+          line-height: 22px;
+        }
+        .feature-item {
+          width: 100%;
+        }
+        .cta-card {
+          padding: 32px 20px;
+          gap: 32px;
+        }
+        .cta-card-bg-tl,
+        .cta-card-bg-tr,
+        .cta-card-bg-bl,
+        .cta-card-bg-br {
+          display: none;
+        }
+        .cta-title {
+          font-size: 26px;
+          line-height: 36px;
+        }
+        .cta-desc {
+          font-size: 16px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+          width: 100%;
+        }
+        .btn-primary,
+        .btn-secondary {
+          width: 100%;
+          justify-content: center;
+        }
+        .complete-features-header h2 {
+          font-size: 28px;
+          line-height: 38px;
+        }
+        .feature-card-preview {
+          height: 220px;
+        }
+        .feature-card-preview img,
+        .feature-card-preview.chart3 img,
+        .feature-card-preview.chart65 img {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          bottom: -0px;
+        }
+        .footer {
+          margin-top: -180px;
+          padding-top: 220px;
+        }
+        .footer-heading {
+          font-size: 24px;
+          line-height: 32px;
+        }
+        .footer-sub-text {
+          font-size: 16px;
+        }
+        .footer-legal {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .header-wrapper {
+          padding-top: 16px;
+        }
+        .hero-section {
+          padding-top: 24px;
+        }
+        .hero-inner {
+          padding: 30px 16px;
+          gap: 24px;
+        }
+        .hero-title {
+          font-size: 26px;
+          line-height: 36px;
+        }
+        .hero-illustration {
+          transform: scale(0.45);
+          transform-origin: top center;
+          margin-bottom: -190px;
+        }
+        .feature-card-preview {
+          height: 180px;
+        }
+        .feature-card-preview img,
+        .feature-card-preview.chart3 img,
+        .feature-card-preview.chart65 img {
+          width: 100%;
+          max-width: 100%;
+          height: 100%;
+          bottom: -0px;
+        }
+        .tag-pills {
+          gap: 4px;
+        }
+        .tag-pill {
+          font-size: 12px;
+          padding: 6px 12px;
+          height: 32px;
+        }
+        .tag-pill.rotated-pos,
+        .tag-pill.rotated-neg,
+        .tag-pill.rotated-neg4,
+        .tag-pill.rotated-pos4 {
+          transform: none;
+        }
+        .complete-features {
+          padding-top: 48px;
+          padding-bottom: 48px;
+        }
+        .complete-features-header {
+          margin-bottom: 32px;
+        }
+        .complete-features-header h2 {
+          font-size: 24px;
+          line-height: 34px;
+        }
+        .complete-features-header p {
+          font-size: 16px;
+        }
+        .feature-item-text h4 {
+          font-size: 18px;
+          white-space: normal;
+        }
+        .cta-title {
+          font-size: 22px;
+          line-height: 32px;
+        }
+        .cta-desc {
+          font-size: 14px;
+        }
+        .footer {
+          margin-top: -140px;
+          padding-top: 180px;
+        }
+        .footer-heading {
+          font-size: 22px;
+          line-height: 30px;
+        }
+        .footer-col h5 {
+          font-size: 18px;
+          margin-bottom: 12px;
+        }
+        .footer-col ul li a {
+          font-size: 14px;
+        }
+      }
+
+      /* Hamburger menu icon for mobile */
+      .mobile-menu-btn {
+        display: none;
+        width: 40px;
+        height: 40px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .mobile-menu-btn span {
+        display: block;
+        width: 22px;
+        height: 2px;
+        background: var(--dark);
+        border-radius: 2px;
+      }
+
+      @media (max-width: 992px) {
+        .mobile-menu-btn {
+          display: flex;
+        }
+      }
     </style>
-</head>
+  </head>
+  <body>
+    <!-- ==================== HEADER + HERO WRAPPER ==================== -->
+    <div class="header-wrapper">
+      <!-- Navbar -->
+      <nav class="navbar">
+        <a href="#" class="nav-logo">
+          <img
+            src="assets/logo.svg"
+            alt="Go Logo"
+          />
+        </a>
 
-<body>
+        <ul class="nav-links">
+          <li><a href="#">Home Page</a></li>
+          <li><div class="nav-separator"></div></li>
+          <li><a href="#">About Platform</a></li>
+          <li><div class="nav-separator"></div></li>
+          <li><a href="#" class="active">Feature's</a></li>
+          <li><div class="nav-separator"></div></li>
+          <li><a href="#">Pricing</a></li>
+          <li><div class="nav-separator"></div></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
 
-
-
-    <div style="width: 100%"><span
-            style="color: #2E2E2E; font-size: 60px;  font-weight: 600; line-height: 70px; word-wrap: break-word">All the
-        </span><span
-            style="color: #F15C2A; font-size: 60px;   font-weight: 600; line-height: 70px; word-wrap: break-word">Tools
-        </span><span
-            style="color: #2E2E2E; font-size: 60px;   font-weight: 600; line-height: 70px; word-wrap: break-word">You</span><span
-            style="color: #F15C2A; font-size: 60px;   font-weight: 600; line-height: 70px; word-wrap: break-word">
-        </span><span
-            style="color: #2E2E2E; font-size: 60px;   font-weight: 600; line-height: 70px; word-wrap: break-word">Need
-            to </span><span
-            style="color: #F15C2A; font-size: 60px;   font-weight: 600; line-height: 70px; word-wrap: break-word">Grow
-        </span><span
-            style="color: #2E2E2E; font-size: 60px;   font-weight: 600; line-height: 70px; word-wrap: break-word">Faster
-            and Achieve More</span></div>
-    <div
-        style="width: 100%; color: #767474; font-size: 20px;   font-weight: 400; line-height: 30px; word-wrap: break-word">
-        Work smarter, scale quicker, and stay organized with tools created to support your business at every stage of
-        success.</div>
-
-
-    <div
-        style="width: 100%; height: 100%; justify-content: center; align-items: flex-start; gap: 30px; display: inline-flex; flex-wrap: wrap; align-content: flex-start">
-        <div
-            style="width: 648px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 2px; display: inline-flex">
-            <div
-                style="align-self: stretch; height: 400px; position: relative; background: white; overflow: hidden; border-top-left-radius: 20px; border-top-right-radius: 20px">
-                <div
-                    style="width: 588px; height: 476px; left: 30px; top: 30px; position: absolute; overflow: hidden; border-radius: 16px">
-                    <div
-                        style="width: 574.48px; height: 462.46px; left: 6.76px; top: 4.51px; position: absolute; background: white">
-                    </div>
-                    <div
-                        style="width: 50.42px; height: 11.66px; left: 81.88px; top: 416.01px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 53.63px; height: 11.82px; left: 207.88px; top: 415.86px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 54.14px; height: 11.82px; left: 361.21px; top: 415.86px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 54.41px; height: 11.66px; left: 488.34px; top: 416.01px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 7.97px; height: 11.80px; left: 61.33px; top: 362.41px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 14.72px; height: 11.48px; left: 55.30px; top: 295.98px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 16.74px; height: 11.64px; left: 53.28px; top: 229.38px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 24.58px; height: 11.80px; left: 45.44px; top: 162.62px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 456.51px; height: 155.83px; left: 83.14px; top: 184.40px; position: absolute; outline: 3px #FCB5C3 solid; outline-offset: -1.50px">
-                    </div>
-                    <div
-                        style="width: 458.58px; height: 153.51px; left: 83.14px; top: 201.54px; position: absolute; outline: 3px #962DFF solid; outline-offset: -1.50px">
-                    </div>
-                    <div
-                        style="width: 11.26px; height: 11.28px; left: 436.35px; top: 49.58px; position: absolute; background: #962DFF">
-                    </div>
-                    <div
-                        style="width: 81.46px; height: 11.69px; left: 458.02px; top: 49.37px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 11.26px; height: 11.28px; left: 436.35px; top: 77.30px; position: absolute; background: #FCB5C3">
-                    </div>
-                    <div
-                        style="width: 81.78px; height: 12.02px; left: 458.52px; top: 76.74px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 94.63px; height: 14.87px; left: 123.27px; top: 80.98px; position: absolute; background: #9291A5">
-                    </div>
-                    <div
-                        style="width: 69.12px; height: 22.70px; left: 45.59px; top: 74.32px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 83.86px; height: 19.61px; left: 45.49px; top: 44.68px; position: absolute; background: #9291A5">
-                    </div>
-                </div>
-            </div>
-            <div
-                style="align-self: stretch; padding: 30px; background: white; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 30px; display: flex">
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                    <div
-                        style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(241, 92, 42, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                        <div
-                            style="color: #F15C2A; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Analytics & Reporting</div>
-                    </div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #2E2E2E; font-size: 30px;   font-weight: 600; line-height: 36.80px; word-wrap: break-word">
-                        Advanced Analytics & Reporting.</div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #767474; font-size: 16px;   font-weight: 400; line-height: 26px; word-wrap: break-word">
-                        Get real-time insights into your business performance with our powerful analytics suite. Track
-                        KPIs, generate custom reports, and make data-driven decisions.</div>
-                </div>
-                <div
-                    style="align-self: stretch; justify-content: center; align-items: center; gap: 2px; display: inline-flex; flex-wrap: wrap; align-content: center">
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Custom Dashboard</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Data Visualization</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Report Builder</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(-6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Scheduled Reports</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Data Export</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Trend Analysis</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(-4deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Predictive Insights</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Advanced Filtering</div>
-                    </div>
-                </div>
-            </div>
+        <div class="nav-actions">
+          <button class="mobile-menu-btn" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+          <button class="btn-icon" aria-label="Theme Toggle">
+            <img
+              src="assets/icon-dark-mode.svg"
+              alt="Dark Mode"
+            />
+          </button>
+          <button class="btn-signin">Sign in</button>
         </div>
-        <div
-            style="width: 648px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 2px; display: inline-flex">
-            <div
-                style="align-self: stretch; height: 400px; position: relative; background: white; overflow: hidden; border-top-left-radius: 20px; border-top-right-radius: 20px">
-                <div
-                    style="width: 587.56px; height: 475px; left: 30px; top: 30px; position: absolute; overflow: hidden; border-radius: 16px">
-                    <div
-                        style="width: 574.05px; height: 461.49px; left: 6.75px; top: 4.50px; position: absolute; background: white">
-                    </div>
-                    <div
-                        style="width: 43.09px; height: 11.77px; left: 44.98px; top: 414.98px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 42.78px; height: 11.77px; left: 158.61px; top: 414.98px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 43.35px; height: 11.77px; left: 272.37px; top: 414.98px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 43.08px; height: 11.77px; left: 386.54px; top: 414.98px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 42.95px; height: 11.77px; left: 500.08px; top: 414.98px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 574.11px; height: 285.79px; left: 6.70px; top: 180.20px; position: absolute; background: linear-gradient(180deg, #765DFF 0%, #CFCAFF 47%, white 100%)">
-                    </div>
-                    <div
-                        style="width: 569.64px; height: 154.26px; left: 8.95px; top: 180.16px; position: absolute; outline: 4px #4A3AFF solid; outline-offset: -2px">
-                    </div>
-                    <div
-                        style="width: 24.41px; height: 24.41px; left: 191.81px; top: 246.30px; position: absolute; background: #4A3AFF">
-                    </div>
-                    <div
-                        style="width: 19.91px; height: 19.91px; left: 194.06px; top: 248.56px; position: absolute; outline: 4px white solid; outline-offset: -2px">
-                    </div>
-                    <div
-                        style="width: 73.10px; height: 56.09px; left: 167.46px; top: 181.20px; position: absolute; background: white">
-                    </div>
-                    <div
-                        style="width: 30.07px; height: 13.28px; left: 189.14px; top: 198.50px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 64.20px; height: 15.14px; left: 477.36px; top: 85.97px; position: absolute; background: #04CE00">
-                    </div>
-                    <div
-                        style="width: 24.49px; height: 24.49px; left: 442.23px; top: 80.78px; position: absolute; background: #E1F6E3">
-                    </div>
-                    <div
-                        style="width: 9.29px; height: 9.25px; left: 449.84px; top: 88.41px; position: absolute; background: #04CE00">
-                    </div>
-                    <div
-                        style="width: 91.47px; height: 32.95px; left: 449.35px; top: 43.77px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 250.55px; height: 19.30px; left: 45.56px; top: 73.26px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 86.37px; height: 15.45px; left: 45.15px; top: 44.46px; position: absolute; background: #9291A5">
-                    </div>
-                </div>
-            </div>
-            <div
-                style="align-self: stretch; padding: 30px; background: white; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 30px; display: flex">
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                    <div
-                        style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(241, 92, 42, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                        <div
-                            style="color: #F15C2A; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Team Collaboration</div>
-                    </div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #2E2E2E; font-size: 30px;   font-weight: 600; line-height: 36.80px; word-wrap: break-word">
-                        Seamless Team Collaboration.</div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #767474; font-size: 16px;   font-weight: 400; line-height: 26px; word-wrap: break-word">
-                        Work together effortlessly with tools designed for modern teams. Share files, communicate in
-                        real-time, and keep everyone on the same page.</div>
-                </div>
-                <div
-                    style="align-self: stretch; justify-content: center; align-items: center; gap: 2px; display: inline-flex; flex-wrap: wrap; align-content: center">
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Real-time Chat</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Video Calls</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Shared Workspace</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            File Storage</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Task Tracking</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Team Calendar</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(-4deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Comments & Mentions</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Activity Feed</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Cross-Team Tools</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            style="width: 648px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 2px; display: inline-flex">
-            <div
-                style="align-self: stretch; height: 400px; position: relative; background: white; overflow: hidden; border-top-left-radius: 20px; border-top-right-radius: 20px">
-                <div
-                    style="width: 587.56px; height: 475px; left: 30px; top: 30px; position: absolute; overflow: hidden; border-radius: 16px">
-                    <div
-                        style="width: 574.05px; height: 461.49px; left: 6.75px; top: 4.50px; position: absolute; background: white">
-                    </div>
-                    <div
-                        style="width: 72.28px; height: 15.02px; left: 87.80px; top: 397.79px; position: absolute; background: #9291A5">
-                    </div>
-                    <div
-                        style="width: 81.82px; height: 15.02px; left: 211.62px; top: 397.79px; position: absolute; background: #9291A5">
-                    </div>
-                    <div
-                        style="width: 73.28px; height: 11.80px; left: 469.44px; top: 397.79px; position: absolute; background: #9291A5">
-                    </div>
-                    <div
-                        style="width: 85.17px; height: 15.02px; left: 340.73px; top: 397.79px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 7.97px; height: 11.77px; left: 48.62px; top: 367.11px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 17.29px; height: 11.77px; left: 48.89px; top: 308.61px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 25.12px; height: 11.77px; left: 48.64px; top: 250.11px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 456.81px; height: 127.28px; left: 85.95px; top: 250.96px; position: absolute; background: #E5EAFC">
-                    </div>
-                    <div
-                        style="width: 456.90px; height: 76.72px; left: 86.36px; top: 301.52px; position: absolute; background: #C6D2FD">
-                    </div>
-                    <div
-                        style="width: 292.98px; height: 65.94px; left: 85.95px; top: 312.30px; position: absolute; background: #D9D9D9">
-                    </div>
-                    <div
-                        style="width: 456.81px; height: 127.28px; left: 85.95px; top: 250.96px; position: absolute; background: #C6D2FD">
-                    </div>
-                    <div
-                        style="width: 456.90px; height: 76.72px; left: 86.36px; top: 301.52px; position: absolute; background: #93AAFD">
-                    </div>
-                    <div
-                        style="width: 14.63px; height: 14.63px; left: 371.61px; top: 304.14px; position: absolute; background: #2D5BFF; outline: 2px white solid; outline-offset: -1px">
-                    </div>
-                    <div
-                        style="width: 89.99px; height: 47.19px; left: 333.93px; top: 246.82px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 69.80px; height: 17.93px; left: 343.96px; top: 258.12px; position: absolute; background: white">
-                    </div>
-                    <div
-                        style="width: 93.08px; height: 36.77px; left: 45.79px; top: 166.06px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 135.83px; height: 45.04px; left: 406.93px; top: 47.26px; position: absolute; background: #F8F8FF">
-                    </div>
-                    <div
-                        style="width: 45.26px; height: 11.64px; left: 426.32px; top: 63.94px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 10.89px; height: 6.14px; left: 513.86px; top: 66.71px; position: absolute; background: #615E83">
-                    </div>
-                    <div
-                        style="width: 121.25px; height: 23.60px; left: 44.98px; top: 74.04px; position: absolute; background: #1E1B39">
-                    </div>
-                    <div
-                        style="width: 86.37px; height: 15.45px; left: 45.15px; top: 44.46px; position: absolute; background: #9291A5">
-                    </div>
-                </div>
-            </div>
-            <div
-                style="align-self: stretch; padding: 30px; background: white; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 30px; display: flex">
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                    <div
-                        style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(241, 92, 42, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                        <div
-                            style="color: #F15C2A; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Automation</div>
-                    </div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #2E2E2E; font-size: 30px;   font-weight: 600; line-height: 36.80px; word-wrap: break-word">
-                        Powerful Automation.</div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #767474; font-size: 16px;   font-weight: 400; line-height: 26px; word-wrap: break-word">
-                        Save time and reduce errors with intelligent automation. Create custom workflows that handle
-                        repetitive tasks automatically.</div>
-                </div>
-                <div
-                    style="align-self: stretch; justify-content: center; align-items: center; gap: 2px; display: inline-flex; flex-wrap: wrap; align-content: center">
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Workflow Builder</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Automation Templates</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Conditional Logic</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(-6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Multi-Step Automations</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            App Integrations</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(4deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Webhook Support</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Scheduled & Triggered Flows</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Automation Logs</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div
-            style="width: 648px; flex-direction: column; justify-content: flex-start; align-items: center; gap: 2px; display: inline-flex">
-            <div style="width: 100%; height: 100%; position: relative; background: white; overflow: hidden; border-top-left-radius: 20px; border-top-right-radius: 20px">
-    <div style="width: 588.31px; height: 417px; left: 30px; top: 30px; position: absolute; overflow: hidden; border-radius: 16px">
-        <div style="width: 574.78px; height: 403px; left: 6.76px; top: 4.51px; position: absolute; background: white"></div>
-        <div style="width: 21.27px; height: 15.16px; left: 81.45px; top: 330.01px; position: absolute; background: #1E1B39"></div>
-        <div style="width: 28.15px; height: 28.16px; left: 44.05px; top: 323px; position: absolute; background: #FF718B"></div>
-        <div style="width: 9.84px; height: 4.92px; left: 53.16px; top: 338.34px; position: absolute; background: #FF718B"></div>
-        <div style="width: 3.54px; height: 3.54px; left: 52.87px; top: 331.83px; position: absolute; background: #FF718B"></div>
-        <div style="width: 3.56px; height: 3.53px; left: 59.82px; top: 331.83px; position: absolute; background: #FF718B"></div>
-        <div style="width: 82.94px; height: 19.59px; left: 45.84px; top: 287.50px; position: absolute; background: #615E83"></div>
-        <div style="width: 24.87px; height: 14.96px; left: 236.67px; top: 330.21px; position: absolute; background: #1E1B39"></div>
-        <div style="width: 28.15px; height: 28.16px; left: 198.53px; top: 323px; position: absolute; background: #FFEB3A"></div>
-        <div style="width: 13.14px; height: 3.58px; left: 206.02px; top: 338.98px; position: absolute; background: #FFEB3A"></div>
-        <div style="width: 3.53px; height: 3.54px; left: 207.14px; top: 331.83px; position: absolute; background: #FFEB3A"></div>
-        <div style="width: 3.56px; height: 3.55px; left: 214.11px; top: 331.83px; position: absolute; background: #FFEB3A"></div>
-        <div style="width: 66.69px; height: 15.01px; left: 200.32px; top: 287.96px; position: absolute; background: #615E83"></div>
-        <div style="width: 48.20px; height: 18.56px; left: 370.94px; top: 330.01px; position: absolute; background: #1E1B39"></div>
-        <div style="width: 28.15px; height: 28.16px; left: 332.72px; top: 323px; position: absolute; background: #7FE47E"></div>
-        <div style="width: 11.96px; height: 6.62px; left: 340.80px; top: 337.80px; position: absolute; background: #7FE47E"></div>
-        <div style="width: 3.53px; height: 3.47px; left: 341.33px; top: 331.95px; position: absolute; background: #7FE47E"></div>
-        <div style="width: 3.56px; height: 3.47px; left: 348.29px; top: 331.94px; position: absolute; background: #7FE47E"></div>
-        <div style="width: 72.35px; height: 15.45px; left: 334.50px; top: 287.50px; position: absolute; background: #615E83"></div>
-        <div style="width: 47.61px; height: 47.88px; left: 44.36px; top: 190.59px; position: absolute; background: #FF718B"></div>
-        <div style="width: 109.11px; height: 47.88px; left: 100.99px; top: 190.59px; position: absolute; background: #FFEB3A"></div>
-        <div style="width: 324.90px; height: 47.88px; left: 219.04px; top: 190.59px; position: absolute; background: #7FE47E"></div>
-        <div style="width: 255.53px; height: 24.13px; left: 45.93px; top: 73.48px; position: absolute; background: #1E1B39"></div>
-        <div style="width: 107.36px; height: 19.36px; left: 45.57px; top: 44.64px; position: absolute; background: #9291A5"></div>
-    </div>
-</div>
-            <div
-                style="align-self: stretch; padding: 30px; background: white; border-bottom-right-radius: 20px; border-bottom-left-radius: 20px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 30px; display: flex">
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                    <div
-                        style="padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(241, 92, 42, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
-                        <div
-                            style="color: #F15C2A; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Analytics & Reporting</div>
-                    </div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #2E2E2E; font-size: 30px;   font-weight: 600; line-height: 36.80px; word-wrap: break-word">
-                        Enterprise-Grade Security.</div>
-                    <div
-                        style="align-self: stretch; text-align: center; color: #767474; font-size: 16px;   font-weight: 400; line-height: 26px; word-wrap: break-word">
-                        Protect your data with bank-level security. We take security seriously so you can focus on
-                        growing your business.</div>
-                </div>
-                <div
-                    style="align-self: stretch; justify-content: center; align-items: center; gap: 2px; display: inline-flex; flex-wrap: wrap; align-content: center">
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            End-to-End Encryption</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Two-Factor Auth</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            SSO Support</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Role-Based Access</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Audit Logs</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(6deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            GDPR & SOC 2</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; transform: rotate(-4deg); transform-origin: top left; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Auto Backups</div>
-                    </div>
-                    <div
-                        style="height: 36px; padding-left: 16px; padding-right: 16px; padding-top: 8px; padding-bottom: 8px; background: white; border-radius: 18px; outline: 1.50px rgba(46, 46, 46, 0.12) solid; outline-offset: -1.50px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
-                        <div
-                            style="color: #2E2E2E; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                            Threat Detection</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div
-        style="width: 100%; height: 100%; padding-left: 330px; padding-right: 330px; padding-top: 80px; padding-bottom: 80px; background: white; flex-direction: column; justify-content: flex-start; align-items: center; gap: 60px; display: inline-flex">
-        <div
-            style="flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-            <div><span
-                    style="color: #2E2E2E; font-size: 48px;   font-weight: 600; line-height: 62.40px; word-wrap: break-word">Complete
-                </span><span
-                    style="color: #F15C2A; font-size: 48px;   font-weight: 600; line-height: 62.40px; word-wrap: break-word">Feature</span><span
-                    style="color: #2E2E2E; font-size: 48px;   font-weight: 600; line-height: 62.40px; word-wrap: break-word">
-                    Set</span></div>
-            <div style="color: #767474; font-size: 20px;   font-weight: 400; line-height: 30px; word-wrap: break-word">
-                Explore all the powerful features included in our platform.</div>
-        </div>
-
-        <div
-            style="width: 1124px; justify-content: center; align-items: center; gap: 8px; display: inline-flex; flex-wrap: wrap; align-content: center">
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15 3.75H15.0112M15 7.5H15.0112M15 11.25H15.0112M15 15H15.0112M15 18.75H15.0112M15 22.5H15.0112"
-                        stroke="#2F6BED" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="M7.5 8.75C8.34185 7.34809 9.4839 6.25 11.241 6.25C18.6699 6.25 14.4942 21.25 22.4774 21.25C24.247 21.25 25.3821 20.1446 26.25 18.75"
-                        stroke="#2F6BED" stroke-width="1.875" stroke-linecap="round" />
-                    <path
-                        d="M26.25 26.25H12.5C8.37521 26.25 6.31281 26.25 5.03141 24.9686C3.75 23.6871 3.75 21.6247 3.75 17.5V3.75"
-                        stroke="#2F6BED" stroke-width="1.875" stroke-linecap="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Advanced Analytics</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Comprehensive data insights</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15 9.375C15 11.7912 13.0412 13.75 10.625 13.75C8.20875 13.75 6.25 11.7912 6.25 9.375C6.25 6.95875 8.20875 5 10.625 5C13.0412 5 15 6.95875 15 9.375Z"
-                        stroke="#FF5820" stroke-width="1.875" />
-                    <path d="M16.875 13.75C19.2912 13.75 21.25 11.7912 21.25 9.375C21.25 6.95875 19.2912 5 16.875 5"
-                        stroke="#FF5820" stroke-width="1.875" stroke-linecap="round" />
-                    <path
-                        d="M16.4286 25H4.82143C3.53934 25 2.5 24.0406 2.5 22.8571C2.5 19.8985 5.09835 17.5 8.30357 17.5H12.9464C14.2529 17.5 15.4586 17.8985 16.4286 18.571"
-                        stroke="#FF5820" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M23.75 17.5V25M27.5 21.25H20" stroke="#FF5820" stroke-width="1.875"
-                        stroke-linecap="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Team Management</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Organize and manage teams</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M20 2.5V7.5M10 2.5V7.5" stroke="#9154E1" stroke-width="1.875" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path
-                        d="M16.25 5H13.75C9.03595 5 6.67894 5 5.21446 6.46446C3.75 7.92894 3.75 10.286 3.75 15V17.5C3.75 22.214 3.75 24.5711 5.21446 26.0355C6.67894 27.5 9.03595 27.5 13.75 27.5H16.25C20.964 27.5 23.3211 27.5 24.7855 26.0355C26.25 24.5711 26.25 22.214 26.25 17.5V15C26.25 10.286 26.25 7.92894 24.7855 6.46446C23.3211 5 20.964 5 16.25 5Z"
-                        stroke="#9154E1" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M3.75 12.5H26.25" stroke="#9154E1" stroke-width="1.875" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M13.75 17.5H20M10 17.5H10.0112M16.25 22.5H10M20 22.5H19.9888" stroke="#9154E1"
-                        stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Smart Scheduling</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Automated calendar management</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M27.5 13.75C27.5 14.7135 27.4831 15.654 27.4511 16.5621C27.3465 19.529 27.2941 21.0124 26.0874 22.2283C24.8807 23.444 23.3554 23.5093 20.3046 23.6398C19.3873 23.679 18.4373 23.7084 17.4616 23.7269C16.5353 23.7444 16.072 23.7533 15.665 23.9083C15.258 24.0633 14.9156 24.3569 14.2306 24.9441L11.5063 27.2802C11.3409 27.422 11.1302 27.5 10.9124 27.5C10.4085 27.5 10 27.0915 10 26.5876V23.6524C9.89803 23.6482 9.79644 23.6441 9.69524 23.6398C6.64461 23.5093 5.11931 23.444 3.91259 22.2281C2.70586 21.0124 2.65352 19.529 2.54886 16.5621C2.51682 15.654 2.5 14.7135 2.5 13.75C2.5 12.7865 2.51682 11.846 2.54886 10.9379C2.65352 7.97104 2.70586 6.48761 3.91259 5.27181C5.11931 4.05601 6.64462 3.99075 9.69525 3.86024C11.369 3.78863 13.1511 3.75 15 3.75"
-                        stroke="#FF5820" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M15.0061 13.75H15.0173M10.0117 13.75H10.0229" stroke="#FF5820" stroke-width="2.5"
-                        stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="M23.125 6.875L24.2188 5.78125M27.5 6.875C27.5 9.29125 25.5412 11.25 23.125 11.25C20.7088 11.25 18.75 9.29125 18.75 6.875C18.75 4.45875 20.7088 2.5 23.125 2.5C25.5412 2.5 27.5 4.45875 27.5 6.875Z"
-                        stroke="#FF5820" stroke-width="1.875" stroke-linecap="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Real-time Chat</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Instant team communication</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M25.6249 13.125V12.5C25.6249 7.78595 25.6249 5.42894 24.1605 3.96446C22.696 2.5 20.339 2.5 15.6249 2.5H14.375C9.66104 2.5 7.30404 2.5 5.83958 3.96445C4.37511 5.4289 4.37509 7.7859 4.37505 12.4999L4.375 18.125C4.37496 22.2343 4.37495 24.289 5.50985 25.6719C5.71765 25.9251 5.94983 26.1573 6.20303 26.3651C7.58596 27.5 9.64061 27.5 13.7499 27.5"
-                        stroke="#0ED70E" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M9.375 8.75H20.625" stroke="#0ED70E" stroke-width="1.875" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M9.375 15H16.875" stroke="#0ED70E" stroke-width="1.875" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path
-                        d="M25.625 25V21.25C25.625 19.4633 23.9461 17.5 21.875 17.5C19.8039 17.5 18.125 19.4633 18.125 21.25V25.625C18.125 26.6605 18.9645 27.5 20 27.5C21.0355 27.5 21.875 26.6605 21.875 25.625V21.25"
-                        stroke="#0ED70E" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Document Management</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Centralized file storage</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M23.75 25.625C24.2819 25.3863 24.7368 25.0765 25.136 24.6744C26.875 22.9224 26.875 20.1026 26.875 14.4631C26.875 8.82368 26.875 6.00393 25.136 4.25196C23.3969 2.5 20.5979 2.5 15 2.5C9.40207 2.5 6.60311 2.5 4.86405 4.25196C3.125 6.00393 3.125 8.82368 3.125 14.4631C3.125 20.1026 3.125 22.9224 4.86405 24.6744C5.2632 25.0765 5.71816 25.3863 6.25 25.625"
-                        stroke="#2F6BED" stroke-width="1.875" stroke-linecap="round" />
-                    <path d="M3.125 10.625H26.875" stroke="#2F6BED" stroke-width="1.875" stroke-linejoin="round" />
-                    <path d="M8.75 6.875H8.76122" stroke="#2F6BED" stroke-width="2.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path d="M13.75 6.875H13.7612" stroke="#2F6BED" stroke-width="2.5" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path
-                        d="M12.8245 20.4725C11.4745 20.4725 10.8964 21.4469 10.7464 22.0466C10.5964 22.6462 10.5964 24.82 10.6864 25.7194C10.9864 26.8437 11.7364 27.3085 12.4714 27.4584C13.1464 27.5184 15.9964 27.4959 16.8214 27.4959C18.0214 27.5184 18.9214 27.0686 19.2964 25.7194C19.3714 25.2696 19.4464 22.7961 19.2589 22.0466C18.8614 20.8472 17.95 20.4725 17.2 20.4725M12.8245 20.4725H17.2M12.8245 20.4725C12.8245 20.3975 12.8227 19.4395 12.8245 18.8966C12.8261 18.4005 12.7825 17.9222 13.0195 17.4845C13.9075 15.7185 16.4575 15.8984 17.0875 17.6974C17.1966 17.9935 17.2032 18.463 17.2 18.8966C17.1959 19.4506 17.2 20.4725 17.2 20.4725"
-                        stroke="#2F6BED" stroke-width="1.875" stroke-linecap="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Security Controls</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Advanced security features</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15 27.5C21.9036 27.5 27.5 21.9036 27.5 15C27.5 8.09644 21.9036 2.5 15 2.5C8.09644 2.5 2.5 8.09644 2.5 15C2.5 21.9036 8.09644 27.5 15 27.5Z"
-                        stroke="#9154E1" stroke-width="1.875" />
-                    <path
-                        d="M8.75 10.4741H14.375M14.375 10.4741H18.125M14.375 10.4741V8.75M21.25 10.4741H18.125M18.125 10.4741C17.4656 12.832 16.0849 15.0609 14.5089 17.0197M14.5089 17.0197C13.2039 18.6417 11.7651 20.0785 10.4911 21.25M14.5089 17.0197C13.7054 16.0776 12.5804 14.5533 12.2589 13.8636M14.5089 17.0197L16.9196 19.5259"
-                        stroke="#9154E1" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Multi-language Support</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Automate repetitive tasks</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M7.5 6.875C7.5 5.70672 7.5 5.1226 7.7512 4.6875C7.91576 4.40246 8.15246 4.16576 8.4375 4.0012C8.8726 3.75 9.45672 3.75 10.625 3.75H14.375C15.5432 3.75 16.1274 3.75 16.5625 4.0012C16.8475 4.16576 17.0842 4.40246 17.2487 4.6875C17.5 5.1226 17.5 5.70672 17.5 6.875C17.5 8.04328 17.5 8.6274 17.2487 9.0625C17.0842 9.34754 16.8475 9.58424 16.5625 9.7488C16.1274 10 15.5432 10 14.375 10H10.625C9.45672 10 8.8726 10 8.4375 9.7488C8.15246 9.58424 7.91576 9.34754 7.7512 9.0625C7.5 8.6274 7.5 8.04328 7.5 6.875Z"
-                        stroke="#FF0000" stroke-width="1.875" />
-                    <path
-                        d="M7.5 19.375C7.5 18.2068 7.5 17.6226 7.7512 17.1875C7.91576 16.9025 8.15246 16.6658 8.4375 16.5013C8.8726 16.25 9.45672 16.25 10.625 16.25H14.375C15.5432 16.25 16.1274 16.25 16.5625 16.5013C16.8475 16.6658 17.0842 16.9025 17.2487 17.1875C17.5 17.6226 17.5 18.2068 17.5 19.375C17.5 20.5432 17.5 21.1274 17.2487 21.5625C17.0842 21.8475 16.8475 22.0842 16.5625 22.2487C16.1274 22.5 15.5432 22.5 14.375 22.5H10.625C9.45672 22.5 8.8726 22.5 8.4375 22.2487C8.15246 22.0842 7.91576 21.8475 7.7512 21.5625C7.5 21.1274 7.5 20.5432 7.5 19.375Z"
-                        stroke="#FF0000" stroke-width="1.875" />
-                    <path
-                        d="M26.0497 21.426C27.0166 20.4591 27.5 19.9757 27.5 19.375C27.5 18.7743 27.0166 18.2909 26.0497 17.324L25.801 17.0753C24.8341 16.1084 24.3507 15.625 23.75 15.625C23.1493 15.625 22.6659 16.1084 21.699 17.0753L21.4503 17.324C20.4834 18.2909 20 18.7743 20 19.375C20 19.9757 20.4834 20.4591 21.4503 21.426L21.699 21.6747C22.6659 22.6416 23.1493 23.125 23.75 23.125C24.3507 23.125 24.8341 22.6416 25.801 21.6747L26.0497 21.426Z"
-                        stroke="#FF0000" stroke-width="1.875" />
-                    <path
-                        d="M7.50735 6.875H2.50961M2.50961 6.875V2.5M2.50961 6.875V15C2.50961 16.3796 2.32049 18.0849 3.62019 18.9536C4.25046 19.375 5.12785 19.375 6.88264 19.375M17.5028 19.375H20.0017M23.75 15.625V11.875C23.75 9.51798 23.75 8.33946 23.0181 7.60724C22.2862 6.875 21.1082 6.875 18.7522 6.875H17.5028"
-                        stroke="#FF0000" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="M27.5 27.5C26.3351 27.5 25.7528 27.5 25.2934 27.3369C24.6808 27.1194 24.1941 26.7022 23.9404 26.1771C23.75 25.7834 23.75 25.2841 23.75 24.2858V23.75"
-                        stroke="#FF0000" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Workflow Automation</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Available in 20+ languages</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M6.25 10C6.263 6.69451 6.38501 4.92626 7.52986 3.78141C8.81126 2.5 10.8737 2.5 14.9985 2.5C19.1233 2.5 21.1856 2.5 22.467 3.78141C23.6119 4.92626 23.7339 6.69451 23.7469 10M6.25 20C6.263 23.3055 6.38501 25.0737 7.52986 26.2186C8.81126 27.5 10.8737 27.5 14.9985 27.5C19.1233 27.5 21.1856 27.5 22.467 26.2186C23.6119 25.0737 23.7339 23.3055 23.7469 20"
-                        stroke="#9154E1" stroke-width="1.875" stroke-linecap="round" />
-                    <path d="M13.75 23.75H16.25" stroke="#9154E1" stroke-width="1.875" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                    <path
-                        d="M20 12.5L21.5331 13.8215C22.1777 14.377 22.5 14.6549 22.5 15C22.5 15.3451 22.1777 15.623 21.5331 16.1785L20 17.5"
-                        stroke="#9154E1" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="M10 12.5L8.46682 13.8215C7.82227 14.377 7.5 14.6549 7.5 15C7.5 15.3451 7.82227 15.623 8.46682 16.1785L10 17.5"
-                        stroke="#9154E1" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path d="M16.25 11.25L13.75 18.75" stroke="#9154E1" stroke-width="1.875" stroke-linecap="round"
-                        stroke-linejoin="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Mobile Apps</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        iOS and Android apps</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M15 10C20.5228 10 25 8.32107 25 6.25C25 4.17893 20.5228 2.5 15 2.5C9.47715 2.5 5 4.17893 5 6.25C5 8.32107 9.47715 10 15 10Z"
-                        stroke="#F15C2A" stroke-width="1.875" />
-                    <path d="M8.75 13.5522C9.50198 13.7782 10.3429 13.9645 11.25 14.1021" stroke="#F15C2A"
-                        stroke-width="1.875" stroke-linecap="round" />
-                    <path d="M15 18.75C9.47715 18.75 5 17.0711 5 15" stroke="#F15C2A" stroke-width="1.875"
-                        stroke-linecap="round" />
-                    <path d="M8.75 22.3022C9.50198 22.5282 10.3429 22.7145 11.25 22.8521" stroke="#F15C2A"
-                        stroke-width="1.875" stroke-linecap="round" />
-                    <path d="M15 27.5C9.47715 27.5 5 25.8211 5 23.75V6.25M25 6.25V15" stroke="#F15C2A"
-                        stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                    <path
-                        d="M25 24.1581L23.5322 26.0164C22.751 27.0055 22.3604 27.5 21.875 27.5C21.3896 27.5 20.999 27.0055 20.2178 26.0164L18.75 24.1581M21.875 27.391V17.5"
-                        stroke="#F15C2A" stroke-width="1.875" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 16px;   font-weight: 500; line-height: 26px; word-wrap: break-word">
-                        Data Import/Export</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Easy data migration</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M3.125 15C3.125 9.40207 3.125 6.60311 4.86405 4.86405C6.60311 3.125 9.40207 3.125 15 3.125C20.5979 3.125 23.3969 3.125 25.136 4.86405C26.875 6.60311 26.875 9.40207 26.875 15C26.875 20.5979 26.875 23.3969 25.136 25.136C23.3969 26.875 20.5979 26.875 15 26.875C9.40207 26.875 6.60311 26.875 4.86405 25.136C3.125 23.3969 3.125 20.5979 3.125 15Z"
-                        stroke="#2F6BED" stroke-width="1.875" stroke-linejoin="round" />
-                    <path
-                        d="M10.625 12.5C9.58946 12.5 8.75 11.6605 8.75 10.625C8.75 9.58946 9.58946 8.75 10.625 8.75C11.6605 8.75 12.5 9.58946 12.5 10.625C12.5 11.6605 11.6605 12.5 10.625 12.5Z"
-                        stroke="#2F6BED" stroke-width="1.875" />
-                    <path
-                        d="M19.375 21.25C20.4105 21.25 21.25 20.4105 21.25 19.375C21.25 18.3395 20.4105 17.5 19.375 17.5C18.3395 17.5 17.5 18.3395 17.5 19.375C17.5 20.4105 18.3395 21.25 19.375 21.25Z"
-                        stroke="#2F6BED" stroke-width="1.875" />
-                    <path d="M12.5 10.625H21.25" stroke="#2F6BED" stroke-width="1.875" stroke-linecap="round" />
-                    <path d="M17.5 19.375H8.75" stroke="#2F6BED" stroke-width="1.875" stroke-linecap="round" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Access Control</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Granular permissions</div>
-                </div>
-            </div>
-            <div
-                style="width: 270px; padding: 24px; background: white; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); overflow: hidden; border-radius: 12px; outline: 1.50px #F5F5F5 solid; outline-offset: -1.50px; flex-direction: column; justify-content: center; align-items: flex-start; gap: 22px; display: inline-flex">
-                <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M13.3204 21.0982C12.853 20.8754 12.2935 21.0735 12.0705 21.5407C11.8476 22.0081 12.0457 22.5676 12.513 22.7906L13.3204 21.0982ZM14.3055 23.3334L13.4979 23.8092C13.6736 24.1076 13.9997 24.2849 14.3457 24.27C14.6917 24.2551 15.0015 24.0506 15.1511 23.7383L14.3055 23.3334ZM17.5278 20.6866C17.9836 20.4411 18.1543 19.8726 17.9089 19.4167C17.6634 18.9609 17.0949 18.7903 16.639 19.0356L17.5278 20.6866ZM20.3125 21.25C20.3125 24.184 17.934 26.5625 15 26.5625V28.4375C18.9695 28.4375 22.1875 25.2195 22.1875 21.25H20.3125ZM15 26.5625C12.066 26.5625 9.6875 24.184 9.6875 21.25H7.8125C7.8125 25.2195 11.0304 28.4375 15 28.4375V26.5625ZM9.6875 21.25C9.6875 18.316 12.066 15.9375 15 15.9375V14.0625C11.0304 14.0625 7.8125 17.2805 7.8125 21.25H9.6875ZM15 15.9375C17.934 15.9375 20.3125 18.316 20.3125 21.25H22.1875C22.1875 17.2805 18.9695 14.0625 15 14.0625V15.9375ZM12.9166 21.9445C12.513 22.7906 12.5134 22.7909 12.513 22.7906C12.5129 22.7906 12.512 22.7901 12.5118 22.79C12.5114 22.7899 12.5121 22.7901 12.5118 22.79C12.5111 22.7896 12.5092 22.7888 12.5086 22.7885C12.5074 22.7879 12.5063 22.7874 12.5054 22.7869C12.5035 22.786 12.5024 22.7854 12.5019 22.7851C12.501 22.7847 12.5027 22.7856 12.507 22.7879C12.5156 22.7925 12.5339 22.8026 12.5602 22.8187C12.613 22.8511 12.6968 22.9067 12.7979 22.9886C13.0004 23.1526 13.2671 23.4176 13.4979 23.8092L15.1132 22.8574C14.7488 22.2388 14.321 21.8094 13.9779 21.5315C13.8062 21.3924 13.6544 21.2902 13.5398 21.22C13.4824 21.1849 13.434 21.1575 13.3967 21.1375C13.3782 21.1275 13.3624 21.1192 13.3495 21.1127C13.3431 21.1095 13.3375 21.1066 13.3326 21.1042C13.3301 21.103 13.3279 21.102 13.3259 21.101C13.3249 21.1005 13.3239 21.1 13.323 21.0995C13.3225 21.0994 13.322 21.0991 13.3216 21.0989C13.3214 21.0988 13.3218 21.0989 13.3216 21.0989C13.3212 21.0988 13.3204 21.0982 12.9166 21.9445ZM14.3055 23.3334C15.1511 23.7383 15.1511 23.7381 15.1511 23.7383C15.1514 23.7378 15.1517 23.737 15.1526 23.7352C15.1542 23.7317 15.1571 23.7259 15.1612 23.7176C15.1692 23.7011 15.182 23.6756 15.1991 23.642C15.2332 23.5748 15.2848 23.4757 15.3514 23.3534C15.4854 23.1077 15.6781 22.7732 15.9134 22.4172C16.4119 21.6627 16.9983 20.9716 17.5278 20.6866L16.639 19.0356C15.6664 19.5591 14.8639 20.6042 14.349 21.3836C14.0775 21.7946 13.8575 22.1766 13.7052 22.4556C13.629 22.5956 13.569 22.711 13.5275 22.7925C13.5067 22.8334 13.4906 22.8659 13.4792 22.8889C13.4736 22.9004 13.4691 22.9095 13.466 22.9161C13.4644 22.9194 13.463 22.9221 13.462 22.9241C13.4615 22.9251 13.4611 22.926 13.4608 22.9268C13.4606 22.9271 13.4609 22.9265 13.4608 22.9268C13.4606 22.927 13.4602 22.928 13.4601 22.928C13.4601 22.9282 13.46 22.9284 14.3055 23.3334Z"
-                        fill="#9154E1" />
-                    <path
-                        d="M21.875 10V9.0625H21.8727L21.875 10ZM11.9375 10.7495C12.3514 11.0605 12.9391 10.9771 13.2501 10.5631C13.5611 10.1492 13.4777 9.56149 13.0638 9.25047L11.9375 10.7495ZM24.4438 19.5467C24.0109 19.831 23.8904 20.4121 24.1746 20.845C24.4588 21.2778 25.04 21.3983 25.4729 21.1141L24.4438 19.5467ZM4.51846 20.8104C4.93679 21.1155 5.52324 21.0238 5.82835 20.6054C6.13345 20.1871 6.04168 19.6006 5.62335 19.2955L4.51846 20.8104ZM20.2906 12.0733C20.0549 12.5343 20.2376 13.0991 20.6986 13.3348C21.1596 13.5704 21.7245 13.3878 21.9601 12.9268L20.2906 12.0733ZM15 3.4375C18.2792 3.4375 20.9375 6.09581 20.9375 9.375H22.8125C22.8125 5.06027 19.3148 1.5625 15 1.5625V3.4375ZM21.875 10.9375C24.4639 10.9375 26.5625 13.0361 26.5625 15.625H28.4375C28.4375 12.0006 25.4994 9.0625 21.875 9.0625V10.9375ZM21.8493 10.9376L21.8773 10.9375L21.8727 9.0625L21.8446 9.06258L21.8493 10.9376ZM20.9375 9.375C20.9375 9.55758 20.9293 9.73799 20.9132 9.91593L22.7806 10.0842C22.8018 9.85041 22.8125 9.61384 22.8125 9.375H20.9375ZM3.4375 15C3.4375 12.2384 5.54537 9.96803 8.23934 9.71166L8.06171 7.8451C4.41457 8.19216 1.5625 11.2625 1.5625 15H3.4375ZM8.23934 9.71166C8.40716 9.69569 8.57749 9.6875 8.75 9.6875V7.8125C8.51809 7.8125 8.28849 7.82351 8.06171 7.8451L8.23934 9.71166ZM9.08459 8.85868C9.34565 5.82172 11.8949 3.4375 15 3.4375V1.5625C10.9132 1.5625 7.56017 4.69982 7.21648 8.69809L9.08459 8.85868ZM8.75 9.6875C9.94726 9.6875 11.0496 10.0824 11.9375 10.7495L13.0638 9.25047C11.8623 8.34779 10.3673 7.8125 8.75 7.8125V9.6875ZM26.5625 15.625C26.5625 17.2642 25.7219 18.7076 24.4438 19.5467L25.4729 21.1141C27.2565 19.943 28.4375 17.9221 28.4375 15.625H26.5625ZM5.62335 19.2955C4.29659 18.3279 3.4375 16.7642 3.4375 15H1.5625C1.5625 17.3886 2.72859 19.5049 4.51846 20.8104L5.62335 19.2955ZM20.9132 9.91593C20.8438 10.6876 20.6266 11.4158 20.2906 12.0733L21.9601 12.9268C22.4031 12.0601 22.6891 11.0997 22.7806 10.0842L20.9132 9.91593Z"
-                        fill="#9154E1" />
-                </svg>
-
-                <div
-                    style="align-self: stretch; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 8px; display: flex">
-                    <div
-                        style="color: #2E2E2E; font-size: 20px;   font-weight: 600; line-height: 30px; word-wrap: break-word">
-                        Cloud Storage</div>
-                    <div
-                        style="align-self: stretch; color: #767474; font-size: 14px;   font-weight: 500; line-height: 20px; word-wrap: break-word">
-                        Unlimited cloud storage</div>
-                </div>
-            </div>
-        </div>
+      </nav>
     </div>
 
-</body>
+    <!-- ==================== HERO SECTION ==================== -->
+    <div class="hero-section">
+      <div class="hero-card">
+        <div class="hero-inner">
+          <div class="hero-text">
+            <div class="hero-badge">
+              <div class="hero-badge-icon">
+                <img
+                  src="assets/icon-badge-star.svg"
+                  alt=""
+                />
+              </div>
+              <span>Our Feature's</span>
+            </div>
+            <h1 class="hero-title">
+              All the <span class="accent">Tools </span>You Need to
+              <span class="accent">Grow </span>Faster and Achieve More
+            </h1>
+            <p class="hero-description">
+              Work smarter, scale quicker, and stay organized with tools created
+              to support your business at every stage of success.
+            </p>
+          </div>
+          <div class="hero-illustration">
+            <div class="illus-woman">
+              <img
+                src="assets/hero-woman.svg"
+                alt="Woman illustration"
+              />
+            </div>
+            <div class="illus-emojis">
+              <div class="illus-emoji1">
+                <img
+                  src="assets/hero-emoji-1.svg"
+                  alt=""
+                />
+              </div>
+              <div class="illus-emoji2">
+                <img
+                  src="assets/hero-emoji-2.svg"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="illus-rating-group">
+              <div class="illus-rating">
+                <img
+                  src="assets/hero-rating.svg"
+                  alt="Rating"
+                />
+              </div>
+              <div class="illus-bubble">
+                <img
+                  src="assets/hero-chat-bubble.svg"
+                  alt="Chat bubble"
+                />
+              </div>
+            </div>
+            <div class="illus-ornament">
+              <img
+                src="assets/hero-ornament.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <!-- ==================== FEATURE CARDS GRID ==================== -->
+    <div class="features-grid">
+      <div class="features-grid-inner">
+        <!-- Card 1: Advanced Analytics & Reporting -->
+        <div class="feature-card">
+          <div class="feature-card-preview chart3">
+            <img
+              src="assets/chart-analytics.svg"
+              alt="Analytics Chart"
+            />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-card-info">
+              <span class="category-badge">Analytics &amp; Reporting</span>
+              <h3 class="feature-card-title">
+                Advanced Analytics &amp; Reporting.
+              </h3>
+              <p class="feature-card-desc">
+                Get real-time insights into your business performance with our
+                powerful analytics suite. Track KPIs, generate custom reports,
+                and make data-driven decisions.
+              </p>
+            </div>
+            <div class="tag-pills">
+              <span class="tag-pill rotated-pos">Custom Dashboard</span>
+              <span class="tag-pill">Data Visualization</span>
+              <span class="tag-pill">Report Builder</span>
+              <span class="tag-pill rotated-neg">Scheduled Reports</span>
+              <span class="tag-pill">Data Export</span>
+              <span class="tag-pill rotated-pos">Trend Analysis</span>
+              <span class="tag-pill rotated-neg4">Predictive Insights</span>
+              <span class="tag-pill">Advanced Filtering</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 2: Seamless Team Collaboration -->
+        <div class="feature-card">
+          <div class="feature-card-preview">
+            <img
+              src="assets/chart-collaboration.svg"
+              alt="Team Collaboration Chart"
+            />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-card-info">
+              <span class="category-badge">Team Collaboration</span>
+              <h3 class="feature-card-title">Seamless Team Collaboration.</h3>
+              <p class="feature-card-desc">
+                Work together effortlessly with tools designed for modern teams.
+                Share files, communicate in real-time, and keep everyone on the
+                same page.
+              </p>
+            </div>
+            <div class="tag-pills">
+              <span class="tag-pill rotated-pos">Real-time Chat</span>
+              <span class="tag-pill">Video Calls</span>
+              <span class="tag-pill">Shared Workspace</span>
+              <span class="tag-pill rotated-pos">File Storage</span>
+              <span class="tag-pill">Task Tracking</span>
+              <span class="tag-pill rotated-pos">Team Calendar</span>
+              <span class="tag-pill rotated-neg4">Comments &amp; Mentions</span>
+              <span class="tag-pill rotated-pos">Activity Feed</span>
+              <span class="tag-pill">Cross-Team Tools</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 3: Powerful Automation -->
+        <div class="feature-card">
+          <div class="feature-card-preview">
+            <img
+              src="assets/chart-collaboration.svg"
+              alt="Automation Chart"
+            />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-card-info">
+              <span class="category-badge">Automation</span>
+              <h3 class="feature-card-title">Powerful Automation.</h3>
+              <p class="feature-card-desc">
+                Save time and reduce errors with intelligent automation. Create
+                custom workflows that handle repetitive tasks automatically.
+              </p>
+            </div>
+            <div class="tag-pills">
+              <span class="tag-pill rotated-pos">Workflow Builder</span>
+              <span class="tag-pill">Automation Templates</span>
+              <span class="tag-pill">Conditional Logic</span>
+              <span class="tag-pill rotated-neg">Multi-Step Automations</span>
+              <span class="tag-pill rotated-pos">App Integrations</span>
+              <span class="tag-pill rotated-pos4">Webhook Support</span>
+              <span class="tag-pill">Scheduled &amp; Triggered Flows</span>
+              <span class="tag-pill rotated-pos">Automation Logs</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Card 4: Enterprise-Grade Security -->
+        <div class="feature-card">
+          <div class="feature-card-preview chart65">
+            <img
+              src="assets/chart-security.svg"
+              alt="Security Chart"
+            />
+          </div>
+          <div class="feature-card-content">
+            <div class="feature-card-info">
+              <span class="category-badge">Analytics &amp; Reporting</span>
+              <h3 class="feature-card-title">Enterprise-Grade Security.</h3>
+              <p class="feature-card-desc">
+                Protect your data with bank-level security. We take security
+                seriously so you can focus on growing your business.
+              </p>
+            </div>
+            <div class="tag-pills">
+              <span class="tag-pill rotated-pos">End-to-End Encryption</span>
+              <span class="tag-pill">Two-Factor Auth</span>
+              <span class="tag-pill">SSO Support</span>
+              <span class="tag-pill rotated-pos">Role-Based Access</span>
+              <span class="tag-pill">Audit Logs</span>
+              <span class="tag-pill rotated-pos">GDPR &amp; SOC 2</span>
+              <span class="tag-pill rotated-neg4">Auto Backups</span>
+              <span class="tag-pill">Threat Detection</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==================== COMPLETE FEATURE SET ==================== -->
+    <section class="complete-features">
+      <div class="complete-features-header">
+        <h2>Complete <span class="accent">Feature</span> Set</h2>
+        <p>Explore all the powerful features included in our platform.</p>
+      </div>
+      <div class="feature-grid-12">
+        <!-- Row 1 -->
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-analytics.svg"
+              alt="Analytics"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Advanced Analytics</h4>
+            <p>Comprehensive data insights</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-team.svg"
+              alt="Team"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Team Management</h4>
+            <p>Organize and manage teams</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-calendar.svg"
+              alt="Calendar"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Smart Scheduling</h4>
+            <p>Automated calendar management</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-chat.svg"
+              alt="Chat"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Real-time Chat</h4>
+            <p>Instant team communication</p>
+          </div>
+        </div>
+
+        <!-- Row 2 -->
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-document.svg"
+              alt="Document"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Document Management</h4>
+            <p>Centralized file storage</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-security.svg"
+              alt="Security"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Security Controls</h4>
+            <p>Advanced security features</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-language.svg"
+              alt="Language"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Multi-language Support</h4>
+            <p>Automate repetitive tasks</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-workflow.svg"
+              alt="Workflow"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Workflow Automation</h4>
+            <p>Available in 20+ languages</p>
+          </div>
+        </div>
+
+        <!-- Row 3 -->
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-mobile.svg"
+              alt="Mobile"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Mobile Apps</h4>
+            <p>iOS and Android apps</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-database.svg"
+              alt="Database"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Data Import/Export</h4>
+            <p>Easy data migration</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-settings.svg"
+              alt="Settings"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Access Control</h4>
+            <p>Granular permissions</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-item-icon">
+            <img
+              src="assets/icon-cloud.svg"
+              alt="Cloud"
+            />
+          </div>
+          <div class="feature-item-text">
+            <h4>Cloud Storage</h4>
+            <p>Unlimited cloud storage</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA + FOOTER WRAPPER ==================== -->
+    <div class="cta-footer-wrapper">
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <div class="cta-card">
+          <!-- Corner decorative elements -->
+          <img
+            class="cta-card-bg-tl"
+            src="assets/cta-corner-tl.svg"
+            alt=""
+          />
+          <img
+            class="cta-card-bg-tr"
+            src="assets/cta-corner-tr.svg"
+            alt=""
+          />
+          <img
+            class="cta-card-bg-bl"
+            src="assets/cta-corner-bl.svg"
+            alt=""
+          />
+          <img
+            class="cta-card-bg-br"
+            src="assets/cta-corner-br.svg"
+            alt=""
+          />
+
+          <div class="cta-content">
+            <div class="cta-badge">
+              <div class="cta-badge-icon">
+                <img
+                  src="assets/icon-pricing.svg"
+                  alt=""
+                />
+              </div>
+              <span>Simple, Transparent Pricing</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+              "
+            >
+              <h2 class="cta-title">Ready to Get Started?</h2>
+              <p class="cta-desc">
+                Try all these features free for 14 days. No credit card
+                required.
+              </p>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <a href="#" class="btn-primary">
+              Start for free trial
+              <img
+                src="assets/icon-arrow-right.svg"
+                alt="Arrow"
+              />
+            </a>
+            <a href="#" class="btn-secondary">Schedule a Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <img
+          class="footer-decor-left"
+          src="assets/footer-decor-left.svg"
+          alt=""
+        />
+        <img
+          class="footer-decor-right"
+          src="assets/footer-decor-right.svg"
+          alt=""
+        />
+
+        <div class="footer-top">
+          <div class="footer-left">
+            <div class="footer-left-info">
+              <div class="footer-badge">
+                <div class="footer-badge-icon">
+                  <img
+                    src="assets/icon-rocket.svg"
+                    alt=""
+                  />
+                </div>
+                <span>Ready to Transform Your SaaS?</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <h3 class="footer-heading">
+                  Ready to Launch Your SaaS Faster?
+                </h3>
+                <p class="footer-sub-text">
+                  The all-in-one platform for launching, growing, and scaling
+                  your SaaS—without the overwhelm.
+                </p>
+              </div>
+            </div>
+            <div class="footer-social">
+              <div class="social-icon rotated-pos">
+                <img
+                  src="assets/social-instagram.svg"
+                  alt="Instagram"
+                />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img
+                  src="assets/social-linkedin.svg"
+                  alt="LinkedIn"
+                />
+              </div>
+              <div class="social-icon">
+                <img
+                  src="assets/social-twitter.svg"
+                  alt="X/Twitter"
+                />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img
+                  src="assets/social-github.svg"
+                  alt="GitHub"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-col">
+              <h5>Product</h5>
+              <ul>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">integration</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Company</h5>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Resources</h5>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Template</a></li>
+                <li><a href="#">Guides</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2025 SaaSPlatform. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Terms &amp; Condition</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
 </html>

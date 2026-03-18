@@ -3,2890 +3,2623 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Integration Showcase - Raw HTML/CSS</title>
+    <title>About Platform - SaaS Platform</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=clash-display@400,500,600,700&display=swap"
       rel="stylesheet"
     />
-    <link rel="icon" type="image/x-icon" href="./favicon.ico" />
     <style>
-      :root {
-        --bg-color: #f9fafb;
-        --card-bg: #ffffff;
-        --text-main: #2e2e2e;
-        --text-muted: #767474;
-        --brand-purple: #7b19d8;
-        --brand-orange: #f15c2a;
-        --border-color: #f5f5f5;
-        --shadow-hero: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
-      }
-
-      * {
+      *,
+      *::before,
+      *::after {
         margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
 
+      :root {
+        --primary: #f15c2a;
+        --primary-border: #f1762a;
+        --dark: #2e2e2e;
+        --text-gray: #767474;
+        --text-gray-light: #5a5a5a;
+        --bg: #f5f5f5;
+        --white: #ffffff;
+        --footer-bg: #101828;
+        --aaa: #aaaaaa;
+        --border-light: rgba(46, 46, 46, 0.12);
+        --border-orange-light: rgba(241, 92, 42, 0.12);
+        --shadow-card: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
+        --blue: #477bff;
+        --purple: #9154e1;
+        --green: #0ed70e;
+      }
+
       body {
-        font-family: "Inter", sans-serif;
-        background-color: var(--bg-color);
-        color: var(--text-main);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        min-height: 100vh;
+        font-family:
+          "General Sans",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        background-color: var(--white);
+        color: var(--dark);
+        overflow-x: hidden;
         -webkit-font-smoothing: antialiased;
-        padding: 40px 0;
-        overflow-x: hidden; 
-        width: 100%;
+        -moz-osx-font-smoothing: grayscale;
       }
 
-      /* Navbar Styles */
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        display: block;
+        max-width: 100%;
+      }
+
+      /* ==================== HEADER SECTION ==================== */
+      .header-wrapper {
+        position: relative;
+        z-index: 1;
+        padding: 24px 260px 0;
+        overflow: hidden;
+      }
+
       .navbar {
-        width: 95%;
-        max-width: 1400px;
-        height: 76px;
-        background: #ffffff;
-        border: 1.5px solid #f5f5f5;
-        border-radius: 18px;
+        position: relative;
+        z-index: 10;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
+        border-radius: 18px;
         padding: 12px 12px 12px 24px;
-        gap: 48px;
-        margin-bottom: 40px;
       }
 
-      .logo {
-        width: 73.31px;
-        height: 43.99px;
-        background: #f15c2a;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 8px;
+      .nav-logo img {
+        height: 44px;
+        width: auto;
       }
 
       .nav-links {
         display: flex;
-        flex-direction: row;
         align-items: center;
         gap: 16px;
-        width: 516px;
-        height: 24px;
+        list-style: none;
       }
 
-      .nav-item {
-        font-size: 16px;
+      .nav-links a {
         font-weight: 500;
+        font-size: 16px;
         line-height: 24px;
-        color: #5a5a5a;
-        text-decoration: none;
+        color: var(--text-gray-light);
         white-space: nowrap;
       }
 
-      .nav-item.active {
-        color: #f15c2a;
+      .nav-links a.active {
+        color: var(--primary);
       }
 
-      .divider {
+      .nav-separator {
         width: 1px;
         height: 8px;
-        background: #e1e1e1;
+        background: #ccc;
       }
 
       .nav-actions {
         display: flex;
-        flex-direction: row;
         align-items: center;
         gap: 8px;
-        width: 146px;
-        height: 52px;
       }
 
-      .theme-toggle {
+      .btn-icon {
         width: 40px;
         height: 40px;
-        background: #fafafa;
-        backdrop-filter: blur(20px);
         border-radius: 1000px;
+        background: #fafafa;
         display: flex;
         align-items: center;
         justify-content: center;
         border: none;
         cursor: pointer;
+        backdrop-filter: blur(20px);
       }
 
-      .theme-toggle svg {
+      .btn-icon img {
         width: 20px;
         height: 20px;
-        color: #2e2e2e;
       }
-      .sign-in-btn {
-        width: 98px;
-        height: 52px;
-        background: #2e2e2e;
-        backdrop-filter: blur(20px);
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #ffffff;
-        font-size: 16px;
+
+      .btn-signin {
+        background: var(--dark);
+        color: var(--white);
         font-weight: 500;
-        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+        padding: 14px 24px;
+        border-radius: 10px;
         border: none;
         cursor: pointer;
+        white-space: nowrap;
+        font-family: inherit;
+        backdrop-filter: blur(20px);
       }
 
-      /* New Hero Section */
-      .hero-section {
-        width: 100%;
-        max-width: 1400px;
-        height: 494.17px;
+      /* ==================== HERO SECTION ==================== */
+      .about-hero {
+        padding: 0 260px;
+        padding-top: 48px;
+        padding-bottom: 80px;
+      }
+
+      .about-hero-inner {
         background: linear-gradient(
-          180deg,
-          #ffffff 0%,
-          rgba(255, 255, 255, 0.1) 100%
+          to bottom,
+          #ffffff,
+          rgba(255, 255, 255, 0.1)
         );
-        border-radius: 16px 16px 0px 0px;
+        border-radius: 16px 16px 0 0;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
+        min-height: 494px;
         position: relative;
-        margin-bottom: 60px;
       }
 
-      .hero-content {
-        width: 808px;
+      .about-hero-content {
         display: flex;
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        max-width: 808px;
         text-align: center;
       }
+
       .about-badge {
-        display: flex;
-        flex-direction: row;
+        display: inline-flex;
         align-items: center;
-        padding: 6px 16px 6px 6px;
         gap: 12px;
-        width: 183px;
-        height: 36px;
-        background: #ffffff;
-        border: 1.5px solid #f5f5f5;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
         border-radius: 18px;
+        padding: 6px 16px 6px 6px;
       }
-      .badge-icon {
+
+      .about-badge-icon {
         width: 24px;
         height: 24px;
-        background: var(--brand-orange);
         border-radius: 20px;
+        background: var(--primary);
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 4px;
       }
 
-      .badge-icon svg {
+      .about-badge-icon img {
         width: 16px;
         height: 16px;
-        color: white;
       }
 
-      .badge-text {
-        font-size: 14px;
+      .about-badge span {
         font-weight: 500;
+        font-size: 14px;
         line-height: 20px;
-        color: #2e2e2e;
+        color: var(--dark);
       }
 
-      .hero-title {
-        font-size: 60px;
+      .about-hero-title {
         font-weight: 600;
+        font-size: 60px;
         line-height: 70px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        letter-spacing: -1.8px;
+        color: var(--dark);
       }
 
-      .hero-description {
-        font-size: 20px;
+      .about-hero-title .highlight {
+        color: var(--primary);
+      }
+
+      .about-hero-desc {
         font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
-      /* Main Content Grid */
-      .main-content-row {
-        display: flex;
-        flex-direction: row;
+      /* ==================== BENTO GRID SECTION ==================== */
+      .bento-section {
+        padding: 0 260px;
+        padding-bottom: 0;
+        margin-top: -48px;
+      }
+
+      .bento-grid {
+        display: grid;
+        grid-template-columns: 688px 688px;
         gap: 24px;
-        width: 95%;
-        max-width: 1400px;
-        justify-content: center;
-        align-items: flex-start;
-        flex-wrap: wrap;
       }
 
-      /* Journey Section */
+      /* Our Journey Card (left column, top) */
       .journey-card {
-        width: 100%;
-        max-width: 688px;
-        min-height: 554px;
-        background: #ffffff;
-        border: 1.5px solid #f5f5f5;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
         border-radius: 20px;
         padding: 8px;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 60px;
       }
 
-      /* Stats Grid Section */
-      .stats-grid {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        align-content: flex-start;
-        padding: 0px;
-        gap: 16px;
-        width: 100%;
-        max-width: 688px;
-      }
-
-      .stat-info-card {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 30px;
-        gap: 24px;
-        width: 336px;
-        height: 140px;
-        border-radius: 20px;
-      }
-
-      .stat-info-icon {
+      .journey-card-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        width: 80px;
-        height: 80px;
-        border-radius: 14px;
-        flex-shrink: 0;
-      }
-
-      .stat-info-icon svg {
-        width: 48px;
-        height: 48px;
-        color: white;
-      }
-
-      .stat-info-text {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 8px;
-        flex-grow: 1;
-      }
-
-      .stat-info-value {
-        font-size: 31px;
-        font-weight: 600;
-        line-height: 38px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
-      }
-
-      .stat-info-label {
-        font-size: 20px;
-        font-weight: 400;
-        line-height: 28px;
-        color: #767474;
-      }
-
-      /* Large Stats Cards */
-      .stat-large-card {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding: 30px;
         gap: 40px;
-        width: 336px;
-        height: 242px;
-        background: #f9f9f9;
-        border: 1.5px solid #f0f0f0;
-        border-radius: 20px;
-      }
-
-      .large-card-header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 20px;
-        width: 100%;
-      }
-
-      .large-card-icon {
-        width: 62px;
-        height: 62px;
-        background: #ffffff;
-        border-radius: 14px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-shrink: 0;
-      }
-
-      .large-card-icon svg {
-        width: 40px;
-        height: 40px;
-      }
-
-      .large-card-title {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 28px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
-      }
-
-      .tech-tags {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 8px;
-        width: 100%;
-      }
-
-      .tech-tag {
-        padding: 8px 16px;
-        background: #ffffff;
-        border: 1.5px solid rgba(241, 92, 42, 0.12);
-        border-radius: 8px;
-        font-size: 14px;
-        font-weight: 500;
-        color: #f15c2a;
-      }
-
-      .support-avatars {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 16px;
-      }
-
-      .avatar-stack {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-      }
-
-      .avatar {
-        width: 48px;
-        height: 48px;
-        border: 1.5px solid #f0f0f0;
-        border-radius: 100px;
-        margin-right: -20px;
-        background-size: cover;
-        background-position: center;
-      }
-
-      .support-status {
-        font-size: 14px;
-        font-weight: 500;
-        color: #477bff;
-        margin-left: 24px;
+        padding: 16px;
       }
 
       .journey-header {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 16px;
-        gap: 40px;
-        width: 672px;
+        gap: 16px;
       }
 
       .journey-title-row {
         display: flex;
-        flex-direction: column;
-        align-items: flex-start;
         gap: 16px;
-        width: 640px;
-      }
-
-      .title-with-icon {
-        display: flex;
-        flex-direction: row;
         align-items: center;
-        gap: 16px;
-        width: 640px;
       }
 
-      .progress-icon {
+      .journey-title-row img {
         width: 40px;
         height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
       }
 
-      .progress-icon svg {
-        width: 40px;
-        height: 40px;
-        color: #f1762a;
-      }
-
-      .journey-title {
-        font-size: 24px;
+      .journey-title-row h3 {
         font-weight: 600;
-        line-height: 32px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        font-size: 24px;
+        line-height: 32.4px;
+        letter-spacing: -0.72px;
+        color: var(--dark);
+        flex: 1;
       }
 
       .journey-desc {
-        font-size: 16px;
         font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
-        color: #767474;
-        width: 640px;
+        color: var(--text-gray);
       }
 
-      .journey-meta {
+      .journey-tags {
         display: flex;
-        flex-direction: row;
         gap: 8px;
-        width: 398px;
+        flex-wrap: wrap;
       }
 
-      .meta-badge {
+      .journey-tag {
         display: flex;
-        flex-direction: row;
+        gap: 12px;
         align-items: center;
         padding: 8px 16px;
-        gap: 12px;
-        background: #ffffff;
+        background: var(--white);
         border: 1.5px solid #f0f0f0;
         border-radius: 8px;
       }
 
-      .meta-label {
-        font-size: 14px;
+      .journey-tag .label {
         font-weight: 500;
-        color: #767474;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--text-gray);
       }
 
-      .meta-value {
-        font-size: 14px;
+      .journey-tag .value {
         font-weight: 500;
-        color: #2e2e2e;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--dark);
       }
 
-      .stats-row {
+      .journey-bottom {
         display: flex;
-        flex-direction: row;
-        align-items: center;
+        gap: 12px;
         padding: 8px;
-        gap: 12px;
-        width: 672px;
       }
 
-      .stat-card {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 24px;
-        gap: 12px;
-        width: 322px;
+      .journey-stat {
+        flex: 1;
         background: #f9f9f9;
         border: 1.5px solid #f0f0f0;
         border-radius: 12px;
-        flex-grow: 1;
-      }
-
-      .stat-header {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        gap: 8px;
-      }
-
-      .stat-icon {
-        width: 24px;
-        height: 24px;
-        color: #f15c2a;
-      }
-
-      .stat-label {
-        font-size: 16px;
-        font-weight: 400;
-        color: #767474;
-      }
-
-      .stat-value {
-        font-size: 20px;
-        font-weight: 600;
-        line-height: 26px;
-        color: #2e2e2e;
-        width: 100%;
-        text-align: right;
-      }
-
-      .icon-grid {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 0;
-      }
-
-      .icon-row {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-        height: 66px;
-      }
-
-      .icon-row.row-2 {
-        margin-top: -8px;
-      }
-
-      .icon-box {
-        width: 62px;
-        height: 62px;
-        background: #ffffff;
-        border: 1.5px solid var(--border-color);
-        box-shadow: var(--shadow-hero);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 -8px;
-        flex-shrink: 0;
-        transition: transform 0.3s ease;
-        z-index: 1;
-      }
-
-      .icon-box:hover {
-        transform: scale(1.1) !important;
-        z-index: 10;
-      }
-
-      .icon-box svg {
-        width: 30px;
-        height: 30px;
-      }
-
-      /* Rotations from Figma */
-      .rotate-neg-4 {
-        transform: rotate(-4deg);
-      }
-      .rotate-pos-2 {
-        transform: rotate(2deg);
-      }
-
-      .content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 24px;
-      }
-
-      .text-group {
+        padding: 24px;
         display: flex;
         flex-direction: column;
         gap: 12px;
       }
 
-      h2 {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 32px;
-        letter-spacing: -0.03em;
-        color: var(--text-main);
-      }
-
-      p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-        color: var(--text-muted);
-      }
-
-      .badge {
-        display: inline-flex;
+      .journey-stat-header {
+        display: flex;
+        gap: 8px;
         align-items: center;
-        padding: 8px 16px;
-        background: #ffffff;
-        border: 1.5px solid rgba(123, 25, 216, 0.12);
-        border-radius: 18px;
-        text-decoration: none;
-        transition: all 0.2s ease;
       }
 
-      .badge span {
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 20px;
-        color: var(--brand-purple);
+      .journey-stat-header img {
+        width: 24px;
+        height: 24px;
       }
 
-      .badge:hover {
-        background: #fdfbff;
-        border-color: rgba(123, 25, 216, 0.25);
-        transform: translateY(-1px);
+      .journey-stat-header span {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: var(--text-gray);
       }
 
-      .milestones-card {
-        box-sizing: border-box;
+      .journey-stat-value {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 26px;
+        color: var(--dark);
+      }
+
+      /* Right column stat cards */
+      .stats-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .stat-card {
+        width: 336px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
+        padding: 30px;
+        border-radius: 20px;
+        overflow: hidden;
+      }
+
+      .stat-card.blue {
+        background: #f8faff;
+      }
+      .stat-card.orange {
+        background: #fffaf7;
+      }
+      .stat-card.purple {
+        background: #fbf8fe;
+      }
+      .stat-card.green {
+        background: #f6fef6;
+      }
+
+      .stat-icon {
+        width: 80px;
+        height: 80px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
+        padding: 10px;
+      }
+
+      .stat-icon.blue {
+        background: var(--blue);
+      }
+      .stat-icon.orange {
+        background: var(--primary-border);
+      }
+      .stat-icon.purple {
+        background: var(--purple);
+      }
+      .stat-icon.green {
+        background: var(--green);
+      }
+
+      .stat-icon img {
+        width: 48px;
+        height: 48px;
+      }
+
+      .stat-info {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 24px;
-        gap: 48px;
-        width: 688px;
-        height: 382px; /* Adjusted to match culture card height */
+        gap: 8px;
+      }
+
+      .stat-info .stat-number {
+        font-weight: 600;
+        font-size: 31px;
+        line-height: 38.4px;
+        letter-spacing: -0.93px;
+        color: var(--dark);
+      }
+
+      .stat-info .stat-label {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 28px;
+        color: var(--text-gray);
+      }
+
+      /* Tech Stack & 24/7 Support row */
+      .bottom-cards-row {
+        display: flex;
+        gap: 16px;
+        width: 690px;
+      }
+
+      .info-card {
+        flex: 1;
+        background: #f9f9f9;
+        border: 1.5px solid #f0f0f0;
+        border-radius: 20px;
+        padding: 30px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 242px;
+      }
+
+      .info-card-header {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+      }
+
+      .info-card-icon {
+        width: 62px;
+        height: 62px;
+        border-radius: 14px;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
+        padding: 10px;
+      }
+
+      .info-card-icon img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .info-card-header h4 {
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        letter-spacing: -0.6px;
+        color: var(--dark);
+        flex: 1;
+      }
+
+      .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .tech-tag {
+        padding: 8px 16px;
+        background: var(--white);
+        border: 1.5px solid var(--border-orange-light);
+        border-radius: 8px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--primary);
+      }
+
+      .support-avatars {
+        display: flex;
+        gap: 16px;
+        align-items: center;
+      }
+
+      .avatar-stack {
+        display: flex;
+        padding-right: 30px;
+      }
+
+      .avatar-stack img {
+        width: 48px;
+        height: 48px;
+        border-radius: 100px;
+        border: 1.5px solid #f0f0f0;
+        object-fit: cover;
+        margin-right: -30px;
+      }
+
+      .support-online {
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--blue);
+      }
+
+      /* Key Milestones Card (left column, bottom) */
+      .milestones-card {
         background: #fafafa;
         border: 1.5px solid #f0f0f0;
         border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 48px;
       }
 
       .milestones-header {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
         gap: 20px;
-        width: 640px;
-        height: 66px;
+        align-items: center;
       }
 
       .milestones-icon {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
         width: 66px;
         height: 66px;
-        background: #f15c2a;
         border-radius: 14px;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
         flex-shrink: 0;
+        overflow: hidden;
+        padding: 10px;
       }
 
-      .milestones-icon svg {
+      .milestones-icon img {
         width: 40px;
         height: 40px;
-        color: white;
       }
 
-      .milestones-title {
-        font-size: 24px;
+      .milestones-header h3 {
         font-weight: 600;
-        line-height: 32px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
-        flex-grow: 1;
+        font-size: 24px;
+        line-height: 32.4px;
+        letter-spacing: -0.72px;
+        color: var(--dark);
+        flex: 1;
       }
 
       .milestones-list {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
         gap: 20px;
-        width: 640px;
-        height: 208px;
       }
 
       .milestone-item {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
         gap: 4px;
-        width: 100%;
       }
 
-      .milestone-name {
-        font-size: 20px;
+      .milestone-item h5 {
         font-weight: 600;
+        font-size: 20px;
         line-height: 28px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        letter-spacing: -0.6px;
+        color: var(--dark);
       }
 
-      .milestone-desc {
-        font-size: 16px;
+      .milestone-item p {
         font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
+      /* Our Culture Card (right column, bottom) */
       .culture-card {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 24px;
-        gap: 24px;
-        width: 688px;
-        height: 382px;
         background: #f8faff;
         border: 1.5px solid #f0f0f0;
         border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        gap: 24px;
+        align-items: center;
       }
 
-      .culture-image {
-        width: 308px;
-        height: 334px;
-        background-size: cover;
-        background-position: center;
+      .culture-photo {
+        flex: 1;
         border-radius: 20px;
-        flex-shrink: 0;
+        overflow: hidden;
+        align-self: stretch;
+      }
+
+      .culture-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 20px;
       }
 
       .culture-content {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
-        padding: 0px;
         gap: 40px;
-        width: 308px;
-        height: 334px;
       }
 
       .culture-header {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 16px;
-        width: 100%;
       }
 
       .culture-title-row {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         gap: 16px;
-        width: 100%;
+        align-items: center;
       }
 
-      .culture-icon-box {
+      .culture-title-icon {
         width: 62px;
         height: 62px;
-        background: rgba(123, 25, 216, 0.08);
         border-radius: 14px;
+        background: rgba(123, 25, 216, 0.08);
         display: flex;
         align-items: center;
         justify-content: center;
         flex-shrink: 0;
+        overflow: hidden;
+        padding: 10px;
       }
 
-      .culture-icon-box svg {
+      .culture-title-icon img {
         width: 40px;
         height: 40px;
-        color: #7b19d8;
       }
 
-      .culture-title {
-        font-size: 24px;
+      .culture-title-row h3 {
         font-weight: 600;
-        line-height: 32px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        font-size: 24px;
+        line-height: 32.4px;
+        letter-spacing: -0.72px;
+        color: var(--dark);
       }
 
-      .culture-desc {
-        font-size: 16px;
+      .culture-header p {
         font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
-      .culture-list {
+      .culture-checklist {
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 12px;
-        width: 100%;
       }
 
-      .culture-item {
+      .culture-check-item {
         display: flex;
-        flex-direction: row;
-        align-items: flex-start;
         gap: 20px;
-        width: 100%;
+        align-items: flex-start;
       }
 
-      .culture-icon-wrapper {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 8px 0px;
-        gap: 10px;
+      .culture-check-item img {
         width: 24px;
-        height: 40px;
+        height: 24px;
+        margin-top: 8px;
         flex-shrink: 0;
       }
 
-      .check-icon {
-        width: 24px;
-        height: 24px;
-        color: #9154e1;
-      }
-
-      .item-text {
-        font-size: 20px;
+      .culture-check-item span {
         font-weight: 400;
+        font-size: 20px;
         line-height: 32px;
-        color: #2e2e2e;
+        color: var(--dark);
       }
 
-      .page-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
-        max-width: 1400px;
-        gap: 24px;
-      }
-
-      /* Animations */
-      @keyframes fadeInUp {
-        from {
-          opacity: 0;
-          transform: translateY(20px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
-      }
-
-      .card {
-        animation: fadeInUp 0.6s ease-out;
-      }
-
-      /* Core Values Section */
+      /* ==================== CORE VALUES SECTION ==================== */
       .values-section {
-        width: 100%;
+        background: linear-gradient(to bottom, #f5f5f5 0%, #ffffff 18.479%);
+        padding: 80px 262px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 80px 0;
         gap: 60px;
-        background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 18.48%);
-        margin-top: 80px;
       }
 
       .values-header {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 16px;
-        width: 808px;
+        align-items: center;
         text-align: center;
       }
 
       .values-title {
-        font-size: 48px;
         font-weight: 600;
-        line-height: 62px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        font-size: 48px;
+        line-height: 62.4px;
+        letter-spacing: -1.44px;
+        color: var(--dark);
       }
 
-      .values-description {
-        font-size: 20px;
+      .values-title .highlight {
+        color: var(--primary);
+      }
+
+      .values-desc {
         font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
       .values-grid {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: flex-start;
-        width: 95%;
+        width: 100%;
         max-width: 1396px;
-        gap: 0;
-        justify-content: center;
       }
 
       .value-card {
+        flex: 1;
         display: flex;
         flex-direction: column;
+        gap: 24px;
         align-items: center;
         padding: 24px;
-        gap: 24px;
-        flex: 1;
         text-align: center;
       }
 
-      .value-icon-box {
+      .value-icon {
         width: 62px;
         height: 62px;
         border-radius: 14px;
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-shrink: 0;
+        overflow: hidden;
+        padding: 10px;
       }
 
-      .value-icon-box svg {
+      .value-icon.orange {
+        background: rgba(241, 118, 42, 0.08);
+      }
+      .value-icon.green {
+        background: rgba(14, 215, 14, 0.08);
+      }
+      .value-icon.blue {
+        background: rgba(71, 123, 255, 0.08);
+      }
+      .value-icon.purple {
+        background: rgba(123, 25, 216, 0.08);
+      }
+
+      .value-icon img {
         width: 40px;
         height: 40px;
       }
 
-      .value-text-group {
+      .value-text {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 16px;
-        width: 301px;
       }
 
-      .value-name {
-        font-size: 24px;
+      .value-text h4 {
         font-weight: 600;
-        line-height: 32px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        font-size: 24px;
+        line-height: 32.4px;
+        letter-spacing: -0.72px;
+        color: var(--dark);
       }
 
-      .value-desc {
-        font-size: 16px;
+      .value-text p {
         font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
-      /* Trust & Testimonials Section */
-      .trust-section {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 80px 0;
-        background: #ffffff;
+      /* ==================== TRUSTED BY INDUSTRY LEADERS ==================== */
+      .trusted-section {
+        background: var(--white);
+        padding: 80px 262px;
       }
 
-      .trust-content {
+      .trusted-inner {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        width: 95%;
-        max-width: 1254px;
         gap: 80px;
-        justify-content: center;
+        align-items: center;
       }
 
-      .stats-group {
-        width: 486px;
-        height: 518.5px;
+      /* Left side - stat cards grid */
+      .trusted-stats {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
         position: relative;
         flex-shrink: 0;
+        max-width: 520px;
       }
 
-      .stat-box {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 30px;
+      .trusted-stat-card {
         background: #fbf8fe;
         border: 1.5px solid #f0f0f0;
         border-radius: 20px;
-        position: absolute;
+        padding: 30px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
       }
 
-      .stat-box-icon {
+      .trusted-stat-card.saas-card {
+        padding: 24px;
+        gap: 30px;
+        position: relative;
+        height: 185px;
+      }
+
+      .trusted-stat-icon {
         width: 60px;
         height: 60px;
-        background: rgba(123, 25, 216, 0.08);
         border-radius: 12px;
+        background: rgba(123, 25, 216, 0.08);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin-bottom: 20px;
+        flex-shrink: 0;
+        overflow: hidden;
+        padding: 10px;
       }
 
-      .stat-box-icon svg {
+      .trusted-stat-icon img {
         width: 34px;
         height: 34px;
-        color: #7b19d8;
       }
 
-      .stat-box-value {
-        font-size: 48px;
-        font-weight: 600;
-        line-height: 62px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
-      }
-
-      .stat-box-label {
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 34px;
-        color: #767474;
-      }
-
-      .stat-users {
-        width: 188px;
-        height: 253px;
-        left: 25px;
-        top: 0;
-      }
-      .stat-satisfaction {
-        width: 261px;
-        height: 263px;
-        left: 225px;
-        top: 58.58px;
-      }
-      .stat-verified {
-        width: 213px;
-        height: 253px;
-        left: 0;
-        top: 265px;
-      }
-
-      .stat-startup {
-        width: 261px;
-        height: 185px;
-        left: 225px;
-        top: 333.5px;
-        padding: 24px;
-        justify-content: flex-start;
-        overflow: hidden;
-      }
-
-      .startup-text {
-        font-size: 30px;
-        font-weight: 600;
-        line-height: 38px;
-        letter-spacing: -0.03em;
-        color: rgba(46, 46, 46, 0.2);
-      }
-
-      .startup-vector {
-        position: absolute;
-        width: 162.75px;
-        height: 115.65px;
-        left: 50%;
-        top: 92.5px;
-        transform: translateX(-50%);
-        background: #f15c2a;
-        mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 163 116' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 115.65L81.375 0L162.75 115.65H0Z' fill='black'/%3E%3C/svg%3E");
-        -webkit-mask: url("data:image/svg+xml,%3Csvg viewBox='0 0 163 116' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 115.65L81.375 0L162.75 115.65H0Z' fill='black'/%3E%3C/svg%3E");
-      }
-
-      .trust-main {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 688px;
-        height: 518.5px;
-      }
-
-      .trust-header {
+      .trusted-stat-content {
         display: flex;
         flex-direction: column;
         gap: 16px;
       }
 
-      .trust-title {
-        font-size: 48px;
+      .trusted-stat-number {
         font-weight: 600;
-        line-height: 62px;
-        letter-spacing: -0.03em;
-        color: #f15c2a;
+        font-size: 48px;
+        line-height: 62.4px;
+        letter-spacing: -1.44px;
+        color: var(--dark);
       }
 
-      .trust-desc {
-        font-size: 20px;
+      .trusted-stat-label {
         font-weight: 400;
+        font-size: 24px;
+        line-height: 34px;
+        color: var(--text-gray);
+      }
+
+      .saas-text {
+        font-weight: 600;
+        font-size: 30px;
+        line-height: 38.4px;
+        letter-spacing: -0.9px;
+        color: rgba(46, 46, 46, 0.2);
+      }
+
+      .saas-logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 91px;
+        width: 163px;
+        height: 116px;
+      }
+
+      /* Card positions */
+      .trusted-stat-card:nth-child(2) {
+        margin-top: 40px;
+      }
+      .trusted-stat-card:nth-child(3) {
+        margin-top: -20px;
+      }
+      .trusted-stat-card:nth-child(4) {
+        margin-top: 20px;
+      }
+
+      /* Right side */
+      .trusted-content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-self: stretch;
+      }
+
+      .trusted-heading {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .trusted-title {
+        font-weight: 600;
+        font-size: 48px;
+        line-height: 62.4px;
+        letter-spacing: -1.44px;
+        color: var(--dark);
+      }
+
+      .trusted-title .highlight {
+        color: var(--primary);
+      }
+
+      .trusted-subtitle {
+        font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
       .testimonials-row {
         display: flex;
-        flex-direction: row;
         gap: 16px;
-        width: 100%;
       }
 
       .testimonial-card {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        padding: 24px;
-        gap: 24px;
-        width: 336px;
-        height: 317px;
+        flex: 1;
         border: 1.5px solid #f0f0f0;
         border-radius: 20px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
       }
 
-      .testimonial-card.pro {
+      .testimonial-card.orange {
         background: #fffaf7;
       }
-      .testimonial-card.enterprise {
+      .testimonial-card.blue {
         background: #f8faff;
       }
 
-      .testimonial-user {
+      .testimonial-header {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         gap: 24px;
+        align-items: center;
       }
 
-      .user-avatar {
+      .testimonial-avatar {
         width: 65px;
         height: 65px;
-        border: 1.5px solid #f5f5f5;
         border-radius: 12px;
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
+        border: 1.5px solid var(--bg);
+        object-fit: cover;
+        box-shadow: var(--shadow-card);
+        flex-shrink: 0;
       }
 
-      .user-info {
+      .testimonial-info {
+        flex: 1;
         display: flex;
         flex-direction: column;
         gap: 8px;
       }
 
-      .user-name {
-        font-size: 24px;
+      .testimonial-info h5 {
         font-weight: 600;
-        line-height: 32px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        font-size: 24px;
+        line-height: 32.4px;
+        letter-spacing: -0.72px;
+        color: var(--dark);
       }
 
-      .user-title {
+      .testimonial-info p {
+        font-weight: 400;
         font-size: 16px;
-        font-weight: 400;
         line-height: 24px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
-      .testimonial-body {
-        font-size: 20px;
+      .testimonial-text {
         font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
-        color: #767474;
-        flex-grow: 1;
+        color: var(--text-gray);
       }
 
-      .plan-badge {
+      .testimonial-tag {
         display: inline-flex;
-        align-items: center;
         padding: 8px 16px;
-        background: #ffffff;
         border-radius: 8px;
-        font-size: 14px;
+        border: 1.5px solid;
+        background: var(--white);
         font-weight: 500;
-        align-self: flex-start;
+        font-size: 14px;
+        line-height: 20px;
+        width: fit-content;
       }
 
-      .plan-badge.pro {
-        border: 1.5px solid rgba(241, 92, 42, 0.12);
-        color: #f15c2a;
+      .testimonial-tag.orange {
+        color: var(--primary);
+        border-color: var(--border-orange-light);
       }
 
-      .plan-badge.enterprise {
-        border: 1.5px solid rgba(71, 123, 255, 0.12);
-        color: #477bff;
+      .testimonial-tag.blue {
+        color: var(--blue);
+        border-color: rgba(71, 123, 255, 0.12);
       }
 
-      /* Leadership Section */
+      /* ==================== LEADERSHIP SECTION ==================== */
       .leadership-section {
-        width: 100%;
+        background: #f5f5f5;
+        padding: 80px 262px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 80px 0;
         gap: 60px;
-        background: #f5f5f5;
       }
 
       .leadership-header {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 16px;
-        width: 890px;
+        align-items: center;
         text-align: center;
       }
 
       .leadership-title {
-        font-size: 48px;
         font-weight: 600;
-        line-height: 62px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        font-size: 48px;
+        line-height: 62.4px;
+        letter-spacing: -1.44px;
+        color: var(--dark);
+      }
+
+      .leadership-title .highlight {
+        color: var(--primary);
       }
 
       .leadership-desc {
-        font-size: 20px;
         font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
-        color: #767474;
+        color: var(--text-gray);
       }
 
       .leadership-grid {
         display: flex;
-        flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        width: 95%;
-        max-width: 1396px;
         gap: 24px;
-      }
-
-      .team-member-img {
-        width: 301px;
-        height: 400px;
-        background-size: cover;
-        background-position: center;
-        border-radius: 16px;
-        flex-shrink: 0;
-      }
-
-      .team-info-card {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
         justify-content: center;
-        align-items: center;
-        padding: 20px;
-        gap: 60px;
+        max-width: 1396px;
+      }
+
+      .leader-photo {
         width: 301px;
         height: 400px;
-        background: #ffffff;
-        border: 1.5px solid #f0f0f0;
         border-radius: 16px;
+        object-fit: cover;
+      }
+
+      .leader-info-card {
+        width: 301px;
+        height: 400px;
+        border-radius: 16px;
+        border: 1.5px solid #f0f0f0;
         position: relative;
         overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        padding: 20px;
       }
 
-      .team-info-card::before {
-        content: "";
+      .leader-info-bg {
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url("https://picsum.photos/seed/abstract/600/800");
-        background-size: cover;
-        opacity: 0.05;
-        pointer-events: none;
+        inset: 0;
+        border-radius: 16px;
+        z-index: 0;
       }
 
-      .team-info-icon {
+      .leader-info-bg-white {
+        position: absolute;
+        inset: 0;
+        background: var(--white);
+        border-radius: 16px;
+      }
+
+      .leader-info-bg-pattern {
+        position: absolute;
+        inset: 0;
+        object-fit: cover;
+        opacity: 0.1;
+        border-radius: 16px;
+        width: 100%;
+        height: 100%;
+      }
+
+      .leader-info-content {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 60px;
+      }
+
+      .leader-logo-icon {
         width: 62px;
         height: 62px;
-        background: #ffffff;
-        border: 1.5px solid #f5f5f5;
-        box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
         border-radius: 12px;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
         display: flex;
         align-items: center;
         justify-content: center;
-        z-index: 1;
+        box-shadow: var(--shadow-card);
+        overflow: hidden;
+        padding: 10px;
       }
 
-      .team-info-icon svg {
+      .leader-logo-icon img {
         width: 32px;
         height: 30px;
       }
 
-      .team-info-text {
+      .leader-info-details {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 24px;
-        width: 261px;
-        z-index: 1;
+        align-items: center;
       }
 
-      .team-info-names {
+      .leader-info-text {
         display: flex;
         flex-direction: column;
-        align-items: center;
         gap: 8px;
-        width: 100%;
+        text-align: center;
       }
 
-      .team-member-name {
-        font-size: 24px;
+      .leader-info-text h4 {
         font-weight: 600;
-        line-height: 32px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
-        text-align: center;
+        font-size: 24px;
+        line-height: 32.4px;
+        letter-spacing: -0.72px;
+        color: var(--dark);
       }
 
-      .team-member-role {
-        font-size: 16px;
+      .leader-info-text p {
         font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
-        color: #767474;
-        text-align: center;
+        color: var(--text-gray);
       }
 
-      .team-socials {
+      .leader-social-icons {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0px;
-        width: 90px;
-        height: 48px;
-        z-index: 1;
+        padding-right: 6px;
       }
 
-      .social-btn {
+      .leader-social-icon {
         width: 48px;
         height: 48px;
-        background: #ffffff;
-        border: 1.5px solid #f5f5f5;
-        box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07);
         border-radius: 100px;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 0 -6px;
-        cursor: pointer;
-        transition: transform 0.2s ease;
+        box-shadow: var(--shadow-card);
+        overflow: hidden;
+        padding: 10px;
+        margin-right: -6px;
       }
 
-      .social-btn:hover {
-        transform: translateY(-2px);
-        z-index: 2;
-      }
-
-      .social-btn svg {
+      .leader-social-icon img {
         width: 24px;
         height: 24px;
       }
 
-      /* CTA Section */
-      .cta-container {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 80px 0;
-        background: #f5f5f5;
+      /* ==================== CTA SECTION ==================== */
+      .cta-footer-wrapper {
+        position: relative;
+        z-index: 1;
+      }
+
+      .cta-section {
+        position: relative;
+        z-index: 2;
+        padding: 60px 262px;
+        background: linear-gradient(
+          to bottom,
+          #f5f5f5 0%,
+          rgba(255, 255, 255, 0) 46.635%
+        );
       }
 
       .cta-card {
-        box-sizing: border-box;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
+        border-radius: 20px;
+        padding: 48px;
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 48px;
         gap: 48px;
-        isolation: isolate;
-        width: 95%;
-        max-width: 1396px;
-        min-height: 361px;
-        background: #ffffff;
-        border: 1.5px solid #f5f5f5;
-        border-radius: 20px;
-        position: relative;
         overflow: hidden;
+        position: relative;
+        min-height: 361px;
       }
 
-      .cta-header {
+      .cta-card-bg-tl {
+        position: absolute;
+        left: -1.5px;
+        top: -1.5px;
+        width: 443px;
+        height: 441px;
+        pointer-events: none;
+        transform: rotate(180deg);
+      }
+
+      .cta-card-bg-tr {
+        position: absolute;
+        right: -1.5px;
+        top: -1.5px;
+        width: 443px;
+        height: 441px;
+        pointer-events: none;
+        transform: scaleY(-1);
+      }
+
+      .cta-card-bg-bl {
+        position: absolute;
+        left: -1.5px;
+        bottom: -1.5px;
+        width: 189px;
+        height: 249px;
+        pointer-events: none;
+      }
+
+      .cta-card-bg-br {
+        position: absolute;
+        right: -22px;
+        bottom: -25px;
+        width: 194px;
+        height: 281px;
+        pointer-events: none;
+      }
+
+      .cta-content {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
         gap: 20px;
-        width: 546px;
+        position: relative;
         z-index: 1;
       }
 
       .cta-badge {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
+        display: inline-flex;
         align-items: center;
-        padding: 6px 16px 6px 6px;
         gap: 12px;
-        width: 237px;
-        height: 36px;
-        background: #ffffff;
-        border: 1.5px solid #f5f5f5;
+        background: var(--white);
+        border: 1.5px solid var(--bg);
         border-radius: 18px;
+        padding: 6px 16px 6px 6px;
       }
 
       .cta-badge-icon {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 4px;
-        gap: 4px;
         width: 24px;
         height: 24px;
-        background: #f15c2a;
         border-radius: 20px;
+        background: var(--primary);
+        display: flex;
+        align-items: center;
         justify-content: center;
+        padding: 4px;
       }
 
-      .cta-badge-icon svg {
+      .cta-badge-icon img {
         width: 16px;
         height: 16px;
-        color: white;
       }
 
-      .cta-badge-text {
-        font-size: 14px;
+      .cta-badge span {
         font-weight: 500;
+        font-size: 14px;
         line-height: 20px;
-        color: #2e2e2e;
-      }
-
-      .cta-title-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 16px;
-        width: 546px;
+        color: var(--dark);
       }
 
       .cta-title {
-        font-size: 48px;
         font-weight: 600;
-        line-height: 62px;
-        letter-spacing: -0.03em;
-        color: #2e2e2e;
+        font-size: 48px;
+        line-height: 62.4px;
+        letter-spacing: -1.44px;
+        color: var(--dark);
         text-align: center;
       }
 
-      .cta-subtitle {
-        font-size: 20px;
+      .cta-desc {
         font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
-        color: #767474;
+        color: var(--text-gray);
         text-align: center;
       }
 
-      .cta-actions {
+      .cta-buttons {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         gap: 16px;
-        width: 404px;
-        height: 52px;
+        align-items: center;
+        position: relative;
         z-index: 1;
       }
 
-      .cta-btn-primary {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+      .btn-primary {
+        display: inline-flex;
         align-items: center;
-        padding: 14px 24px;
+        justify-content: center;
         gap: 10px;
-        width: 211px;
-        height: 52px;
-        background: #f15c2a;
-        border: 1.5px solid #f1762a;
+        background: var(--primary);
+        border: 1.5px solid var(--primary-border);
         border-radius: 10px;
-        color: #ffffff;
-        font-size: 16px;
+        padding: 14px 24px;
+        color: var(--white);
         font-weight: 500;
-        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: nowrap;
         cursor: pointer;
+        font-family: inherit;
+        text-decoration: none;
       }
 
-      .cta-btn-secondary {
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+      .btn-primary img {
+        width: 24px;
+        height: 24px;
+      }
+
+      .btn-secondary {
+        display: inline-flex;
         align-items: center;
-        padding: 14px 24px;
-        gap: 10px;
-        width: 177px;
-        height: 52px;
-        background: #ffffff;
+        justify-content: center;
+        background: var(--white);
         border: 1.5px solid #f0f0f0;
         border-radius: 10px;
-        color: #2e2e2e;
-        font-size: 16px;
+        padding: 14px 24px;
+        color: var(--dark);
         font-weight: 500;
-        text-decoration: none;
+        font-size: 16px;
+        line-height: 24px;
+        white-space: nowrap;
         cursor: pointer;
+        font-family: inherit;
+        text-decoration: none;
       }
 
-      /* CTA Decoration Vectors */
-      .cta-vector-1 {
-        position: absolute;
-        width: 443.15px;
-        height: 441.44px;
-        right: 0px;
-        top: 0px;
-        background: linear-gradient(
-          135deg,
-          rgba(241, 92, 42, 0.05) 0%,
-          transparent 100%
-        );
-        transform: scaleY(-1);
-        z-index: 0;
-      }
-
-      .cta-vector-2 {
-        position: absolute;
-        width: 443.15px;
-        height: 441.44px;
-        left: 0px;
-        top: 0px;
-        background: linear-gradient(
-          135deg,
-          rgba(241, 92, 42, 0.05) 0%,
-          transparent 100%
-        );
-        transform: rotate(180deg);
-        z-index: 0;
-      }
-
-      .cta-vector-3 {
-        position: absolute;
-        width: 189.35px;
-        height: 249.49px;
-        left: 0px;
-        bottom: 0px;
-        background: rgba(241, 118, 42, 0.12);
-        z-index: 0;
-        mask-image: radial-gradient(circle at bottom left, black, transparent);
-        -webkit-mask-image: radial-gradient(
-          circle at bottom left,
-          black,
-          transparent
-        );
-      }
-
-      .cta-vector-4 {
-        position: absolute;
-        width: 194.45px;
-        height: 281px;
-        right: -20.82px;
-        bottom: -24px;
-        background: #ffffff;
-        z-index: 0;
-        box-shadow: -20px -20px 40px rgba(0, 0, 0, 0.02);
-        border-radius: 100px;
-      }
-
-      /* Footer Section */
-      .footer-section {
-        width: 100%;
+      /* ==================== FOOTER ==================== */
+      .footer {
         background: #101828;
-        padding: 260px 0 40px 0;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 80px;
+        padding: 40px 260px;
+        padding-top: 260px;
         position: relative;
-        isolation: isolate;
-        margin-top: -180px; /* Overlap with CTA section */
+        overflow: hidden;
+        margin-top: -243px;
       }
 
-      .footer-content {
-        width: 95%;
-        max-width: 1390px;
+      .footer-decor-left {
+        position: absolute;
+        left: -100px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 338px;
+        height: 473px;
+        pointer-events: none;
+      }
+
+      .footer-decor-right {
+        position: absolute;
+        right: -100px;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg) scaleY(-1);
+        width: 338px;
+        height: 473px;
+        pointer-events: none;
+      }
+
+      .footer-top {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
+        margin-bottom: 24px;
+        position: relative;
         z-index: 1;
-        gap: 40px;
       }
 
-      .footer-brand {
-        width: 470px;
+      .footer-left {
+        max-width: 470px;
         display: flex;
         flex-direction: column;
         gap: 48px;
       }
 
-      .footer-brand-text {
+      .footer-left-info {
         display: flex;
         flex-direction: column;
         gap: 20px;
       }
 
       .footer-badge {
-        display: flex;
-        flex-direction: row;
+        display: inline-flex;
         align-items: center;
-        padding: 6px 16px 6px 6px;
         gap: 12px;
-        width: fit-content;
         background: rgba(255, 255, 255, 0.16);
         border: 1.5px solid rgba(255, 255, 255, 0.16);
         border-radius: 18px;
+        padding: 6px 16px 6px 6px;
+        width: fit-content;
       }
 
       .footer-badge-icon {
         width: 24px;
         height: 24px;
-        background: #ffffff;
         border-radius: 20px;
+        background: var(--white);
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 4px;
       }
 
-      .footer-badge-icon svg {
+      .footer-badge-icon img {
         width: 16px;
         height: 16px;
-        color: #f15c2a;
       }
 
-      .footer-badge-text {
-        font-size: 14px;
+      .footer-badge span {
         font-weight: 500;
-        color: #ffffff;
+        font-size: 14px;
+        line-height: 20px;
+        color: var(--white);
       }
 
-      .footer-title-group {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-      }
-
-      .footer-brand-title {
-        font-size: 30px;
+      .footer-heading {
         font-weight: 600;
-        line-height: 37px;
-        letter-spacing: -0.03em;
-        color: #ffffff;
+        font-size: 30px;
+        line-height: 36.8px;
+        letter-spacing: -0.9px;
+        color: var(--white);
       }
 
-      .footer-brand-desc {
-        font-size: 20px;
+      .footer-sub-text {
         font-weight: 400;
+        font-size: 20px;
         line-height: 30px;
-        color: #aaaaaa;
+        color: var(--aaa);
       }
 
-      .footer-socials {
+      .footer-social {
         display: flex;
-        flex-direction: row;
-        gap: 12px;
+        gap: 4px;
+        align-items: center;
       }
 
-      .footer-social-btn {
+      .social-icon {
         width: 40px;
         height: 40px;
+        border-radius: 10px;
         background: rgba(255, 255, 255, 0.16);
         border: 1.5px solid rgba(255, 255, 255, 0.12);
-        border-radius: 10px;
         display: flex;
         align-items: center;
         justify-content: center;
-        cursor: pointer;
-        transition: all 0.2s ease;
+        overflow: hidden;
+        box-shadow: var(--shadow-card);
       }
 
-      .footer-social-btn:hover {
-        background: rgba(255, 255, 255, 0.24);
-        transform: scale(1.05);
+      .social-icon.rotated-neg {
+        transform: rotate(-4deg);
       }
 
-      .footer-social-btn svg {
+      .social-icon.rotated-pos {
+        transform: rotate(4deg);
+      }
+
+      .social-icon img {
         width: 24px;
         height: 24px;
-        color: #ffffff;
       }
 
-      .footer-links-grid {
+      .footer-right {
         display: flex;
-        flex-direction: row;
         gap: 48px;
       }
 
-      .footer-column {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-      }
-
-      .footer-column-title {
-        font-size: 20px;
+      .footer-col h5 {
         font-weight: 600;
+        font-size: 20px;
         line-height: 30px;
-        color: #ffffff;
+        color: var(--white);
+        margin-bottom: 20px;
       }
 
-      .footer-column-links {
+      .footer-col ul {
+        list-style: none;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 6px;
       }
 
-      .footer-link {
-        font-size: 16px;
+      .footer-col ul li a {
         font-weight: 400;
+        font-size: 16px;
         line-height: 24px;
-        color: #aaaaaa;
-        text-decoration: none;
-        transition: color 0.2s ease;
+        color: var(--aaa);
       }
 
-      .footer-link:hover {
-        color: #ffffff;
+      .footer-col ul li a:hover {
+        color: var(--white);
       }
 
       .footer-bottom {
-        width: 95%;
-        max-width: 1390px;
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
-        padding-top: 40px;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        position: relative;
         z-index: 1;
-        gap: 20px;
       }
 
       .footer-copyright {
+        font-weight: 400;
         font-size: 16px;
-        color: #767474;
+        line-height: 24px;
+        color: var(--text-gray);
       }
 
       .footer-legal {
         display: flex;
-        flex-direction: row;
-        align-items: center;
         gap: 12px;
+        align-items: center;
       }
 
-      .footer-legal-link {
+      .footer-legal a {
+        font-weight: 400;
         font-size: 16px;
-        color: #767474;
-        text-decoration: none;
+        line-height: 24px;
+        color: var(--text-gray);
       }
 
-      .footer-legal-link:hover {
-        color: #ffffff;
+      .footer-legal a:hover {
+        color: var(--white);
       }
 
-      .footer-divider {
+      .footer-legal-sep {
         width: 1px;
-        height: 12px;
-        background: rgba(255, 255, 255, 0.24);
+        height: 8px;
+        background: var(--text-gray);
       }
 
-      /* Footer Decorative Vectors */
-      .footer-vector-left {
-        position: absolute;
-        width: 338px;
-        height: 473px;
-        left: -100px;
-        top: 50%;
-        transform: translateY(-50%);
-        background: linear-gradient(
-          35.64deg,
-          rgba(255, 255, 255, 0.08) 6.96%,
-          rgba(255, 255, 255, 0) 76.55%
-        );
-        z-index: 0;
-        pointer-events: none;
+      /* ==================== RESPONSIVE ==================== */
+      @media (max-width: 1600px) {
+        .header-wrapper,
+        .about-hero,
+        .values-section,
+        .trusted-section,
+        .leadership-section,
+        .cta-section {
+          padding-left: 120px;
+          padding-right: 120px;
+        }
+        .footer {
+          padding-left: 120px;
+          padding-right: 120px;
+        }
+        .bento-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .stat-card {
+          width: calc(50% - 8px);
+        }
+        .bottom-cards-row {
+          width: 100%;
+        }
       }
 
-      .footer-vector-right {
-        position: absolute;
-        width: 338px;
-        height: 473px;
-        right: -100px;
-        top: 50%;
-        transform: translateY(-50%) matrix(-1, 0, 0, 1, 0, 0);
-        background: linear-gradient(
-          35.64deg,
-          rgba(255, 255, 255, 0.08) 6.96%,
-          rgba(255, 255, 255, 0) 76.55%
-        );
-        z-index: 0;
-        pointer-events: none;
+      @media (max-width: 1400px) {
+        .header-wrapper,
+        .about-hero,
+        .values-section,
+        .trusted-section,
+        .leadership-section,
+        .cta-section {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        .footer {
+          padding-left: 60px;
+          padding-right: 60px;
+        }
+        .bento-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .about-hero-title {
+          font-size: 48px;
+          line-height: 58px;
+        }
+        .values-title,
+        .trusted-title,
+        .leadership-title,
+        .cta-title {
+          font-size: 40px;
+          line-height: 52px;
+        }
+        .stat-card {
+          width: calc(50% - 8px);
+        }
+        .bottom-cards-row {
+          width: 100%;
+        }
+        .trusted-inner {
+          gap: 40px;
+        }
+        .trusted-stats {
+          max-width: 460px;
+        }
+        .leader-photo,
+        .leader-info-card {
+          width: 260px;
+          height: 350px;
+        }
+      }
+
+      @media (max-width: 1200px) {
+        .header-wrapper,
+        .about-hero,
+        .values-section,
+        .trusted-section,
+        .leadership-section,
+        .cta-section {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        .footer {
+          padding-left: 40px;
+          padding-right: 40px;
+        }
+        .about-hero-title {
+          font-size: 40px;
+          line-height: 50px;
+        }
+        .bento-grid {
+          grid-template-columns: 1fr;
+        }
+        .stats-grid {
+          width: 100%;
+        }
+        .stat-card {
+          width: calc(50% - 8px);
+        }
+        .bottom-cards-row {
+          width: 100%;
+        }
+        .values-grid {
+          flex-wrap: wrap;
+        }
+        .value-card {
+          flex: 0 0 calc(50% - 12px);
+        }
+        .trusted-inner {
+          flex-direction: column;
+          gap: 40px;
+          align-items: flex-start;
+        }
+        .trusted-stats {
+          max-width: 100%;
+          width: 100%;
+        }
+        .trusted-stat-card:nth-child(2),
+        .trusted-stat-card:nth-child(3),
+        .trusted-stat-card:nth-child(4) {
+          margin-top: 0;
+        }
+        .trusted-content {
+          gap: 40px;
+        }
+        .leader-photo,
+        .leader-info-card {
+          width: 220px;
+          height: 300px;
+        }
+        .cta-title {
+          font-size: 36px;
+          line-height: 48px;
+        }
+      }
+
+      @media (max-width: 992px) {
+        .header-wrapper,
+        .about-hero,
+        .values-section,
+        .trusted-section,
+        .leadership-section,
+        .cta-section {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .footer {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .about-hero-title {
+          font-size: 36px;
+          line-height: 44px;
+        }
+        .about-hero-desc {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .stat-card {
+          width: 100%;
+          padding: 24px;
+        }
+        .stat-icon {
+          width: 60px;
+          height: 60px;
+        }
+        .stat-icon img {
+          width: 36px;
+          height: 36px;
+        }
+        .stat-info .stat-number {
+          font-size: 24px;
+          line-height: 32px;
+        }
+        .stat-info .stat-label {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .bottom-cards-row {
+          flex-direction: column;
+        }
+        .info-card {
+          height: auto;
+          gap: 30px;
+        }
+        .values-title,
+        .trusted-title,
+        .leadership-title,
+        .cta-title {
+          font-size: 32px;
+          line-height: 42px;
+        }
+        .values-desc,
+        .trusted-subtitle,
+        .leadership-desc,
+        .cta-desc {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .values-grid {
+          flex-direction: column;
+        }
+        .value-card {
+          flex: 1 1 100%;
+        }
+        .culture-card {
+          flex-direction: column;
+        }
+        .culture-photo {
+          height: 250px;
+        }
+        .leadership-grid {
+          justify-content: center;
+        }
+        .leader-photo,
+        .leader-info-card {
+          width: calc(50% - 12px);
+          height: 300px;
+        }
+        .testimonial-text {
+          font-size: 16px;
+          line-height: 24px;
+        }
+        .testimonials-row {
+          flex-direction: column;
+        }
+        .trusted-stat-card {
+          padding: 20px;
+        }
+        .trusted-stat-card.saas-card {
+          height: auto;
+          min-height: 160px;
+        }
+        .trusted-stat-number {
+          font-size: 36px;
+          line-height: 48px;
+        }
+        .trusted-stat-label {
+          font-size: 18px;
+          line-height: 26px;
+        }
+        .saas-logo {
+          top: 70px;
+          width: 130px;
+          height: 92px;
+        }
+        .footer-top {
+          flex-direction: column;
+          gap: 40px;
+        }
+        .footer-right {
+          gap: 32px;
+          flex-wrap: wrap;
+        }
+        .footer-bottom {
+          flex-direction: column;
+          gap: 16px;
+          text-align: center;
+        }
+        .milestones-card {
+          gap: 32px;
+        }
+        .journey-card {
+          gap: 30px;
+        }
+        .culture-content {
+          gap: 24px;
+        }
+        .culture-check-item span {
+          font-size: 16px;
+          line-height: 24px;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .about-hero-title {
+          font-size: 30px;
+          line-height: 38px;
+        }
+        .about-hero-inner {
+          min-height: 350px;
+        }
+        .bento-grid {
+          gap: 16px;
+        }
+        .journey-card-content {
+          padding: 12px;
+          gap: 24px;
+        }
+        .journey-bottom {
+          flex-direction: column;
+        }
+        .leader-photo,
+        .leader-info-card {
+          width: 100%;
+          height: 280px;
+        }
+        .leadership-grid {
+          gap: 16px;
+        }
+        .cta-title {
+          font-size: 28px;
+          line-height: 36px;
+        }
+        .cta-buttons {
+          flex-direction: column;
+        }
+        .footer-heading {
+          font-size: 24px;
+          line-height: 30px;
+        }
+        .trusted-stats {
+          grid-template-columns: 1fr 1fr;
+          gap: 12px;
+        }
+        .trusted-stat-number {
+          font-size: 30px;
+          line-height: 40px;
+        }
+        .trusted-stat-label {
+          font-size: 16px;
+          line-height: 22px;
+        }
+        .trusted-stat-icon {
+          width: 48px;
+          height: 48px;
+        }
+        .trusted-stat-icon img {
+          width: 28px;
+          height: 28px;
+        }
+        .testimonial-header {
+          gap: 16px;
+        }
+        .testimonial-avatar {
+          width: 50px;
+          height: 50px;
+        }
+        .testimonial-info h5 {
+          font-size: 18px;
+          line-height: 24px;
+        }
+        .saas-text {
+          font-size: 22px;
+          line-height: 28px;
+        }
+        .saas-logo {
+          top: 60px;
+          width: 110px;
+          height: 80px;
+        }
+        .values-section,
+        .trusted-section,
+        .leadership-section {
+          padding-top: 48px;
+          padding-bottom: 48px;
+        }
+        .values-section {
+          gap: 40px;
+        }
+        .leadership-section {
+          gap: 40px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .about-hero-title {
+          font-size: 26px;
+          line-height: 34px;
+        }
+        .about-hero-inner {
+          min-height: 280px;
+        }
+        .stat-card {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+        .trusted-stats {
+          grid-template-columns: 1fr;
+        }
+        .trusted-stat-card:nth-child(2),
+        .trusted-stat-card:nth-child(3),
+        .trusted-stat-card:nth-child(4) {
+          margin-top: 0;
+        }
+        .testimonials-row {
+          gap: 12px;
+        }
+        .leader-info-card {
+          height: 250px;
+          gap: 30px;
+        }
+        .leader-info-content {
+          gap: 30px;
+        }
+        .about-hero {
+          padding-top: 24px;
+        }
       }
     </style>
   </head>
   <body>
-    <nav class="navbar">
-      <a class="" href="/index.html">
-        <svg
-          width="74"
-          height="44"
-          viewBox="0 0 74 44"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M65.8923 12.716C65.884 12.8042 65.8737 12.9144 65.8449 12.9784C65.6514 13.8272 65.5706 14.6867 65.5551 15.5746C65.5796 15.7992 65.6039 16.0239 65.7676 16.2172C66.0293 16.5753 66.486 16.5516 66.7037 16.1719C66.8125 15.982 66.8312 15.7837 66.8046 15.5811C66.6581 14.7224 66.696 13.8367 66.7544 12.975C66.7585 12.931 66.7647 12.8649 66.771 12.7988C67.0209 12.8 67.2482 12.7992 67.4509 12.8183C67.6108 12.8111 67.748 12.8018 67.8669 12.7463C68.2213 12.6018 68.2566 12.2272 67.9127 12.0169C67.7837 11.9381 67.6056 11.8991 67.448 11.8842C66.8826 11.8532 66.3194 11.8002 65.7561 11.7472C65.5535 11.7281 65.3485 11.731 65.1436 11.734C65.0289 11.7454 64.8938 11.7327 64.7975 11.7903C64.6335 11.8416 64.5331 11.9433 64.5186 12.0975C64.5266 12.2539 64.5858 12.3484 64.7374 12.4294C64.8212 12.504 64.9318 12.5367 65.0444 12.5473C65.3127 12.5948 65.6016 12.6664 65.8923 12.716ZM71.9924 14.3131C71.9904 14.3351 72.0108 14.3593 72.0108 14.3593C72.045 14.9628 72.0812 15.5443 72.0948 16.1236C72.0989 16.3241 72.1048 16.5025 72.2254 16.6695C72.483 17.0717 72.9378 17.0701 73.1778 16.6925C73.2866 16.5026 73.3278 16.3064 73.3035 16.0818C73.2305 15.4079 73.225 14.7404 73.15 14.0886C73.0971 13.6834 73.0199 13.2981 72.9404 12.9349C72.8934 12.7082 72.7503 12.5391 72.4821 12.4916C72.2159 12.4221 72.0006 12.5352 71.8693 12.7229C71.7175 12.8865 71.5883 13.0522 71.4795 13.2421C71.2886 13.5798 71.1203 13.9197 70.9091 14.2333C70.8781 14.3193 70.8494 14.3833 70.7982 14.4452C70.7798 14.399 70.7594 14.3749 70.7594 14.3749C70.5182 13.7963 70.2997 13.2199 70.0566 12.6634C70.0156 12.6151 69.9973 12.5689 69.9789 12.5227C69.8624 12.3116 69.7151 12.1866 69.4673 12.1633C69.2399 12.1641 69.0471 12.2793 68.916 12.4671C68.8625 12.551 68.8563 12.6171 68.8255 12.7031C68.669 13.3999 68.49 14.0945 68.3337 14.7912C68.2512 15.1837 68.1914 15.5782 68.1541 15.9749C68.1233 16.061 68.1354 16.1733 68.1721 16.2657C68.2007 16.4462 68.3255 16.5691 68.5036 16.6081C68.7268 16.6514 68.8907 16.6001 68.975 16.4302C69.0549 16.3043 69.0879 16.1963 69.1208 16.0882C69.2483 15.7 69.351 15.3317 69.4539 14.9634C69.5196 14.7473 69.5587 14.5731 69.6492 14.337C69.6859 14.4294 69.7247 14.4998 69.7636 14.5701C69.9414 14.8537 70.1194 15.1372 70.3465 15.3809C70.5777 15.5806 70.7826 15.5776 71.0039 15.3984C71.0532 15.3585 71.0778 15.3386 71.127 15.2988C71.3588 15.0094 71.6357 14.7242 71.8673 14.4347C71.9167 14.3949 71.9433 14.3529 71.9924 14.3131Z"
-            fill="#F15C2A"
-          />
-          <path
-            d="M20.1367 8.84618C19.9407 9.25026 19.8825 9.54918 19.9312 9.80679C19.979 10.1553 20.1757 10.2865 20.4652 10.2263C23.1716 9.8353 28.8034 12.1985 30.9042 12.9071C31.4008 13.0612 31.8732 12.4602 31.5814 11.854C31.1291 11.251 25.5527 8.32658 23.3518 7.98854C22.4888 7.85891 20.9584 7.4953 20.1367 8.84618Z"
-            fill="#F15C2A"
-          />
-          <path
-            d="M43.5387 3.28263C43.8057 3.46841 43.9491 3.63515 44.0109 3.81218C44.1059 4.04571 44.0303 4.19398 43.8282 4.25424C42.0004 4.92465 39.3346 8.30079 38.2784 9.4523C38.0238 9.71611 37.514 9.50089 37.4788 9.02433C37.545 8.49548 39.9753 4.78806 41.2268 3.83379C41.7184 3.46149 42.5425 2.71779 43.5387 3.28263Z"
-            fill="#F15C2A"
-          />
-          <path
-            d="M29.775 0.200515C30.1373 -0.0173766 30.4976 -0.0717641 30.6622 0.1075C33.0937 2.56384 34.1644 6.19195 34.7299 9.47436C34.7555 9.55201 34.7475 9.65922 34.7109 9.76839C34.6911 9.86279 34.6104 9.95687 34.4898 10.0242C34.3608 10.0989 34.2543 10.1153 34.2123 10.0365C33.2004 8.38866 27.1572 1.77874 29.775 0.200515Z"
-            fill="#F15C2A"
-          />
-          <path
-            d="M14.9616 24.9392C14.4336 24.9994 13.898 24.9555 13.3865 24.8101C12.8752 24.6648 12.398 24.421 11.9836 24.093C11.6177 23.8405 11.3131 23.5121 11.0918 23.1312C10.8707 22.7504 10.7383 22.3267 10.7043 21.8905C10.6702 21.4544 10.7354 21.0168 10.8949 20.609C11.0545 20.2013 11.3048 19.8336 11.6275 19.5324C12.198 18.9197 12.9642 18.5148 13.8016 18.3831C15.9939 17.9779 18.2269 17.8153 20.4585 17.8983C20.9515 17.8887 21.4418 17.9756 21.9006 18.1539C22.3596 18.3323 22.7778 18.5982 23.131 18.9366C23.484 19.2747 23.7648 19.6783 23.9569 20.1236C24.1487 20.5687 24.2481 21.0467 24.249 21.5292C24.668 23.9383 24.5064 26.4076 23.7772 28.7402C21.2107 36.2591 14.6135 38.3056 7.71859 35.1707C5.78009 34.3235 4.14153 32.9309 3.01247 31.1707C1.48657 29.0353 0.493103 26.5813 0.112097 24.006C-0.177532 21.7175 0.09602 19.3968 0.910231 17.2375C1.72427 15.0781 3.05523 13.1428 4.7919 11.5931C6.46208 9.88829 8.54113 8.61861 10.8417 7.89836C12.3112 7.27598 13.9679 7.21565 15.4855 7.72927C15.8286 7.85775 16.1308 8.07358 16.3606 8.35439C16.5905 8.63522 16.7396 8.97077 16.7926 9.32629C16.8457 9.68178 16.8005 10.0443 16.662 10.3762C16.5234 10.7081 16.2966 10.9973 16.0049 11.2139C15.4508 11.6186 14.8573 11.9688 14.2329 12.2596C12.3056 13.2224 10.5838 14.5347 9.15862 16.127C8.2258 17.1564 7.53548 18.3743 7.13647 19.6949C6.73728 21.0155 6.63916 22.4069 6.84886 23.7713C7.14233 25.6323 8.01954 27.3604 9.35868 28.7164C13.4872 33.1472 19.7078 29.8322 19.1983 24.267C17.6695 24.4869 16.3229 24.7441 14.9616 24.9392Z"
-            fill="#F15C2A"
-          />
-          <path
-            d="M41.4229 38.8282C34.3904 42.2082 27.1901 37.4882 26.3227 28.9184C25.6797 22.7949 28.7648 14.5972 37.094 12.1478C38.8648 11.6413 40.7394 11.5814 42.544 11.9737C44.7 12.5729 46.6125 13.8184 48.0115 15.5346C49.4105 17.2508 50.2258 19.3512 50.3421 21.5397C51.021 28.8185 47.2313 36.1617 41.4229 38.8282ZM45.0052 25.5642C45.1597 23.8999 44.7094 22.2329 43.7332 20.8568C43.2214 20.0144 42.4276 19.3705 41.4872 19.035C40.5465 18.6996 39.5178 18.6932 38.5758 19.0172C34.8284 20.2003 31.7689 25.4902 32.3079 29.6437C32.3183 30.2885 32.4724 30.9239 32.7595 31.5055C33.0467 32.087 33.4599 32.6008 33.9704 33.0108C34.4808 33.4206 35.0762 33.7169 35.7147 33.8788C36.3534 34.0405 37.0198 34.064 37.6673 33.9477C39.6337 33.476 41.3977 32.4146 42.7131 30.9116C44.0287 29.4086 44.83 27.5391 45.0052 25.5642Z"
-            fill="#F15C2A"
-          />
-          <path
-            d="M55.2242 41.8261C55.0548 42.5498 54.5983 43.1769 53.955 43.5692C53.3117 43.9615 52.5344 44.0871 51.7941 43.9183C51.0539 43.7494 50.4113 43.2999 50.0077 42.6687C49.6039 42.0377 49.4724 41.2765 49.6419 40.5527C49.8113 39.829 50.2679 39.202 50.9111 38.8096C51.5544 38.4172 52.3317 38.2918 53.0719 38.4606C53.8122 38.6295 54.4548 39.0788 54.8586 39.71C55.2622 40.3412 55.3938 41.1024 55.2242 41.8261ZM55.9844 14.6344C56.4287 14.0892 57.0417 13.6999 57.7322 13.5245C58.4225 13.3491 59.1534 13.3971 59.8155 13.6612C60.4919 13.8959 61.0661 14.3504 61.4425 14.9487C61.8187 15.5471 61.9739 16.2529 61.8823 16.948C61.6868 18.0583 61.4112 19.1535 61.0576 20.2251C60.0332 23.8676 59.0292 27.5118 57.9677 31.1104C57.5025 32.5419 56.9405 33.9037 56.33 35.3417C56.1226 35.7897 55.8094 36.1826 55.4165 36.4885C55.1679 36.7231 54.8629 36.8921 54.5292 36.9801C54.1955 37.0683 53.8442 37.0725 53.5078 36.9925C53.1714 36.9125 52.8606 36.7508 52.6043 36.5224C52.3481 36.2939 52.1546 36.0062 52.0418 35.6858C51.85 35.112 51.7735 34.5076 51.8165 33.9063C52.0502 31.4222 52.2857 28.9182 52.6851 26.4295C53.2996 22.8821 54.1809 19.3849 55.322 15.9665C55.4617 15.5073 55.684 15.0765 55.9788 14.6945L55.9844 14.6344Z"
-            fill="#F15C2A"
-          />
-        </svg>
-      </a>
-      <div class="nav-links">
-        <a href="/index.html" class="nav-item">Home Page</a>
-        <div class="divider"></div>
-        <a href="/about.html" class="nav-item active">About Platform</a>
-        <div class="divider"></div>
-        <a href="/features.html" class="nav-item">Feature’s</a>
-        <div class="divider"></div>
-        <a href="/pricing.html" class="nav-item">Pricing</a>
-        <div class="divider"></div>
-        <a href="/contact.html" class="nav-item">Contact</a>
+    <div class="page-wrapper">
+      <!-- Header -->
+      <div class="header-wrapper">
+        <nav class="navbar">
+          <a href="index.html" class="nav-logo">
+            <img src="assets/logo.svg" alt="GO! Logo" />
+          </a>
+          <ul class="nav-links">
+            <li><a href="#">Home Page</a></li>
+            <li><div class="nav-separator"></div></li>
+            <li><a href="about.html" class="active">About Platform</a></li>
+            <li><div class="nav-separator"></div></li>
+            <li><a href="index.html">Feature's</a></li>
+            <li><div class="nav-separator"></div></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><div class="nav-separator"></div></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <div class="nav-actions">
+            <button class="btn-icon">
+              <img src="assets/icon-dark-mode.svg" alt="Dark mode" />
+            </button>
+            <button class="btn-signin">Sign in</button>
+          </div>
+        </nav>
       </div>
-      <div class="nav-actions">
-        <button class="theme-toggle">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-          >
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-        <a href="/sign-in.html" class="sign-in-btn">Sign in</a>
-      </div>
-    </nav>
 
-    <section class="hero-section">
-      <div class="hero-content">
-        <div class="about-badge">
-          <div class="badge-icon">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+      <!-- Hero Section -->
+      <div class="about-hero">
+        <div class="about-hero-inner">
+          <div class="about-hero-content">
+            <div class="about-badge">
+              <div class="about-badge-icon">
+                <img src="assets/icon-3d-rotate.svg" alt="" />
+              </div>
+              <span>About the Platform</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+                width: 100%;
+              "
             >
-              <path
-                d="M12 3v18M3 12h18M3 12l4-4M3 12l4 4M21 12l-4-4M21 12l-4 4"
+              <h1 class="about-hero-title">
+                We're <span class="highlight">Building</span> the Future of
+                Business <span class="highlight">Software</span>
+              </h1>
+              <p class="about-hero-desc">
+                Our mission is to empower businesses of all sizes with powerful,
+                intuitive tools that drive growth and success.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Grid Section -->
+        <div style="margin-top: 48px">
+          <div class="bento-grid">
+            <!-- Left Column -->
+            <div style="display: flex; flex-direction: column; gap: 24px">
+              <!-- Our Journey Card -->
+              <div class="journey-card">
+                <div class="journey-card-content">
+                  <div class="journey-header">
+                    <div class="journey-title-row">
+                      <img src="assets/icon-progress.svg" alt="" />
+                      <h3>Our Journey</h3>
+                    </div>
+                    <p class="journey-desc">
+                      Founded in 2018, we've grown from a small team of 5 to a
+                      global company serving millions. Our passion for
+                      innovation drives everything we do.
+                    </p>
+                  </div>
+                  <div class="journey-tags">
+                    <div class="journey-tag">
+                      <span class="label">Founded:</span>
+                      <span class="value">2018</span>
+                    </div>
+                    <div class="journey-tag">
+                      <span class="label">Headquarters:</span>
+                      <span class="value">San Francisco, CA</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="journey-bottom">
+                  <div class="journey-stat">
+                    <div class="journey-stat-header">
+                      <img src="assets/icon-user-add.svg" alt="" />
+                      <span>Team Size</span>
+                    </div>
+                    <div class="journey-stat-value">150+</div>
+                  </div>
+                  <div class="journey-stat">
+                    <div class="journey-stat-header">
+                      <img src="assets/icon-layers.svg" alt="" />
+                      <span>Projects</span>
+                    </div>
+                    <div class="journey-stat-value">1200+</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Key Milestones Card -->
+              <div class="milestones-card">
+                <div class="milestones-header">
+                  <div class="milestones-icon">
+                    <img src="assets/icon-calendar-02.svg" alt="" />
+                  </div>
+                  <h3>Key Milestones</h3>
+                </div>
+                <div class="milestones-list">
+                  <div class="milestone-item">
+                    <h5>Company Founded</h5>
+                    <p>Started with 5 passionate developers</p>
+                  </div>
+                  <div class="milestone-item">
+                    <h5>1M Users</h5>
+                    <p>Reached our first million users</p>
+                  </div>
+                  <div class="milestone-item">
+                    <h5>Series B Funding</h5>
+                    <p>$50M raised to scale globally</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div style="display: flex; flex-direction: column; gap: 16px">
+              <!-- 4 Stat Cards -->
+              <div class="stats-grid">
+                <div class="stat-card blue">
+                  <div class="stat-icon blue">
+                    <img src="assets/icon-user-multiple.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Active Users</div>
+                  </div>
+                </div>
+                <div class="stat-card orange">
+                  <div class="stat-icon orange">
+                    <img src="assets/icon-magic-wand.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Customer Rating</div>
+                  </div>
+                </div>
+                <div class="stat-card purple">
+                  <div class="stat-icon purple">
+                    <img src="assets/icon-earth.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Countries</div>
+                  </div>
+                </div>
+                <div class="stat-card green">
+                  <div class="stat-icon green">
+                    <img src="assets/icon-dashboard-speed.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack & 24/7 Support -->
+              <div class="bottom-cards-row">
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <div class="info-card-icon">
+                      <img src="assets/icon-source-code.svg" alt="" />
+                    </div>
+                    <h4>Tech Stack</h4>
+                  </div>
+                  <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <div class="info-card-icon">
+                      <img src="assets/icon-alarm-clock.svg" alt="" />
+                    </div>
+                    <h4>24/7 Support</h4>
+                  </div>
+                  <div class="support-avatars">
+                    <div class="avatar-stack">
+                      <img src="assets/support-avatar-1.png" alt="" />
+                      <img src="assets/support-avatar-2.png" alt="" />
+                      <img src="assets/support-avatar-3.png" alt="" />
+                    </div>
+                    <span class="support-online">Online now</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Our Culture Card -->
+              <div class="culture-card">
+                <div class="culture-photo">
+                  <img src="assets/culture-photo.png" alt="Our Culture" />
+                </div>
+                <div class="culture-content">
+                  <div class="culture-header">
+                    <div class="culture-title-row">
+                      <div class="culture-title-icon">
+                        <img src="assets/icon-ai.svg" alt="" />
+                      </div>
+                      <h3>Our Culture</h3>
+                    </div>
+                    <p>
+                      We believe in work-life balance, continuous learning, and
+                      celebrating wins together.
+                    </p>
+                  </div>
+                  <div class="culture-checklist">
+                    <div class="culture-check-item">
+                      <img src="assets/icon-checkmark-circle.svg" alt="" />
+                      <span>Flexible working hours</span>
+                    </div>
+                    <div class="culture-check-item">
+                      <img src="assets/icon-checkmark-circle.svg" alt="" />
+                      <span>Unlimited PTO</span>
+                    </div>
+                    <div class="culture-check-item">
+                      <img src="assets/icon-checkmark-circle.svg" alt="" />
+                      <span>Learning budget</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Values Section -->
+      <div class="values-section">
+        <div class="values-header">
+          <h2 class="values-title">
+            Our Core <span class="highlight">Values</span>
+          </h2>
+          <p class="values-desc">
+            These principles guide everything we do, from product development to
+            customer support.
+          </p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon orange">
+              <img src="assets/icon-heart-check.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Customer First</h4>
+              <p>
+                Everything we do is centered around delivering value to our
+                customers.
+              </p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon green">
+              <img src="assets/icon-rocket-01.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Innovation</h4>
+              <p>
+                We constantly push boundaries to create cutting-edge solutions.
+              </p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon blue">
+              <img src="assets/icon-security-shield.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Trust &amp; Security</h4>
+              <p>Your data security and privacy are our top priorities</p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon purple">
+              <img src="assets/icon-global.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Global Impact</h4>
+              <p>Building tools that empower businesses worldwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trusted by Industry Leaders -->
+      <div class="trusted-section">
+        <div class="trusted-inner">
+          <!-- Left - Stats -->
+          <div class="trusted-stats">
+            <div class="trusted-stat-card">
+              <div class="trusted-stat-icon">
+                <img src="assets/icon-user-multiple-03.svg" alt="" />
+              </div>
+              <div class="trusted-stat-content">
+                <div class="trusted-stat-number">5k</div>
+                <div class="trusted-stat-label">Total User's</div>
+              </div>
+            </div>
+            <div class="trusted-stat-card">
+              <div class="trusted-stat-icon">
+                <img src="assets/icon-star-face.svg" alt="" />
+              </div>
+              <div class="trusted-stat-content">
+                <div class="trusted-stat-number">99%</div>
+                <div class="trusted-stat-label">Client Satisfaction</div>
+              </div>
+            </div>
+            <div class="trusted-stat-card">
+              <div class="trusted-stat-icon">
+                <img src="assets/icon-id-verified.svg" alt="" />
+              </div>
+              <div class="trusted-stat-content">
+                <div class="trusted-stat-number">4.2k</div>
+                <div class="trusted-stat-label">Verified Client</div>
+              </div>
+            </div>
+            <div class="trusted-stat-card saas-card">
+              <div class="saas-text">SaaS Startup.</div>
+              <img
+                class="saas-logo"
+                src="assets/logo-go-vector.svg"
+                alt="GO! Logo"
               />
-            </svg>
+            </div>
           </div>
-          <span class="badge-text">About the Platform</span>
-        </div>
-        <h1 class="hero-title">
-          We're Building the Future of Business Software
-        </h1>
-        <p class="hero-description">
-          Our mission is to empower businesses of all sizes with powerful,
-          intuitive tools that drive growth and success.
-        </p>
-      </div>
-    </section>
 
-    <div class="page-content">
-      <div class="main-content-row">
-        <div class="journey-card">
-          <div class="journey-header">
-            <div class="journey-title-row">
-              <div class="title-with-icon">
-                <div class="progress-icon">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <circle cx="12" cy="12" r="10"></circle>
-                    <path d="M12 6v6l4 2"></path>
-                  </svg>
-                </div>
-                <h3 class="journey-title">Our Journey</h3>
-              </div>
-              <p class="journey-desc">
-                Founded in 2018, we've grown from a small team of 5 to a global
-                company serving millions. Our passion for innovation drives
-                everything we do.
+          <!-- Right - Content -->
+          <div class="trusted-content">
+            <div class="trusted-heading">
+              <h2 class="trusted-title">
+                <span class="highlight">Trusted</span> by Industry
+                <span class="highlight">Leaders</span>
+              </h2>
+              <p class="trusted-subtitle">
+                See what our customers have to say about their experience
               </p>
             </div>
-            <div class="journey-meta">
-              <div class="meta-badge">
-                <span class="meta-label">Founded:</span>
-                <span class="meta-value">2018</span>
+            <div class="testimonials-row">
+              <div class="testimonial-card orange">
+                <div class="testimonial-header">
+                  <img
+                    class="testimonial-avatar"
+                    src="assets/leader-sarah.png"
+                    alt="Sarah Johnson"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Sarah Johnson</h5>
+                    <p>CEO at (TechStart)</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  Switching to the Professional plan was the best decision for
+                  our team. The ROI was immediate.
+                </p>
+                <div class="testimonial-tag orange">Professional Plan</div>
               </div>
-              <div class="meta-badge">
-                <span class="meta-label">Headquarters:</span>
-                <span class="meta-value">San Francisco, CA</span>
+              <div class="testimonial-card blue">
+                <div class="testimonial-header">
+                  <img
+                    class="testimonial-avatar"
+                    src="assets/leader-michael.png"
+                    alt="Michael Chen"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Michael Chen</h5>
+                    <p>CTO at (ScaleUp)</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  Enterprise support has been phenomenal. Having a dedicated
+                  account manager makes all the difference.
+                </p>
+                <div class="testimonial-tag blue">Enterprise Plan</div>
               </div>
-            </div>
-          </div>
-          <div class="stats-row">
-            <div class="stat-card">
-              <div class="stat-header">
-                <svg
-                  class="stat-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                  <circle cx="8.5" cy="7" r="4"></circle>
-                  <line x1="20" y1="8" x2="20" y2="14"></line>
-                  <line x1="23" y1="11" x2="17" y2="11"></line>
-                </svg>
-                <span class="stat-label">Team Size</span>
-              </div>
-              <div class="stat-value">150+</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-header">
-                <svg
-                  class="stat-icon"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
-                  <polyline points="2 17 12 22 22 17"></polyline>
-                  <polyline points="2 12 12 17 22 12"></polyline>
-                </svg>
-                <span class="stat-label">Projects</span>
-              </div>
-              <div class="stat-value">1200+</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="stats-grid">
-          <!-- Active Users -->
-          <div class="stat-info-card" style="background: #f8faff">
-            <div class="stat-info-icon" style="background: #477bff">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div class="stat-info-text">
-              <div class="stat-info-value">10M+</div>
-              <div class="stat-info-label">Active Users</div>
-            </div>
-          </div>
-
-          <!-- Customer Rating -->
-          <div class="stat-info-card" style="background: #fffaf7">
-            <div class="stat-info-icon" style="background: #f1762a">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-            </div>
-            <div class="stat-info-text">
-              <div class="stat-info-value">4.9/5</div>
-              <div class="stat-info-label">Customer Rating</div>
-            </div>
-          </div>
-
-          <!-- Countries -->
-          <div class="stat-info-card" style="background: #fbf8fe">
-            <div class="stat-info-icon" style="background: #9154e1">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" y1="12" x2="22" y2="12"></line>
-                <path
-                  d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-                ></path>
-              </svg>
-            </div>
-            <div class="stat-info-text">
-              <div class="stat-info-value">150+</div>
-              <div class="stat-info-label">Countries</div>
-            </div>
-          </div>
-
-          <!-- Uptime -->
-          <div class="stat-info-card" style="background: #f6fef6">
-            <div class="stat-info-icon" style="background: #0ed70e">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="3"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M22 12A10 10 0 1 1 12 2l1.2 1.2"></path>
-                <path d="M2 12A10 10 0 0 1 12 22l-1.2-1.2"></path>
-                <path d="M12 7v5l3 3"></path>
-              </svg>
-            </div>
-            <div class="stat-info-text">
-              <div class="stat-info-value">99.9%</div>
-              <div class="stat-info-label">Uptime</div>
-            </div>
-          </div>
-
-          <!-- Tech Stack -->
-          <div class="stat-large-card">
-            <div class="large-card-header">
-              <div class="large-card-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#2E2E2E"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <polyline points="16 18 22 12 16 6"></polyline>
-                  <polyline points="8 6 2 12 8 18"></polyline>
-                  <line x1="14" y1="4" x2="10" y2="20"></line>
-                </svg>
-              </div>
-              <div class="large-card-title">Tech Stack</div>
-            </div>
-            <div class="tech-tags">
-              <div class="tech-tag">React</div>
-              <div class="tech-tag">Node.js</div>
-              <div class="tech-tag">TypeScript</div>
-              <div class="tech-tag">AWS</div>
-              <div class="tech-tag">Docker</div>
-            </div>
-          </div>
-
-          <!-- 24/7 Support -->
-          <div class="stat-large-card">
-            <div class="large-card-header">
-              <div class="large-card-icon">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="#477BFF"
-                  stroke-width="2.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10"></circle>
-                  <polyline points="12 6 12 12 16 14"></polyline>
-                </svg>
-              </div>
-              <div class="large-card-title">24/7 Support</div>
-            </div>
-            <div class="support-avatars">
-              <div class="avatar-stack">
-                <div
-                  class="avatar"
-                  style="
-                    background-image: url(&quot;https://picsum.photos/seed/user1/100/100&quot;);
-                  "
-                ></div>
-                <div
-                  class="avatar"
-                  style="
-                    background-image: url(&quot;https://picsum.photos/seed/user2/100/100&quot;);
-                  "
-                ></div>
-                <div
-                  class="avatar"
-                  style="
-                    background-image: url(&quot;https://picsum.photos/seed/user3/100/100&quot;);
-                  "
-                ></div>
-              </div>
-              <div class="support-status">Online now</div>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Second Row: Milestones and Culture -->
-      <div class="main-content-row">
-        <!-- Key Milestones Section -->
-        <div class="milestones-card">
-          <div class="milestones-header">
-            <div class="milestones-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-                <line x1="16" y1="2" x2="16" y2="6"></line>
-                <line x1="8" y1="2" x2="8" y2="6"></line>
-                <line x1="3" y1="10" x2="21" y2="10"></line>
-              </svg>
-            </div>
-            <h3 class="milestones-title">Key Milestones</h3>
-          </div>
-          <div class="milestones-list">
-            <div class="milestone-item">
-              <h4 class="milestone-name">Company Founded</h4>
-              <p class="milestone-desc">Started with 5 passionate developers</p>
-            </div>
-            <div class="milestone-item">
-              <h4 class="milestone-name">1M Users</h4>
-              <p class="milestone-desc">Reached our first million users</p>
-            </div>
-            <div class="milestone-item">
-              <h4 class="milestone-name">Series B Funding</h4>
-              <p class="milestone-desc">$50M raised to scale globally</p>
-            </div>
-          </div>
+      <!-- Meet Our Leadership -->
+      <div class="leadership-section">
+        <div class="leadership-header">
+          <h2 class="leadership-title">
+            Meet Our <span class="highlight">Leadership</span>
+          </h2>
+          <p class="leadership-desc">
+            A diverse team of innovators, builders, and dreamers working
+            together to create something special.
+          </p>
         </div>
-
-        <!-- Our Culture Section -->
-        <div class="culture-card">
-          <div
-            class="culture-image"
-            style="
-              background-image: url(&quot;https://picsum.photos/seed/office/600/600&quot;);
-            "
-          ></div>
-          <div class="culture-content">
-            <div class="culture-header">
-              <div class="culture-title-row">
-                <div class="culture-icon-box">
-                  <svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2.5"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M12 8V4H8" />
-                    <rect x="4" y="8" width="16" height="12" rx="2" />
-                    <path d="M2 14h2" />
-                    <path d="M20 14h2" />
-                    <path d="M15 13v2" />
-                    <path d="M9 13v2" />
-                  </svg>
-                </div>
-                <h3 class="culture-title">Our Culture</h3>
-              </div>
-              <p class="culture-desc">
-                We believe in work-life balance, continuous learning, and
-                celebrating wins together.
-              </p>
-            </div>
-            <div class="culture-list">
-              <div class="culture-item">
-                <div class="culture-icon-wrapper">
-                  <svg
-                    class="check-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                </div>
-                <span class="item-text">Flexible working hours</span>
-              </div>
-              <div class="culture-item">
-                <div class="culture-icon-wrapper">
-                  <svg
-                    class="check-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                </div>
-                <span class="item-text">Unlimited PTO</span>
-              </div>
-              <div class="culture-item">
-                <div class="culture-icon-wrapper">
-                  <svg
-                    class="check-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="3"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                    <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                  </svg>
-                </div>
-                <span class="item-text">Learning budget</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <section class="values-section">
-      <div class="values-header">
-        <h2 class="values-title">Our Core Values</h2>
-        <p class="values-description">
-          These principles guide everything we do, from product development to
-          customer support.
-        </p>
-      </div>
-      <div class="values-grid">
-        <!-- Customer First -->
-        <div class="value-card">
-          <div
-            class="value-icon-box"
-            style="background: rgba(241, 118, 42, 0.08)"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#F1762A"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"
-              ></path>
-              <polyline points="9 11 12 14 22 4"></polyline>
-            </svg>
-          </div>
-          <div class="value-text-group">
-            <h3 class="value-name">Customer First</h3>
-            <p class="value-desc">
-              Everything we do is centered around delivering value to our
-              customers.
-            </p>
-          </div>
-        </div>
-
-        <!-- Innovation -->
-        <div class="value-card">
-          <div
-            class="value-icon-box"
-            style="background: rgba(14, 215, 14, 0.08)"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#0ED70E"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M4.5 16.5c-1.5 1.26-2 2.67-2 3.5 0 1.21.97 2 2.23 2 .83 0 2.24-.5 3.5-2"
-              ></path>
-              <path
-                d="M15 4.5c5.12-1.35 8-1.15 9 0-1.15 1-1.35 3.88 0 9"
-              ></path>
-              <path d="M9 15l3-3"></path>
-              <path d="M17 14.5l.5.5"></path>
-              <path d="M11.5 9l.5.5"></path>
-              <path d="M17 9l.5.5"></path>
-              <path d="M11.5 14.5l.5.5"></path>
-              <path d="M10 10l-6.5 6.5"></path>
-              <path d="M14 14l6.5-6.5"></path>
-            </svg>
-          </div>
-          <div class="value-text-group">
-            <h3 class="value-name">Innovation</h3>
-            <p class="value-desc">
-              We constantly push boundaries to create cutting-edge solutions.
-            </p>
-          </div>
-        </div>
-
-        <!-- Trust & Security -->
-        <div class="value-card">
-          <div
-            class="value-icon-box"
-            style="background: rgba(71, 123, 255, 0.08)"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#477BFF"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-              <path d="M12 8v4"></path>
-              <path d="M12 16h.01"></path>
-            </svg>
-          </div>
-          <div class="value-text-group">
-            <h3 class="value-name">Trust & Security</h3>
-            <p class="value-desc">
-              Your data security and privacy are our top priorities
-            </p>
-          </div>
-        </div>
-
-        <!-- Global Impact -->
-        <div class="value-card">
-          <div
-            class="value-icon-box"
-            style="background: rgba(123, 25, 216, 0.08)"
-          >
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#7B19D8"
-              stroke-width="2.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="12" cy="12" r="10"></circle>
-              <line x1="2" y1="12" x2="22" y2="12"></line>
-              <path
-                d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"
-              ></path>
-            </svg>
-          </div>
-          <div class="value-text-group">
-            <h3 class="value-name">Global Impact</h3>
-            <p class="value-desc">
-              Building tools that empower businesses worldwide.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="trust-section">
-      <div class="trust-content">
-        <!-- Left Side: Stats Group -->
-        <div class="stats-group">
-          <!-- Total Users -->
-          <div class="stat-box stat-users">
-            <div class="stat-box-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-              </svg>
-            </div>
-            <div class="stat-box-value">5k</div>
-            <div class="stat-box-label">Total User’s</div>
-          </div>
-
-          <!-- Client Satisfaction -->
-          <div class="stat-box stat-satisfaction">
-            <div class="stat-box-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"
-                ></path>
-              </svg>
-            </div>
-            <div class="stat-box-value">99%</div>
-            <div class="stat-box-label">Client Satisfaction</div>
-          </div>
-
-          <!-- Verified Client -->
-          <div class="stat-box stat-verified">
-            <div class="stat-box-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
-                <path d="m9 12 2 2 4-4"></path>
-              </svg>
-            </div>
-            <div class="stat-box-value">4.2k</div>
-            <div class="stat-box-label">Verified Client</div>
-          </div>
-
-          <!-- SaaS Startup -->
-          <div class="stat-box stat-startup">
-            <div class="startup-text">SaaS Startup.</div>
-            <div class="startup-vector"></div>
-          </div>
-        </div>
-
-        <!-- Right Side: Content & Testimonials -->
-        <div class="trust-main">
-          <div class="trust-header">
-            <h2 class="trust-title">Trusted by Industry Leaders</h2>
-            <p class="trust-desc">
-              See what our customers have to say about their experience
-            </p>
-          </div>
-          <div class="testimonials-row">
-            <!-- Sarah Johnson -->
-            <div class="testimonial-card pro">
-              <div class="testimonial-user">
-                <div
-                  class="user-avatar"
-                  style="
-                    background-image: url(&quot;https://picsum.photos/seed/sarah/130/130&quot;);
-                  "
-                ></div>
-                <div class="user-info">
-                  <h4 class="user-name">Sarah Johnson</h4>
-                  <p class="user-title">CEO at (TechStart)</p>
-                </div>
-              </div>
-              <p class="testimonial-body">
-                Switching to the Professional plan was the best decision for our
-                team. The ROI was immediate.
-              </p>
-              <div class="plan-badge pro">Professional Plan</div>
-            </div>
-
-            <!-- Michael Chen -->
-            <div class="testimonial-card enterprise">
-              <div class="testimonial-user">
-                <div
-                  class="user-avatar"
-                  style="
-                    background-image: url(&quot;https://picsum.photos/seed/michael/130/130&quot;);
-                  "
-                ></div>
-                <div class="user-info">
-                  <h4 class="user-name">Michael Chen</h4>
-                  <p class="user-title">CTO at (ScaleUp)</p>
-                </div>
-              </div>
-              <p class="testimonial-body">
-                Enterprise support has been phenomenal. Having a dedicated
-                account manager makes all the difference.
-              </p>
-              <div class="plan-badge enterprise">Enterprise Plan</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="leadership-section">
-      <div class="leadership-header">
-        <h2 class="leadership-title">Meet Our Leadership</h2>
-        <p class="leadership-desc">
-          A diverse team of innovators, builders, and dreamers working together
-          to create something special.
-        </p>
-      </div>
-      <div class="leadership-grid">
-        <!-- Sarah Johnson Image -->
-        <div
-          class="team-member-img"
-          style="
-            background-image: url(&quot;https://picsum.photos/seed/sarah/600/800&quot;);
-          "
-        ></div>
-
-        <!-- Sarah Johnson Info Card -->
-        <div class="team-info-card">
-          <div class="team-info-icon">
-            <svg viewBox="0 0 33 30" fill="none">
-              <rect
-                x="0.75"
-                y="10.5"
-                width="8.5"
-                height="13.5"
-                fill="#FFC228"
+        <div class="leadership-grid">
+          <img
+            class="leader-photo"
+            src="assets/leader-sarah.png"
+            alt="Team member"
+          />
+          <div class="leader-info-card">
+            <div class="leader-info-bg">
+              <div class="leader-info-bg-white"></div>
+              <img
+                class="leader-info-bg-pattern"
+                src="assets/leader-pattern.png"
+                alt=""
               />
-              <rect x="9.25" y="0" width="22" height="10.5" fill="#FF0A0A" />
-              <rect x="5.5" y="24" width="16" height="6" fill="#07E0B0" />
-              <rect
-                x="10.75"
-                y="12.75"
-                width="21.5"
-                height="6.75"
-                fill="#6F3BFD"
-              />
-            </svg>
-          </div>
-          <div class="team-info-text">
-            <div class="team-info-names">
-              <h3 class="team-member-name">Sarah Johnson</h3>
-              <p class="team-member-role">CEO & Co-Founder</p>
             </div>
-            <div class="team-socials">
-              <div class="social-btn">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"
-                  ></path>
-                </svg>
+            <div class="leader-info-content">
+              <div class="leader-logo-icon">
+                <img src="assets/logo-go.svg" alt="GO!" />
               </div>
-              <div class="social-btn">
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  stroke-width="2"
-                >
-                  <path
-                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"
-                  ></path>
-                  <rect x="2" y="9" width="4" height="12"></rect>
-                  <circle cx="4" cy="4" r="2"></circle>
-                </svg>
+              <div class="leader-info-details">
+                <div class="leader-info-text">
+                  <h4>Sarah Johnson</h4>
+                  <p>CEO &amp; Co-Founder</p>
+                </div>
+                <div class="leader-social-icons">
+                  <div class="leader-social-icon">
+                    <img src="assets/icon-fb-social.svg" alt="Facebook" />
+                  </div>
+                  <div class="leader-social-icon">
+                    <img src="assets/icon-linkedin-social.svg" alt="LinkedIn" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        <!-- Michael Chen -->
-        <div
-          class="team-member-img"
-          style="
-            background-image: url(&quot;https://picsum.photos/seed/michael/600/800&quot;);
-          "
-        ></div>
-
-        <!-- Team Member 3 -->
-        <div
-          class="team-member-img"
-          style="
-            background-image: url(&quot;https://picsum.photos/seed/woman1/600/800&quot;);
-          "
-        ></div>
-
-        <!-- Team Member 4 -->
-        <div
-          class="team-member-img"
-          style="
-            background-image: url(&quot;https://picsum.photos/seed/man1/600/800&quot;);
-          "
-        ></div>
-
-        <!-- Team Member 5 -->
-        <div
-          class="team-member-img"
-          style="
-            background-image: url(&quot;https://picsum.photos/seed/girl1/600/800&quot;);
-          "
-        ></div>
-
-        <!-- Team Member 6 -->
-        <div
-          class="team-member-img"
-          style="
-            background-image: url(&quot;https://picsum.photos/seed/hispanic/600/800&quot;);
-          "
-        ></div>
-      </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-container">
-      <div class="cta-card">
-        <!-- Decorative Vectors -->
-        <div class="cta-vector-1"></div>
-        <div class="cta-vector-2"></div>
-        <div class="cta-vector-3"></div>
-        <div class="cta-vector-4"></div>
-
-        <div class="cta-header">
-          <div class="cta-badge">
-            <div class="cta-badge-icon">
-              <svg
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-              >
-                <path
-                  d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"
-                />
-              </svg>
-            </div>
-            <span class="cta-badge-text">Ready to Get Started?</span>
-          </div>
-          <div class="cta-title-group">
-            <h2 class="cta-title">Start your free trial today</h2>
-            <p class="cta-subtitle">
-              Join over 5,000+ businesses already growing with our platform. No
-              credit card required.
-            </p>
-          </div>
-        </div>
-
-        <div class="cta-actions">
-          <button class="cta-btn primary">Start for free trial</button>
-          <button class="cta-btn secondary">Schedule a Demo</button>
+          <img
+            class="leader-photo"
+            src="assets/leader-michael.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-4.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-5.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-6.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-7.png"
+            alt="Team member"
+          />
         </div>
       </div>
-    </section>
 
-    <!-- Footer Section -->
-    <footer style="padding: 80px 0; background-color: #f5f5f5; position: relative;width: 100%; ">
-    <div style="display: flex; align-items: center; justify-content: center; ">
-      <!-- Support / CTA Section -->
-      <div
-        style="z-index: 2; background: #FFFFFF; background-image: url('./assets/images/support-bg.png'); display: flex; flex-direction: column; align-items: center; padding: 48px; gap: 48px; width: 1396px; height: 475px; border: 1.5px solid #F5F5F5; border-radius: 20px; box-sizing: border-box; position: relative; isolation: isolate;">
-        <div style="display: flex; flex-direction: column; align-items: center; gap: 40px;">
-          <div style="display: flex; flex-direction: column; align-items: center; gap: 20px; width: 726px;">
-            <!-- Badge -->
-            <div style="display: flex; align-items: center; padding: 6px 16px 6px 6px; gap: 12px; background: #fff; border: 1.5px solid #F5F5F5; border-radius: 18px;">
-              <div style="display: flex; align-items: center; justify-content: center; width: 24px; height: 24px; background: #F15C2A; border-radius: 20px;">
-                <img src="./assets/icon/final-action-icon.svg" alt="">
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <div class="cta-card">
+          <img class="cta-card-bg-tl" src="assets/cta-corner-tl.svg" alt="" />
+          <img class="cta-card-bg-tr" src="assets/cta-corner-tr.svg" alt="" />
+          <img class="cta-card-bg-bl" src="assets/cta-corner-bl.svg" alt="" />
+          <img class="cta-card-bg-br" src="assets/cta-corner-br.svg" alt="" />
+
+          <div class="cta-content">
+            <div class="cta-badge">
+              <div class="cta-badge-icon">
+                <img src="assets/icon-pricing.svg" alt="" />
               </div>
-              <span style="font-family: 'General Sans', sans-serif; font-size: 14px; font-weight: 500; color: #2E2E2E;">
-                Final Action
-              </span>
+              <span>Simple, Transparent Pricing</span>
             </div>
-            <!-- Title -->
-            <h2 style="margin: 0; font-family: 'General Sans', sans-serif; font-size: 48px; font-weight: 600; line-height: 62px; text-align: center; letter-spacing: -0.03em; color: #2E2E2E;">
-              <span style="color: #F15C2A;">Still</span> have <span style="color: #F15C2A;">questions?</span>
-            </h2>
-            <!-- Description -->
-            <p style="margin: 0; font-family: 'General Sans', sans-serif; font-size: 20px; line-height: 30px; text-align: center; color: #767474;">
-              Our team is here to help. Chat with us or send an email.</p>
-          </div>
-        </div>
-
-        <!-- Buttons -->
-        <div style="display: flex; flex-direction: row; align-items: center; gap: 16px; width: 361px; height: 52px; cursor: pointer;">
-          <!-- Chat Button -->
-          <button style="display: flex; justify-content: center; align-items: center; width: 193px; height: 52px; background: #2E2E2E; border: 1.5px solid #4C4C4C; border-radius: 10px; padding: 14px 24px; gap: 10px; box-sizing: border-box; cursor: pointer;">
-            <span style="font-weight: 500; font-size: 16px; line-height: 24px; color: #FFFFFF;">Chat with our Team</span>
-          </button>
-
-          <!-- Email Button -->
-          <button style="display: flex; justify-content: center; align-items: center; width: 152px; height: 52px; background: #FFFFFF; border: 1.5px solid #F0F0F0; border-radius: 10px; padding: 14px 24px; gap: 10px; box-sizing: border-box; cursor: pointer;">
-            <span style=" text-wrap: nowrap; font-weight: 500; font-size: 16px; line-height: 24px; color: #2E2E2E;">Send us Email</span>
-          </button>
-        </div>
-
-        <!-- Avatar Stack -->
-        <div style="display: flex; flex-direction: row; align-items: center; gap: 24px; width: 504px; height: 66px;">
-          <div style="width: 62px; height: 62px; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); transform: rotate(-4deg); margin: 0 -24px;">
-            <img src="./assets/images/hero-level-img1.png" alt="">
-          </div>
-          <div style="width: 62px; height: 62px; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); transform: rotate(2deg); margin: 0 -24px;">
-            <img src="./assets/images/hero-level-img4.png" alt="">
-          </div>
-          <div style="width: 62px; height: 62px; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); transform: rotate(-4deg); margin: 0 -24px;">
-            <img src="./assets/images/hero-level-img3.png" alt="">
-          </div>
-          <div style="width: 62px; height: 62px; box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); transform: rotate(-2deg); margin: 0 -24px;">
-            <img src="./assets/images/hero-level-img2.png" alt="">
-          </div>
-          <div class="divider" style="margin-left: 24px;"></div>
-
-          <!-- Stats -->
-          <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 8px; width: 268px; height: 60px;">
-            <span style=" text-wrap: nowrap; font-weight: 500; font-size: 20px; line-height: 28px; color: #2E2E2E;">3,847 trials started this month</span>
-            <span style=" text-wrap: nowrap; font-weight: 400; font-size: 16px; line-height: 24px; color: #767474;">4.9 • 500+ reviews • 97% satisfaction</span>
-          </div>
-        </div>
-
-        <div style="z-index: 2;">
-          <!-- Footer Section -->
-          <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: flex-start; gap: 179px; width: 1390px; height: 260px; box-sizing: border-box; margin-top: 50px;">
-
-            <!-- Left Column: CTA -->
-            <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 48px; width: 470px; height: 260px;">
-              <!-- Top Label -->
-              <div style="display: flex; flex-direction: row; align-items: center; padding: 6px 16px 6px 6px; gap: 12px; width: 261px; height: 36px; background: rgba(255, 255, 255, 0.16); border: 1.5px solid rgba(255, 255, 255, 0.16); border-radius: 18px; box-sizing: border-box;">
-                <div style="width: 24px; height: 24px; background: #FFFFFF; border-radius: 20px; display: flex; justify-content: center; align-items: center;">
-                  <img src="./assets/icon/saas-icon.svg" alt="">
-                </div>
-                <span style="font-family: 'General Sans', sans-serif; font-weight: 500; font-size: 14px; line-height: 20px; color: #FFFFFF;">Ready to Transform Your SaaS?</span>
-              </div>
-
-              <!-- Main Heading & Subtext -->
-              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 16px; width: 470px; height: 113px;">
-                <h2 style="font-weight: 600; font-size: 30px; line-height: 37px; letter-spacing: -0.03em; color: #FFFFFF; margin: 0;">Ready to Launch Your SaaS Faster?</h2>
-                <p style="font-weight: 400; font-size: 20px; line-height: 30px; color: #AAAAAA; margin: 0;">The all-in-one platform for launching, growing, and scaling your SaaS—without the overwhelm.</p>
-              </div>
-
-              <!-- Social Icons -->
-              <div style="display: flex; flex-direction: row; align-items: center; gap: 4px; width: 177px; height: 43px;">
-                <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.16); border: 1.5px solid rgba(255, 255, 255, 0.12); box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); border-radius: 10px; display: flex; justify-content: center; align-items: center; transform: rotate(4deg);">
-                  <img src="./assets/icon/facebook-icon.svg" alt="">
-                </div>
-                <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.16); border: 1.5px solid rgba(255, 255, 255, 0.12); box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); border-radius: 10px; display: flex; justify-content: center; align-items: center; transform: rotate(-4deg);">
-                  <img src="./assets/icon/linkedin-icon.svg" alt="">
-                </div>
-                <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.16); border: 1.5px solid rgba(255, 255, 255, 0.12); box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); border-radius: 10px; display: flex; justify-content: center; align-items: center; transform: rotate(-4deg);">
-                  <img src="./assets/icon/x-icon.svg" alt="">
-                </div>
-                <div style="width: 40px; height: 40px; background: rgba(255, 255, 255, 0.16); border: 1.5px solid rgba(255, 255, 255, 0.12); box-shadow: 0px 0px 68px -16px rgba(241, 92, 42, 0.07); border-radius: 10px; display: flex; justify-content: center; align-items: center; transform: rotate(-4deg);">
-                  <img src="./assets/icon/github-icon.svg" alt="">
-                </div>
-              </div>
-            </div>
-
-            <!-- Right Column: Footer Links -->
-            <div style="display: flex; flex-direction: row; align-items: flex-start; gap: 48px; width: 369px; height: 164px;">
-              <!-- Product Links -->
-              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 79px; height: 164px;">
-                <span style="font-weight: 600; font-size: 20px; line-height: 30px; color: #FFFFFF;">Product</span>
-                <div style="display: flex; flex-direction: column; gap: 6px; width: 79px; height: 114px;">
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Feature</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Pricing</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Integration</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">API</span>
-                </div>
-              </div>
-
-              <!-- Company Links -->
-              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 92px; height: 164px;">
-                <span style="font-family: 'General Sans', sans-serif; font-weight: 600; font-size: 20px; line-height: 30px; color: #FFFFFF;">Company</span>
-                <div style="display: flex; flex-direction: column; gap: 6px; width: 60px; height: 114px;">
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">About</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Blog</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Career</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Contact</span>
-                </div>
-              </div>
-
-              <!-- Resources Links -->
-              <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px; width: 102px; height: 164px;">
-                <span style="font-weight: 600; font-size: 20px; line-height: 30px; color: #FFFFFF;">Resources</span>
-                <div style="display: flex; flex-direction: column; gap: 6px; width: 88px; height: 114px;">
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Help Center</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Community</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Template</span>
-                  <span style="font-weight: 400; font-size: 16px; color: #AAAAAA;">Guides</span>
-                </div>
-              </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+              "
+            >
+              <h2 class="cta-title">Ready to Get Started?</h2>
+              <p class="cta-desc">
+                Try all these features free for 14 days. No credit card
+                required.
+              </p>
             </div>
           </div>
-        </div>
-
-        <!-- Footer Bottom Bar -->
-        <div style="display: flex; flex-direction: row; justify-content: space-between; align-items: center; width: 1390px; height: 24px; box-sizing: border-box; gap: 10px; padding-top: 15px; margin-top: 10px;">
-          <!-- Copyright -->
-          <div style="width: 296px; height: 24px; font-family: 'General Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #767474;">
-            © 2025 SaaSPlatform. All rights reserved.
-          </div>
-          <!-- Legal Links -->
-          <div style="display: flex; flex-direction: row; justify-content: center; align-items: center; gap: 12px; width: 341px; height: 24px;">
-            <span style="font-family: 'General Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #767474;">Privacy Policy</span>
-            <div style="width: 1px; height: 8px; background: rgba(255, 255, 255, 0.24);"></div>
-            <span style="font-family: 'General Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #767474;">Terms & Condition</span>
-            <div style="width: 1px; height: 8px; background: rgba(255, 255, 255, 0.24);"></div>
-            <span style="font-family: 'General Sans', sans-serif; font-weight: 400; font-size: 16px; line-height: 24px; color: #767474;">Security</span>
+          <div class="cta-buttons">
+            <a href="#" class="btn-primary">
+              Start for free trial
+              <img src="assets/icon-arrow-right.svg" alt="Arrow" />
+            </a>
+            <a href="#" class="btn-secondary">Schedule a Demo</a>
           </div>
         </div>
       </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <img
+          class="footer-decor-left"
+          src="assets/footer-decor-left.svg"
+          alt=""
+        />
+        <img
+          class="footer-decor-right"
+          src="assets/footer-decor-right.svg"
+          alt=""
+        />
+
+        <div class="footer-top">
+          <div class="footer-left">
+            <div class="footer-left-info">
+              <div class="footer-badge">
+                <div class="footer-badge-icon">
+                  <img src="assets/icon-rocket.svg" alt="" />
+                </div>
+                <span>Ready to Transform Your SaaS?</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <h3 class="footer-heading">
+                  Ready to Launch Your SaaS Faster?
+                </h3>
+                <p class="footer-sub-text">
+                  The all-in-one platform for launching, growing, and scaling
+                  your SaaS—without the overwhelm.
+                </p>
+              </div>
+            </div>
+            <div class="footer-social">
+              <div class="social-icon rotated-pos">
+                <img src="assets/social-instagram.svg" alt="Instagram" />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img src="assets/social-linkedin.svg" alt="LinkedIn" />
+              </div>
+              <div class="social-icon">
+                <img src="assets/social-twitter.svg" alt="X/Twitter" />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img src="assets/social-github.svg" alt="GitHub" />
+              </div>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-col">
+              <h5>Product</h5>
+              <ul>
+                <li><a href="index.html">Feature</a></li>
+                <li><a href="pricing.html">Pricing</a></li>
+                <li><a href="#">integration</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Company</h5>
+              <ul>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Resources</h5>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Template</a></li>
+                <li><a href="#">Guides</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            &copy; 2025 SaaSPlatform. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Terms &amp; Condition</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </footer>
     </div>
-
-    <div style="top: 350px; left: 0; z-index: 1; position: absolute; width: 100%; height: 100%;">
-      <img src="./assets/images/footer-bg.png" alt="" style="width: 100%; height: 100%;">
-    </div>
-  </footer>
   </body>
 </html>
