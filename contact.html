@@ -10,17 +10,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/x-icon" href="./favicon.ico" />
 
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 
   <link rel="stylesheet" href="./css/navbar.css">
-    <link rel="stylesheet" href="./css/footer.css" />
-
-
-
+  <link rel="stylesheet" href="./css/footer.css" />
 
   <style>
     :root {
-      --bg-color: #f5f5f5;
+      --bg-color: #fafafa;
       --card-bg: #ffffff;
       --text-main: #2e2e2e;
       --text-muted: #767474;
@@ -43,15 +40,16 @@
       color: var(--text-main);
       display: flex;
       flex-direction: column;
-      /* align-items: center; */
+
+      width: 100%;
       min-height: 100vh;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
     }
 
-    
 
-    
+
+
     .divider {
       width: 1px;
       height: 8px;
@@ -157,6 +155,7 @@
       max-width: 1216px;
       display: flex;
       align-items: center;
+      justify-content: center;
       /* flex-direction: row; */
       /* gap: 16px; */
       margin-bottom: 24px;
@@ -297,7 +296,7 @@
       width: 95%;
       max-width: 1216px;
       display: flex;
-       
+
       align-items: center;
       margin-bottom: 48px;
     }
@@ -391,75 +390,17 @@
       color: #767474;
     }
 
-    /* CTA Section */
-    .cta-section {
-      width: 100%;
-      background: linear-gradient(180deg,
-          #f5f5f5 0%,
-          rgba(255, 255, 255, 0) 46.63%);
-      padding: 60px 0;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+     
 
-    .cta-card {
-      width: 95%;
-      max-width: 1396px;
-      height: 361px;
-      background: #ffffff;
-      border: 1.5px solid #f5f5f5;
-      border-radius: 20px;
-      padding: 48px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 48px;
-      position: relative;
-      overflow: hidden;
-    }
+   
 
-    .cta-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-      text-align: center;
-      z-index: 1;
-    }
+     
+    
+    
 
-    .cta-badge {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      padding: 6px 16px 6px 6px;
-      gap: 12px;
-      background: #ffffff;
-      border: 1.5px solid #f5f5f5;
-      border-radius: 18px;
-    }
+   
 
-    .cta-title {
-      font-size: 48px;
-      font-weight: 600;
-      line-height: 62px;
-      letter-spacing: -0.03em;
-      color: #2e2e2e;
-    }
-
-    .cta-desc {
-      font-size: 20px;
-      font-weight: 400;
-      line-height: 30px;
-      color: #767474;
-    }
-
-    .cta-buttons {
-      display: flex;
-      flex-direction: row;
-      gap: 16px;
-      z-index: 1;
-    }
+    
 
     .btn-primary {
       padding: 14px 24px;
@@ -1193,7 +1134,7 @@
   <!-- Navbar -->
   <div class="web-header" style="width: 100%; position:fixed; top: 0; z-index: 1000;  margin: 0 auto ;  ">
     <nav class="navbar" style="backdrop-filter: blur(50px);">
-      <a class="" href="/index.html"> 
+      <a class="" href="/index.html">
         <img src="./assets/main-logo.svg" alt="">
       </a>
       <div class="nav-links">
@@ -1216,34 +1157,34 @@
         <a href="/sign-in.html" class="sign-in-btn">Sign in</a>
       </div>
     </nav>
-  </div>  
+  </div>
 
   <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none ; z-index: 1000; " id="mySidebar">
     <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; z-index: 1000; ">
       <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
       <a href="/index.html" class="nav-item  ">Home Page</a>
-  
+
       <a href="/about.html" class="nav-item ">About Platform</a>
-  
+
       <a href="/features.html" class="nav-item">Feature’s</a>
-  
+
       <a href="/pricing.html" class="nav-item">Pricing</a>
-  
+
       <a href="/contact.html" class="nav-item active">Contact</a>
     </div>
   </div>
-  
-<div class="mobile-header w3-white">
-  <a href="/index.html" style="padding-left: 10px;">
-    <img src="./assets/main-logo.svg" alt="">
-  </a>
 
-  <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
-</div>
+  <div class="mobile-header w3-white">
+    <a href="/index.html" style="padding-left: 10px;">
+      <img src="./assets/main-logo.svg" alt="">
+    </a>
+
+    <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+  </div>
 
 
 
-  <header class="contact-hero">
+  <div class="contact-hero">
     <div class="hero-badge">
       <div class="badge-icon">
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1265,9 +1206,9 @@
     <p class="hero-desc">
       Have a question or want to learn more? We'd love to hear from you.
     </p>
-  </header>
+  
 
-  <div class="contact-container">
+  <div class="contact-container" >
     <div class="contact-methods">
       <!-- Email -->
       <div class="method-card">
@@ -1514,194 +1455,147 @@
   </div>
 
 
-
+</div>
   <!-- Footer -->
-     <div class="cta-footer-wrapper">
-      <!-- CTA Section -->
-      <div class="cta-section">
-        <div class="cta-card">
-          <!-- Corner decorative elements -->
-          <img
-            class="cta-card-bg-tl"
-            src="assets/cta-corner-tl.svg"
-            alt=""
-          />
-          <img
-            class="cta-card-bg-tr"
-            src="assets/cta-corner-tr.svg"
-            alt=""
-          />
-          <img
-            class="cta-card-bg-bl"
-            src="assets/cta-corner-bl.svg"
-            alt=""
-          />
-          <img
-            class="cta-card-bg-br"
-            src="assets/cta-corner-br.svg"
-            alt=""
-          />
+  <div class="cta-footer-wrapper">
+    <!-- CTA Section -->
+    <div class="cta-section">
+      <div class="cta-card">
+        <!-- Corner decorative elements -->
+        <img class="cta-card-bg-tl" src="assets/cta-corner-tl.svg" alt="" />
+        <img class="cta-card-bg-tr" src="assets/cta-corner-tr.svg" alt="" />
+        <img class="cta-card-bg-bl" src="assets/cta-corner-bl.svg" alt="" />
+        <img class="cta-card-bg-br" src="assets/cta-corner-br.svg" alt="" />
 
-          <div class="cta-content">
-            <div class="cta-badge">
-              <div class="cta-badge-icon">
-                <img
-                  src="assets/icon-pricing.svg"
-                  alt=""
-                />
-              </div>
-              <span>Simple, Transparent Pricing</span>
+        <div class="cta-content">
+          <div class="cta-badge">
+            <div class="cta-badge-icon">
+              <img src="assets/icon-pricing.svg" alt="" />
             </div>
-            <div
-              style="
+            <span>Simple, Transparent Pricing</span>
+          </div>
+          <div style="
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 gap: 16px;
-              "
-            >
-              <h2 class="cta-title">Ready to Get Started?</h2>
-              <p class="cta-desc">
-                Try all these features free for 14 days. No credit card
-                required.
+              ">
+            <h2 class="cta-title">Ready to Get Started?</h2>
+            <p class="cta-desc">
+              Try all these features free for 14 days. No credit card
+              required.
+            </p>
+          </div>
+        </div>
+        <div class="cta-buttons">
+          <a href="#" class="btn-primary">
+            Start for free trial
+            <img src="assets/icon-arrow-right.svg" alt="Arrow" />
+          </a>
+          <a href="#" class="btn-secondary">Schedule a Demo</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <img class="footer-decor-left" src="assets/footer-decor-left.svg" alt="" />
+      <img class="footer-decor-right" src="assets/footer-decor-right.svg" alt="" />
+
+      <div class="footer-top">
+        <div class="footer-left">
+          <div class="footer-left-info">
+            <div class="footer-badge">
+              <div class="footer-badge-icon">
+                <img src="assets/icon-rocket.svg" alt="" />
+              </div>
+              <span>Ready to Transform Your SaaS?</span>
+            </div>
+            <div style="display: flex; flex-direction: column; gap: 16px">
+              <h3 class="footer-heading">
+                Ready to Launch Your SaaS Faster?
+              </h3>
+              <p class="footer-sub-text">
+                The all-in-one platform for launching, growing, and scaling
+                your SaaS—without the overwhelm.
               </p>
             </div>
           </div>
-          <div class="cta-buttons">
-            <a href="#" class="btn-primary">
-              Start for free trial
-              <img
-                src="assets/icon-arrow-right.svg"
-                alt="Arrow"
-              />
-            </a>
-            <a href="#" class="btn-secondary">Schedule a Demo</a>
+          <div class="footer-social">
+            <div class="social-icon rotated-pos">
+              <img src="assets/social-instagram.svg" alt="Instagram" />
+            </div>
+            <div class="social-icon rotated-neg">
+              <img src="assets/social-linkedin.svg" alt="LinkedIn" />
+            </div>
+            <div class="social-icon">
+              <img src="assets/social-twitter.svg" alt="X/Twitter" />
+            </div>
+            <div class="social-icon rotated-neg">
+              <img src="assets/social-github.svg" alt="GitHub" />
+            </div>
+          </div>
+        </div>
+        <div class="footer-right">
+          <div class="footer-col">
+            <h5>Product</h5>
+            <ul>
+              <li><a href="#">Feature</a></li>
+              <li><a href="#">Pricing</a></li>
+              <li><a href="#">integration</a></li>
+              <li><a href="#">API</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Company</h5>
+            <ul>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Career</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Resources</h5>
+            <ul>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Community</a></li>
+              <li><a href="#">Template</a></li>
+              <li><a href="#">Guides</a></li>
+            </ul>
           </div>
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer class="footer">
-        <img
-          class="footer-decor-left"
-          src="assets/footer-decor-left.svg"
-          alt=""
-        />
-        <img
-          class="footer-decor-right"
-          src="assets/footer-decor-right.svg"
-          alt=""
-        />
-
-        <div class="footer-top">
-          <div class="footer-left">
-            <div class="footer-left-info">
-              <div class="footer-badge">
-                <div class="footer-badge-icon">
-                  <img
-                    src="assets/icon-rocket.svg"
-                    alt=""
-                  />
-                </div>
-                <span>Ready to Transform Your SaaS?</span>
-              </div>
-              <div style="display: flex; flex-direction: column; gap: 16px">
-                <h3 class="footer-heading">
-                  Ready to Launch Your SaaS Faster?
-                </h3>
-                <p class="footer-sub-text">
-                  The all-in-one platform for launching, growing, and scaling
-                  your SaaS—without the overwhelm.
-                </p>
-              </div>
-            </div>
-            <div class="footer-social">
-              <div class="social-icon rotated-pos">
-                <img
-                  src="assets/social-instagram.svg"
-                  alt="Instagram"
-                />
-              </div>
-              <div class="social-icon rotated-neg">
-                <img
-                  src="assets/social-linkedin.svg"
-                  alt="LinkedIn"
-                />
-              </div>
-              <div class="social-icon">
-                <img
-                  src="assets/social-twitter.svg"
-                  alt="X/Twitter"
-                />
-              </div>
-              <div class="social-icon rotated-neg">
-                <img
-                  src="assets/social-github.svg"
-                  alt="GitHub"
-                />
-              </div>
-            </div>
-          </div>
-          <div class="footer-right">
-            <div class="footer-col">
-              <h5>Product</h5>
-              <ul>
-                <li><a href="#">Feature</a></li>
-                <li><a href="#">Pricing</a></li>
-                <li><a href="#">integration</a></li>
-                <li><a href="#">API</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h5>Company</h5>
-              <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-            <div class="footer-col">
-              <h5>Resources</h5>
-              <ul>
-                <li><a href="#">Help Center</a></li>
-                <li><a href="#">Community</a></li>
-                <li><a href="#">Template</a></li>
-                <li><a href="#">Guides</a></li>
-              </ul>
-            </div>
-          </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">
+          © 2025 SaaSPlatform. All rights reserved.
+        </p>
+        <div class="footer-legal">
+          <a href="#">Privacy Policy</a>
+          <div class="footer-legal-sep"></div>
+          <a href="#">Terms &amp; Condition</a>
+          <div class="footer-legal-sep"></div>
+          <a href="#">Security</a>
         </div>
-
-        <div class="footer-bottom">
-          <p class="footer-copyright">
-            © 2025 SaaSPlatform. All rights reserved.
-          </p>
-          <div class="footer-legal">
-            <a href="#">Privacy Policy</a>
-            <div class="footer-legal-sep"></div>
-            <a href="#">Terms &amp; Condition</a>
-            <div class="footer-legal-sep"></div>
-            <a href="#">Security</a>
-          </div>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </footer>
+  
 
 
 
 
 
-   <script>
+  <script>
 
-      function w3_open() {
-        document.getElementById("mySidebar").style.display = "block";
-      }
+    function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
 
-      function w3_close() {
-        document.getElementById("mySidebar").style.display = "none";
-      }
-    </script>
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }
+  </script>
 </body>
 
 </html>
