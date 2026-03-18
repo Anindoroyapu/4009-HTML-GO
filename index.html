@@ -10,6 +10,8 @@
 
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 
+<link rel="stylesheet" href="./css/navbar.css">
+
 
   <style>
     /* Mobile Responsive */
@@ -425,98 +427,11 @@
       animation: scroll 10s linear infinite;
     }
 
-    .logo {
-      height: 60px;
-      width: auto;
-    }
-
-  /* Default: HIDE on desktop */
-.mobile-header {
-  display: none;
-}
-
-
-/* SHOW only on tablet + mobile */
-@media (max-width: 768px) {
-  .mobile-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    margin-top: 5px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    background: #fff;
-    z-index: 999;
-    padding: 8px 12px;
-  }
-}
+  
 
 
   
-    /* Navbar Styles */
-    .navbar {
-      width: 100%;
-      max-width: 1100px;
-      height: 76px;
-      background: #FFFFFF;
-      box-shadow: 0 0 68px -16px rgba(241, 92, 42, 0.07);
-      border: 1.5px solid #F5F5F5;
-      border-radius: 18px;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      padding: 12px 24px;
-      gap: 48px;
-      margin: 24px auto;
 
-    }
-
-    .logo {
-      color: #F15C2A;
-      font-weight: 700;
-      font-size: 20px;
-    }
-
-    .menu {
-      display: flex;
-      gap: 16px;
-      align-items: center;
-    }
-
-    .menu a {
-      color: #5a5a5a;
-      text-decoration: none;
-      font-weight: 600;
-    }
-
-    .menu .active {
-      color: #F15C2A;
-    }
-
-    .nav-btn {
-      display: flex;
-      gap: 10px;
-    }
-
-    .theme {
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      border: none;
-      background: #f5f5f5;
-    }
-
-    .signin {
-      padding: 10px 20px;
-      background: #2e2e2e;
-      color: white;
-      border: none;
-      border-radius: 10px;
-    }
 
     /* Hero */
 
@@ -3272,7 +3187,7 @@
     </nav>
   </div>  
 
-  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none ;  " id="mySidebar">
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none ;  z-index: 1000;" id="mySidebar">
     <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; ">
       <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
       <a href="/index.html" class="nav-item active">Home Page</a>
