@@ -2465,7 +2465,6 @@ h3{
     .faq-divider-art::after {
       content: "";
       position: absolute;
-     
       pointer-events: none;
     }
 
@@ -2853,15 +2852,21 @@ h3{
         line-height: 1.25 !important;
         white-space: normal !important;
       }
-
       .hero-buttons {
-        width: 100%;
+        width: 100%;cursor: pointer; 
       }
 
       .primary,
       .secondary {
         width: 100%;
         justify-content: center;
+        cursor: pointer; 
+        z-index: 1000;
+      }
+
+      .primary:hover{
+        background: #2E2E2E;
+        color: #fff;
       }
 
       .stats-cards,
