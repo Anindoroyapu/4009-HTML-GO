@@ -718,6 +718,8 @@
     line-height: 36.8px;
     letter-spacing: -0.9px;
     color: var(--white);
+    text-wrap: nowrap;
+    margin-bottom: -10px;
 }
 
 .footer-sub-text {
@@ -761,7 +763,7 @@
 
 .footer-right {
     display: flex;
-    gap: 0px;
+    gap: 40px;
    
 }
 
