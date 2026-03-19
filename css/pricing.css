@@ -192,6 +192,7 @@
         line-height: 62.4px;
         letter-spacing: -1.44px;
         color: var(--dark);
+        font-family: 'General Sans', sans-serif;
       }
 
       .pricing-hero-title .highlight {
@@ -611,7 +612,10 @@
         font-size: 48px;
         line-height: 62.4px;
         letter-spacing: -1.44px;
+        
+        font-family: 'General Sans', sans-serif;
       }
+     
 
       .comparison-labels-title .highlight {
         color: #ff5820;
@@ -622,6 +626,7 @@
         font-size: 20px;
         line-height: 30px;
         color: var(--text-gray);
+        margin-top: -20px;
       }
 
       /* Section blocks */
@@ -641,7 +646,7 @@
       .comparison-section-items {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
       }
 
       .comparison-label-item {
@@ -678,11 +683,10 @@
         margin-bottom: 40px;
         user-select: none;
       }
-
       .comparison-data-items {
         display: flex;
         flex-direction: column;
-        gap: 30px;
+        gap: 15px;
       }
 
       .comparison-data-item {
