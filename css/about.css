@@ -284,6 +284,7 @@
         font-size: 16px;
         line-height: 24px;
         color: var(--text-gray);
+        margin-top: -5px;
       }
 
       .journey-tags {
@@ -606,6 +607,7 @@
         font-size: 16px;
         line-height: 24px;
         color: var(--text-gray);
+        margin-top: -7px;
       }
 
       /* Our Culture Card (right column, bottom) */
@@ -735,6 +737,7 @@
         line-height: 62.4px;
         letter-spacing: -1.44px;
         color: var(--dark);
+        font-family:'General Sans',sans-serif;
       }
 
       .values-title .highlight {
@@ -806,6 +809,7 @@
         line-height: 32.4px;
         letter-spacing: -0.72px;
         color: var(--dark);
+        font-family:'General Sans',sans-serif;
       }
 
       .value-text p {
@@ -813,6 +817,7 @@
         font-size: 16px;
         line-height: 24px;
         color: var(--text-gray);
+        margin-top: -10px;
       }
 
       /* ==================== TRUSTED BY INDUSTRY LEADERS ==================== */
@@ -889,9 +894,11 @@
 
       .trusted-stat-label {
         font-weight: 400;
-        font-size: 24px;
+        font-size: 20px;
         line-height: 34px;
         color: var(--text-gray);
+        margin-top: -10px;
+        text-wrap: nowrap;
       }
 
       .saas-text {
@@ -943,6 +950,7 @@
         line-height: 62.4px;
         letter-spacing: -1.44px;
         color: var(--dark);
+        font-family:'General Sans',sans-serif;
       }
 
       .trusted-title .highlight {
@@ -968,6 +976,7 @@
         padding: 24px;
         display: flex;
         flex-direction: column;
+        justify-content: space-between;
         gap: 24px;
       }
 
@@ -1014,7 +1023,8 @@
         font-size: 16px;
         line-height: 24px;
         color: var(--text-gray);
-      }
+        margin-top: -10px;   
+        }
 
       .testimonial-text {
         font-weight: 400;
@@ -1068,7 +1078,8 @@
         font-size: 48px;
         line-height: 62.4px;
         letter-spacing: -1.44px;
-        color: var(--dark);
+        color: var(--dark);   
+        font-family:'General Sans',sans-serif;
       }
 
       .leadership-title .highlight {

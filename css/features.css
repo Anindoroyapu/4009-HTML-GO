@@ -210,6 +210,7 @@
         line-height: 70px;
         letter-spacing: -1.8px;
         color: var(--dark);
+        font-family: 'General Sans', sans-serif;
       }
 
       .hero-title .accent {
@@ -378,6 +379,11 @@
         align-items: center;
         gap: 12px;
         width: 100%;
+        font-family: 'General Sans', sans-serif;
+      }
+      .feature-card-info p{
+        margin-top: -10px;
+        
       }
 
       .category-badge {
@@ -464,6 +470,7 @@
       .complete-features-header {
         text-align: center;
         margin-bottom: 60px;
+        font-family: 'General Sans', sans-serif;
       }
 
       .complete-features-header h2 {
@@ -473,6 +480,7 @@
         letter-spacing: -1.44px;
         color: var(--dark);
         margin-bottom: 16px;
+         font-family: 'General Sans', sans-serif;
       }
 
       .complete-features-header h2 .accent {
@@ -484,6 +492,7 @@
         font-size: 20px;
         line-height: 30px;
         color: var(--text-gray);
+        margin-top: -10px;
       }
 
       .feature-grid-12 {
@@ -540,6 +549,8 @@
         font-size: 14px;
         line-height: 20px;
         color: var(--text-gray);
+        margin-top: -15px;
+        white-space: nowrap;
       }
 
       /* ==================== CTA SECTION ==================== */
