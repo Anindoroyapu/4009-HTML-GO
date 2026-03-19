@@ -369,6 +369,7 @@
       font-weight: 500;
       line-height: 20px;
       color: #2E2E2E;
+      text-wrap: nowrap;
     }
 
     .why-btn {
