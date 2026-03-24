@@ -102,6 +102,7 @@ body.dark-mode-contact .method-title {
 
 body.dark-mode-contact .method-desc {
   color: var(--dm-muted);
+  text-align: start;
 }
 
 body.dark-mode-contact .method-link {

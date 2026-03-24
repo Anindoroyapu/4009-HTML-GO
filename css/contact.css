@@ -184,6 +184,7 @@
       color: #2e2e2e;
       margin-bottom: 16px;
       letter-spacing: -0.03em;
+      text-align: start;
     }
 
     .method-desc {
@@ -191,12 +192,14 @@
       color: #767474;
       line-height: 24px;
       margin-bottom: 16px;
+        text-align: start;
     }
 
     .method-link {
       font-size: 14px;
       font-weight: 500;
       text-decoration: none;
+      text-align: start !important;
     }
 
     /* Contact Form */
