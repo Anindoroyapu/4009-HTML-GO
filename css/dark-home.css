@@ -81,21 +81,9 @@ body.dark-mode .cta-section {
  
 
 body.dark-mode .pricing-figma-toggle,
-body.dark-mode .faq-left,
 body.dark-mode .xqv9r-0015,
 body.dark-mode .xqv9r-0022,
-body.dark-mode .xqv9r-0090,
-body.dark-mode .xqv9r-0091,
-body.dark-mode .xqv9r-0092,
-body.dark-mode .xqv9r-0093,
-body.dark-mode .xqv9r-0094,
-body.dark-mode .xqv9r-0095,
-body.dark-mode .xqv9r-0096,
-body.dark-mode .xqv9r-0097,
-body.dark-mode .xqv9r-0098,
-body.dark-mode .xqv9r-0099,
-body.dark-mode .xqv9r-0100,
-body.dark-mode .xqv9r-0101,
+
 body.dark-mode .xqv9r-0118,
 body.dark-mode .xqv9r-0152,
 body.dark-mode .xqv9r-0171,
@@ -146,7 +134,6 @@ body.dark-mode .divider,
 body.dark-mode .pricing-plan,
 body.dark-mode .pricing-figma-grid,
 body.dark-mode .faq-item,
-body.dark-mode .footer-bottom,
 body.dark-mode .footer-legal-sep,
 body.dark-mode .cta-proof-divider {
   border-color: var(--dm-border-soft);
@@ -275,7 +262,8 @@ body.dark-mode .features-section {
  body.dark-mode .xqv9r-0135,
  body.dark-mode .pricing-figma-badge,
  body.dark-mode .pricing-figma-foot,
- body.dark-mode .faq-badge{
+ body.dark-mode .faq-badge,
+ body.dark-mode .cta-badge{
     background: rgba(255, 255, 255, 0.16);  
  }
  body.dark-mode .xqv9r-0134{
