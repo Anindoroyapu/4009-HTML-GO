@@ -46,9 +46,7 @@ body.dark-mode .dashboard-features,
 body.dark-mode .card,
 body.dark-mode .status-badge,
 body.dark-mode .onboarding-hero,
-body.dark-mode .hero-dashboard,
-body.dark-mode .frame-main,
-body.dark-mode .comparison-table,
+body.dark-mode .hero-dashboard, 
 body.dark-mode .pricing-card,
 body.dark-mode .pricing-figma-grid,
 body.dark-mode .pricing-plan,
@@ -80,9 +78,7 @@ body.dark-mode .cta-section {
 
 }
 
-body.dark-mode .frame-main {
-  background: linear-gradient(180deg, #141d29 0%, #101722 100%);
-}
+ 
 
 body.dark-mode .pricing-figma-toggle,
 body.dark-mode .faq-left,
@@ -145,10 +141,8 @@ body.dark-mode .xqv9r-0175 {
 }
 
 body.dark-mode .divider,
-body.dark-mode .table-header,
-body.dark-mode .table-row,
-body.dark-mode .col-concept,
-body.dark-mode .col-new-way,
+ 
+ 
 body.dark-mode .pricing-plan,
 body.dark-mode .pricing-figma-grid,
 body.dark-mode .faq-item,
@@ -251,13 +245,37 @@ body.dark-mode svg [fill="#637381"] {
 body.dark-mode .footer {
   background: #0f1622;
 }
-body.dark-mode .xqv9r-0067{
+body.dark-mode .xqv9r-0067,
+body.dark-mode .xqv9r-0073,
+body.dark-mode .xqv9r-0087,
+body.dark-mode .xqv9r-0106,
+body.dark-mode .xqv9r-0117,
+body.dark-mode .xqv9r-0118{
     border-radius: 20px;
     background-color: #1B0E36;
+    overflow: hidden;
 }
 body.dark-mode .dashboard-features {
 background-color: #010102;
 }
 body.dark-mode .features-section {
-    background-color: #1B0E36;
+    background-color: #251840;
+
 }
+ body.dark-mode .xqv9r-00461{
+    background-color: #1B0E36;
+  
+ }
+ body.dark-mode .xqv9r-0060{
+    background: rgba(255, 255, 255, 0.16);
+  
+ }
+ body.dark-mode .xqv9r-0131,
+ body.dark-mode .xqv9r-0132,
+ body.dark-mode .xqv9r-0135{
+    background: rgba(255, 255, 255, 0.16);  
+ }
+ body.dark-mode .xqv9r-0134{
+    background-color: #1B0E36;
+  
+ }
