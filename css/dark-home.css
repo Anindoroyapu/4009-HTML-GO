@@ -272,10 +272,17 @@ body.dark-mode .features-section {
  }
  body.dark-mode .xqv9r-0131,
  body.dark-mode .xqv9r-0132,
- body.dark-mode .xqv9r-0135{
+ body.dark-mode .xqv9r-0135,
+ body.dark-mode .pricing-figma-badge,
+ body.dark-mode .pricing-figma-foot,
+ body.dark-mode .faq-badge{
     background: rgba(255, 255, 255, 0.16);  
  }
  body.dark-mode .xqv9r-0134{
     background-color: #1B0E36;
+  
+ }
+ body.dark-mode .xqv9r-0156{
+    background-color: #36304A;
   
  }
