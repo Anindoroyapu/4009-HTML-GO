@@ -163,6 +163,12 @@
     z-index: 1000;
     padding: 8px 12px;
   }
+  body.dark-mode .navbar {
+    display: none;
+  }
+  body.dark-mode .mobile-header {
+   background: #1B0E36 !important;
+  }
 }
 
 
