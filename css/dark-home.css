@@ -69,7 +69,7 @@ body.dark-mode .footer-social .social-icon {
 }
 
 body.dark-mode .trusted-section,
-body.dark-mode .features-section,
+
 body.dark-mode .pricing-figma,
 body.dark-mode .faq-section,
 body.dark-mode .founders-section,
@@ -250,4 +250,14 @@ body.dark-mode svg [fill="#637381"] {
 
 body.dark-mode .footer {
   background: #0f1622;
+}
+body.dark-mode .xqv9r-0067{
+    border-radius: 20px;
+    background-color: #1B0E36;
+}
+body.dark-mode .dashboard-features {
+background-color: #010102;
+}
+body.dark-mode .features-section {
+    background-color: #1B0E36;
 }
