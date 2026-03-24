@@ -1,0 +1,274 @@
+/* Dark mode overrides for pages/dark-about.html.
+   Color-only changes to match Figma node 71:10107 without altering layout. */
+
+body.dark-mode-about {
+  --dm-bg: #0e0724;
+  --dm-bg-alt: #000000;
+  --dm-surface: #1b0e36;
+  --dm-surface-border: #251840;
+  --dm-nav: #383048;
+  --dm-nav-border: #484157;
+  --dm-muted: #b1b1b1;
+  --dm-footer: #101828;
+  --dm-button-alt: #4d465b;
+  --dm-chip: #403a54;
+  --dm-chip-border: rgba(255, 255, 255, 0.08);
+  background: var(--dm-bg);
+  color: #ffffff;
+}
+
+body.dark-mode-about .page-wrapper,
+body.dark-mode-about .about-hero,
+body.dark-mode-about .trusted-section {
+  background: var(--dm-bg);
+}
+
+body.dark-mode-about .navbar {
+  background: var(--dm-nav);
+  border-color: var(--dm-nav-border);
+}
+
+body.dark-mode-about .nav-item {
+  color: var(--dm-muted);
+}
+
+body.dark-mode-about .nav-item.active {
+  color: #ffffff;
+}
+
+body.dark-mode-about .divider {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode-about .theme-toggle {
+  background: var(--dm-button-alt);
+}
+
+body.dark-mode-about .theme-toggle svg {
+  color: #ffffff;
+}
+
+body.dark-mode-about .sign-in-btn,
+body.dark-mode-about .btn-signin {
+  background: var(--dm-button-alt);
+  color: #ffffff;
+}
+
+body.dark-mode-about .mobile-header {
+  background: var(--dm-nav);
+  border-bottom: 1px solid var(--dm-nav-border);
+}
+
+body.dark-mode-about .w3-sidebar {
+  background: var(--dm-nav);
+  color: #ffffff;
+}
+
+body.dark-mode-about .w3-sidebar .w3-bar-item,
+body.dark-mode-about .w3-sidebar .nav-item {
+  color: #ffffff;
+}
+
+body.dark-mode-about .about-hero-inner {
+  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.1));
+}
+
+body.dark-mode-about .about-badge,
+body.dark-mode-about .cta-badge {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+body.dark-mode-about .about-badge span,
+body.dark-mode-about .cta-badge span {
+  color: #ffffff;
+}
+
+body.dark-mode-about .about-hero-title,
+body.dark-mode-about .values-title,
+body.dark-mode-about .trusted-title,
+body.dark-mode-about .leadership-title,
+body.dark-mode-about .cta-title,
+body.dark-mode-about .journey-title-row h3,
+body.dark-mode-about .milestones-header h3,
+body.dark-mode-about .culture-title-row h3,
+body.dark-mode-about .value-text h4,
+body.dark-mode-about .testimonial-info h5,
+body.dark-mode-about .leader-info-text h4,
+body.dark-mode-about .journey-stat-value,
+body.dark-mode-about .milestone-item h5,
+body.dark-mode-about .culture-check-item span,
+body.dark-mode-about .info-card-header h4,
+body.dark-mode-about .trusted-stat-number,
+body.dark-mode-about .stat-info .stat-number,
+body.dark-mode-about .footer-heading,
+body.dark-mode-about .footer-col h5 {
+  color: #ffffff;
+}
+
+body.dark-mode-about .about-hero-desc,
+body.dark-mode-about .journey-desc,
+body.dark-mode-about .journey-tag .label,
+body.dark-mode-about .journey-stat-header span,
+body.dark-mode-about .stat-info .stat-label,
+body.dark-mode-about .culture-header p,
+body.dark-mode-about .values-desc,
+body.dark-mode-about .value-text p,
+body.dark-mode-about .trusted-subtitle,
+body.dark-mode-about .testimonial-info p,
+body.dark-mode-about .testimonial-text,
+body.dark-mode-about .leader-info-text p,
+body.dark-mode-about .leadership-desc,
+body.dark-mode-about .cta-desc,
+body.dark-mode-about .footer-sub-text,
+body.dark-mode-about .footer-col ul li a,
+body.dark-mode-about .footer-copyright,
+body.dark-mode-about .footer-legal a,
+body.dark-mode-about .milestone-item p,
+body.dark-mode-about .journey-tag .value,
+body.dark-mode-about .saas-text,
+body.dark-mode-about .trusted-stat-label {
+  color: var(--dm-muted);
+}
+
+body.dark-mode-about .journey-card,
+body.dark-mode-about .milestones-card,
+body.dark-mode-about .culture-card,
+body.dark-mode-about .info-card,
+body.dark-mode-about .trusted-stat-card,
+body.dark-mode-about .leader-info-card,
+body.dark-mode-about .cta-card {
+  background: var(--dm-surface);
+  border-color: var(--dm-surface-border);
+}
+
+body.dark-mode-about .journey-tag {
+  background: var(--dm-chip);
+  border-color: var(--dm-chip-border);
+}
+
+body.dark-mode-about .journey-bottom,
+body.dark-mode-about .journey-stat {
+  background: transparent;
+}
+
+body.dark-mode-about .journey-stat {
+  border-color: var(--dm-surface-border);
+}
+
+body.dark-mode-about .stat-card.blue {
+  background: rgba(71, 123, 255, 0.1);
+}
+
+body.dark-mode-about .stat-card.orange {
+  background: rgba(241, 92, 42, 0.1);
+}
+
+body.dark-mode-about .stat-card.purple {
+  background: rgba(145, 84, 225, 0.1);
+}
+
+body.dark-mode-about .stat-card.green {
+  background: rgba(14, 215, 14, 0.1);
+}
+
+body.dark-mode-about .info-card-icon,
+body.dark-mode-about .culture-title-icon,
+body.dark-mode-about .trusted-stat-icon,
+body.dark-mode-about .leader-logo-icon,
+body.dark-mode-about .leader-social-icon {
+  background: #3C3650;
+  border-color: var(--dm-surface-border);
+}
+
+body.dark-mode-about .tech-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #36304a;
+  color: #ffffff;
+}
+
+body.dark-mode-about .avatar-stack img {
+  border-color: var(--dm-footer);
+}
+
+body.dark-mode-about .support-online {
+  color: #477bff;
+}
+
+body.dark-mode-about .values-section {
+  background: linear-gradient(to top, #000000 0%, #0e0724 100%);
+}
+
+body.dark-mode-about .trusted-stat-card.saas-card .saas-text {
+  color: rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode-about .testimonial-card.orange {
+  background: #250f24;
+  border-color: #2f192e;
+}
+
+body.dark-mode-about .testimonial-card.blue {
+  background: #141239;
+  border-color: #19173e;
+}
+
+body.dark-mode-about .testimonial-tag.orange,
+body.dark-mode-about .testimonial-tag.blue {
+  color: #ffffff;
+  border-color: transparent;
+}
+
+body.dark-mode-about .testimonial-tag.orange {
+  background: #f15c2a;
+}
+
+body.dark-mode-about .testimonial-tag.blue {
+  background: #477bff;
+}
+
+body.dark-mode-about .leadership-section {
+  background: var(--dm-bg-alt);
+}
+
+body.dark-mode-about .leader-info-bg-white {
+  background: var(--dm-surface);
+}
+
+body.dark-mode-about .leader-social-icon {
+  background: var(--dm-bg);
+  border-color: #211b36;
+}
+
+body.dark-mode-about .cta-section {
+  background: transparent;
+}
+
+body.dark-mode-about .cta-card {
+  background: #1d0f36;
+  border-color: var(--dm-surface-border);
+}
+
+body.dark-mode-about .cta-section .btn-primary {
+  background: #000000;
+  border-color: #101828;
+  color: #ffffff;
+}
+
+body.dark-mode-about .cta-section .btn-secondary {
+  background: var(--dm-button-alt);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+body.dark-mode-about .footer {
+  background: var(--dm-footer);
+}
+
+body.dark-mode-about .footer-badge {
+  border-color: rgba(255, 255, 255, 0.16);
+}
+
+body.dark-mode-about .footer-legal-sep {
+  background: #767474;
+}
