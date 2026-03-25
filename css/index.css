@@ -196,7 +196,7 @@
   .pill-card {
     position: absolute;
     left: 1350px;
-    top: 527px;
+    top: 627px;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -255,7 +255,7 @@
   .info-card {
     position: absolute;
     left: 282px;
-    top: 508px;
+    top: 608px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -269,6 +269,74 @@
     border-radius: 12px;
     transform: rotate(-6deg);
   }
+
+  .zx9-cardWrap {
+  width: 574px;
+  padding: 30px;
+  border-radius: 16px;
+  background: #fff url('white-line-texture-background.jpg');
+  border: 1.5px solid rgba(0, 123, 255, 0.08);
+  box-shadow: 0px 4px 48px rgba(217, 217, 217, 0.4);
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+
+  font-family: 'Sora', sans-serif;
+}
+
+/* Header */
+.zx9-cardHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Brand */
+.zx9-brandBox {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.zx9-logoOrb {
+  width: 48px;
+  height: 48px;
+  background: #000;
+  border-radius: 50%;
+}
+
+.zx9-brandName {
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  margin: 0;
+  color: #1A1A1A;
+}
+
+/* Rating */
+.zx9-ratingRow {
+  display: flex;
+  gap: 4px;
+}
+
+.zx9-star {
+  font-size: 24px;
+  color: #E0E0E0;
+}
+
+.zx9-starFill {
+  color: #FFC107;
+}
+
+/* Text */
+.zx9-reviewTxt {
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 32px;
+  color: #333;
+  margin: 0;
+}
 
   /* Label Row */
   .label-row {
