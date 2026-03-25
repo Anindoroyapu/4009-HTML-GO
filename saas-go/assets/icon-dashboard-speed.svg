@@ -1,7 +1,0 @@
-<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g id="dashboard-speed-02">
-<path id="Vector" d="M24 42C27.3137 42 30 39.3137 30 36C30 32.6863 27.3137 30 24 30C20.6863 30 18 32.6863 18 36C18 39.3137 20.6863 42 24 42Z" stroke="var(--stroke-0, white)" stroke-width="3"/>
-<path id="Vector_2" d="M24 30V20" stroke="var(--stroke-0, white)" stroke-width="3" stroke-linecap="round"/>
-<path id="Vector_3" d="M44 26C44 14.9543 35.0456 6 24 6C12.9543 6 4 14.9543 4 26" stroke="var(--stroke-0, white)" stroke-width="3" stroke-linecap="round"/>
-</g>
-</svg>
