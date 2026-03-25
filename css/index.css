@@ -651,7 +651,7 @@
     position: relative;
     width: 393px;
     height: 574px;
-    background: url('happy-winner-portrait-surprised-amazed-smiling-casual-curly-student-woman-holding-smartphone-isolated-blue-background.png') no-repeat center/cover;
+    background: url('../assets/choose-girl-img.png') no-repeat center/cover;
     border-radius: 20px;
     flex-shrink: 0;
   }
