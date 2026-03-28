@@ -1,11 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AppFlow | Contact</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/contact.css">
 </head>
-<body>
-    
+
+<body class="contact-body">
+    <header class="topbar contact-topbar">
+        <div class="container contact-topbar-inner">
+            <a class="brand" href="./index.html" aria-label="AppFlow home">
+                <img src="./public/images/main-logo.png" alt="AppFlow">
+            </a>
+
+            <nav class="main-nav" aria-label="Primary">
+                <a href="./index.html">Home Page</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./features.html">Features</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./pricing.html">Pricing</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./about.html">About</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./blog.html">Blog</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a class="is-active" href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="topbar-actions">
+                <button class="icon-btn" aria-label="Theme">◔</button>
+                <a class="btn btn-primary" href="#">Get start for free</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <section class="contact-message-section">
+            <div class="container contact-message-wrap">
+                <article class="contact-intro-card contact-pattern-card">
+                    <div class="contact-intro-copy">
+                        <h1>Get in <span>Touch</span> &amp; <span>Talk Our Team</span></h1>
+                        <p>
+                            Have a question, need support, or want to talk about your project?
+                            <br>
+                            We&rsquo;re here to help and would love to hear from you.
+                        </p>
+                    </div>
+
+                    <div class="contact-social" aria-label="Social links">
+                        <a href="#" aria-label="Facebook">
+                            <img src="./assets/contact/icon-facebook.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <img src="./assets/contact/icon-linkedin.svg" alt="">
+                        </a>
+                        <a href="#" aria-label="GitHub">
+                            <img src="./assets/contact/icon-github.svg" alt="">
+                        </a>
+                    </div>
+                </article>
+
+                <div class="contact-grid">
+                    <article class="contact-info-card contact-pattern-card">
+                        <div class="contact-info-head">
+                            <span class="contact-flow-icon" aria-hidden="true">
+                                <img src="./assets/contact/icon-flow-connection.svg" alt="">
+                            </span>
+                            <h2>Send Us a Message</h2>
+                        </div>
+
+                        <p class="contact-info-subtitle">
+                            Fill out the form below and our team will get back to you as soon as possible.
+                        </p>
+
+                        <div class="contact-details-block">
+                            <h3>Contact Information.</h3>
+                            <ul>
+                                <li><img src="./assets/contact/icon-checkmark-badge.svg" alt="">support@yourappname.com</li>
+                                <li><img src="./assets/contact/icon-checkmark-badge.svg" alt="">+1 (000) 123-4567</li>
+                                <li><img src="./assets/contact/icon-checkmark-badge.svg" alt="">123 Digital Street, Tech City, Country</li>
+                                <li><img src="./assets/contact/icon-checkmark-badge.svg" alt="">Scale with user needs.</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="contact-form-card contact-pattern-card">
+                        <form class="contact-form" action="#" method="post">
+                            <div class="contact-form-grid">
+                                <label>
+                                    First Name
+                                    <input type="text" placeholder="Enter your first name" required>
+                                </label>
+                                <label>
+                                    Last Name
+                                    <input type="text" placeholder="Enter your last name" required>
+                                </label>
+                                <label>
+                                    Email Address
+                                    <input type="email" placeholder="Enter your email address" required>
+                                </label>
+                                <label>
+                                    Subject
+                                    <input type="text" placeholder="Select Subject">
+                                </label>
+                            </div>
+
+                            <label class="contact-note">
+                                Short Note
+                                <textarea placeholder="Describe your note..."></textarea>
+                            </label>
+
+                            <button class="contact-submit-btn" type="submit">
+                                Send a Request
+                                <img src="./assets/contact/icon-cursor-info.svg" alt="">
+                            </button>
+                        </form>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-faq-section">
+            <div class="container contact-faq-wrap">
+                <article class="contact-quick-card contact-pattern-card">
+                    <h2>Quick <span>Questions</span></h2>
+                </article>
+
+                <div class="contact-faq-list">
+                    <article class="contact-faq-item open">
+                        <div>
+                            <h3>How fast do you respond?</h3>
+                            <p>Most messages are answered within 24 hours.</p>
+                        </div>
+                        <img src="./assets/contact/icon-arrow-down-1.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="contact-faq-item">
+                        <h3>Do you offer technical support?</h3>
+                        <img src="./assets/contact/icon-arrow-down-2.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="contact-faq-item">
+                        <h3>Can I request a demo?</h3>
+                        <img src="./assets/contact/icon-arrow-down-2.svg" alt="" aria-hidden="true">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact-footer-block">
+            <div class="container contact-cta">
+                <img class="contact-cta-vector-left" src="./assets/contact/cta-vector-left.svg" alt="">
+                <img class="contact-cta-vector-top" src="./assets/contact/cta-vector-top.svg" alt="">
+
+                <div class="contact-cta-copy">
+                    <h2>Let&rsquo;s Build Something Great Together</h2>
+                    <p>
+                        Whether you&rsquo;re launching a new idea or scaling an existing
+                        product, we&rsquo;re ready to help.
+                    </p>
+                </div>
+
+                <div class="contact-cta-actions">
+                    <a href="#" class="contact-cta-btn light">
+                        Get Start Today
+                        <img src="./assets/contact/icon-arrow-right-light.svg" alt="">
+                    </a>
+                    <a href="#" class="contact-cta-btn dark">
+                        Start free Trial
+                        <img src="./assets/contact/icon-arrow-right-dark.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <footer class="contact-footer">
+                <div class="container contact-footer-top">
+                    <div class="contact-footer-about">
+                        <a href="./index.html" class="contact-footer-logo" aria-label="Logoipsum">
+                            <img src="./public/images/main-logo.png" alt="Logoipsum">
+                        </a>
+                        <p>
+                            The ultimate multipurpose app template for
+                            building modern SaaS, productivity, and
+                            utility applications.
+                        </p>
+                    </div>
+
+                    <div class="contact-footer-links">
+                        <div>
+                            <h3>Product</h3>
+                            <a href="./index.html">Home Page</a>
+                            <a href="./features.html">Features</a>
+                            <a href="./pricing.html">Pricing</a>
+                            <a href="#">FAQ&rsquo;s</a>
+                        </div>
+                        <div>
+                            <h3>Company</h3>
+                            <a href="./about.html">About Us</a>
+                            <a href="./blog.html">Blog</a>
+                            <a href="#">Career</a>
+                            <a href="./contact.html">Contact</a>
+                        </div>
+                        <div>
+                            <h3>Legal</h3>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">Help Center</a>
+                            <a href="#">Terms &amp; Condition</a>
+                            <a href="#">Security</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container contact-footer-bottom">
+                    <p>&copy; 2025 AppFlow. All rights reserved.</p>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        <span class="contact-footer-dot"></span>
+                        <a href="#">Terms &amp; Service</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
+    </main>
 </body>
+
 </html>
