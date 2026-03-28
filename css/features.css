@@ -900,6 +900,10 @@
 }
 
 @media (max-width: 1280px) {
+    .features-topbar .main-nav {
+        display: none;
+    }
+
     .features-heading h1,
     .features-all-section h2,
     .features-faq-side-card h2,
@@ -954,6 +958,24 @@
 }
 
 @media (max-width: 900px) {
+    .features-topbar .features-topbar-inner {
+        min-height: 76px;
+    }
+
+    .features-topbar .brand img {
+        width: 156px;
+    }
+
+    .features-topbar .icon-btn {
+        display: none;
+    }
+
+    .features-topbar .btn {
+        min-height: 46px;
+        font-size: 13px;
+        padding: 0 14px;
+    }
+
     .features-hero-section {
         padding-bottom: 72px;
     }

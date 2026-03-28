@@ -1732,4 +1732,129 @@
       gap: 12px;
       text-align: center;
     }
+    .container{
+      padding: 0 16px;
+      width: 100%;
+    }
+  }
+
+  /* Home Page Responsive Hardening */
+  .home-body {
+    overflow-x: hidden;
+  }
+
+  .home-body img,
+  .home-body video {
+    max-width: 100%;
+    height: auto;
+  }
+
+  @media (max-width: 1280px) {
+    .home-body .cards-container,
+    .home-body .heading-container {
+      width: min(974px, calc(100% - 32px));
+    }
+
+    .home-body .frame,
+    .home-body .trusted-section,
+    .home-body .af-section-wrapper,
+    .home-body .xylin-section,
+    .home-body .zx-pricing-zone,
+    .home-body .faq-wrapper {
+      width: min(100%, calc(100% - 32px));
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .home-body .pill-card,
+    .home-body .info-card {
+      position: static;
+      transform: none;
+      margin: 12px auto 0;
+    }
+
+    .home-body .frame {
+      height: auto;
+      min-height: 420px;
+    }
+
+    .home-body .group-image {
+      position: relative;
+      left: auto;
+      top: auto;
+      transform: none;
+      width: 100%;
+      height: min(62vw, 620px);
+      border-radius: 16px;
+    }
+
+    .home-body .zx9-cardWrap {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .home-body .main-heading {
+      font-size: clamp(34px, 8.5vw, 52px);
+      line-height: 1.2;
+    }
+
+    .home-body .sub-heading {
+      font-size: 16px;
+      line-height: 1.55;
+      padding-inline: 8px;
+    }
+
+    .home-body .features-grid,
+    .home-body .gs-cards,
+    .home-body .af-content-wrapper,
+    .home-body .zx-plan-wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    .home-body .quorra-testimonials > div,
+    .home-body .faq-wrapper,
+    .home-body .af-section-wrapper {
+      display: grid !important;
+      grid-template-columns: 1fr !important;
+      gap: 16px;
+    }
+
+    .home-body .quorra-card,
+    .home-body .zx-cardWrap {
+      width: 100% !important;
+      min-width: 0;
+    }
+
+    .home-body .quantum-cta input[type="email"],
+    .home-body .quantum-cta button {
+      width: 100%;
+      max-width: 420px;
+    }
+  }
+
+  @media (max-width: 640px) {
+    .home-body .cards-row {
+      gap: 8px;
+    }
+
+    .home-body .card {
+      min-width: unset;
+      width: calc(50% - 8px);
+      justify-content: center;
+      padding-inline: 10px;
+    }
+
+    .home-body .card-text {
+      font-size: 13px;
+      line-height: 20px;
+    }
+
+    .home-body .frame {
+      min-height: 300px;
+    }
+
+    .home-body .group-image {
+      height: min(70vw, 360px);
+    }
   }
