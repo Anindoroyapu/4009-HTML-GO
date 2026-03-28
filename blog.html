@@ -1,143 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-
-    <link rel="stylesheet" href="./css/blog.css">
+    <title>AppFlow | Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
     <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/blog.css">
 </head>
-<body>
 
-<div class=""
-    style="width: 100%; position: fixed; top: 0; left: 22%; z-index: 1000; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-    <div class="frame-parent ">
-      <img class="frame-icon" alt="" src="./public/images/main-logo.png" />
+<body class="blog-body">
+    <header class="topbar blog-topbar">
+        <div class="container blog-topbar-inner">
+            <a class="brand" href="./index.html" aria-label="AppFlow home">
+                <img src="./public/images/main-logo.png" alt="AppFlow">
+            </a>
 
-      <div class="home-page-parent">
-        <div class="home-page">
-          <ul class="home-page2">
-           <a href="./index.html"><li>Home Page</li></a> 
-          </ul>
-        </div>
-        <div class="frame-child">
-        </div>
-        <a href="./features.html" class="features">Features</a>
-        <div class="frame-child">
-        </div>
-        <a href="./pricing.html" class="features">Pricing</a>
-        <div class="frame-child">
-        </div>
-        <a href="./about.html" class="features">About</a>
-          
-        <div class="frame-child">
-        </div>
-        <a href="./blog.html" class="features">Blog</a>
-        <div class="frame-child">
-        </div>
-        <a href="./contact.html" class="features">Contact</a>
-      </div>
-      <div class="registration-button-parent">
-        <img class="registration-button-icon" alt="">
+            <nav class="main-nav" aria-label="Primary">
+                <a href="./index.html">Home Page</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./features.html">Features</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./pricing.html">Pricing</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./about.html">About</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a class="is-active" href="./blog.html">Blog</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./contact.html">Contact</a>
+            </nav>
 
-        <div class="get-start-for-free-wrapper">
-          <div class="get-start-for">Get start for free</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-
-    <section class="mn-blog-hero">
-        <div class="mn-container">
-            <h1 class="mn-main-title">How to Maximize Your Daily Productivity</h1>
-            <p class="mn-hero-lead">Simple strategies and tools to help you stay focused, organized, and efficient throughout your workday.</p>
-            <div class="mn-meta-info">
-                <span>Free Guide</span>
-                <span>•</span>
-                <span>Featured</span>
-                <span>•</span>
-                <span>Updated 2026</span>
+            <div class="topbar-actions">
+                <button class="icon-btn" aria-label="Theme">Mode</button>
+                <a class="btn btn-primary" href="#">Get start for free</a>
             </div>
         </div>
-    </section>
+    </header>
 
-    <section class="mn-image-grid-section">
-        <div class="mn-container mn-grid-layout">
-            <div class="mn-grid-item mn-large-img">
-                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?q=80&w=1000" alt="Productivity 1">
-            </div>
-            <div class="mn-grid-item mn-small-img">
-                <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=500" alt="Productivity 2">
-            </div>
-            <div class="mn-grid-item mn-small-img">
-                <img src="https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=500" alt="Productivity 3">
-            </div>
-        </div>
-    </section>
-
-    <article class="mn-article-body">
-        <div class="mn-container-narrow">
-            <h2 class="mn-section-heading">Introduction</h2>
-            <p class="mn-para-text">Productivity isn't about being busy; it's about being effective. To truly maximize your output, you need a blend of the right mindset and the right digital toolkit.</p>
-
-            <div class="mn-feature-split">
-                <div class="mn-split-col">
-                    <h3 class="mn-sub-heading">Smarter Automation</h3>
-                    <p class="mn-para-small">AI-powered tools can handle the heavy lifting of scheduling and organization, letting you focus on deep work.</p>
+    <main class="blog-main">
+        <section class="blog-hero-section">
+            <div class="container blog-hero-wrap">
+                <div class="blog-heading">
+                    <h1>Insights, <span>Updates &amp;</span> Product <span>Stories</span></h1>
+                    <p>Tips, guides, and insights on productivity, AI tools, SaaS growth, and modern app development.</p>
                 </div>
-                <div class="mn-split-col">
-                    <h3 class="mn-sub-heading">Personalized Workflows</h3>
-                    <p class="mn-para-small">Customizing your dashboard to fit your specific needs is the fastest way to reduce cognitive load.</p>
+
+                <div class="blog-filter-row" aria-label="Blog categories">
+                    <button class="blog-chip active" type="button"><img src="./assets/blog/icon-all-type.svg" alt="">All Type</button>
+                    <button class="blog-chip" type="button"><img src="./assets/blog/icon-productivity.svg" alt="">Productivity</button>
+                    <button class="blog-chip" type="button"><img src="./assets/blog/icon-ai-brain.svg" alt="">AI &amp; Automation</button>
+                    <button class="blog-chip" type="button"><img src="./assets/blog/icon-system-update.svg" alt="">Product Updates</button>
+                    <button class="blog-chip" type="button"><img src="./assets/blog/icon-ai-voice.svg" alt="">SaaS Growth</button>
+                    <button class="blog-chip" type="button"><img src="./assets/blog/icon-money-security.svg" alt="">Finance</button>
+                </div>
+
+                <div class="blog-grid">
+                    <article class="blog-card">
+                        <img class="blog-card-image" src="./assets/blog/card-1.png" alt="How to Maximize Your Daily Productivity">
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta-row">
+                                <div class="blog-pill-group">
+                                    <span class="blog-pill">Productivity</span>
+                                    <span class="blog-pill">5 min</span>
+                                </div>
+                                <div class="blog-like-wrap">
+                                    <span class="blog-like-pill"><img src="./assets/blog/icon-thumbs-up-1.svg" alt=""></span>
+                                    <span class="blog-like-pill">1.1k</span>
+                                </div>
+                            </div>
+                            <h2>How to Maximize Your Daily Productivity</h2>
+                            <p>Simple strategies and tools to help you stay focused, organized, and efficient throughout your workday.</p>
+                            <div class="blog-card-foot">
+                                <a href="#">Read More <img src="./assets/blog/icon-arrow-right-gradient.svg" alt=""></a>
+                                <span class="blog-like-icon"><img src="./assets/blog/icon-thumbs-up-2.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img class="blog-card-image" src="./assets/blog/card-2.png" alt="Automating Repetitive Tasks with AI">
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta-row">
+                                <div class="blog-pill-group">
+                                    <span class="blog-pill">AI &amp; Automation</span>
+                                    <span class="blog-pill">7 min</span>
+                                </div>
+                                <div class="blog-like-wrap">
+                                    <span class="blog-like-pill"><img src="./assets/blog/icon-thumbs-up-1.svg" alt=""></span>
+                                    <span class="blog-like-pill">1.1k</span>
+                                </div>
+                            </div>
+                            <h2>Automating Repetitive Tasks with AI</h2>
+                            <p>Discover how AI can save you time by handling routine tasks and streamlining your workflow.</p>
+                            <div class="blog-card-foot">
+                                <a href="#">Read More <img src="./assets/blog/icon-arrow-right-gradient.svg" alt=""></a>
+                                <span class="blog-like-icon"><img src="./assets/blog/icon-thumbs-up-2.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img class="blog-card-image" src="./assets/blog/card-3.png" alt="Building a Scalable Dashboard for Your App">
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta-row">
+                                <div class="blog-pill-group">
+                                    <span class="blog-pill">SaaS</span>
+                                    <span class="blog-pill">6 min</span>
+                                </div>
+                                <div class="blog-like-wrap">
+                                    <span class="blog-like-pill"><img src="./assets/blog/icon-thumbs-up-1.svg" alt=""></span>
+                                    <span class="blog-like-pill">1.1k</span>
+                                </div>
+                            </div>
+                            <h2>Building a Scalable Dashboard for Your App</h2>
+                            <p>Learn how to design dashboards that grow with your app while keeping data clear and actionable.</p>
+                            <div class="blog-card-foot">
+                                <a href="#">Read More <img src="./assets/blog/icon-arrow-right-gradient.svg" alt=""></a>
+                                <span class="blog-like-icon"><img src="./assets/blog/icon-thumbs-up-2.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img class="blog-card-image" src="./assets/blog/card-4.png" alt="Tracking Expenses Made Simple">
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta-row">
+                                <div class="blog-pill-group">
+                                    <span class="blog-pill">Finance</span>
+                                    <span class="blog-pill">5 min</span>
+                                </div>
+                                <div class="blog-like-wrap">
+                                    <span class="blog-like-pill"><img src="./assets/blog/icon-thumbs-up-3.svg" alt=""></span>
+                                    <span class="blog-like-pill">1.1k</span>
+                                </div>
+                            </div>
+                            <h2>Tracking Expenses Made Simple</h2>
+                            <p>Tips and tools to efficiently track your spending, income, and budgeting without stress.</p>
+                            <div class="blog-card-foot">
+                                <a href="#">Read More <img src="./assets/blog/icon-arrow-right-gradient.svg" alt=""></a>
+                                <span class="blog-like-icon"><img src="./assets/blog/icon-thumbs-up-4.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img class="blog-card-image" src="./assets/blog/card-5.png" alt="Top Tools to Boost Team Collaboration">
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta-row">
+                                <div class="blog-pill-group">
+                                    <span class="blog-pill">Productivity</span>
+                                    <span class="blog-pill">5 min</span>
+                                </div>
+                                <div class="blog-like-wrap">
+                                    <span class="blog-like-pill"><img src="./assets/blog/icon-thumbs-up-3.svg" alt=""></span>
+                                    <span class="blog-like-pill">1.1k</span>
+                                </div>
+                            </div>
+                            <h2>Top Tools to Boost Team Collaboration</h2>
+                            <p>Explore modern tools that help teams communicate, plan, and execute projects more effectively.</p>
+                            <div class="blog-card-foot">
+                                <a href="#">Read More <img src="./assets/blog/icon-arrow-right-gradient.svg" alt=""></a>
+                                <span class="blog-like-icon"><img src="./assets/blog/icon-thumbs-up-4.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="blog-card">
+                        <img class="blog-card-image" src="./assets/blog/card-6.png" alt="How AI Improves Task Management">
+                        <div class="blog-card-body">
+                            <div class="blog-card-meta-row">
+                                <div class="blog-pill-group">
+                                    <span class="blog-pill">AI &amp; Productivity</span>
+                                    <span class="blog-pill">6 min</span>
+                                </div>
+                                <div class="blog-like-wrap">
+                                    <span class="blog-like-pill"><img src="./assets/blog/icon-thumbs-up-3.svg" alt=""></span>
+                                    <span class="blog-like-pill">1.1k</span>
+                                </div>
+                            </div>
+                            <h2>How AI Improves Task Management</h2>
+                            <p>Learn how AI can prioritize tasks, suggest workflows, and increase personal and team productivity.</p>
+                            <div class="blog-card-foot">
+                                <a href="#">Read More <img src="./assets/blog/icon-arrow-right-gradient.svg" alt=""></a>
+                                <span class="blog-like-icon"><img src="./assets/blog/icon-thumbs-up-4.svg" alt=""></span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="blog-pagination" aria-label="Pagination">
+                    <button type="button" aria-label="Previous page"><img src="./assets/blog/icon-arrow-left.svg" alt=""></button>
+                    <button class="active" type="button">01.</button>
+                    <button type="button">02.</button>
+                    <button type="button">03.</button>
+                    <button type="button"><img src="./assets/blog/pager-ellipsis.svg" alt=""></button>
+                    <button type="button">12.</button>
+                    <button type="button" aria-label="Next page"><img src="./assets/blog/icon-arrow-right-dark.svg" alt=""></button>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-faq-section">
+            <div class="container blog-faq-wrap">
+                <article class="blog-faq-side-card">
+                    <div class="blog-faq-side-head">
+                        <h2>Frequently Asked <span>Questions</span></h2>
+                        <p>Everything you need to know about AppFlow.</p>
+                    </div>
+
+                    <div class="blog-faq-brand-block">
+                        <img src="./assets/blog/faq-logo.svg" alt="Logoipsum">
+                        <ul>
+                            <li>No credit card required</li>
+                            <li>14-day free trial</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <div class="blog-faq-list">
+                    <article class="blog-faq-item open">
+                        <div>
+                            <h3>What makes this app different from others?</h3>
+                            <p>Our app combines multiple use cases into one platform - from task management to finance tracking, all powered by intelligent AI automation. You get enterprise-grade features at an affordable price.</p>
+                        </div>
+                        <img src="./assets/blog/icon-arrow-down-open.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="blog-faq-item">
+                        <h3>Can I use this on multiple devices?</h3>
+                        <img src="./assets/blog/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="blog-faq-item">
+                        <h3>Is my data secure?</h3>
+                        <img src="./assets/blog/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="blog-faq-item">
+                        <h3>Do you offer a free trial?</h3>
+                        <img src="./assets/blog/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="blog-faq-item">
+                        <h3>Can I cancel anytime?</h3>
+                        <img src="./assets/blog/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="blog-faq-item">
+                        <h3>What kind of support do you provide?</h3>
+                        <img src="./assets/blog/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="blog-footer-block">
+            <div class="container blog-cta">
+                <img class="blog-cta-vector-left" src="./assets/blog/cta-vector-left.svg" alt="">
+                <img class="blog-cta-vector-top" src="./assets/blog/cta-vector-top.svg" alt="">
+
+                <div class="blog-cta-copy">
+                    <h2>Building the Future of Productivity</h2>
+                    <p>Join thousands of users who trust our platform to organize, automate, and scale their daily work.</p>
+                </div>
+
+                <div class="blog-cta-actions">
+                    <a href="#" class="blog-cta-btn light">
+                        Get Start Today
+                        <img src="./assets/blog/icon-arrow-right-gradient.svg" alt="">
+                    </a>
+                    <a href="#" class="blog-cta-btn dark">
+                        Start free Trial
+                        <img src="./assets/blog/cta-arrow-right-dark.svg" alt="">
+                    </a>
                 </div>
             </div>
 
-            <div class="mn-quote-box">
-                <p>"Focus on being productive instead of busy." — Tim Ferriss</p>
-            </div>
-        </div>
-    </article>
+            <footer class="blog-footer">
+                <div class="container blog-footer-top">
+                    <div class="blog-footer-about">
+                        <a href="./index.html" class="blog-footer-logo" aria-label="Logoipsum">
+                            <img src="./public/images/main-logo.png" alt="Logoipsum">
+                        </a>
+                        <p>The ultimate multipurpose app template for building modern SaaS, productivity, and utility applications.</p>
+                    </div>
 
-    <section class="mn-related-section">
-        <div class="mn-container">
-            <div class="mn-flex-between mn-margin-b-40">
-                <h2 class="mn-section-heading">Related Articles</h2>
-                <a href="#" class="mn-link-more">See all &rarr;</a>
-            </div>
-            <div class="mn-card-grid">
-                <div class="mn-article-card">
-                    <div class="mn-card-img"><img src="https://images.unsplash.com/photo-1454165833767-027ffea9e778?q=80&w=400" alt="Article 1"></div>
-                    <p class="mn-card-tag">Finance • 10 min</p>
-                    <h4 class="mn-card-title">Tracking Expenses Made Simple</h4>
+                    <div class="blog-footer-links">
+                        <div>
+                            <h3>Product</h3>
+                            <a href="./index.html">Home Page</a>
+                            <a href="./features.html">Features</a>
+                            <a href="./pricing.html">Pricing</a>
+                            <a href="#">FAQ&rsquo;s</a>
+                        </div>
+                        <div>
+                            <h3>Company</h3>
+                            <a href="./about.html">About Us</a>
+                            <a href="./blog.html">Blog</a>
+                            <a href="#">Career</a>
+                            <a href="./contact.html">Contact</a>
+                        </div>
+                        <div>
+                            <h3>Legal</h3>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">Help Center</a>
+                            <a href="#">Terms &amp; Condition</a>
+                            <a href="#">Security</a>
+                        </div>
+                    </div>
                 </div>
-                <div class="mn-article-card">
-                    <div class="mn-card-img"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400" alt="Article 2"></div>
-                    <p class="mn-card-tag">Teamwork • 8 min</p>
-                    <h4 class="mn-card-title">Top Tools for Team Collaboration</h4>
-                </div>
-                <div class="mn-article-card">
-                    <div class="mn-card-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400" alt="Article 3"></div>
-                    <p class="mn-card-tag">Design • 12 min</p>
-                    <h4 class="mn-card-title">Building Scalable Dashboards</h4>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="mn-cta-banner">
-        <div class="mn-container">
-            <div class="mn-banner-inner">
-                <h2 class="mn-banner-title">Building the Future of Productivity</h2>
-                <p class="mn-banner-desc">Join 10k+ users scaling their workflow with Mooni.</p>
-                <div class="mn-banner-btns">
-                    <button class="mn-btn-white">Get Started Today</button>
-                    <button class="mn-btn-outline">Learn More</button>
+                <div class="container blog-footer-bottom">
+                    <p>&copy; 2025 AppFlow. All rights reserved.</p>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        <span class="blog-footer-dot"></span>
+                        <a href="#">Terms &amp; Service</a>
+                    </div>
                 </div>
-            </div>
-        </div>
-    </section>
-    
+            </footer>
+        </section>
+    </main>
 </body>
+
 </html>
