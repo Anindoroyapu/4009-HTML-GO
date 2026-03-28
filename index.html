@@ -6,48 +6,38 @@
   <meta name="viewport" content="initial-scale=1, width=device-width">
 
   <link rel="stylesheet" href="./css/index.css" />
+  <link rel="stylesheet" href="./css/about.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" />
 </head>
 
 <body>
 
-  <!-- Header Section -->
-  <div class=""
-    style="min-width: 100%; position: fixed;display: flex; top: 0; left: 22%; z-index: 1000; background-color: #fff; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);">
-    <div class="frame-parent ">
-      <img class="frame-icon" alt="" src="./public/images/main-logo.png" />
+  <header class="topbar about-topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="./index.html" aria-label="AppFlow home">
+        <img src="./public/images/main-logo.png" alt="AppFlow">
+      </a>
 
-      <div class="home-page-parent">
-        <div class="home-page">
-          <ul class="home-page2">
-           <a href="./index.html"><li>Home Page</li></a> 
-          </ul>
-        </div>
-        <div class="frame-child">
-        </div>
-        <a href="./features.html" class="features">Features</a>
-        <div class="frame-child">
-        </div>
-        <a href="./pricing.html" class="features">Pricing</a>
-        <div class="frame-child">
-        </div>
-        <a href="./about.html" class="features">About</a>
-        <div class="frame-child">
-        </div>
-        <a href="./blog.html" class="features">Blog</a>
-        <div class="frame-child">
-        </div>
-        <a href="./contact.html" class="features">Contact</a>
-      </div>
-      <div class="registration-button-parent">
-        <img class="registration-button-icon" alt="">
+      <nav class="main-nav" aria-label="Primary">
+        <a class="is-active" href="./index.html">Home Page</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="./features.html">Features</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="./pricing.html">Pricing</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="./about.html">About</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="./blog.html">Blog</a>
+        <span class="sep" aria-hidden="true"></span>
+        <a href="./contact.html">Contact</a>
+      </nav>
 
-        <div class="get-start-for-free-wrapper">
-          <div class="get-start-for">Get start for free</div>
-        </div>
+      <div class="topbar-actions">
+        <button class="icon-btn" aria-label="Theme">Mode</button>
+        <a class="btn btn-primary" href="#">Get start for free</a>
       </div>
     </div>
-  </div>
+  </header>
 
 
   <div class="cards-container">
@@ -881,36 +871,79 @@
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer class="cosmo-footer">
-    <div class="cosmo-footer-top">
-      <div class="cosmo-footer-column">
-        <h3>Product</h3>
-        <a href="#">Home Page</a>
-        <a href="#">Features</a>
-        <a href="#">Pricing</a>
-        <a href="#">FAQ’s</a>
+  <section class="about-footer-block">
+    <div class="container about-cta">
+      <img class="about-cta-vector-left" src="./assets/about/about-footer-vector-left.svg" alt="">
+      <img class="about-cta-vector-top" src="./assets/about/about-footer-vector-top.svg" alt="">
+
+      <div class="about-cta-copy">
+        <h2>Building the Future of Productivity</h2>
+        <p>
+          Join thousands of users who trust our platform to organize,
+          automate, and scale their daily work.
+        </p>
       </div>
-      <div class="cosmo-footer-column">
-        <h3>Company</h3>
-        <a href="#">About Us</a>
-        <a href="#">Blog</a>
-        <a href="#">Career</a>
-        <a href="#">Contact</a>
-      </div>
-      <div class="cosmo-footer-column">
-        <h3>Legal</h3>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Help Center</a>
-        <a href="#">Terms & Condition</a>
-        <a href="#">Security</a>
+
+      <div class="about-cta-actions">
+        <a href="#" class="about-cta-btn light">
+          Get Start Today
+          <img src="./assets/about/about-footer-arrow-light.svg" alt="">
+        </a>
+        <a href="#" class="about-cta-btn dark">
+          Start free Trial
+          <img src="./assets/about/about-footer-arrow-dark.svg" alt="">
+        </a>
       </div>
     </div>
-    <div class="cosmo-footer-bottom">
-      <span>© 2025 AppFlow. All rights reserved.</span>
-      <span>Privacy Policy | Terms & Service</span>
-    </div>
-  </footer>
+
+    <footer class="about-footer">
+      <div class="container about-footer-top">
+        <div class="about-footer-about">
+          <a href="./index.html" class="about-footer-logo" aria-label="Logoipsum">
+            <img src="./public/images/main-logo.png" alt="Logoipsum">
+          </a>
+          <p>
+            The ultimate multipurpose app template for
+            building modern SaaS, productivity, and
+            utility applications.
+          </p>
+        </div>
+
+        <div class="about-footer-links">
+          <div>
+            <h3>Product</h3>
+            <a href="./index.html">Home Page</a>
+            <a href="./features.html">Features</a>
+            <a href="./pricing.html">Pricing</a>
+            <a href="#">FAQ&rsquo;s</a>
+          </div>
+          <div>
+            <h3>Company</h3>
+            <a href="./about.html">About Us</a>
+            <a href="./blog.html">Blog</a>
+            <a href="#">Career</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+          <div>
+            <h3>Legal</h3>
+            <a href="#">Privacy policy</a>
+            <a href="#">Help Center</a>
+            <a href="#">Terms &amp; Condition</a>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="container about-footer-bottom">
+        <p>&copy; 2025 AppFlow. All rights reserved.</p>
+        <div>
+          <a href="#">Privacy Policy</a>
+          <span class="about-footer-dot"></span>
+          <a href="#">Terms &amp; Service</a>
+        </div>
+      </div>
+    </footer>
+  </section>
 
 
 

@@ -7,6 +7,15 @@
     font-family: 'Sora', sans-serif;
     color: #1a1a1a;
     background: #fff;
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
+.features-body .container {
+    width: min(1400px, calc(100% - 32px));
+    margin: 0 auto;
+    display: block;
 }
 
 .features-main {
@@ -23,6 +32,10 @@
 }
 
 .features-topbar-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
     min-height: 88px;
 }
 
