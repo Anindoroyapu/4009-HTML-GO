@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,114 +8,290 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="./css/features.css">
 </head>
+
 <body class="features-body">
-    <header class="fx-topbar">
-        <div class="fx-container fx-topbar-inner">
-            <a class="fx-brand" href="./index.html" aria-label="AppFlow home">
+    <header class="topbar features-topbar">
+        <div class="container features-topbar-inner">
+            <a class="brand" href="./index.html" aria-label="AppFlow home">
                 <img src="./public/images/main-logo.png" alt="AppFlow">
             </a>
 
-            <nav class="fx-nav" aria-label="Primary navigation">
+            <nav class="main-nav" aria-label="Primary">
                 <a href="./index.html">Home Page</a>
-                <span class="fx-sep" aria-hidden="true"></span>
-                <a class="active" href="./features.html">Features</a>
-                <span class="fx-sep" aria-hidden="true"></span>
+                <span class="sep" aria-hidden="true"></span>
+                <a class="is-active" href="./features.html">Features</a>
+                <span class="sep" aria-hidden="true"></span>
                 <a href="./pricing.html">Pricing</a>
-                <span class="fx-sep" aria-hidden="true"></span>
+                <span class="sep" aria-hidden="true"></span>
                 <a href="./about.html">About</a>
-                <span class="fx-sep" aria-hidden="true"></span>
+                <span class="sep" aria-hidden="true"></span>
                 <a href="./blog.html">Blog</a>
-                <span class="fx-sep" aria-hidden="true"></span>
+                <span class="sep" aria-hidden="true"></span>
                 <a href="./contact.html">Contact</a>
             </nav>
 
-            <div class="fx-actions">
-                <button type="button" class="fx-icon-btn" aria-label="Theme">◔</button>
-                <a href="#" class="fx-btn fx-btn-primary">Get start for free</a>
+            <div class="topbar-actions">
+                <button class="icon-btn" aria-label="Theme">Mode</button>
+                <a class="btn btn-primary" href="#">Get start for free</a>
             </div>
         </div>
     </header>
 
-    <main class="fx-main">
-        <section class="fx-hero">
-            <div class="fx-container fx-hero-inner">
-                <div class="fx-copy">
-                    <h1>
-                        Powerful <span>Features</span> Built for
-                        <br>
-                        Modern <span>Apps</span>
-                    </h1>
-                    <p>
-                        Everything you need to build, scale, and manage a modern SaaS, productivity, finance, or AI-
-                        powered application all inside one clean, modular system.
-                    </p>
-
-                    <div class="fx-tags" aria-label="Feature highlights">
-                        <span><img src="./assets/productivity-icon.svg" alt="">Productivity</span>
-                        <span><img src="./assets/ai-tool-icon.svg" alt="">AI Tool</span>
-                        <span><img src="./assets/clients-icon.svg" alt="">32k+ clients</span>
-                        <span><img src="./assets/rating-icon.svg" alt="">4.9 Rating</span>
-                    </div>
-
-                    <div class="fx-cta-row">
-                        <a href="#" class="fx-btn fx-btn-primary">Explore Our Features</a>
-                        <a href="#" class="fx-btn fx-btn-dark">See Live Demo</a>
-                    </div>
+    <main class="features-main">
+        <section class="features-hero-section">
+            <div class="container features-hero-wrap">
+                <div class="features-heading">
+                    <h1>Powerful <span>Features</span> Built for Modern <span>Apps</span></h1>
+                    <p>Everything you need to build, scale, and manage a modern SaaS, productivity, finance, or AI-powered application - all inside one clean, modular system.</p>
                 </div>
 
-                <div class="fx-phones-wrap">
-                  <img src="./assets/Group 1000003563.png" alt="">
+                <div class="features-tag-row" aria-label="Feature highlights">
+                    <span><img src="./assets/features/icon-productivity.svg" alt="">Productivity</span>
+                    <span><img src="./assets/features/icon-ai-tool.svg" alt="">AI Tool</span>
+                    <span><img src="./assets/features/icon-clients.svg" alt="">32k+ clients</span>
+                    <span><img src="./assets/features/icon-rating.svg" alt="">4.9 Rating</span>
+                </div>
+
+                <div class="features-hero-actions">
+                    <a href="#" class="features-hero-btn primary">Explore Our Features</a>
+                    <a href="#" class="features-hero-btn dark">See Live Demo</a>
+                </div>
+
+                <div class="features-phones-stage" aria-hidden="true">
+                    <article class="features-salary-badge">
+                        <div>
+                            <img src="./assets/features/badge-salary-icon.svg" alt="">
+                            <span>Total Salaries</span>
+                        </div>
+                        <div>
+                            <strong>$456k</strong>
+                            <em>+15%</em>
+                        </div>
+                    </article>
+
+                    <article class="features-trusted-badge left">
+                        <span><img src="./assets/features/badge-trusted-icon.svg" alt=""></span>
+                        <p>Trusted by <b>3500+</b> users</p>
+                    </article>
+
+                    <article class="features-trusted-badge right">
+                        <span><img src="./assets/features/badge-trusted-icon.svg" alt=""></span>
+                        <p>Trusted by <b>3500+</b> users</p>
+                    </article>
+
+                    <img class="features-floating-appstore" src="./assets/features/badge-appstore-icon.svg" alt="">
+                    <img class="features-floating-googleplay" src="./assets/features/badge-googleplay-icon.svg" alt="">
+
+                    <figure class="features-phone left">
+                        <img src="./assets/features/phone-dark.png" alt="">
+                    </figure>
+                    <figure class="features-phone right">
+                        <img src="./assets/features/phone-light.png" alt="">
+                    </figure>
                 </div>
             </div>
         </section>
 
+        <section class="features-trusted-section">
+            <div class="container features-trusted-wrap">
+                <h2>Trusted by <span>3,500+ Startups,</span> Founders &amp; Tech Teams Worldwide</h2>
 
-        <section class="" style=" width: 100%; display: flex; justify-content: center;">
-
-
-
-
-            <div class="trusted-section">
-    <h2 class="trusted-heading">Trusted by <span style=" color: #007BFF;">3,500+ Startups,</span> Founders & Tech Teams
-      Worldwide</h2>
-
-    <div class="logos-container">
-      <!-- Example logos (replace with actual brand SVGs or images) -->
-      <div class=" "><img src="./assets/2.svg" alt=""></div>
-      <div class=" "><img src="./assets/1.svg" alt=""></div>
-      <div><img src="./assets/3.svg" alt=""></div>
-      <div> <img src="./assets/4.svg" alt=""></div>
-      <div> <img src="./assets/5.svg" alt=""></div>
-      <div><img src="./assets/6.svg" alt=""></div>
-      <div><img src="./assets/7.svg" alt=""></div>
-      <div><img src="./assets/8.svg" alt=""></div>
-      <div> <img src="./assets/9.svg" alt=""></div>
-      <div> <img src="./assets/10.svg" alt=""></div>
-      <div class=" "> <img src="./assets/5.svg" alt=""></div>
-      <div class=" ">
-        <img src="./assets/4.svg" alt="">
-      </div>
-      <div><img src="./assets/3.svg" alt=""></div>
-      <div> <img src="./assets/2.svg" alt=""></div>
-      <div> <img src="./assets/1.svg" alt=""></div>
-      <div><img src="./assets/10.svg" alt=""></div>
-      <div><img src="./assets/9.svg" alt=""></div>
-      <div><img src="./assets/8.svg" alt=""></div>
-      <div> <img src="./assets/7.svg" alt=""></div>
-      <div> <img src="./assets/6.svg" alt=""></div>
-
-    </div>
-
-    <!-- Blurred background rectangles -->
-    <div class="blur-right"></div>
-    <div class="blur-left"></div>
-  </div>
+                <div class="features-logo-grid" aria-label="Trusted companies">
+                    <img src="./assets/features/brand-1.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-2.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-3.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-4.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-5.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-6.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-7.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-8.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-9.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-10.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-6.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-5.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-9.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-1.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-3.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-10.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-8.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-4.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-2.svg" alt="Partner logo">
+                    <img src="./assets/features/brand-7.svg" alt="Partner logo">
+                </div>
+            </div>
         </section>
-        
 
-       
+        <section class="features-all-section">
+            <div class="container">
+                <h2>Our all <span>Features.</span></h2>
+
+                <div class="features-all-grid">
+                    <div class="features-all-left">
+                        <article class="features-menu-card">
+                            <img src="./assets/features/features-flow-path.svg" alt="" class="features-flow-path" aria-hidden="true">
+                            <ul>
+                                <li class="active">Core Dashboard</li>
+                                <li>AI &amp; Automation</li>
+                                <li>Productivity Tools</li>
+                                <li>Finance &amp; Tracking</li>
+                                <li>Security &amp; Performance</li>
+                                <li>Integration &amp; Sync</li>
+                            </ul>
+                        </article>
+
+                        <article class="features-summary-card">
+                            <h3>Unified Smart Dashboard</h3>
+                            <p>A clean, modular dashboard that adapts to any app type - from task managers to finance tools and AI platforms.</p>
+                        </article>
+                    </div>
+
+                    <div class="features-all-right">
+                        <article class="features-detail-card">
+                            <span><img src="./assets/features/icon-dashboard-square-02.svg" alt=""></span>
+                            <h3>Unified Dashboard View.</h3>
+                            <p>View all tasks, data, analytics, and activities in one place. Fully customizable widgets and layout with real-time data updates.</p>
+                        </article>
+
+                        <article class="features-detail-card">
+                            <span><img src="./assets/features/icon-chart-average.svg" alt=""></span>
+                            <h3>Visual Analytics &amp; Charts.</h3>
+                            <p>Line charts, bar charts, pie charts, KPI cards. Live data refresh and export visuals as image or PDF.</p>
+                        </article>
+
+                        <article class="features-detail-card">
+                            <span><img src="./assets/features/icon-puzzle.svg" alt=""></span>
+                            <h3>Modular Widget System.</h3>
+                            <p>Add or remove widgets anytime. Save multiple dashboard layouts. Optimized for both desktop and mobile.</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-faq-section">
+            <div class="container features-faq-wrap">
+                <article class="features-faq-side-card">
+                    <div>
+                        <h2>Frequently Asked <span>Questions</span></h2>
+                        <p>Everything you need to know about AppFlow.</p>
+                    </div>
+
+                    <div class="features-faq-brand-block">
+                        <img src="./assets/features/faq-logo.svg" alt="Logoipsum">
+                        <ul>
+                            <li>No credit card required</li>
+                            <li>14-day free trial</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <div class="features-faq-list">
+                    <article class="features-faq-item open">
+                        <div>
+                            <h3>What makes this app different from others?</h3>
+                            <p>Our app combines multiple use cases into one platform - from task management to finance tracking, all powered by intelligent AI automation. You get enterprise-grade features at an affordable price.</p>
+                        </div>
+                        <img src="./assets/features/icon-arrow-down-open.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="features-faq-item">
+                        <h3>Can I use this on multiple devices?</h3>
+                        <img src="./assets/features/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="features-faq-item">
+                        <h3>Is my data secure?</h3>
+                        <img src="./assets/features/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="features-faq-item">
+                        <h3>Do you offer a free trial?</h3>
+                        <img src="./assets/features/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="features-faq-item">
+                        <h3>Can I cancel anytime?</h3>
+                        <img src="./assets/features/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+
+                    <article class="features-faq-item">
+                        <h3>What kind of support do you provide?</h3>
+                        <img src="./assets/features/icon-arrow-down-closed.svg" alt="" aria-hidden="true">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-footer-block">
+            <div class="container features-cta">
+                <img class="features-cta-vector-left" src="./assets/features/cta-vector-left.svg" alt="">
+                <img class="features-cta-vector-top" src="./assets/features/cta-vector-top.svg" alt="">
+
+                <div class="features-cta-copy">
+                    <h2>Everything You Need. Nothing You Don't.</h2>
+                    <p>A clean, flexible, and powerful feature set that adapts to any app idea - from MVP to scale.</p>
+                </div>
+
+                <div class="features-cta-actions">
+                    <a href="#" class="features-cta-btn light">
+                        Try Live Demo
+                        <img src="./assets/features/cta-arrow-right-light.svg" alt="">
+                    </a>
+                    <a href="#" class="features-cta-btn dark">
+                        Start free Trial
+                        <img src="./assets/features/cta-arrow-right-dark.svg" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <footer class="features-footer">
+                <div class="container features-footer-top">
+                    <div class="features-footer-about">
+                        <a href="./index.html" class="features-footer-logo" aria-label="Logoipsum">
+                            <img src="./public/images/main-logo.png" alt="Logoipsum">
+                        </a>
+                        <p>The ultimate multipurpose app template for building modern SaaS, productivity, and utility applications.</p>
+                    </div>
+
+                    <div class="features-footer-links">
+                        <div>
+                            <h3>Product</h3>
+                            <a href="./index.html">Home Page</a>
+                            <a href="./features.html">Features</a>
+                            <a href="./pricing.html">Pricing</a>
+                            <a href="#">FAQ&rsquo;s</a>
+                        </div>
+                        <div>
+                            <h3>Company</h3>
+                            <a href="./about.html">About Us</a>
+                            <a href="./blog.html">Blog</a>
+                            <a href="#">Career</a>
+                            <a href="./contact.html">Contact</a>
+                        </div>
+                        <div>
+                            <h3>Legal</h3>
+                            <a href="#">Privacy policy</a>
+                            <a href="#">Help Center</a>
+                            <a href="#">Terms &amp; Condition</a>
+                            <a href="#">Security</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container features-footer-bottom">
+                    <p>&copy; 2025 AppFlow. All rights reserved.</p>
+                    <div>
+                        <a href="#">Privacy Policy</a>
+                        <span class="features-footer-dot"></span>
+                        <a href="#">Terms &amp; Service</a>
+                    </div>
+                </div>
+            </footer>
+        </section>
     </main>
 </body>
+
 </html>

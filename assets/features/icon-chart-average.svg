@@ -1,19 +1,19 @@
 <svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g id="chart-average">
-<path id="Vector" d="M31.5 31.5H15C10.0503 31.5 7.57537 31.5 6.03769 29.9623C4.5 28.4245 4.5 25.9497 4.5 21V4.5" stroke="url(#paint0_radial_0_15)" stroke-width="2.25" stroke-linecap="round"/>
-<path id="Vector_2" d="M9 18H9.01347M13.4973 18H13.5108M17.9946 18H18.0081M22.4919 18H22.5054M26.9892 18H27.0027M31.4865 18H31.5" stroke="url(#paint1_radial_0_15)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
-<path id="Vector_3" d="M9 10.5C10.0102 8.8177 11.3807 7.5 13.4892 7.5C22.4038 7.5 17.3931 25.5 26.9728 25.5C29.0964 25.5 30.4586 24.1736 31.5 22.5" stroke="url(#paint2_radial_0_15)" stroke-width="2.25" stroke-linecap="round"/>
+<path id="Vector" d="M31.5 31.5H15C10.0503 31.5 7.57537 31.5 6.03769 29.9623C4.5 28.4245 4.5 25.9497 4.5 21V4.5" stroke="url(#paint0_radial_0_38)" stroke-width="2.25" stroke-linecap="round"/>
+<path id="Vector_2" d="M9 18H9.01347M13.4973 18H13.5108M17.9946 18H18.0081M22.4919 18H22.5054M26.9892 18H27.0027M31.4865 18H31.5" stroke="url(#paint1_radial_0_38)" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_3" d="M9 10.5C10.0102 8.8177 11.3807 7.5 13.4892 7.5C22.4038 7.5 17.3931 25.5 26.9728 25.5C29.0964 25.5 30.4586 24.1736 31.5 22.5" stroke="url(#paint2_radial_0_38)" stroke-width="2.25" stroke-linecap="round"/>
 </g>
 <defs>
-<radialGradient id="paint0_radial_0_15" cx="0" cy="0" r="1" gradientTransform="matrix(27.587 19.7679 -1.83105 27.587 18 18)" gradientUnits="userSpaceOnUse">
+<radialGradient id="paint0_radial_0_38" cx="0" cy="0" r="1" gradientTransform="matrix(27.587 19.7679 -1.83105 27.587 18 18)" gradientUnits="userSpaceOnUse">
 <stop stop-color="#007BFF"/>
 <stop offset="1" stop-color="#0056B3"/>
 </radialGradient>
-<radialGradient id="paint1_radial_0_15" cx="0" cy="0" r="1" gradientTransform="matrix(22.9891 0.732143 -1.52587 1.02174 20.25 18.5)" gradientUnits="userSpaceOnUse">
+<radialGradient id="paint1_radial_0_38" cx="0" cy="0" r="1" gradientTransform="matrix(22.9891 0.732143 -1.52587 1.02174 20.25 18.5)" gradientUnits="userSpaceOnUse">
 <stop stop-color="#007BFF"/>
 <stop offset="1" stop-color="#0056B3"/>
 </radialGradient>
-<radialGradient id="paint2_radial_0_15" cx="0" cy="0" r="1" gradientTransform="matrix(22.9891 13.1786 -1.52587 18.3913 20.25 16.5)" gradientUnits="userSpaceOnUse">
+<radialGradient id="paint2_radial_0_38" cx="0" cy="0" r="1" gradientTransform="matrix(22.9891 13.1786 -1.52587 18.3913 20.25 16.5)" gradientUnits="userSpaceOnUse">
 <stop stop-color="#007BFF"/>
 <stop offset="1" stop-color="#0056B3"/>
 </radialGradient>
