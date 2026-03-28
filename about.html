@@ -3,9 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AppFlow | About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/about.css">
 </head>
-<body>
-    
+<body class="about-body">
+    <header class="topbar about-topbar">
+        <div class="container topbar-inner">
+            <a class="brand" href="./index.html" aria-label="AppFlow home">
+                <img src="./public/images/main-logo.png" alt="AppFlow">
+            </a>
+
+            <nav class="main-nav" aria-label="Primary">
+                <a href="./index.html">Home Page</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./features.html">Features</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./pricing.html">Pricing</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a class="is-active" href="./about.html">About</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./blog.html">Blog</a>
+                <span class="sep" aria-hidden="true"></span>
+                <a href="./contact.html">Contact</a>
+            </nav>
+
+            <div class="topbar-actions">
+                <button class="icon-btn" aria-label="Theme">Mode</button>
+                <a class="btn btn-primary" href="#">Get start for free</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="about-main">
+        <section class="about-hero">
+            <div class="container about-wrap">
+                <div class="about-copy">
+                    <h1>Building <span>Smarter Apps</span> for Modern Work</h1>
+                    <p>
+                        We design and build powerful, intuitive, and future-ready applications that help
+                        individuals and teams work smarter, faster, and better.
+                    </p>
+                </div>
+
+                <div class="about-gallery" aria-label="About showcase">
+                    <article class="about-card left">
+                        <img src="./assets/about/about-left.jpg" alt="Professional using phone at desk">
+                    </article>
+
+                    <article class="about-card center">
+                        <img src="./assets/Group 1000003563.png" alt="Product presentation in workspace">
+                        <button class="play-btn" type="button" aria-label="Play showcase video">
+                            <span></span>
+                        </button>
+                    </article>
+
+                    <article class="about-card right">
+                        <img src="./assets/about/about-right.jpg" alt="Team working together">
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-application">
+            <div class="container about-app-wrap">
+                <article class="about-app-intro-card">
+                    <div class="about-app-intro-copy">
+                        <h2>About Our <span>Application</span></h2>
+                        <p>
+                            We’re a product-focused team building clean, scalable digital solutions that simplify
+                            workflows through smart design, modern tech, and automation, creating fast, intuitive
+                            tools for startups and SaaS products across multiple industries.
+                        </p>
+                    </div>
+                    <img class="about-app-mark" src="./assets/about/about-application-mark.svg" alt="Application mark">
+                </article>
+
+                <div class="about-mission-grid">
+                    <article class="about-mission-card">
+                        <div class="about-mission-head">
+                            <span class="about-mission-icon-wrap">
+                                <img src="./assets/about/about-flow-icon.svg" alt="Flow connection icon">
+                            </span>
+                            <h3>Our <span>Mission</span></h3>
+                        </div>
+
+                        <p>
+                            To build simple, reliable, and intelligent applications that empower people to manage
+                            their work, data, and ideas more effectively without friction or complexity.
+                        </p>
+
+                        <ul>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Build simple, smart apps.</li>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Remove workflow friction.</li>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Empower work &amp; ideas.</li>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Scale with user needs.</li>
+                        </ul>
+                    </article>
+
+                    <article class="about-mission-card">
+                        <div class="about-mission-head">
+                            <span class="about-mission-icon-wrap">
+                                <img src="./assets/about/about-rocket-icon.svg" alt="Rocket icon">
+                            </span>
+                            <h3>Our <span>Mission</span></h3>
+                        </div>
+
+                        <p>
+                            To become a trusted platform for modern productivity and digital organization, where AI
+                            and thoughtful design work together to enhance human focus and creativity.
+                        </p>
+
+                        <ul>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Lead modern productivity.</li>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Unite AI &amp; design.</li>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Boost focus &amp; creativity.</li>
+                            <li><img src="./assets/about/about-check-icon.svg" alt="">Redefine digital organization.</li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
