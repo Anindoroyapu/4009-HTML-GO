@@ -1084,7 +1084,7 @@
 
     /* Footer Section */
     footer {
-      background: #FFFFFF;
+      /* background: #FFFFFF; */
        
       display: flex;
       flex-direction: column;
