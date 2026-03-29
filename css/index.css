@@ -23,7 +23,7 @@
     align-items: center;
     gap: 40px;
     width: 974px;
-	margin-top: 140px;
+	margin-top: 200px;
   }
 
   .cards-row {
@@ -125,6 +125,7 @@
   	line-height: 24px;
   	font-weight: 600;
   	background: radial-gradient(102.4% 125.7% at 50% 50%, #007bff, #0056b3);
+  background-clip: text;
   	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
 }
@@ -365,6 +366,7 @@
     font-size: 16px;
     line-height: 24px;
     background: radial-gradient(circle at 50% 50%, #007BFF 0%, #0056B3 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     transform: rotate(-6deg);
@@ -954,6 +956,7 @@
     font-size: 16px;
     line-height: 20px;
     background: radial-gradient(102% 102% at 50% 50%, #007BFF 0%, #0056B3 100%);
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -1319,6 +1322,7 @@
   margin: 5px 0;
   font-size: 28px;
   background: linear-gradient(45deg, #007BFF, #0056B3);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
 }

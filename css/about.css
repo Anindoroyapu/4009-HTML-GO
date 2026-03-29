@@ -16,10 +16,15 @@
 
 .about-topbar {
   width: 100%;
-  background: transparent;
+  background: #fff;
   box-shadow: none;
   border-bottom: 0;
-  position: static;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
 }
 
 .about-topbar .topbar-inner {
@@ -42,6 +47,14 @@
   gap: 14px;
   color: #666666;
   font-size: 14px;
+ 
+ 
+}
+.about-topbar .main-nav a {
+  outline: none;
+  text-decoration: none;
+  color: inherit;
+ 
 }
 
 .about-topbar .main-nav .is-active {
@@ -95,6 +108,7 @@
 .about-main {
   width: 100%;
   padding: 10px 0 80px;
+  margin-top: 88px;
 }
 
 .about-wrap {
