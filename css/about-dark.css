@@ -6,9 +6,8 @@
     #0e0724;
 }
 
-.about-body.dark-mode .about-topbar {
-  background: #0e0724 !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+.about-body .dark-mode .about-topbar {
+  background: #0e0724; 
 }
 
 .about-body.dark-mode .about-topbar .main-nav {
