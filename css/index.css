@@ -1720,6 +1720,9 @@
     font-size: 16px;
     color: #8E8E8E;
   }
+  .video-card{
+      display: flex; gap: 10px;
+    }
 
   @media (max-width: 768px) {
     .quantum-cta {
@@ -1800,12 +1803,12 @@
 
     .home-body .zx9-cardWrap {
       width: 100%;
-    } .pricing-plan-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-        .pricing-plan-card:nth-child(3) {
+    } 
+   
+    .pricing-plan-card:nth-child(3) {
         grid-column: 1 / -1;
     }
+    
   }
 
   @media (max-width: 900px) {
@@ -1822,6 +1825,9 @@
       line-height: 1.55;
       padding-inline: 8px;
     }
+    .video-card{
+      display: grid; gap: 20px;
+    }
 
     .home-body .features-grid,
     .home-body .gs-cards,
@@ -1829,6 +1835,43 @@
     .home-body .zx-plan-wrapper {
       grid-template-columns: 1fr;
     }
+     .home-body .features-grid{
+        display: grid !important;
+ 
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+    }
+
+
+    .features-header h1 {
+  font-weight: 600;
+  font-size: 20px;
+ 
+  
+  color: #1A1A1A;
+}
+  .features-header p {
+  font-weight: 600;
+  font-size: 18px;
+ 
+  
+  color: #1A1A1A;
+}
+.faq-section{
+  padding: 40px 16px;
+  width: 100%;
+}
+.faq-left{
+  width: 90%;
+  background: transparent;
+}
+.faq-items{
+  width:90%;
+}
+.trusted-section{
+  width: 60%;
+}
 
     .home-body .quorra-testimonials > div,
     .home-body .faq-wrapper,
@@ -1849,9 +1892,23 @@
       width: 100%;
       max-width: 420px;
     }
-    .pricing-plan-grid,
+
+    .pricing-plan-grid{
+      width: 100%;
+    display: grid;
+     gap: 16px;
+     justify-content: center;
+     grid-template-columns: 1fr !important;
+    }
+
     .pricing-testimonial-grid {
-        grid-template-columns: 1fr;
+           width: 100%;
+    display: grid;
+    }
+
+    .trusted-section{
+      width: 300px;
+       margin: 0 auto;
     }
   }
 
@@ -1859,6 +1916,8 @@
     .home-body .cards-row {
       gap: 8px;
     }
+
+ 
 
     .home-body .card {
       min-width: unset;
@@ -1972,12 +2031,7 @@
     background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
 }
 
-.pricing-plan-grid {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 20px;
-}
+
 
 .pricing-plan-card {
     background: #fff;
@@ -2120,7 +2174,8 @@
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 20px;
-}.pricing-feature-head h3 {
+}
+.pricing-feature-head h3 {
     margin: 0;
     font-size: 16px;
     line-height: 1.5;
