@@ -1,0 +1,152 @@
+/* Dark mode overrides for Blog page */
+
+.blog-body.dark-mode {
+  background:
+    linear-gradient(to right, rgba(82, 78, 98, 0.26) 1px, transparent 1px) 0 0 / 44px 100%,
+    #0e0724;
+}
+
+.blog-body.dark-mode .about-topbar {
+  background: #0e0724;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.blog-body.dark-mode .about-topbar .main-nav {
+  color: #b1b1b1;
+}
+
+.blog-body.dark-mode .about-topbar .main-nav .is-active {
+  color: #007bff;
+}
+
+.blog-body.dark-mode .about-topbar .sep {
+  background: #524e62;
+}
+
+.blog-body.dark-mode .about-topbar .icon-btn {
+  color: #b1b1b1;
+  background: #524d62;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.blog-body.dark-mode .blog-hero-section::before {
+  opacity: 0.08;
+}
+
+.blog-body.dark-mode .blog-heading h1 {
+  color: #fff;
+}
+
+.blog-body.dark-mode .blog-heading p {
+  color: #b1b1b1;
+}
+
+.blog-body.dark-mode .blog-chip {
+  border-color: #2f2940;
+  background: #312c44;
+  color: #fff;
+}
+
+.blog-body.dark-mode .blog-chip.active {
+  border-color: rgba(0, 123, 255, 0.08);
+  background: radial-gradient(circle at 50% 20%, #007bff, #0056b3);
+  color: #fff;
+}
+
+.blog-body.dark-mode .blog-card-image {
+  border-color: #2f2940;
+}
+
+.blog-body.dark-mode .blog-card-body {
+  border-color: #2f2940;
+  background: #312c44;
+  box-shadow: 0 4px 48px rgba(14, 7, 36, 0.26);
+}
+
+.blog-body.dark-mode .blog-pill,
+.blog-body.dark-mode .blog-like-pill {
+  background: #3e3951;
+  border-color: #383447;
+  color: #fff;
+}
+
+.blog-body.dark-mode .blog-card h2 {
+  color: #fff;
+}
+
+.blog-body.dark-mode .blog-card p {
+  color: #b1b1b1;
+}
+
+.blog-body.dark-mode .blog-like-icon {
+  border-color: #383447;
+  background: #3e3951;
+}
+
+.blog-body.dark-mode .blog-pagination button {
+  border-color: #2f2940;
+  background: #312c44;
+  color: #b1b1b1;
+}
+
+.blog-body.dark-mode .blog-pagination button.active {
+  color: #fff;
+  background: radial-gradient(circle at 50% 20%, #007bff, #0056b3);
+}
+
+.blog-body.dark-mode .blog-faq-section::before {
+  opacity: 0.16;
+}
+
+.blog-body.dark-mode .blog-faq-side-card {
+  border-color: #2f2940;
+  box-shadow: 0 4px 48px rgba(14, 7, 36, 0.26);
+  background:
+    linear-gradient(rgba(49, 44, 68, 0.95), rgba(49, 44, 68, 0.95)),
+    url('../assets/blog/faq-card-pattern.png') center/cover no-repeat;
+}
+
+.blog-body.dark-mode .blog-faq-side-head h2,
+.blog-body.dark-mode .blog-faq-item h3 {
+  color: #fff;
+}
+
+.blog-body.dark-mode .blog-faq-side-head p,
+.blog-body.dark-mode .blog-faq-brand-block ul,
+.blog-body.dark-mode .blog-faq-item p {
+  color: #b1b1b1;
+}
+
+.blog-body.dark-mode .blog-faq-item {
+  border-color: #2f2940;
+  background:
+    linear-gradient(rgba(49, 44, 68, 0.95), rgba(49, 44, 68, 0.95)),
+    url('../assets/blog/faq-item-bg.png') center/cover no-repeat;
+  box-shadow: 0 4px 48px rgba(14, 7, 36, 0.26);
+}
+
+.blog-body.dark-mode .about-footer-block {
+  background:
+    linear-gradient(rgba(14, 7, 36, 0.92), rgba(14, 7, 36, 0.92)),
+    url('../assets/about/about-footer-bg.png') center top/cover no-repeat;
+}
+
+.blog-body.dark-mode .about-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.blog-body.dark-mode .about-footer-links h3,
+.blog-body.dark-mode .about-footer-about p,
+.blog-body.dark-mode .about-footer-links a {
+  color: #b1b1b1;
+}
+
+.blog-body.dark-mode .about-footer-bottom,
+.blog-body.dark-mode .about-footer-bottom p,
+.blog-body.dark-mode .about-footer-bottom a {
+  color: #8f8da0;
+}
+
+.blog-body.dark-mode .about-footer-dot {
+  background: #8f8da0;
+}
