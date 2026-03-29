@@ -15,7 +15,12 @@
     padding: 0px 0;
     width: 100%;
   }
-
+.color-text{
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
   /* Container for the top cards */
   .cards-container {
     display: flex;
@@ -1751,7 +1756,7 @@
   .home-body img,
   .home-body video {
     max-width: 100%;
-    height: auto;
+    
   }
 
   @media (max-width: 1280px) {
