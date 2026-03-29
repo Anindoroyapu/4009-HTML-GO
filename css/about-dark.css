@@ -7,7 +7,7 @@
 }
 
 .about-body.dark-mode .about-topbar {
-  background: #0e0724;
+  background: #0e0724 !important;
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
@@ -101,10 +101,11 @@
 
 .about-body.dark-mode .about-footer-block {
   background:
-    linear-gradient(rgba(14, 7, 36, 0.92), rgba(14, 7, 36, 0.92)),
-    url('../assets/about/about-footer-bg.png') center top/cover no-repeat;
+   none !important;
 }
-
+.about-body.dark-mode .about-topbar{
+    background: #0e0724 !important;
+}
 .about-body.dark-mode .about-footer {
   border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
