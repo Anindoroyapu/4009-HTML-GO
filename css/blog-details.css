@@ -107,10 +107,11 @@
 }
 
 .details-gallery-grid img {
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 620px;
     object-fit: cover;
     display: block;
+    object-position: center;
 }
 
 .details-article-content {

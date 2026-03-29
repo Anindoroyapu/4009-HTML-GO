@@ -427,7 +427,7 @@
     border-radius: 20px;
     isolation: isolate;
     overflow: hidden;
-    margin-top: 60px;
+    margin: 60px 0;
   }
 
   /* Section Heading */
@@ -1891,7 +1891,7 @@
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 68%),  center top / cover no-repeat;
+    /* background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 68%),  center top / cover no-repeat; */
     opacity: 0.92;
     pointer-events: none;
 }

@@ -1,0 +1,233 @@
+/* ===== INDEX DARK MODE (FIGMA 432:19701) ===== */
+.home-body.dark-mode {
+  background: #0e0724;
+  color: #ffffff;
+}
+
+.home-body.dark-mode .about-topbar {
+  background: #1a1530;
+  border-bottom: 1px solid #31264a;
+}
+
+.home-body.dark-mode .about-topbar .main-nav {
+  color: #b1b1b1;
+}
+
+.home-body.dark-mode .about-topbar .main-nav .is-active {
+  color: #0d84ff;
+}
+
+.home-body.dark-mode .about-topbar .sep {
+  background: #524e62;
+}
+
+.home-body.dark-mode .about-topbar .icon-btn {
+  background: #524d62;
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.home-body.dark-mode .cards-container {
+  margin-top: 196px;
+}
+
+.home-body.dark-mode .card {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.home-body.dark-mode .card-text {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .main-heading {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .sub-heading {
+  color: #b1b1b1;
+}
+
+.home-body.dark-mode .frame {
+  border-color: #282837;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.home-body.dark-mode .pill-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 48px rgba(14, 7, 36, 0.35);
+}
+
+.home-body.dark-mode .pill-text,
+.home-body.dark-mode .value-text,
+.home-body.dark-mode .label-text {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .info-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 48px rgba(14, 7, 36, 0.35);
+}
+
+.home-body.dark-mode .badge {
+  background: #1a1530;
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.home-body.dark-mode .trusted-section {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: #31264a;
+}
+
+.home-body.dark-mode .trusted-heading {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .blur-right,
+.home-body.dark-mode .blur-left {
+  background: #17122c;
+}
+
+.home-body.dark-mode .features-section,
+
+.home-body.dark-mode .xylin-section,
+.home-body.dark-mode .faq-section {
+  background: #18122c;
+}
+
+
+
+.home-body.dark-mode .faq-section::before{
+    background: none;
+}
+.home-body.dark-mode .features-header h1,
+.home-body.dark-mode .gs-header h1,
+.home-body.dark-mode .af-intro-text h2,
+.home-body.dark-mode .vortec-intro h2,
+.home-body.dark-mode .pricing-heading h1,
+.home-body.dark-mode .faq-title-black,
+.home-body.dark-mode .faq-item-title {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .features-header p,
+.home-body.dark-mode .gs-header p,
+.home-body.dark-mode .af-intro-text p,
+.home-body.dark-mode .vortec-intro p,
+.home-body.dark-mode .pricing-heading p,
+.home-body.dark-mode .faq-subtitle,
+.home-body.dark-mode .faq-item-body p,
+.home-body.dark-mode .faq-benefits,
+.home-body.dark-mode .faq-item-card .faq-arrow {
+  color: #b1b1b1;
+}
+
+.home-body.dark-mode .feature-card,
+.home-body.dark-mode .gs-card,
+.home-body.dark-mode .quorra-card,
+.home-body.dark-mode .faq-left,
+.home-body.dark-mode .faq-item-card {
+  background: #201c34;
+  border-color: #2b2640;
+  box-shadow: 0 4px 48px rgba(14, 7, 36, 0.26);
+}
+
+.home-body.dark-mode .feature-content h2,
+.home-body.dark-mode .gs-card-title,
+.home-body.dark-mode .af-card-text h3,
+.home-body.dark-mode .quorra-user-info .quorra-name,
+.home-body.dark-mode .pricing-plan-head h2,
+.home-body.dark-mode .pricing-feature-head h3 {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .feature-content p,
+.home-body.dark-mode .gs-card-text,
+.home-body.dark-mode .af-card-text p,
+.home-body.dark-mode .quorra-text,
+.home-body.dark-mode .pricing-plan-head p,
+.home-body.dark-mode .pricing-feature-head p,
+.home-body.dark-mode .pricing-feature-list li,
+.home-body.dark-mode .pricing-billing-toggle button,
+.home-body.dark-mode .pricing-plan-btn.light {
+  color: #b1b1b1;
+}
+
+.home-body.dark-mode .feature-icon,
+.home-body.dark-mode .af-card-icon,
+.home-body.dark-mode .pricing-billing-toggle,
+.home-body.dark-mode .pricing-plan-card {
+  background: #201c34;
+  border-color: #2b2640;
+}
+
+.home-body.dark-mode .feature-tags span,
+.home-body.dark-mode .pricing-billing-toggle button {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+  color: #b1b1b1;
+}
+
+.home-body.dark-mode .pricing-billing-toggle .is-active,
+.home-body.dark-mode .pricing-plan-btn.primary,
+.home-body.dark-mode .pricing-popular-tag {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .af-section-wrapper {
+  background: #18122c;
+}
+
+.home-body.dark-mode .af-card-prod,
+.home-body.dark-mode .af-card-sync,
+.home-body.dark-mode .af-card-ai {
+  background: rgba(71, 123, 255, 0.08);
+  border-color: #26213c;
+}
+
+.home-body.dark-mode .af-card-org,
+.home-body.dark-mode .af-card-fin,
+.home-body.dark-mode .af-card-light {
+  background: rgba(123, 25, 216, 0.08);
+  border-color: #26213c;
+}
+
+.home-body.dark-mode .about-footer-block {
+  background: #0e0724;
+}
+
+.home-body.dark-mode .about-footer {
+  background: #0e0724;
+}
+
+.home-body.dark-mode .about-footer-about p,
+.home-body.dark-mode .about-footer-links a,
+.home-body.dark-mode .about-footer-bottom p,
+.home-body.dark-mode .about-footer-bottom a {
+  color: #b1b1b1;
+}
+
+.home-body.dark-mode .about-footer-links h3 {
+  color: #ffffff;
+}
+
+.home-body.dark-mode .about-footer-dot {
+  background: #7f7f7f;
+}
+
+@media (max-width: 900px) {
+  .home-body.dark-mode .about-topbar {
+    background: #15102a;
+  }
+
+  .home-body.dark-mode .feature-card,
+  .home-body.dark-mode .gs-card,
+  .home-body.dark-mode .faq-left,
+  .home-body.dark-mode .faq-item-card,
+  .home-body.dark-mode .quorra-card {
+    background: #1d1831;
+  }
+}
