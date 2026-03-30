@@ -536,7 +536,10 @@
 /* Feature Card */
 .feature-card {
 
-  background: url(../assets/faq-bg-2.jpg), #FFFFFF ;
+  background: url(../assets/faq-bg-2.jpg), #FFFFFF;
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
 
   
   border: 1.5px solid rgba(0, 123, 255, 0.08);
@@ -594,7 +597,7 @@
   justify-content: center;
   align-items: center;
   background: #FFFFFF;
-  border: 1.5px solid #F5F5F5;
+  border: 2px solid #eeeded;
   border-radius: 1000px;
   padding: 6px 12px;
   font-weight: 400;
