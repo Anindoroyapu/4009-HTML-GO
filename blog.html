@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="./css/about.css" />
     <link rel="stylesheet" href="./css/blog.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap" />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+    <link rel="stylesheet" href="./css/navbar.css">
 </head>
 
 <body class="blog-body">
@@ -38,6 +40,39 @@
             </div>
         </div>
     </header>
+
+
+ <div style=" display: flex; justify-content: start;  background-color: black; width: 100%; ">
+    <div class="w3-sidebar w3-bar-block w3-border-right " style=" display:none ; z-index: 1000;  " id="mySidebar">
+      <div class="main-nav"
+        style=" padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; justify-items: start !important;">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="index.html" class="nav-item active">Home Page</a>
+
+        <a href="./pricing.html">Pricing</a>
+
+        <a href="./about.html">About</a>
+
+        <a href="./blog.html">Blog</a>
+
+        <a href="./contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="mobile-header w3-white">
+    <a class="brand" href="./index.html" style="padding-left: 10px; " aria-label="AppFlow home">
+      <img src="./public/images/main-logo.png" alt="AppFlow" style="height: 30px; width: auto;">
+    </a>
+    <div class="" style=" display: flex; align-items: center; ">
+      <a class="" aria-label="Switch to dark mode" onclick="location.href='./index-dark.html'">
+        <img src="./assets/white-moon.svg" alt="">
+      </a>
+      <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+    </div>
+  </div>
+
+
 
     <main class="blog-main">
         <section class="blog-hero-section">
@@ -335,6 +370,15 @@
             </footer>
         </section>
     </main>
+
+
+    <script>  function w3_open() {
+      document.getElementById("mySidebar").style.display = "block";
+    }
+
+    function w3_close() {
+      document.getElementById("mySidebar").style.display = "none";
+    }</script>
 </body>
 
 </html>

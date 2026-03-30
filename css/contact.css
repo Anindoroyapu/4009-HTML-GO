@@ -688,13 +688,17 @@
     padding-top: 12px;
   }
 
-  .contact-intro-card,
+  .contact-intro-card{
+        padding: 20px;
+     display: grid;
+  }
   .contact-info-card,
   .contact-form-card,
   .contact-quick-card,
   .contact-cta {
     padding: 20px;
   }
+
 
   .contact-intro-copy h1,
   .contact-info-head h2,
