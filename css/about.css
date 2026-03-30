@@ -512,6 +512,7 @@
   right: -24px;
   top: -8px;
   width: 210px;
+  max-height: 85px;
 }
 
 .about-cta-copy {
@@ -632,6 +633,7 @@
   justify-content: space-between;
   gap: 16px;
   color: #8e8e8e;
+  margin: 20px auto;
 }
 
 .about-footer-bottom p,
