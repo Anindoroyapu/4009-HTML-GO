@@ -2001,6 +2001,15 @@
     overflow: hidden;
     
     }
+
+
+
+    
+    .boxcard{
+  width: 100% !important;
+  overflow: hidden;
+  margin: 50px 0px;
+}
   }
 
   @media (max-width: 640px) {
@@ -2053,6 +2062,8 @@
        line-height: 28px;
         text-align: center;
     }
+
+
   }
 .pricing-hero-section {
     padding: 52px 0 92px;
@@ -2485,7 +2496,9 @@
   border-radius: 16px;
   box-shadow: 0 4px 48px rgba(217, 217, 217, 0.4);
 }
-
+.boxcard{
+  width: auto; margin: 50px 0px;
+}
 .home-cta-label {
   position: absolute;
   width: 1px;
