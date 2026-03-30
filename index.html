@@ -8,8 +8,8 @@
   <link rel="stylesheet" href="./css/index.css" />
   <link rel="stylesheet" href="./css/about.css" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600&display=swap" />
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-    <link rel="stylesheet" href="./css/navbar.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+  <link rel="stylesheet" href="./css/navbar.css">
 </head>
 
 <body class="home-body">
@@ -41,18 +41,21 @@
     </div>
   </header>
 
-  <div class="w3-sidebar w3-bar-block w3-border-right " style=" display:none ; z-index: 1000; " id="mySidebar">
-    <div class="main-nav" style=" padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start;">
-      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-      <a href="index.html" class="nav-item active">Home Page</a>
-  
-      <a href="./pricing.html">Pricing</a>
-  
-      <a href="./about.html">About</a>
-  
-      <a href="./blog.html">Blog</a>
-  
-      <a href="./contact.html">Contact</a>
+  <div style=" display: flex; justify-content: start;  background-color: black; width: 100%; ">
+    <div class="w3-sidebar w3-bar-block w3-border-right " style=" display:none ; z-index: 1000;  " id="mySidebar">
+      <div class="main-nav"
+        style=" padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; justify-items: start !important;">
+        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+        <a href="index.html" class="nav-item active">Home Page</a>
+
+        <a href="./pricing.html">Pricing</a>
+
+        <a href="./about.html">About</a>
+
+        <a href="./blog.html">Blog</a>
+
+        <a href="./contact.html">Contact</a>
+      </div>
     </div>
   </div>
 
@@ -60,11 +63,10 @@
     <a class="brand" href="./index.html" style="padding-left: 10px; " aria-label="AppFlow home">
       <img src="./public/images/main-logo.png" alt="AppFlow" style="height: 30px; width: auto;">
     </a>
-    <div class="" style=" display: flex; align-items: center; "> 
+    <div class="" style=" display: flex; align-items: center; ">
       <a class="" aria-label="Switch to dark mode" onclick="location.href='./index-dark.html'">
-        <img
-          src="./assets/white-moon.svg" alt="" >
-        </a>
+        <img src="./assets/white-moon.svg" alt="">
+      </a>
       <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
     </div>
   </div>
@@ -518,7 +520,14 @@
       <div class="faq-items">
         <div class="faq-item-card expandable">
           <div class="faq-item-header">
-            <h3 class="faq-item-title">What makes this app different from others?</h3><span class="faq-arrow">▼</span>
+            <h3 class="faq-item-title">What makes this app different from others?</h3><span class="faq-arrow"><svg
+                width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20H18" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 16V4" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 12C16 12 13.054 16 12 16C10.9459 16 8 12 8 12" stroke="#B1B1B1" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
           </div>
           <div class="faq-item-body">
             <p>Our app combines multiple use cases into one platform - from task management to finance tracking, all
@@ -527,7 +536,14 @@
         </div>
         <div class="faq-item-card">
           <div class="faq-item-header">
-            <h3 class="faq-item-title">Can I use this on multiple devices?</h3><span class="faq-arrow">▼</span>
+            <h3 class="faq-item-title">Can I use this on multiple devices?</h3><span class="faq-arrow"><svg width="24"
+                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20H18" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 16V4" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 12C16 12 13.054 16 12 16C10.9459 16 8 12 8 12" stroke="#B1B1B1" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
           </div>
           <div class="faq-item-body">
             <p>Yes, AppFlow is fully responsive and works on all devices including mobile, tablet, and desktop.</p>
@@ -535,7 +551,14 @@
         </div>
         <div class="faq-item-card">
           <div class="faq-item-header">
-            <h3 class="faq-item-title">Is my data secure?</h3><span class="faq-arrow">▼</span>
+            <h3 class="faq-item-title">Is my data secure?</h3><span class="faq-arrow"><svg width="24" height="24"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20H18" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 16V4" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 12C16 12 13.054 16 12 16C10.9459 16 8 12 8 12" stroke="#B1B1B1" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
           </div>
           <div class="faq-item-body">
             <p>Absolutely! We use industry-standard encryption and security protocols to keep your data safe.</p>
@@ -543,7 +566,14 @@
         </div>
         <div class="faq-item-card">
           <div class="faq-item-header">
-            <h3 class="faq-item-title">Do you offer a free trial?</h3><span class="faq-arrow">▼</span>
+            <h3 class="faq-item-title">Do you offer a free trial?</h3><span class="faq-arrow"><svg width="24"
+                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20H18" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 16V4" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 12C16 12 13.054 16 12 16C10.9459 16 8 12 8 12" stroke="#B1B1B1" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
           </div>
           <div class="faq-item-body">
             <p>Yes, you can try AppFlow free for 14 days with no credit card required.</p>
@@ -551,7 +581,14 @@
         </div>
         <div class="faq-item-card">
           <div class="faq-item-header">
-            <h3 class="faq-item-title">Can I cancel anytime?</h3><span class="faq-arrow">▼</span>
+            <h3 class="faq-item-title">Can I cancel anytime?</h3><span class="faq-arrow"><svg width="24" height="24"
+                viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20H18" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 16V4" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 12C16 12 13.054 16 12 16C10.9459 16 8 12 8 12" stroke="#B1B1B1" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
           </div>
           <div class="faq-item-body">
             <p>Yes, you can cancel your subscription at any time without any hidden fees.</p>
@@ -559,7 +596,14 @@
         </div>
         <div class="faq-item-card">
           <div class="faq-item-header">
-            <h3 class="faq-item-title">What kind of support do you provide?</h3><span class="faq-arrow">▼</span>
+            <h3 class="faq-item-title">What kind of support do you provide?</h3><span class="faq-arrow"><svg width="24"
+                height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 20H18" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" />
+                <path d="M12 16V4" stroke="#B1B1B1" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 12C16 12 13.054 16 12 16C10.9459 16 8 12 8 12" stroke="#B1B1B1" stroke-width="1.5"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
           </div>
           <div class="faq-item-body">
             <p>We provide 24/7 customer support via chat, email, and phone.</p>

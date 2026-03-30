@@ -92,5 +92,9 @@
     z-index: 1000;
     padding: 8px 12px;
   }
+  .home-body.dark-mode .w3-sidebar,
+  .home-body.dark-mode  .mobile-header  {
+    background: #18122C !important;
+  }
 
 }

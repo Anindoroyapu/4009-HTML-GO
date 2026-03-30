@@ -1155,7 +1155,60 @@
         align-items: flex-start;
         gap: 32px;
       }
+      .trusted-heading{
+        width: 100%;
+      }
+     .features-header{
+        width: 280px;
+      }
+      .feature-card{
+        width: 100%;
+      }
+      .gs-section{
+        width: 100%;
+        padding: 0 10px;
+      }
+      .gs-section h1{
+        font-size: 22px;
+      }
+      .gs-section p{
+        font-size: 18px;
+      }
+      .faq-left{
+        width: 100%;
+        padding: 0;
+      }
+      .gs-card-title{
+        font-size: 18px;
+      }
+      .af-card-text h3 p{
+        font-size: 14px;
+      }
+      .vortec-intro h2{
+        font-size: 20px;
+      }
+.quorra-card p.quorra-text{
+        font-size: 14px;
+      
+}
+.pricing-heading h1{
+        font-size: 18px;
+}
+.faq-left{
+        width: 100%;
+        padding: 0;
+        overflow: hidden;
+}
+.faq-left-content  h2{
+        font-size: 22px;
+
     }
+    .faq-benefits {
+      display: grid;
+    }
+  
+  
+  }
 
 
 
@@ -1377,6 +1430,7 @@
   align-items: flex-start;
   position: relative;
   z-index: 2;
+  justify-content: center;
 }
 
 /* LEFT COLUMN */
@@ -1907,8 +1961,19 @@
     }
 
     .trusted-section{
-      width: 300px;
+      width: 200px;
        margin: 0 auto;
+        
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 8px;
+    
+    
+     
+     
+    overflow: hidden;
+    
     }
   }
 
@@ -1937,6 +2002,30 @@
 
     .home-body .group-image {
       height: min(70vw, 360px);
+    }
+    .logos-container{
+     display: flex;
+      flex-wrap: wrap;
+       justify-content: center;
+      
+        gap: 6px;
+    justify-content: start;
+    align-items: start;
+    gap:  10px;
+    width: 300px;
+    height: 129px;
+    z-index: 1;
+    position: relative;
+    }
+    .blur-left,
+    .blur-right {
+      background: none;
+    }
+   
+    .trusted-section h2{
+      font-size: 20px;
+       line-height: 28px;
+        text-align: center;
     }
   }
 .pricing-hero-section {
