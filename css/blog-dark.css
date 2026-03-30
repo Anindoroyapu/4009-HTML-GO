@@ -26,7 +26,6 @@
 .blog-body.dark-mode .about-topbar .icon-btn {
   color: #b1b1b1;
   background: #524d62;
-  border-color: rgba(255, 255, 255, 0.08);
 }
 
 .blog-body.dark-mode .blog-hero-section::before {
