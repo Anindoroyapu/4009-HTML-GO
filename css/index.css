@@ -426,7 +426,7 @@
     padding: 48px 278px;
     gap: 48px;
     width: 1400px;
-    height: 351px;
+    /* height: 351px; */
     background: rgba(0, 123, 255, 0.04);
     border: 1px solid #F5F5F5;
     border-radius: 20px;
@@ -489,7 +489,10 @@
   .blur-left {
     left: 0;
     z-index: 3;
-  }/* Features Section */
+  }
+  
+  
+  /* Features Section */
 .features-section {
   width: 100%;
   padding: 80px 278px;
@@ -614,11 +617,26 @@
     gap: 0px;
     max-width: 1920px;
     margin: 0 auto;
-     background: url(../assets/faq-bg-2.jpg), #FFFFFF;
+  }
+
+  .gs-section-bg{
+   background: url(../assets/faq-bg-2.jpg), #FFFFFF;
   background-size: 100% 100%;
   background-position: center;
   background-repeat: no-repeat;
+  width: 100%;
   }
+
+  .footer-bg{
+    width: 100%;
+    height: 262px;
+    position: relative;
+   
+    
+    padding-top: 80px;
+     background: url('../assets/about/about-footer-bg.png') center top/cover no-repeat;;
+  }
+
 
   .gs-header {
     text-align: center;
@@ -1832,9 +1850,7 @@
   }
 
   /* Home Page Responsive Hardening */
-  .home-body {
-    overflow-x: hidden;
-  }
+ 
 
   .home-body img,
   .home-body video {
@@ -1922,6 +1938,15 @@
   justify-content: center;
   width: 100%;
     }
+
+    .features-section {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 60px;
+}
 
 
     .features-header h1 {
