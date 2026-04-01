@@ -626,6 +626,19 @@
   background-repeat: no-repeat;
   width: 100%;
   }
+    .gs-section-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .gs-section-bg > * {
+    position: relative;
+    z-index: 1;
+  }
 
   .footer-bg{
     width: 100%;
