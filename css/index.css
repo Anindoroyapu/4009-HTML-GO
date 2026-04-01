@@ -661,9 +661,8 @@
 
   .gs-cards {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
-    gap: 40px;
+    gap: 28px;
     max-width: 1400px;
     width: 100%;
     margin-top: 60px;
@@ -871,7 +870,6 @@
     }
   }
 
-
   .xylin-section {
     display: flex;
     flex-direction: column;
@@ -879,10 +877,26 @@
     padding: 80px 260px;
     gap: 60px;
     width: 100%;
- background: url(../assets/faq-bg-2.jpg), #FFFFFF;
-  background-size: 100% 100%;
-  background-position: center;
-  background-repeat: no-repeat;  }
+    background: url(../assets/faq-bg-2.jpg), #FFFFFF;
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+
+  .xylin-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(255, 255, 255, 0.5);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .xylin-section > * {
+    position: relative;
+    z-index: 1;
+  }
 
   .vortec-intro {
     display: flex;
