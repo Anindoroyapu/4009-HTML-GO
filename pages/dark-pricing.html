@@ -1,0 +1,1119 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pricing - SaaS Platform</title>
+    <base href="../" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=clash-display@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
+
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css" />
+
+
+    <link rel="stylesheet" href="./css/pricing.css" />
+    <link rel="stylesheet" href="./css/dark-pricing.css" />
+  </head>
+  <body class="dark-mode-pricing">
+    <!-- ==================== HEADER ==================== -->
+    <!-- Navbar -->
+  <div class="web-header" style="width: 100%; position:fixed; top: 0; z-index: 1000;  margin: 0 auto ;  ">
+    <nav class="navbar" style="backdrop-filter: blur(50px);">
+      <a class="" href="pages/dark-home.html"> 
+        <img src="./assets/main-logo-dark.svg" alt="">
+      </a>
+      <div class="nav-links">
+        <a href="pages/dark-home.html" class="nav-item ">Home Page</a>
+        <div class="divider"></div>
+        <a href="pages/dark-about.html" class="nav-item ">About Platform</a>
+        <div class="divider"></div>
+        <a href="pages/dark-features.html" class="nav-item">Feature’s</a>
+        <div class="divider"></div>
+        <a href="pages/dark-pricing.html" class="nav-item active">Pricing</a>
+        <div class="divider"></div>
+        <a href="pages/dark-contact.html" class="nav-item">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="theme-toggle" href="pricing.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </a>
+        <a href="#" class="sign-in-btn">Sign in</a>
+      </div>
+    </nav>
+  </div>  
+
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none ; z-index: 1000; " id="mySidebar">
+    <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; ">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <a href="pages/dark-home.html" class="nav-item ">Home Page</a>
+  
+      <a href="pages/dark-about.html" class="nav-item ">About Platform</a>
+  
+      <a href="pages/dark-features.html" class="nav-item">Feature’s</a>
+  
+      <a href="pages/dark-pricing.html" class="nav-item active">Pricing</a>
+  
+      <a href="pages/dark-contact.html" class="nav-item">Contact</a>
+    </div>
+  </div>
+  
+<div class="mobile-header w3-white">
+  <a href="pages/dark-home.html" style="padding-left: 10px;">
+    <img src="./assets/main-logo.svg" alt="">
+  </a>
+
+    <div style=" display: flex; align-items: center;  ">
+       <a class="theme-toggle" href="pricing.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </a>
+ <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+    </div>
+</div>
+
+
+
+    <!-- ==================== PRICING HERO ==================== -->
+    <section class="pricing-hero">
+      <div class="pricing-hero-content">
+        <div class="pricing-badge">
+          <div class="pricing-badge-icon">
+            <img src="assets/icon-bitcoin-key.svg" alt="" />
+          </div>
+          <span>Simple, Transparent Pricing</span>
+        </div>
+        <div class="pricing-hero-title-wrap">
+          <h1 class="pricing-hero-title">
+            Choose the <span class="highlight">Plan</span> That
+            <span class="highlight">Fits</span> Your
+            <span class="highlight">Stage</span>
+          </h1>
+          <p class="pricing-hero-desc">
+            Start free, scale when you're ready. No hidden fees, no surprises.
+          </p>
+        </div>
+      </div>
+      <div class="pricing-toggle">
+        <button class="toggle-btn active">Monthly</button>
+        <button class="toggle-btn">
+          Annual <span class="discount-badge">-20%</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==================== PRICING CARDS ==================== -->
+    <section class="pricing-cards-section">
+      <div class="pricing-cards">
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <div class="pricing-card-top">
+             <div class="pricing-card-name">
+                <img src="assets/icon-plan.svg" alt="" />
+                <span>Starter</span>
+              </div> <span class="pricing-card-subtitle">14-day free trial</span>
+              
+            </div>
+            <div class="pricing-card-price">
+              <span class="amount">$19</span><span class="period">/mo</span>
+            </div>
+            <p class="pricing-card-desc">
+              Everything you need to validate your idea and get your first
+              customers.
+            </p>
+            <a href="#" class="pricing-card-cta">
+              Start for free trial
+              <img src="assets/icon-arrow-right-dark.svg" alt="" />
+            </a>
+          </div>
+          <div class="pricing-card-features">
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Everything in Growth</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Unlimited users</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>White-label solution</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Dedicated account manager</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>24/7 phone support</span>
+            </div>
+            <div class="pricing-feature-item faded">
+              <img src="assets/icon-check-orange.svg" alt="" />
+              <span>Custom integrations</span>
+            </div>
+            <div class="pricing-feature-item faded">
+              <img src="assets/icon-check-orange.svg" alt="" />
+              <span>SLA guarantee 99.99%</span>
+            </div>
+            <div class="pricing-feature-item faded">
+              <img src="assets/icon-check-orange.svg" alt="" />
+              <span>Advanced security (SSO, SAML)</span>
+            </div>
+            <div class="pricing-feature-item faded">
+              <img src="assets/icon-check-orange.svg" alt="" />
+              <span>Custom contracts &amp; invoicing</span>
+            </div>
+            <div class="pricing-feature-item faded">
+              <img src="assets/icon-check-orange.svg" alt="" />
+              <span>Onboarding assistance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Growth -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <div class="pricing-card-top">
+             <div class="pricing-card-name">
+                <img src="assets/icon-plan.svg" alt="" />
+                <span>Growth</span>
+              </div> <span class="pricing-card-subtitle">Most value for money</span>
+              
+            </div>
+            <div class="pricing-card-price">
+              <span class="amount">$49</span><span class="period">/mo</span>
+            </div>
+            <p class="pricing-card-desc">
+              Everything you need to validate your idea and get your first
+              customers.
+            </p>
+            <a href="#" class="pricing-card-cta primary">
+              Start for free trial
+              <img src="assets/icon-arrow-right.svg" alt="" />
+            </a>
+          </div>
+          <div class="pricing-card-features">
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Everything in Growth</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Unlimited users</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>White-label solution</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Dedicated account manager</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>24/7 phone support</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Custom integrations</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>SLA guarantee 99.99%</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Advanced security (SSO, SAML)</span>
+            </div>
+            <div class="pricing-feature-item faded">
+              <img src="assets/icon-check-orange.svg" alt="" />
+              <span>Custom contracts &amp; invoicing</span>
+            </div>
+            <div class="pricing-feature-item faded">
+              <img src="assets/icon-check-orange.svg" alt="" />
+              <span>Onboarding assistance</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Scale -->
+        <div class="pricing-card">
+          <div class="pricing-card-header">
+            <div class="pricing-card-top">
+              <div class="pricing-card-name">
+                <img src="assets/icon-plan.svg" alt="" />
+                <span>Scale</span>
+              </div> 
+              <span class="pricing-card-subtitle"
+                >Volume discounts available</span
+              >
+            </div>
+            <div class="pricing-card-price custom-price">Custom</div>
+            <p class="pricing-card-desc">
+              Everything you need to validate your idea and get your first
+              customers.
+            </p>
+            <a href="#" class="pricing-card-cta">
+              Contact Sales
+              <img src="assets/icon-arrow-right-dark.svg" alt="" />
+            </a>
+          </div>
+          <div class="pricing-card-features">
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Everything in Growth</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Unlimited users</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>White-label solution</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Dedicated account manager</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>24/7 phone support</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Custom integrations</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>SLA guarantee 99.99%</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Advanced security (SSO, SAML)</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Custom contracts &amp; invoicing</span>
+            </div>
+            <div class="pricing-feature-item">
+              <img src="assets/icon-check-orange.svg" alt="✓" />
+              <span>Onboarding assistance</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INFO BAR ==================== -->
+     
+    <div class="info-bar">
+      <div class="info-bar-inner">
+        <span class="info-bar-item">SSL certificates</span>
+        <div class="info-bar-sep"></div>
+        <span class="info-bar-item">Daily backups</span>
+        <div class="info-bar-sep"></div>
+        <span class="info-bar-item">GDPR compliance</span>
+        <div class="info-bar-sep"></div>
+        <span class="info-bar-item">API access</span>
+        <div class="info-bar-sep"></div>
+        <a href="#" class="info-bar-link">
+          Check our FAQ's
+          <img src="assets/icon-user-question.svg" alt="" />
+        </a>
+      </div>
+    </div>
+
+    <!-- ==================== COMPARISON TABLE ==================== -->
+    <section class="comparison-section">
+      <div class="comparison-table">
+        <!-- Left Labels Column -->
+        <div class="comparison-labels">
+          <div class="comparison-labels-header">
+            <h2 class="comparison-labels-title">
+              <span class="highlight">Compare</span> All Features
+            </h2>
+            <p class="comparison-labels-desc">
+              See exactly what's included in each plan
+            </p>
+          </div>
+
+          <!-- Our Features -->
+          <div class="comparison-section-block">
+            <h3 class="comparison-section-title">Our Features.</h3>
+            <div class="comparison-section-items">
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Team members</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Storage</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>API calls</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Projects</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Custom domains</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Analytics & Reporting -->
+          <div class="comparison-section-block">
+            <h3 class="comparison-section-title">Analytics &amp; Reporting.</h3>
+            <div class="comparison-section-items">
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Basic analytics</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Advanced analytics</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Custom reports</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Data export</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Real-time dashboards</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Predictive analytics</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Integrations -->
+          <div class="comparison-section-block">
+            <h3 class="comparison-section-title">Integrations.</h3>
+            <div class="comparison-section-items">
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Basic integrations (20+)</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Premium integrations (200+)</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Custom integrations</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>API access</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Webhooks</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Security & Compliance -->
+          <div class="comparison-section-block">
+            <h3 class="comparison-section-title">Security &amp; Compliance.</h3>
+            <div class="comparison-section-items">
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>SSL encryption</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Two-factor authentication</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>SSO/SAML</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Advanced permissions</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Audit logs</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>GDPR compliance</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>SOC 2 Type II</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Custom security policies</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Support -->
+          <div class="comparison-section-block">
+            <h3 class="comparison-section-title">Support.</h3>
+            <div class="comparison-section-items">
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Email support</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Live chat support</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Phone support</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Priority support</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Dedicated account manager</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Onboarding assistance</span>
+              </div>
+              <div class="comparison-label-item">
+                <img src="assets/icon-check-orange.svg" alt="" />
+                <span>Custom training</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data Columns -->
+        <div class="comparison-columns">
+          <!-- Starter Column -->
+          <div class="comparison-col">
+            <div class="comparison-col-header">
+              <div class="comparison-col-plan">
+                <div class="comparison-col-plan-name">
+                  <img src="assets/icon-plan.svg" alt="" />
+                  <span>Starter</span>
+                </div>
+                <span class="comparison-col-plan-sub">14-day free trial</span>
+              </div>
+              <div class="comparison-col-price">
+                <span class="amount">$19</span><span class="period">/mo</span>
+              </div>
+              <a href="#" class="comparison-col-cta">
+                Start for free trial
+                <img src="assets/icon-arrow-right-dark.svg" alt="" />
+              </a>
+            </div>
+
+            <!-- Our Features -->
+            <div class="comparison-data-block">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items" style=" margin-top: -30px;">
+                <div class="comparison-data-item"><span>5</span></div>
+                <div class="comparison-data-item"><span>10 GB</span></div>
+                <div class="comparison-data-item"><span>50/day</span></div>
+                <div class="comparison-data-item"><span>10</span></div>
+                <div class="comparison-data-item"><span>1</span></div>
+              </div>
+            </div>
+
+            <!-- Analytics & Reporting -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Integrations -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item"><span>Limit</span></div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Security & Compliance -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Support -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Growth Column -->
+          <div class="comparison-col">
+            <div class="comparison-col-header">
+              <div class="comparison-col-plan">
+                <div class="comparison-col-plan-name">
+                  <img src="assets/icon-plan.svg" alt="" />
+                  <span>Growth</span>
+                </div>
+                <span class="comparison-col-plan-sub"
+                  >Most value for money</span
+                >
+              </div>
+              <div class="comparison-col-price">
+                <span class="amount">$49</span><span class="period">/mo</span>
+              </div>
+              <a href="#" class="comparison-col-cta primary">
+                Start for free trial
+                <img src="assets/icon-arrow-right.svg" alt="" />
+              </a>
+            </div>
+
+            <!-- Our Features -->
+            <div class="comparison-data-block">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items" style=" margin-top: -30px;">
+                <div class="comparison-data-item"><span>25</span></div>
+                <div class="comparison-data-item"><span>100 GB</span></div>
+                <div class="comparison-data-item"><span>Unlimited</span></div>
+                <div class="comparison-data-item"><span>100</span></div>
+                <div class="comparison-data-item"><span>5</span></div>
+              </div>
+            </div>
+
+            <!-- Analytics & Reporting -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Integrations -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item"><span>50/day</span></div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Security & Compliance -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Support -->
+            <div class="comparison-data-block" style=" margin-top: 10px;"> 
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-cancel.svg" alt="✗" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Scale Column -->
+          <div class="comparison-col">
+            <div class="comparison-col-header">
+              <div class="comparison-col-plan">
+                <div class="comparison-col-plan-name">
+                  <img src="assets/icon-plan.svg" alt="" />
+                  <span>Scale</span>
+                </div>
+                <span class="comparison-col-plan-sub"
+                  >Volume discounts available</span
+                >
+              </div>
+              <div class="comparison-col-price custom">Custom</div>
+              <a href="#" class="comparison-col-cta">
+                Contact Sales
+                <img src="assets/icon-arrow-right-dark.svg" alt="" />
+              </a>
+            </div>
+
+            <!-- Our Features -->
+            <div class="comparison-data-block">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items" style=" margin-top: -30px;">
+                <div class="comparison-data-item"><span>Unlimited</span></div>
+                <div class="comparison-data-item"><span>Unlimited</span></div>
+                <div class="comparison-data-item"><span>Unlimited</span></div>
+                <div class="comparison-data-item"><span>Unlimited</span></div>
+                <div class="comparison-data-item"><span>Unlimited</span></div>
+              </div>
+            </div>
+
+            <!-- Analytics & Reporting -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Integrations -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <span>Full+ Custom</span>
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Security & Compliance -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+              </div>
+            </div>
+
+            <!-- Support -->
+            <div class="comparison-data-block" style=" margin-top: 10px;">
+              <div class="comparison-data-title">Our Features.</div>
+              <div class="comparison-data-items">
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+                <div class="comparison-data-item">
+                  <img src="assets/icon-check-green.svg" alt="✓" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+     
+<!-- Footer -->
+      <div class="cta-footer-wrapper">
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <div class="cta-card">
+          <!-- Corner decorative elements -->
+          <img
+            class="cta-card-bg-tl"
+            src="assets/cta-corner-tl.svg"
+            alt=""
+          />
+          <img
+            class="cta-card-bg-tr"
+            src="assets/cta-corner-tr.svg"
+            alt=""
+          />
+          <img
+            class="cta-card-bg-bl"
+            src="assets/cta-corner-bl.svg"
+            alt=""
+          />
+          <img
+            class="cta-card-bg-br"
+            src="assets/cta-corner-br.svg"
+            alt=""
+          />
+
+          <div class="cta-content">
+            <div class="cta-badge">
+              <div class="cta-badge-icon">
+                <img
+                  src="assets/icon-pricing.svg"
+                  alt=""
+                />
+              </div>
+              <span>Simple, Transparent Pricing</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+              "
+            >
+              <h2 class="cta-title">Ready to Get Started?</h2>
+              <p class="cta-desc">
+                Try all these features free for 14 days. No credit card
+                required.
+              </p>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <a href="#" class="btn-primary">
+              Start for free trial
+              <img
+                src="assets/icon-arrow-right.svg"
+                alt="Arrow"
+              />
+            </a>
+            <a href="#" class="btn-secondary">Schedule a Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="footer">
+        <img
+          class="footer-decor-left"
+          src="assets/footer-decor-left.svg"
+          alt=""
+        />
+        <img
+          class="footer-decor-right"
+          src="assets/footer-decor-right.svg"
+          alt=""
+        />
+
+        <div class="footer-top">
+          <div class="footer-left">
+            <div class="footer-left-info">
+              <div class="footer-badge">
+                <div class="footer-badge-icon">
+                  <img
+                    src="assets/icon-rocket.svg"
+                    alt=""
+                  />
+                </div>
+                <span>Ready to Transform Your SaaS?</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <h3 class="footer-heading">
+                  Ready to Launch Your SaaS Faster?
+                </h3>
+                <p class="footer-sub-text">
+                  The all-in-one platform for launching, growing, and scaling
+                  your SaaS—without the overwhelm.
+                </p>
+              </div>
+            </div>
+            <div class="footer-social">
+              <div class="social-icon rotated-pos">
+                <img
+                  src="assets/social-instagram.svg"
+                  alt="Instagram"
+                />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img
+                  src="assets/social-linkedin.svg"
+                  alt="LinkedIn"
+                />
+              </div>
+              <div class="social-icon">
+                <img
+                  src="assets/social-twitter.svg"
+                  alt="X/Twitter"
+                />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img
+                  src="assets/social-github.svg"
+                  alt="GitHub"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-col">
+              <h5>Product</h5>
+              <ul>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">integration</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Company</h5>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Resources</h5>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Template</a></li>
+                <li><a href="#">Guides</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2025 SaaSPlatform. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Terms &amp; Condition</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+    </div>
+
+
+
+
+
+    <script>
+
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

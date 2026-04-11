@@ -626,7 +626,8 @@
   background-repeat: no-repeat;
   width: 100%;
   }
-    .gs-section-bg::before {
+
+  .gs-section-bg::before {
     content: '';
     position: absolute;
     inset: 0;
