@@ -1,337 +1,692 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Platform - SaaS Platform</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600,700&f[]=clash-display@400,500,600,700&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AppFlow | About</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&display=swap">
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="./css/about.css">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
-  <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/5/w3.css">
 
-</head>
+    <link rel="stylesheet" href="./css/navbar.css">
+    <link rel="stylesheet" href="./css/footer.css" />
 
-<body class="about-body">
-    <header class="topbar about-topbar">
-        <div class="container topbar-inner">
-            <a class="brand" href="./index.html" aria-label="AppFlow home">
-                <img src="./public/images/main-logo.png" alt="AppFlow">
-            </a>
-
-            <nav class="main-nav" aria-label="Primary">
-                <a href="./index.html">Home Page</a>
-                <!-- <span class="sep" aria-hidden="true"></span>
-                <a href="./features.html">Features</a> -->
-                <span class="sep" aria-hidden="true"></span>
-                <a href="./pricing.html">Pricing</a>
-                <span class="sep" aria-hidden="true"></span>
-                <a class="is-active" href="./about.html">• About</a>
-                <span class="sep" aria-hidden="true"></span>
-                <a href="./blog.html">Blog</a>
-                <span class="sep" aria-hidden="true"></span>
-                <a href="./contact.html">Contact</a>
-            </nav>
-
-            <div class="topbar-actions">
-                <button class="icon-btn" aria-label="Theme" onclick="location.href='./about-dark.html'"><img src="./assets/white-moon.svg" alt=""></button>
-                <a class="btn btn-primary" href="#">Get start for free</a>
-            </div>
-        </div>
-    </header>
-
-
-     <div style=" display: flex; justify-content: start;  background-color: black; width: 100%; ">
-    <div class="w3-sidebar w3-bar-block w3-border-right " style=" display:none ; z-index: 1000;  " id="mySidebar">
-      <div class="main-nav"
-        style=" padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; justify-items: start !important;">
-        <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
-        <a href="index.html" class="nav-item active">Home Page</a>
-
-        <a href="./pricing.html">Pricing</a>
-
-        <a href="./about.html">About</a>
-
-        <a href="./blog.html">Blog</a>
-
-        <a href="./contact.html">Contact</a>
-      </div>
-    </div>
-  </div>
-
-  <div class="mobile-header w3-white">
-    <a class="brand" href="./about-dark.html" style="padding-left: 10px; " aria-label="AppFlow home">
-      <img src="./public/images/main-logo.png" alt="AppFlow" style="height: 30px; width: auto;">
-    </a>
-    <div class="" style=" display: flex; align-items: center; ">
-      <a class="" aria-label="Switch to dark mode" onclick="location.href='./index-dark.html'">
-        <img src="./assets/white-moon.svg" alt="">
+      <link rel="stylesheet" href="./css/about.css" />
+  </head>
+  <body>
+   
+ 
+      <!-- Navbar -->
+  <div class="web-header" style="width: 100%; position:fixed; top: 0; z-index: 1000;  margin: 0 auto ;  ">
+    <nav class="navbar" style="backdrop-filter: blur(50px);">
+      <a class="" href="index.html"> 
+        <img src="./assets/main-logo.svg" alt="">
       </a>
-      <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+      <div class="nav-links">
+        <a href="index.html" class="nav-item ">Home Page</a>
+        <div class="divider"></div>
+        <a href="about.html" class="nav-item active">About Platform</a>
+        <div class="divider"></div>
+        <a href="features.html" class="nav-item">Feature’s</a>
+        <div class="divider"></div>
+        <a href="pricing.html" class="nav-item">Pricing</a>
+        <div class="divider"></div>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </div>
+      <div class="nav-actions">
+        <a class="theme-toggle" href="pages/dark-about.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </a>
+        <a href="#" class="sign-in-btn">Sign in</a>
+      </div>
+    </nav>
+  </div>  
+
+  <div class="w3-sidebar w3-bar-block w3-border-right" style="display:none ;  z-index: 1000;" id="mySidebar">
+    <div style="padding: 20px; display: flex; flex-direction: column; gap: 20px; align-items: start; ">
+      <button onclick="w3_close()" class="w3-bar-item w3-large">Close &times;</button>
+      <a href="index.html" class="nav-item ">Home Page</a>
+  
+      <a href="about.html" class="nav-item active ">About Platform</a>
+  
+      <a href="features.html" class="nav-item">Feature’s</a>
+  
+      <a href="pricing.html" class="nav-item">Pricing</a>
+  
+      <a href="contact.html" class="nav-item">Contact</a>
     </div>
   </div>
+  
+<div class="mobile-header w3-white">
+  <a href="index.html" style="padding-left: 10px;">
+    <img src="./assets/main-logo.svg" alt="">
+  </a>
 
-    <main class="about-main">
-        <section class="about-hero">
-            <div class="container about-wrap">
-                <div class="about-copy">
-                    <h1>Building <span>Smarter Apps</span> for Modern Work</h1>
-                    <p>
-                        We design and build powerful, intuitive, and future-ready applications that help
-                        individuals and teams work smarter, faster, and better.
+   <div class="" style=" display: flex; align-items: center;">
+  <a class="theme-toggle" href="pages/dark-about.html">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+        </a>
+    <button class="w3-button w3-xlarge" onclick="w3_open()">☰</button>
+ </div>
+</div>
+
+ <div class="page-wrapper">
+
+      <!-- Hero Section -->
+      <div class="about-hero">
+        <div class="about-hero-inner">
+          <div class="about-hero-content">
+            <div class="about-badge">
+              <div class="about-badge-icon">
+                <img src="assets/icon-3d-rotate.svg" alt="" />
+              </div>
+              <span>About the Platform</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                gap: 24px;
+                align-items: center;
+                width: 100%;
+              "
+            >
+              <h1 class="about-hero-title">
+                We're <span class="highlight">Building</span> the Future of
+                Business <span class="highlight">Software</span>
+              </h1>
+              <p class="about-hero-desc">
+                Our mission is to empower businesses of all sizes with powerful,
+                intuitive tools that drive growth and success.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento Grid Section -->
+        <div style="margin-top: 48px">
+          <div class="bento-grid">
+            <!-- Left Column -->
+            <div style="display: flex; flex-direction: column; gap: 24px">
+              <!-- Our Journey Card -->
+              <div class="journey-card">
+                <div class="journey-card-content">
+                  <div class="journey-header">
+                    <div class="journey-title-row">
+                      <img src="assets/icon-progress.svg" alt="" />
+                      <h3>Our Journey</h3>
+                    </div>
+                    <p class="journey-desc">
+                      Founded in 2018, we've grown from a small team of 5 to a
+                      global company serving millions. Our passion for
+                      innovation drives everything we do.
                     </p>
-                </div>
-
-                <div class="about-gallery" aria-label="About showcase">
-                    <article class="about-card left">
-                        <img src="./assets/about/about-left.jpg" alt="Professional using phone at desk">
-                    </article>
-
-                    <article class="about-card center">
-                        <video src="./assets/video/0_Mobile_Phone_Mockup_Smartphone_Mockup_1920x1080.mp4"
-                            height="440px"></video> <button class="play-btn" type="button"
-                            aria-label="Play showcase video">
-                            <span></span>
-                        </button>
-                    </article>
-
-                    <article class="about-card right">
-                        <img src="./assets/about/about-right.jpg" alt="Team working together">
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-application">
-            <div class="container about-app-wrap">
-                <article class="about-app-intro-card">
-                    <div class="about-app-intro-copy">
-                        <h2>About Our <span>Application</span></h2>
-                        <p>
-                            We’re a product-focused team building clean, scalable digital solutions that simplify
-                            workflows through smart design, modern tech, and automation, creating fast, intuitive
-                            tools for startups and SaaS products across multiple industries.
-                        </p>
+                  </div>
+                  <div class="journey-tags">
+                    <div class="journey-tag">
+                      <span class="label">Founded:</span>
+                      <span class="value">2018</span>
                     </div>
-                    <img class="about-app-mark" src="./assets/about/about-application-mark.svg" alt="Application mark">
-                </article>
-
-                <div class="about-mission-grid">
-                    <article class="about-mission-card">
-                        <div class="about-mission-head">
-                            <span class="about-mission-icon-wrap">
-                                <img src="./assets/about/about-flow-icon.svg" alt="Flow connection icon">
-                            </span>
-                            <h3>Our <span>Mission</span></h3>
-                        </div>
-
-                        <p>
-                            To build simple, reliable, and intelligent applications that empower people to manage
-                            their work, data, and ideas more effectively without friction or complexity.
-                        </p>
-
-                        <ul>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Build simple, smart apps.</li>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Remove workflow friction.</li>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Empower work &amp; ideas.</li>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Scale with user needs.</li>
-                        </ul>
-                    </article>
-
-                    <article class="about-mission-card">
-                        <div class="about-mission-head">
-                            <span class="about-mission-icon-wrap">
-                                <img src="./assets/about/about-rocket-icon.svg" alt="Rocket icon">
-                            </span>
-                            <h3>Our <span>Mission</span></h3>
-                        </div>
-
-                        <p>
-                            To become a trusted platform for modern productivity and digital organization, where AI
-                            and thoughtful design work together to enhance human focus and creativity.
-                        </p>
-
-                        <ul>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Lead modern productivity.</li>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Unite AI &amp; design.</li>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Boost focus &amp; creativity.</li>
-                            <li><img src="./assets/about/about-check-icon.svg" alt="">Redefine digital organization.
-                            </li>
-                        </ul>
-                    </article>
-                </div>
-            </div>
-        </section>
-
-        <section class="about-team">
-            <div class="container about-team-wrap">
-                <div class="about-team-header">
-                    <div class="about-team-title-wrap">
-                        <span class="about-team-icon">
-                            <img src="./assets/about/about-user-group.svg" alt="Team icon">
-                        </span>
-                        <h2>Meet our <span>Team</span></h2>
+                    <div class="journey-tag">
+                      <span class="label">Headquarters:</span>
+                      <span class="value">San Francisco, CA</span>
                     </div>
-
-                    <a class="about-team-logo" href="./index.html" aria-label="Logoipsum">
-                        <img src="./public/images/main-logo.png" alt="Logoipsum">
-                    </a>
+                  </div>
                 </div>
+                <div class="journey-bottom">
+                  <div class="journey-stat">
+                    <div class="journey-stat-header">
+                      <img src="assets/icon-user-add.svg" alt="" />
+                      <span>Team Size</span>
+                    </div>
+                    <div class="journey-stat-value">150+</div>
+                  </div>
+                  <div class="journey-stat">
+                    <div class="journey-stat-header">
+                      <img src="assets/icon-layers.svg" alt="" />
+                      <span>Projects</span>
+                    </div>
+                    <div class="journey-stat-value">1200+</div>
+                  </div>
+                </div>
+              </div>
 
-                <p class="about-team-subtitle">
-                    We’re a diverse team of designers, developers, and product thinkers building purposeful
-                    products through close collaboration, fast iteration, and user-focused solutions.
+              <!-- Key Milestones Card -->
+              <div class="milestones-card">
+                <div class="milestones-header">
+                  <div class="milestones-icon">
+                    <img src="assets/icon-calendar-02.svg" alt="" />
+                  </div>
+                  <h3>Key Milestones</h3>
+                </div>
+                <div class="milestones-list">
+                  <div class="milestone-item">
+                    <h5>Company Founded</h5>
+                    <p>Started with 5 passionate developers</p>
+                  </div>
+                  <div class="milestone-item">
+                    <h5>1M Users</h5>
+                    <p>Reached our first million users</p>
+                  </div>
+                  <div class="milestone-item">
+                    <h5>Series B Funding</h5>
+                    <p>$50M raised to scale globally</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column -->
+            <div style="display: flex; flex-direction: column; gap: 16px">
+              <!-- 4 Stat Cards -->
+              <div class="stats-grid">
+                <div class="stat-card blue">
+                  <div class="stat-icon blue">
+                    <img src="assets/icon-user-multiple.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">10M+</div>
+                    <div class="stat-label">Active Users</div>
+                  </div>
+                </div>
+                <div class="stat-card orange">
+                  <div class="stat-icon orange">
+                    <img src="assets/icon-magic-wand.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">4.9/5</div>
+                    <div class="stat-label">Customer Rating</div>
+                  </div>
+                </div>
+                <div class="stat-card purple">
+                  <div class="stat-icon purple">
+                    <img src="assets/icon-earth.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Countries</div>
+                  </div>
+                </div>
+                <div class="stat-card green">
+                  <div class="stat-icon green">
+                    <img src="assets/icon-dashboard-speed.svg" alt="" />
+                  </div>
+                  <div class="stat-info">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Tech Stack & 24/7 Support -->
+              <div class="bottom-cards-row">
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <div class="info-card-icon">
+                      <img src="assets/icon-source-code.svg" alt="" />
+                    </div>
+                    <h4>Tech Stack</h4>
+                  </div>
+                  <div class="tech-tags">
+                    <span class="tech-tag">React</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">TypeScript</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Docker</span>
+                  </div>
+                </div>
+                <div class="info-card">
+                  <div class="info-card-header">
+                    <div class="info-card-icon">
+                      <img src="assets/icon-alarm-clock.svg" alt="" />
+                    </div>
+                    <h4>24/7 Support</h4>
+                  </div>
+                  <div class="support-avatars">
+                    <div class="avatar-stack">
+                      <img src="assets/support-avatar-1.png" alt="" />
+                      <img src="assets/support-avatar-2.png" alt="" />
+                      <img src="assets/support-avatar-3.png" alt="" />
+                    </div>
+                    <span class="support-online">Online now</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Our Culture Card -->
+              <div class="culture-card">
+                <div class="culture-photo">
+                  <img src="assets/culture-photo.png" alt="Our Culture" />
+                </div>
+                <div class="culture-content">
+                  <div class="culture-header">
+                    <div class="culture-title-row">
+                      <div class="culture-title-icon">
+                        <img src="assets/icon-ai.svg" alt="" />
+                      </div>
+                      <h3>Our Culture</h3>
+                    </div>
+                    <p>
+                      We believe in work-life balance, continuous learning, and
+                      celebrating wins together.
+                    </p>
+                  </div>
+                  <div class="culture-checklist">
+                    <div class="culture-check-item">
+                      <img src="assets/icon-checkmark-circle.svg" alt="" />
+                      <span>Flexible working hours</span>
+                    </div>
+                    <div class="culture-check-item">
+                      <img src="assets/icon-checkmark-circle.svg" alt="" />
+                      <span>Unlimited PTO</span>
+                    </div>
+                    <div class="culture-check-item">
+                      <img src="assets/icon-checkmark-circle.svg" alt="" />
+                      <span>Learning budget</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Core Values Section -->
+      <div class="values-section">
+        <div class="values-header">
+          <h2 class="values-title">
+            Our Core <span class="highlight">Values</span>
+          </h2>
+          <p class="values-desc">
+            These principles guide everything we do, from product development to
+            customer support.
+          </p>
+        </div>
+        <div class="values-grid">
+          <div class="value-card">
+            <div class="value-icon orange">
+              <img src="assets/icon-heart-check.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Customer First</h4>
+              <p>
+                Everything we do is centered around delivering value to our
+                customers.
+              </p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon green">
+              <img src="assets/icon-rocket-01.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Innovation</h4>
+              <p>
+                We constantly push boundaries to create cutting-edge solutions.
+              </p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon blue">
+              <img src="assets/icon-security-shield.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Trust &amp; Security</h4>
+              <p>Your data security and privacy are our top priorities</p>
+            </div>
+          </div>
+          <div class="value-card">
+            <div class="value-icon purple">
+              <img src="assets/icon-global.svg" alt="" />
+            </div>
+            <div class="value-text">
+              <h4>Global Impact</h4>
+              <p>Building tools that empower businesses worldwide.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Trusted by Industry Leaders -->
+      <div class="trusted-section">
+        <div class="trusted-inner">
+          <!-- Left - Stats -->
+          <div class="trusted-stats">
+            <div class="trusted-stat-card">
+              <div class="trusted-stat-icon">
+                <img src="assets/icon-user-multiple-03.svg" alt="" />
+              </div>
+              <div class="trusted-stat-content">
+                <div class="trusted-stat-number">5k</div>
+                <div class="trusted-stat-label">Total User's</div>
+              </div>
+            </div>
+            <div class="trusted-stat-card">
+              <div class="trusted-stat-icon">
+                <img src="assets/icon-star-face.svg" alt="" />
+              </div>
+              <div class="trusted-stat-content">
+                <div class="trusted-stat-number">99%</div>
+                <div class="trusted-stat-label">Client Satisfaction</div>
+              </div>
+            </div>
+            <div class="trusted-stat-card">
+              <div class="trusted-stat-icon">
+                <img src="assets/icon-id-verified.svg" alt="" />
+              </div>
+              <div class="trusted-stat-content">
+                <div class="trusted-stat-number">4.2k</div>
+                <div class="trusted-stat-label">Verified Client</div>
+              </div>
+            </div>
+            <div class="trusted-stat-card saas-card">
+              <div class="saas-text">SaaS Startup.</div>
+              <img
+                class="saas-logo"
+                src="assets/logo-go-vector.svg"
+                alt="GO! Logo"
+              />
+            </div>
+          </div>
+
+          <!-- Right - Content -->
+          <div class="trusted-content">
+            <div class="trusted-heading">
+              <h2 class="trusted-title">
+                <span class="highlight">Trusted</span> by Industry
+                <span class="highlight">Leaders</span>
+              </h2>
+              <p class="trusted-subtitle">
+                See what our customers have to say about their experience
+              </p>
+            </div>
+            <div class="testimonials-row">
+              <div class="testimonial-card orange">
+                <div class="testimonial-header">
+                  <img
+                    class="testimonial-avatar"
+                    src="assets/leader-sarah.png"
+                    alt="Sarah Johnson"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Sarah Johnson</h5>
+                    <p>CEO at (TechStart)</p>
+                  </div>
+                </div>
+                <p class="testimonial-text">
+                  Switching to the Professional plan was the best decision for
+                  our team. The ROI was immediate.
                 </p>
-
-                <div class="about-team-grid">
-                    <article class="about-team-card">
-                        <div class="about-team-photo">
-                            <img src="./assets/about/team-member-1.jpg" alt="Ariyan Siam">
-                        </div>
-                        <div class="about-team-meta">
-                            <h3>Ariyan Siam</h3>
-                            <p>UX/UI Designer</p>
-                        </div>
-                    </article>
-
-                    <article class="about-team-card">
-                        <div class="about-team-photo">
-                            <img src="./assets/about/team-member-2.jpg" alt="Jesiya Miky">
-                        </div>
-                        <div class="about-team-meta">
-                            <h3>Jesiya Miky</h3>
-                            <p>Frontend Developer</p>
-                        </div>
-                    </article>
-
-                    <article class="about-team-card">
-                        <div class="about-team-photo">
-                            <img src="./assets/about/team-member-3.jpg" alt="Rafim Rihab">
-                        </div>
-                        <div class="about-team-meta">
-                            <h3>Rafim Rihab</h3>
-                            <p>Backend Engineer</p>
-                        </div>
-                    </article>
-
-                    <article class="about-team-card">
-                        <div class="about-team-photo">
-                            <img src="./assets/about/team-member-4.jpg" alt="Tokiyo Safy">
-                        </div>
-                        <div class="about-team-meta">
-                            <h3>Tokiyo Safy</h3>
-                            <p>AI Engineer</p>
-                        </div>
-                    </article>
-
-                    <article class="about-team-card">
-                        <div class="about-team-photo">
-                            <img src="./assets/about/team-member-5.jpg" alt="Mr. Hanry">
-                        </div>
-                        <div class="about-team-meta">
-                            <h3>Mr. Hanry</h3>
-                            <p>Product Manager</p>
-                        </div>
-                    </article>
+                <div class="testimonial-tag orange">Professional Plan</div>
+              </div>
+              <div class="testimonial-card blue">
+                <div class="testimonial-header">
+                  <img
+                    class="testimonial-avatar"
+                    src="assets/leader-michael.png"
+                    alt="Michael Chen"
+                  />
+                  <div class="testimonial-info">
+                    <h5>Michael Chen</h5>
+                    <p>CTO at (ScaleUp)</p>
+                  </div>
                 </div>
-
-                <div class="about-team-dots" aria-hidden="true">
-                    <span></span>
-                    <span class="active"></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
+                <p class="testimonial-text">
+                  Enterprise support has been phenomenal. Having a dedicated
+                  account manager makes all the difference.
+                </p>
+                <div class="testimonial-tag blue">Enterprise Plan</div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
 
-        <section class="about-footer-block">
-            <div class="container about-cta">
-                <img class="about-cta-vector-left" src="./assets/about/about-footer-vector-left.svg" alt="">
-                <img class="about-cta-vector-top" src="./assets/about/about-footer-vector-top.svg" alt="">
-
-                <div class="about-cta-copy">
-                    <h2>Building the Future of Productivity</h2>
-                    <p>
-                        Join thousands of users who trust our platform to organize,
-                        automate, and scale their daily work.
-                    </p>
-                </div>
-
-                <div class="about-cta-actions">
-                    <a href="#" class="about-cta-btn light">
-                        Get Start Today
-                        <img src="./assets/about/about-footer-arrow-light.svg" alt="">
-                    </a>
-                    <a href="#" class="about-cta-btn dark">
-                        Start free Trial
-                        <img src="./assets/about/about-footer-arrow-dark.svg" alt="">
-                    </a>
-                </div>
+      <!-- Meet Our Leadership -->
+      <div class="leadership-section">
+        <div class="leadership-header">
+          <h2 class="leadership-title">
+            Meet Our <span class="highlight">Leadership</span>
+          </h2>
+          <p class="leadership-desc">
+            A diverse team of innovators, builders, and dreamers working
+            together to create something special.
+          </p>
+        </div>
+        <div class="leadership-grid">
+          <img
+            class="leader-photo"
+            src="assets/leader-sarah.png"
+            alt="Team member"
+          />
+          <div class="leader-info-card">
+            <div class="leader-info-bg">
+              <div class="leader-info-bg-white"></div>
+              <img
+                class="leader-info-bg-pattern"
+                src="assets/leader-pattern.png"
+                alt=""
+              />
             </div>
-
-            <footer class="about-footer">
-                <div class="container about-footer-top">
-                    <div class="about-footer-about">
-                        <a href="./index.html" class="about-footer-logo" aria-label="Logoipsum">
-                            <img src="./public/images/main-logo.png" alt="Logoipsum">
-                        </a>
-                        <p>
-                            The ultimate multipurpose app template for
-                            building modern SaaS, productivity, and
-                            utility applications.
-                        </p>
-                    </div>
-
-                    <div class="about-footer-links">
-                        <div>
-                            <h3>Product</h3>
-                            <a href="./index.html">Home Page</a>
-                            <a href="./features.html">Features</a>
-                            <a href="./pricing.html">Pricing</a>
-                            <a href="#">FAQ’s</a>
-                        </div>
-                        <div>
-                            <h3>Company</h3>
-                            <a href="./about.html">About Us</a>
-                            <a href="./blog.html">Blog</a>
-                            <a href="#">Career</a>
-                            <a href="./contact.html">Contact</a>
-                        </div>
-                        <div>
-                            <h3>Legal</h3>
-                            <a href="#">Privacy policy</a>
-                            <a href="#">Help Center</a>
-                            <a href="#">Terms &amp; Condition</a>
-                            <a href="#">Security</a>
-                        </div>
-                    </div>
+            <div class="leader-info-content">
+              <div class="leader-logo-icon">
+                <img src="assets/logo-go.svg" alt="GO!" />
+              </div>
+              <div class="leader-info-details">
+                <div class="leader-info-text">
+                  <h4>Sarah Johnson</h4>
+                  <p>CEO &amp; Co-Founder</p>
                 </div>
-
-                <div class="container about-footer-bottom">
-                    <p>&copy; 2025 AppFlow. All rights reserved.</p>
-                    <div>
-                        <a href="#">Privacy Policy</a>
-                        <span class="about-footer-dot"></span>
-                        <a href="#">Terms &amp; Service</a>
-                    </div>
+                <div class="leader-social-icons">
+                  <div class="leader-social-icon">
+                    <img src="assets/icon-fb-social.svg" alt="Facebook" />
+                  </div>
+                  <div class="leader-social-icon">
+                    <img src="assets/icon-linkedin-social.svg" alt="LinkedIn" />
+                  </div>
                 </div>
-            </footer>
-        </section>
-    </main>
+              </div>
+            </div>
+          </div>
+          <img
+            class="leader-photo"
+            src="assets/leader-michael.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-4.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-5.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-6.png"
+            alt="Team member"
+          />
+          <img
+            class="leader-photo"
+            src="assets/leader-photo-7.png"
+            alt="Team member"
+          />
+        </div>
+      </div>
 
-    <script>  
+      <!-- CTA Section -->
+      <div class="cta-section">
+        <div class="cta-card">
+          <img class="cta-card-bg-tl" src="assets/cta-corner-tl.svg" alt="" />
+          <img class="cta-card-bg-tr" src="assets/cta-corner-tr.svg" alt="" />
+          <img class="cta-card-bg-bl" src="assets/cta-corner-bl.svg" alt="" />
+          <img class="cta-card-bg-br" src="assets/cta-corner-br.svg" alt="" />
+
+          <div class="cta-content">
+            <div class="cta-badge">
+              <div class="cta-badge-icon">
+                <img src="assets/icon-pricing.svg" alt="" />
+              </div>
+              <span>Simple, Transparent Pricing</span>
+            </div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+              "
+            >
+              <h2 class="cta-title">Ready to Get Started?</h2>
+              <p class="cta-desc">
+                Try all these features free for 14 days. No credit card
+                required.
+              </p>
+            </div>
+          </div>
+          <div class="cta-buttons">
+            <a href="#" class="btn-primary">
+              Start for free trial
+              <img src="assets/icon-arrow-right.svg" alt="Arrow" />
+            </a>
+            <a href="#" class="btn-secondary">Schedule a Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <!-- Footer -->
+      <footer class="footer">
+        <img
+          class="footer-decor-left"
+          src="assets/footer-decor-left.svg"
+          alt=""
+        />
+        <img
+          class="footer-decor-right"
+          src="assets/footer-decor-right.svg"
+          alt=""
+        />
+
+        <div class="footer-top">
+          <div class="footer-left">
+            <div class="footer-left-info">
+              <div class="footer-badge">
+                <div class="footer-badge-icon">
+                  <img
+                    src="assets/icon-rocket.svg"
+                    alt=""
+                  />
+                </div>
+                <span>Ready to Transform Your SaaS?</span>
+              </div>
+              <div style="display: flex; flex-direction: column; gap: 16px">
+                <h3 class="footer-heading">
+                  Ready to Launch Your SaaS Faster?
+                </h3>
+                <p class="footer-sub-text">
+                  The all-in-one platform for launching, growing, and scaling
+                  your SaaS—without the overwhelm.
+                </p>
+              </div>
+            </div>
+            <div class="footer-social">
+              <div class="social-icon rotated-pos">
+                <img
+                  src="assets/social-instagram.svg"
+                  alt="Instagram"
+                />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img
+                  src="assets/social-linkedin.svg"
+                  alt="LinkedIn"
+                />
+              </div>
+              <div class="social-icon">
+                <img
+                  src="assets/social-twitter.svg"
+                  alt="X/Twitter"
+                />
+              </div>
+              <div class="social-icon rotated-neg">
+                <img
+                  src="assets/social-github.svg"
+                  alt="GitHub"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="footer-right">
+            <div class="footer-col">
+              <h5>Product</h5>
+              <ul>
+                <li><a href="#">Feature</a></li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">integration</a></li>
+                <li><a href="#">API</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Company</h5>
+              <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Career</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h5>Resources</h5>
+              <ul>
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Community</a></li>
+                <li><a href="#">Template</a></li>
+                <li><a href="#">Guides</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copyright">
+            © 2025 SaaSPlatform. All rights reserved.
+          </p>
+          <div class="footer-legal">
+            <a href="#">Privacy Policy</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Terms &amp; Condition</a>
+            <div class="footer-legal-sep"></div>
+            <a href="#">Security</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+
+
+
+     <script>
+
       function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-    }
+        document.getElementById("mySidebar").style.display = "block";
+      }
 
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-    }
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
     </script>
-</body>
-
+  </body>
 </html>
