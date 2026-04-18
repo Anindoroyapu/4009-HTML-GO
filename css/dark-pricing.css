@@ -75,6 +75,9 @@ body.dark-mode-pricing .cta-badge {
   background: rgba(255, 255, 255, 0.16);
   border-color: rgba(255, 255, 255, 0.08);
 }
+body.dark-mode-pricing .pricing-hero-content {
+ background: none;
+}
 
 body.dark-mode-pricing .pricing-badge span,
 body.dark-mode-pricing .cta-badge span {
