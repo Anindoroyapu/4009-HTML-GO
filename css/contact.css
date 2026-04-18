@@ -80,7 +80,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 20px;
+      /* gap: 20px; */
       text-align: center;
       
       background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 71.6%);
@@ -145,6 +145,7 @@
       /* flex-direction: row; */
       /* gap: 16px; */
       margin-bottom: 24px;
+      margin-top: 60px;
     }
 
     .contact-methods {
@@ -175,14 +176,14 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 24px;
+      /* margin-bottom: 24px; */
     }
 
     .method-title {
       font-size: 24px;
       font-weight: 600;
       color: #111827;
-      margin-bottom: 16px;
+      /* margin-bottom: 16px; */
       letter-spacing: -0.03em;
       text-align: start;
     }
