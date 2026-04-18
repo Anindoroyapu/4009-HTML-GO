@@ -1,8 +1,8 @@
     :root {
       --bg-color: #fafafa;
       --card-bg: #ffffff;
-      --text-main: #2e2e2e;
-      --text-muted: #767474;
+      --text-main: #111827;
+      --text-muted: #4B5563;
       --brand-orange: #f15c2a;
       --brand-purple: #7b19d8;
       --brand-blue: #477bff;
@@ -61,7 +61,7 @@
     .sign-in-btn {
       width: 98px;
       height: 52px;
-      background: #2e2e2e;
+      background: #111827;
       backdrop-filter: blur(20px);
       border-radius: 10px;
       display: flex;
@@ -113,7 +113,7 @@
     .badge-text {
       font-size: 14px;
       font-weight: 500;
-      color: #2e2e2e;
+      color: #111827;
     }
 
     .hero-title {
@@ -121,7 +121,7 @@
       font-weight: 600;
       line-height: 62px;
       letter-spacing: -0.03em;
-      color: #2e2e2e;
+      color: #111827;
        font-family: 'General Sans', sans-serif;
     }
 
@@ -129,7 +129,7 @@
       font-size: 20px;
       font-weight: 400;
       line-height: 30px;
-      color: #767474;
+      color: #4B5563;
       max-width: 595px;
       margin-top: -10px;
       text-wrap: nowrap;
@@ -181,7 +181,7 @@
     .method-title {
       font-size: 24px;
       font-weight: 600;
-      color: #2e2e2e;
+      color: #111827;
       margin-bottom: 16px;
       letter-spacing: -0.03em;
       text-align: start;
@@ -189,7 +189,7 @@
 
     .method-desc {
       font-size: 16px;
-      color: #767474;
+      color: #4B5563;
       line-height: 24px;
       margin-bottom: 16px;
         text-align: start;
@@ -243,7 +243,7 @@
       border-radius: 12px;
       padding: 16px 20px;
       font-size: 14px;
-      color: #2e2e2e;
+      color: #111827;
       outline: none;
     }
 
@@ -259,7 +259,7 @@
       border-radius: 12px;
       padding: 16px 20px;
       font-size: 14px;
-      color: #2e2e2e;
+      color: #111827;
       outline: none;
       resize: none;
     }
@@ -320,14 +320,14 @@
     .location-city {
       font-size: 24px;
       font-weight: 600;
-      color: #2e2e2e;
+      color: #111827;
       margin-bottom: 4px;
       letter-spacing: -0.03em;
     }
 
     .location-address {
       font-size: 16px;
-      color: #767474;
+      color: #4B5563;
     }
 
     .location-country-badge {
@@ -356,7 +356,7 @@
     .hours-title {
       font-size: 24px;
       font-weight: 600;
-      color: #2e2e2e;
+      color: #111827;
       letter-spacing: -0.03em;
         font-family: 'General Sans', sans-serif;
         text-align: start;
@@ -377,11 +377,11 @@
 
     .hours-day {
       font-weight: 500;
-      color: #2e2e2e;
+      color: #111827;
     }
 
     .hours-time {
-      color: #767474;
+      color: #4B5563;
     }
 
 
@@ -420,7 +420,7 @@
       background: #ffffff;
       border: 2px solid #e0e0e0;
       border-radius: 10px;
-      color: #2e2e2e;
+      color: #111827;
       font-size: 16px;
       font-weight: 600;
       text-decoration: none;
@@ -546,7 +546,7 @@
     }
 
     .copyright {
-      color: #767474;
+      color: #4B5563;
       font-size: 16px;
     }
 
@@ -557,7 +557,7 @@
     }
 
     .legal-link {
-      color: #767474;
+      color: #4B5563;
       text-decoration: none;
       font-size: 16px;
     }

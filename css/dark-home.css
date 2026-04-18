@@ -218,12 +218,12 @@ body.dark-mode .xqv9r-0040 {
   background: linear-gradient(90deg, #0d1117 0%, rgba(13, 17, 23, 0) 100%);
 }
 
-body.dark-mode svg [stroke="#767474"],
+body.dark-mode svg [stroke="#4B5563"],
 body.dark-mode svg [stroke="#637381"] {
   stroke: #9aabc0;
 }
 
-body.dark-mode svg [fill="#767474"],
+body.dark-mode svg [fill="#4B5563"],
 body.dark-mode svg [fill="#637381"] {
   fill: #9aabc0;
 }

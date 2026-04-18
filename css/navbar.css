@@ -113,13 +113,13 @@
     .theme-toggle svg {
       width: 20px;
       height: 20px;
-      color: #2E2E2E;
+      color: #111827;
     }
 
     .sign-in-btn {
       width: 98px;
       height: 52px;
-      background: #2E2E2E;
+      background: #111827;
       backdrop-filter: blur(20px);
       border-radius: 10px;
       display: flex;
@@ -228,7 +228,7 @@
 
     .signin {
       padding: 10px 20px;
-      background: #2e2e2e;
+      background: #111827;
       color: white;
       border: none;
       border-radius: 10px;
