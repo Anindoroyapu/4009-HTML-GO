@@ -208,6 +208,7 @@
         line-height: 70px;
         letter-spacing: -1.8px;
         color: var(--dark);
+        font-family: 'General Sans',sans-serif;
       }
 
       .about-hero-title .highlight {
@@ -263,7 +264,9 @@
         display: flex;
         gap: 16px;
         align-items: center;
+        font-family: 'General Sans',sans-serif;
       }
+
 
       .journey-title-row img {
         width: 40px;
