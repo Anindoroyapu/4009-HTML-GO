@@ -143,6 +143,7 @@
         padding: 0 260px;
         padding-top: 148px;
         padding-bottom: 80px;
+      
       }
 
       .about-hero-inner {
@@ -158,6 +159,8 @@
         justify-content: center;
         min-height: 494px;
         position: relative;
+      /* border: #101828 1.5px solid; */
+      box-shadow: 0px 2px 24px rgba(16, 24, 40, 0.12);
       }
 
       .about-hero-content {
@@ -922,15 +925,18 @@
       }
 
       /* Card positions */
+      .trusted-stat-card:nth-child(1) {
+        margin-bottom: 40px;
+      }
       .trusted-stat-card:nth-child(2) {
         margin-top: 40px;
       }
       .trusted-stat-card:nth-child(3) {
-        margin-top: -20px;
+        margin-top: -40px;
       }
-      .trusted-stat-card:nth-child(4) {
+      /* .trusted-stat-card:nth-child(4) {
         margin-top: 20px;
-      }
+      } */
 
       /* Right side */
       .trusted-content {
@@ -944,7 +950,7 @@
       .trusted-heading {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+       
       }
 
       .trusted-title {
@@ -1010,7 +1016,7 @@
         flex: 1;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        /* gap: 8px; */
       }
 
       .testimonial-info h5 {
@@ -1030,10 +1036,12 @@
         }
 
       .testimonial-text {
-        font-weight: 400;
-        font-size: 20px;
-        line-height: 30px;
+        
         color: var(--text-gray);
+        font-size: 20px;
+font-style: normal;
+font-weight: 400 !important;
+line-height: 30px !important;
       }
 
       .testimonial-tag {
