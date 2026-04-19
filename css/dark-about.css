@@ -175,7 +175,7 @@ body.dark-mode-about .stat-card.green {
 body.dark-mode-about .info-card-icon,
 body.dark-mode-about .culture-title-icon,
 body.dark-mode-about .trusted-stat-icon,
-body.dark-mode-about .leader-logo-icon,
+
 body.dark-mode-about .leader-social-icon {
   background: #3C3650;
   border-color: var(--dm-surface-border);

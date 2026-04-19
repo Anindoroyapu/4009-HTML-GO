@@ -139,7 +139,8 @@ body.dark-mode-pricing .pricing-card {
 }
 
 body.dark-mode-pricing .pricing-card-cta {
-  background: #000000;
+  background: rgba(255, 255, 255, 0.16);
+
   border-color: #101828;
   color: #ffffff;
 }
@@ -173,7 +174,8 @@ body.dark-mode-pricing .comparison-col:nth-child(even) {
 }
 
 body.dark-mode-pricing .comparison-col-cta {
-  background: #000000;
+   background: rgba(255, 255, 255, 0.16);
+
   border-color: #101828;
 }
 
