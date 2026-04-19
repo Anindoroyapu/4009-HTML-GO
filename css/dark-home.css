@@ -2,19 +2,28 @@
    Only visual tokens are changed; layout and spacing remain untouched. */
 
 body.dark-mode {
-  --dm-bg: #0d1117;
-  --dm-bg-soft: #121822;
-  --dm-surface: #171f2b;
-  --dm-surface-2: #1d2633;
-  --dm-border: #2a3547;
-  --dm-border-soft: #334155;
-  --dm-text: #e6edf5;
-  --dm-text-soft: #a9b4c4;
-  --dm-text-muted: #92a0b5;
-  --dm-shadow: 0 20px 40px rgba(3, 8, 18, 0.45);
-  background: #0e0724;
-  color: var(--dm-text);
+  --dm-bg: #0e0724;
+  --dm-bg-alt: #000000;
+  --dm-surface: #1b0e36;
+  --dm-surface-border: #251840;
+  --dm-surface-2: #2a243e;
+  --dm-nav: #383048;
+  --dm-nav-border: #484157;
+  --dm-muted: #b1b1b1;
+  --dm-footer: #0e0724;
+  --dm-button-alt: #4d465b;
+  --dm-chip: #403a54;
+  --dm-chip-border: rgba(255, 255, 255, 0.08);
+  --dm-text: #ffffff;
+  --dm-text-soft: #b1b1b1;
+  --dm-text-muted: #b1b1b1;
+  --dm-border: #251840;
+  --dm-border-soft: #251840;
+  --dm-shadow: 0 4px 24px rgba(14, 7, 36, 0.24);
+  background: var(--dm-bg);
+  color: #ffffff;
 }
+
 body.dark-mode,
 body.dark-mode p,
 body.dark-mode span,
@@ -146,7 +155,7 @@ body.dark-mode .pricing-plan-btn,
 body.dark-mode .faq-question,
 body.dark-mode .cta-action-light,
 body.dark-mode .contact-btn {
-  background: #101723;
+  background: #1b0e36;
   border-color: var(--dm-border);
   color: var(--dm-text);
 }
@@ -160,6 +169,19 @@ body.dark-mode .icon-dash {
 
 body.dark-mode .pricing-toggle-pill {
   color: var(--dm-text-soft);
+}
+
+body.dark-mode .nav-item.active {
+  color: #ffffff;
+}
+
+body.dark-mode .color-text,
+body.dark-mode .faq-title-blue {
+  background: none;
+  -webkit-background-clip: unset;
+  background-clip: unset;
+  -webkit-text-fill-color: unset;
+  color: #f15c2a;
 }
 
 body.dark-mode .pricing-toggle-pill.active,
@@ -196,12 +218,12 @@ body.dark-mode .xqv9r-0167 {
 }
 
 body.dark-mode .mobile-header {
-  background: #0f1622;
+  background: #1b0e36;
   border-bottom: 1px solid var(--dm-border);
 }
 
 body.dark-mode .w3-sidebar {
-  background: #0f1622;
+  background: #1b0e36;
   color: var(--dm-text);
 }
 
@@ -215,7 +237,7 @@ body.dark-mode .marquee-wrapper {
 
 body.dark-mode .xqv9r-0038,
 body.dark-mode .xqv9r-0040 {
-  background: linear-gradient(90deg, #0d1117 0%, rgba(13, 17, 23, 0) 100%);
+  background: linear-gradient(90deg, #0e0724 0%, rgba(14, 7, 36, 0) 100%);
 }
 
 body.dark-mode svg [stroke="#4B5563"],
@@ -229,7 +251,7 @@ body.dark-mode svg [fill="#637381"] {
 }
 
 body.dark-mode .footer {
-  background: #0f1622;
+  background: #0e0724;
 }
 body.dark-mode .xqv9r-0067,
 body.dark-mode .xqv9r-0073,
@@ -245,7 +267,7 @@ body.dark-mode .dashboard-features {
 background-color: #010102;
 }
 body.dark-mode .features-section {
-    background-color: #251840;
+    background-color: #0e0724;
 
 }
  body.dark-mode .xqv9r-00461{
@@ -277,3 +299,36 @@ body.dark-mode .features-section {
  body.dark-mode .xqv9r-0132{
     background-color: #565268;
  }
+
+/* === Figma exact color overrides === */
+
+/* Navbar: #383048 bg, #484157 border */
+body.dark-mode .navbar {
+  background: #383048;
+  border-color: #484157;
+}
+
+/* Theme toggle icon button: #3e364e */
+body.dark-mode .theme-toggle {
+  background: #3e364e;
+  border-color: transparent;
+}
+
+/* Sign in button: #4d465b */
+body.dark-mode .sign-in-btn {
+  background: #4d465b;
+  color: #ffffff;
+  border-color: transparent;
+}
+
+/* Secondary / Book a Demo button: glass translucent */
+body.dark-mode .secondary {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+}
+
+/* Orange accent span: "Grow & Scale" */
+body.dark-mode .xqv9r-0013 {
+  color: #f15c2a;
+}
