@@ -3534,7 +3534,7 @@ h3{
     .xqv9r-0036 { color:#F15C2A; }
     .xqv9r-0037 { position: relative;width: 100%; margin: 60px auto; overflow: hidden; }
     .xqv9r-0038 { position: absolute; top: 50%; left: 0; transform: translateY(-50%); width: 10%; height: 60px; background: linear-gradient(90deg, rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%); z-index: 1; }
-    .xqv9r-0039 { display: flex; gap: 48px; }
+    .xqv9r-0039 { display: flex; gap: 48px;height: 100%;}
     .xqv9r-0040 { position: absolute; top: 50%; right: 0; transform: translateY(-50%); width: 10%; height: 60px; background: linear-gradient(-90deg,rgba(255, 255, 255, 1) 80%, rgba(255, 255, 255, 0) 100%); z-index: 1; }
     .xqv9r-0041 { border: 1.5px solid #F5F5F5; }
     .xqv9r-0042 { background-color: #F5F5F5; }
