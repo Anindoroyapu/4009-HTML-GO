@@ -335,3 +335,21 @@ body.dark-mode .secondary {
 body.dark-mode .xqv9r-0013 {
   color: #f15c2a;
 }
+
+body.dark-mode .tag.orange {
+  color: #ffffff;
+  background:#f1762a ;
+}
+
+body.dark-mode .tag.green {
+  color: #ffffff;
+  background:#0ED70E ;
+}
+body.dark-mode .tag.blue {
+  color: #ffffff;
+  background:#477BFF ;
+}
+body.dark-mode .tag.purple {
+  color: #ffffff;
+  background:#7B19D8 ;
+}

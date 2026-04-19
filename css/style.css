@@ -556,6 +556,7 @@ font-weight: 500;
 border:1px solid;
 width: fit-content;
 height: fit-content;
+
 }
 .tag.orange{color:#F1762A;border-color:rgba(241,118,42,.2);}
 .tag.green{color:#0ED70E;border-color:rgba(14,215,14,.2);}
