@@ -191,7 +191,7 @@
 
       .pricing-hero-title {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 62.4px;
         letter-spacing: -1.44px;
         color: var(--dark);
@@ -331,7 +331,7 @@
 
       .pricing-card-price .amount {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 62.4px;
         color: var(--dark);
       }
@@ -345,7 +345,7 @@
 
       .pricing-card-price.custom-price {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 62.4px;
         color: var(--dark);
       }
@@ -552,7 +552,7 @@
 
       .comparison-col-price .amount {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 62.4px;
         color: var(--dark);
       }
@@ -566,7 +566,7 @@
 
       .comparison-col-price.custom {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 62.4px;
         color: var(--dark);
       }
@@ -612,7 +612,7 @@
 
       .comparison-labels-title {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 62.4px;
         letter-spacing: -1.44px;
         
@@ -825,7 +825,7 @@
 
       .cta-title {
         font-weight: 600;
-        font-size: 48px;
+        font-size: 50px;
         line-height: 62.4px;
         letter-spacing: -1.44px;
         color: var(--dark);
