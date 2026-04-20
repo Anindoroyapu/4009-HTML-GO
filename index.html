@@ -1764,6 +1764,128 @@
     function w3_close() {
       document.getElementById("mySidebar").style.display = "none";
     }
+
+    // ===== Scroll Animation System =====
+    (function initSA() {
+      var els = [];
+
+      function add(selector, animClass, delay) {
+        document.querySelectorAll(selector).forEach(function (el) {
+          animClass.split(" ").forEach(function (c) { if (c) el.classList.add(c); });
+          if (delay) el.style.transitionDelay = delay + "ms";
+          els.push(el);
+        });
+      }
+
+      // Hero section
+      add(".hero .xqv9r-0009", "sa-fade-up", 0);
+      add(".hero .xqv9r-0012", "sa-fade-up", 150);
+      add(".hero .xqv9r-0020", "sa-fade-up", 250);
+      add(".hero .hero-buttons", "sa-fade-up", 380);
+      add(".hero .xqv9r-0015", "sa-fade-right", 200);
+      add(".hero .xqv9r-0022", "sa-fade-left", 200);
+
+      // Stats cards wrapper
+      add(".cards-wrapper .mrr-card", "sa-fade-up", 0);
+      add(".cards-wrapper .active-card", "sa-fade-up", 120);
+      add(".cards-wrapper .analytics-card", "sa-fade-up", 200);
+      document.querySelectorAll(".cards-wrapper .stat-card").forEach(function (card, i) {
+        card.classList.add("sa-fade-up");
+        card.style.transitionDelay = (i * 100) + "ms";
+        els.push(card);
+      });
+
+      // Trusted section
+      add(".trusted-header", "sa-fade-up", 0);
+      add(".trusted-section .marquee", "sa-fade-up", 150);
+      add(".stats-bar", "sa-fade-up", 300);
+
+      // Why Choose Us / Features section
+      add(".features-section-header", "sa-fade-up", 0);
+      document.querySelectorAll(".feature-section-card").forEach(function (card, i) {
+        card.classList.add("sa-fade-up");
+        card.style.transitionDelay = (i * 120) + "ms";
+        els.push(card);
+      });
+
+      // Dashboard features section
+      add(".dashboard-header", "sa-fade-up", 0);
+      document.querySelectorAll(".dashboard-cards .card").forEach(function (card, i) {
+        card.classList.add("sa-zoom-in");
+        card.style.transitionDelay = (i * 110) + "ms";
+        els.push(card);
+      });
+      add(".dashboard-features .status-badge", "sa-fade-up", 300);
+
+      // Powerful Features section
+      add(".pf-heading", "sa-fade-up", 0);
+      add(".pf-card-onboarding", "sa-fade-left", 100);
+      add(".pf-card-analytics", "sa-fade-right", 200);
+      add(".pf-card-integrations", "sa-fade-left", 100);
+      add(".pf-card-automation", "sa-fade-up", 200);
+      add(".pf-card-hosting", "sa-fade-right", 300);
+      add(".xqv9r-0131", "sa-fade-up", 100);
+
+      // Old Way vs New Way (hero-cta + comparison)
+      add(".hero-cta", "sa-fade-left", 0);
+      add(".frame-main", "sa-fade-right", 150);
+
+      // Integrations section
+      add(".xqv9r-0139 .xqv9r-0059", "sa-fade-up", 0);
+      document.querySelectorAll(".xqv9r-0142 .xqv9r-0143").forEach(function (card, i) {
+        card.classList.add("sa-zoom-in");
+        card.style.transitionDelay = (i * 80) + "ms";
+        els.push(card);
+      });
+      document.querySelectorAll(".xqv9r-0146 .xqv9r-0143").forEach(function (card, i) {
+        card.classList.add("sa-zoom-in");
+        card.style.transitionDelay = (i * 80) + "ms";
+        els.push(card);
+      });
+      add(".xqv9r-0151", "sa-fade-up", 100);
+      add(".xqv9r-0153", "sa-fade-up", 200);
+
+      // Founders / Testimonials section
+      add(".founders-head", "sa-fade-up", 0);
+      add(".founders-testimonial", "sa-fade-up", 200);
+
+      // Pricing section
+      add(".pricing-figma-header", "sa-fade-up", 0);
+      add(".pricing-figma-toggle", "sa-fade-up", 150);
+      document.querySelectorAll(".pricing-plan").forEach(function (plan, i) {
+        plan.classList.add("sa-fade-up");
+        plan.style.transitionDelay = (i * 130) + "ms";
+        els.push(plan);
+      });
+      add(".pricing-figma-foot", "sa-fade-up", 100);
+
+      // FAQ section
+      add(".faq-left", "sa-fade-left", 0);
+      add(".faq-divider-art", "sa-fade-up", 150);
+      document.querySelectorAll(".faq-item").forEach(function (item, i) {
+        item.classList.add("sa-fade-right");
+        item.style.transitionDelay = (i * 90) + "ms";
+        els.push(item);
+      });
+
+      // CTA + Footer
+      add(".cta-card", "sa-zoom-in", 0);
+      add(".footer-left", "sa-fade-left", 0);
+      add(".footer-right", "sa-fade-right", 100);
+      add(".footer-bottom", "sa-fade-up", 200);
+
+      // Intersection Observer
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add("sa-visible");
+            observer.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+      els.forEach(function (el) { observer.observe(el); });
+    })();
   </script>
 </body>
 
