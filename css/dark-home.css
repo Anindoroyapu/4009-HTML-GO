@@ -85,6 +85,12 @@ box-shadow: 0 0 68px -16px rgba(241, 92, 42, 0.07);
 body.dark-mode .xqv9r-0109{
   border-radius:  10px 0 0 10px ;}
   
+body.dark-mode .xqv9r-0110,
+body.dark-mode .xqv9r-0112,
+body.dark-mode .xqv9r-0114{
+  color: #ffffff;
+}  
+
 body.dark-mode .xqv9r-0111{
   border-radius: 0  ;}
 
@@ -171,7 +177,7 @@ body.dark-mode .pricing-plan-btn,
 body.dark-mode .faq-question,
 body.dark-mode .cta-action-light,
 body.dark-mode .contact-btn {
-  background: #1b0e36;
+  background: #251840;
   border-color: var(--dm-border);
   color: var(--dm-text);
 }

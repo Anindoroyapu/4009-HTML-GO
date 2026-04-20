@@ -625,7 +625,7 @@
             }
 .footer {
     background: var(--footer-bg);
-    padding: 40px 260px;
+    padding: 10px 260px;
     padding-top: 260px;
     position: relative;
     overflow: hidden;

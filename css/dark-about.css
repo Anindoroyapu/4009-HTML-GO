@@ -151,6 +151,9 @@ body.dark-mode-about .journey-bottom,
 body.dark-mode-about .journey-stat {
   background: transparent;
 }
+body.dark-mode-about .journey-stat {
+  background: #251840;
+}
 
 body.dark-mode-about .journey-stat {
   border-color: var(--dm-surface-border);
