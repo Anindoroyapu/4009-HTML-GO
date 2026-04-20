@@ -626,6 +626,62 @@
       function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
       }
+
+      // ===== Scroll Animation System =====
+      (function initSA() {
+        var els = [];
+
+        function add(selector, animClass, delay) {
+          document.querySelectorAll(selector).forEach(function (el) {
+            animClass.split(" ").forEach(function (c) { if (c) el.classList.add(c); });
+            if (delay) el.style.transitionDelay = delay + "ms";
+            els.push(el);
+          });
+        }
+
+        // Hero section
+        add(".hero-badge", "sa-fade-up", 0);
+        add(".hero-title", "sa-fade-up", 120);
+        add(".hero-description", "sa-fade-up", 240);
+        add(".illus-woman", "sa-fade-right", 100);
+        add(".illus-rating-group", "sa-fade-left", 250);
+        add(".illus-emojis", "sa-zoom-in", 300);
+
+        // Feature Cards Grid
+        document.querySelectorAll(".feature-card").forEach(function (card, i) {
+          card.classList.add("sa-fade-up");
+          card.style.transitionDelay = (i * 130) + "ms";
+          els.push(card);
+        });
+
+        // Complete Feature Set section
+        add(".complete-features-header", "sa-fade-up", 0);
+        document.querySelectorAll(".feature-item").forEach(function (item, i) {
+          item.classList.add("sa-zoom-in");
+          item.style.transitionDelay = (i * 60) + "ms";
+          els.push(item);
+        });
+
+        // CTA section
+        add(".cta-card", "sa-zoom-in", 0);
+
+        // Footer
+        add(".footer-left", "sa-fade-left", 0);
+        add(".footer-right", "sa-fade-right", 100);
+        add(".footer-bottom", "sa-fade-up", 200);
+
+        // Intersection Observer
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add("sa-visible");
+              observer.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+        els.forEach(function (el) { observer.observe(el); });
+      })();
     </script>
   </body>
 </html>
