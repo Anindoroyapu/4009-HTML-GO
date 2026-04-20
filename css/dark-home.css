@@ -159,6 +159,9 @@ body.dark-mode .contact-btn {
   border-color: var(--dm-border);
   color: var(--dm-text);
 }
+body.dark-mode .xqv9r-0017 {
+  color: #B1B1B1;
+}
 
 body.dark-mode .theme-toggle svg,
 body.dark-mode .faq-arrow svg,
