@@ -106,7 +106,6 @@
 
     <div class="contact-container">
       <div class="contact-methods">
-
         <!-- Email --> 
         <div class="method-card">
          <div style="display: flex; flex-direction: column;  ">
@@ -499,6 +498,62 @@
       function w3_close() {
         document.getElementById("mySidebar").style.display = "none";
       }
+
+      // ===== Scroll Animation System =====
+      (function initSA() {
+        var els = [];
+
+        function add(selector, animClass, delay) {
+          document.querySelectorAll(selector).forEach(function (el) {
+            animClass.split(" ").forEach(function (c) { if (c) el.classList.add(c); });
+            if (delay) el.style.transitionDelay = delay + "ms";
+            els.push(el);
+          });
+        }
+
+        // Hero section
+        add(".hero-badge", "sa-fade-up", 0);
+        add(".hero-title", "sa-fade-up", 120);
+        add(".hero-desc", "sa-fade-up", 220);
+
+        // Contact methods (4 cards)
+        document.querySelectorAll(".method-card").forEach(function (card, i) {
+          card.classList.add("sa-fade-up");
+          card.style.transitionDelay = (i * 110) + "ms";
+          els.push(card);
+        });
+
+        // Contact form
+        add(".contact-form-container", "sa-fade-right", 150);
+
+        // Location cards
+        document.querySelectorAll(".location-card").forEach(function (card, i) {
+          card.classList.add("sa-fade-up");
+          card.style.transitionDelay = (i * 120) + "ms";
+          els.push(card);
+        });
+        add(".hours-card", "sa-fade-left", 100);
+
+        // CTA card
+        add(".cta-card", "sa-zoom-in", 0);
+
+        // Footer
+        add(".footer-left", "sa-fade-left", 0);
+        add(".footer-right", "sa-fade-right", 100);
+        add(".footer-bottom", "sa-fade-up", 200);
+
+        // Intersection Observer
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              e.target.classList.add("sa-visible");
+              observer.unobserve(e.target);
+            }
+          });
+        }, { threshold: 0.1, rootMargin: "0px 0px -40px 0px" });
+
+        els.forEach(function (el) { observer.observe(el); });
+      })();
     </script>
 </body>
 

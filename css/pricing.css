@@ -1,3 +1,34 @@
+/* ===== Scroll Animation System ===== */
+.sa-fade-up,
+.sa-fade-left,
+.sa-fade-right,
+.sa-zoom-in {
+  opacity: 0;
+  will-change: opacity, transform;
+  transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.sa-fade-up    { transform: translateY(40px); }
+.sa-fade-left  { transform: translateX(-50px); }
+.sa-fade-right { transform: translateX(50px); }
+.sa-zoom-in    { transform: scale(0.88); }
+
+.sa-fade-up.sa-visible,
+.sa-fade-left.sa-visible,
+.sa-fade-right.sa-visible,
+.sa-zoom-in.sa-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sa-fade-up, .sa-fade-left, .sa-fade-right, .sa-zoom-in {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
     *,
       *::before,
       *::after {
