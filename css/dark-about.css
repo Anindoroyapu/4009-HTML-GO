@@ -70,7 +70,7 @@ body.dark-mode-about .w3-sidebar .nav-item {
 }
 
 body.dark-mode-about .about-hero-inner {
-  background: linear-gradient(to bottom, #000000, rgba(0, 0, 0, 0.1));
+  background: linear-gradient(to bottom, #000000, rgba(14, 7, 36, 0.1));
 }
 
 body.dark-mode-about .about-badge,
