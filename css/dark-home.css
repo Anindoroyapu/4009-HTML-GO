@@ -372,6 +372,15 @@ body.dark-mode .secondary {
   border-color: rgba(255, 255, 255, 0.08);
   color: #ffffff;
 }
+body.dark-mode .primary:hover {
+  background: #111827;
+  color: #fff;
+}
+body.dark-mode .secondary:hover {
+  background: #F15C2A;
+  border-color: #F1762A;
+  color: #fff;
+}
 
 /* Orange accent span: "Grow & Scale" */
 body.dark-mode .xqv9r-0013 {

@@ -69,6 +69,7 @@
         font-size: 14px !important;
         padding: 10px !important;
       }
+     
 
       .cards-wrapper {
         gap: 12px !important;
@@ -516,6 +517,11 @@
       padding: 14px 24px;
       border-radius: 10px;
       font-size: 16px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .primary:hover {
+      background: #111827;
+      color: #fff;
     }
 
     .secondary {
@@ -524,6 +530,12 @@
       padding: 14px 24px;
       border-radius: 10px;
       font-size: 16px;
+      transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    }
+    .secondary:hover {
+      background: #F15C2A;
+      border-color: #F1762A;
+      color: #fff;
     }
 
     .features {
@@ -3560,7 +3572,7 @@ h3{
     .xqv9r-0018 { color: #111827; font-family:'General Sans', sans-serif; font-weight:600; font-size:20px; line-height:26px; color:#111827; transform:rotate(-6deg); }
     .xqv9r-0019 { color: #4B5563; }
     .xqv9r-0020 { color: #4B5563; font-size: 20px; text-align: center; width: 100%; line-height: 30px; }
-    .xqv9r-0021 { display: flex; align-items: center; gap:10px; font-weight: 500; }
+    .xqv9r-0021 {cursor: pointer; text-decoration: none; display: flex; align-items: center; gap:10px; font-weight: 500; }
     .xqv9r-0022 { box-sizing:border-box; display:flex; flex-direction:column; justify-content:center; align-items:flex-start; padding:24px; gap:8px; position:absolute; width:186px; height:138px; left: 50%; margin-left: 482px; top:466.29px; background:#FFFFFF; border:1.5px solid #F5F5F5; border-radius:12px; transform:rotate(6deg); }
     .xqv9r-0023 { color: #111827; font-family:'General Sans', sans-serif; font-weight:600; font-size:20px; line-height:26px; color:#111827; transform:rotate(-6deg); width: 100%; text-align: end; padding-left:70px; }
     .xqv9r-0024 { display: flex; justify-content: center; align-items: center; gap: 7px; }
@@ -3672,8 +3684,11 @@ border-radius:18px; }
     .xqv9r-0128 { display:flex; flex-direction:column; align-items:flex-start;padding: 24px; }
     .xqv9r-0129 { display:flex; flex-direction:column; align-items:flex-start; margin-top: 40px; gap:12px; width:408px; }
     .xqv9r-0130 { display:flex; align-items:center; padding:8px 16px; gap:12px; width:147px; height:36px; background:#FFFFFF; border:1.5px solid rgba(123,25,216,0.12); border-radius:18px; color:#7B19D8; font-size:14px; font-weight:500; }
-    .xqv9r-0131 { width: 100%; display:flex;align-items:center;justify-content: center; background-color: #fafafa; margin-bottom: 80px; }
-    .xqv9r-0132 { width: fit-content; display:flex;align-items:center;justify-content: center; gap:10px;padding:14px 24px;background:#fff;border:1.5px solid #F0F0F0;border-radius:10px; }
+    .xqv9r-0131 { width: 100%; display:flex;align-items:center;justify-content: center; padding-bottom: 80px; }
+    .xqv9r-0132 { width: fit-content; display:flex;align-items:center;justify-content: center; gap:10px;padding:14px 24px;background:#fff;border:1.5px solid #F0F0F0;border-radius:10px; text-decoration: none; }
+     .xqv9r-0131 :hover {
+      background-color: #F15C2A;
+      color: #fff !important;}
     .xqv9r-0133 { font-family:'General Sans',sans-serif;font-size:16px;font-weight:500;color:#111827; }
     .xqv9r-0134 { background-color: #FFFFFF; padding: 80px 0; }
     .xqv9r-0135 { width: fit-content; display: flex; align-items: center; justify-content: center; margin-bottom: 20px; }
