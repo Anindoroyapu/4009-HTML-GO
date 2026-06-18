@@ -361,8 +361,8 @@
         letter-spacing: -1.44px;
         color: var(--dark);
         text-align: center;
-                margin: 0;
-                font-family:'General Sans',sans-serif;
+        margin: 0;
+        font-family:'General Sans',sans-serif;
       }
 
       .cta-desc {
