@@ -1547,6 +1547,11 @@ h3{
       font-weight: 500;
       font-size: 16px;
       line-height: 24px;
+      transition: background 0.3s ease, border-color 0.3s ease;
+    }
+    .cta-button:hover {
+      background: #d94a1e;
+      border-color: #d94a1e;
     }
 
     .arrow-right {

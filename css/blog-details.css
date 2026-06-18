@@ -450,12 +450,23 @@
     background: #fff;
     border-color: #f0f0f0;
     color: #2f6bed;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+.details-cta-btn.light:hover {
+    background: var(--primary);
+    border-color: var(--primary-border);
+    color: #fff;
 }
 
 .details-cta-btn.dark {
     background: #1a1a1a;
     border-color: #060606;
     color: #fff;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+.details-cta-btn.dark:hover {
+    background: #d94a1e;
+    border-color: #d94a1e;
 }
 
 .details-footer-block .about-footer {

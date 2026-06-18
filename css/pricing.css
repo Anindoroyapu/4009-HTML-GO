@@ -406,6 +406,12 @@
         border: 1.5px solid #f0f0f0;
         background: #f5f5f5;
         color: var(--dark);
+        transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+      .pricing-card-cta:hover {
+        background: var(--primary);
+        border-color: var(--primary-border);
+        color: var(--white);
       }
 
       .pricing-card-cta img {
@@ -417,6 +423,10 @@
         background: var(--primary);
         border-color: var(--primary-border);
         color: var(--white);
+      }
+      .pricing-card-cta.primary:hover {
+        background: #d94a1e;
+        border-color: #d94a1e;
       }
 
       .pricing-card-features {
@@ -621,6 +631,12 @@
         background: var(--white);
         color: var(--dark);
         width: 100%;
+        transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+      .comparison-col-cta:hover {
+        background: var(--primary);
+        border-color: var(--primary-border);
+        color: var(--white);
       }
 
       .comparison-col-cta img {
@@ -898,6 +914,11 @@
         cursor: pointer;
         font-family: inherit;
         text-decoration: none;
+        transition: background 0.3s ease, border-color 0.3s ease;
+      }
+      .btn-primary:hover {
+        background: #d94a1e;
+        border-color: #d94a1e;
       }
 
       .btn-primary img {
@@ -921,6 +942,13 @@
         cursor: pointer;
         font-family: inherit;
         text-decoration: none;
+        transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+      }
+      .btn-secondary:hover {
+        background: var(--primary);
+        border-color: var(--primary-border);
+        color: var(--white);
+      }
       }
 
       /* ==================== FOOTER ==================== */

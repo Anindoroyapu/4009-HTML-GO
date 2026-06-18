@@ -148,11 +148,19 @@ body.dark-mode-pricing .pricing-card-cta {
   border-color: #101828;
   color: #ffffff;
 }
+body.dark-mode-pricing .pricing-card-cta:hover {
+  background: var(--primary);
+  border-color: var(--primary-border);
+}
 
 body.dark-mode-pricing .pricing-card-cta.primary {
   background: #f15c2a;
   border-color: #f1762a;
   color: #ffffff;
+}
+body.dark-mode-pricing .pricing-card-cta.primary:hover {
+  background: #d94a1e;
+  border-color: #d94a1e;
 }
 
 body.dark-mode-pricing .info-bar-inner {
@@ -182,10 +190,18 @@ body.dark-mode-pricing .comparison-col-cta {
 
   border-color: #101828;
 }
+body.dark-mode-pricing .comparison-col-cta:hover {
+  background: var(--primary);
+  border-color: var(--primary-border);
+}
 
 body.dark-mode-pricing .comparison-col-cta.primary {
   background: #f15c2a;
   border-color: #f1762a;
+}
+body.dark-mode-pricing .comparison-col-cta.primary:hover {
+  background: #d94a1e;
+  border-color: #d94a1e;
 }
 
 body.dark-mode-pricing .cta-section {
@@ -202,11 +218,19 @@ body.dark-mode-pricing .btn-primary {
   border-color: #101828;
   color: #ffffff;
 }
+body.dark-mode-pricing .btn-primary:hover {
+  background: #d94a1e;
+  border-color: #d94a1e;
+}
 
 body.dark-mode-pricing .btn-secondary {
   background: #4d465b;
   border-color: transparent;
   color: #ffffff;
+}
+body.dark-mode-pricing .btn-secondary:hover {
+  background: var(--primary);
+  border-color: var(--primary-border);
 }
 
 body.dark-mode-pricing .footer {

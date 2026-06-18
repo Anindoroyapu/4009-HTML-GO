@@ -147,11 +147,19 @@ body.dark-mode-features .btn-primary {
   border-color: #101828;
   color: #ffffff;
 }
+body.dark-mode-features .btn-primary:hover {
+  background: #d94a1e;
+  border-color: #d94a1e;
+}
 
 body.dark-mode-features .btn-secondary {
   background: var(--dm-button-alt);
   border-color: transparent;
   color: #ffffff;
+}
+body.dark-mode-features .btn-secondary:hover {
+  background: var(--primary);
+  border-color: var(--primary-border);
 }
 
 body.dark-mode-features .footer {
