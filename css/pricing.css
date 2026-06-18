@@ -272,11 +272,18 @@
         transition: all 0.2s;
         white-space: nowrap;
       }
+      .toggle-btn:hover {
+        background: rgba(241, 92, 42, 0.1);
+      }
 
       .toggle-btn.active {
         background: var(--primary);
         border: 1.5px solid var(--bg);
         color: var(--white);
+      }
+      .toggle-btn.active:hover {
+        background: #d94a1e;
+        border-color: #d94a1e;
       }
 
       .toggle-btn .discount-badge {

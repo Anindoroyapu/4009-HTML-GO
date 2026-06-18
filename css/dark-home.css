@@ -202,6 +202,9 @@ body.dark-mode .icon-dash {
 body.dark-mode .pricing-toggle-pill {
   color: var(--dm-text-soft);
 }
+body.dark-mode .pricing-toggle-pill:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
 
 body.dark-mode .nav-item.active {
   color: #ffffff;
@@ -223,6 +226,9 @@ body.dark-mode .pricing-plan-btn.featured,
 body.dark-mode .cta-action-dark,
 body.dark-mode .contact-btn:hover {
   background: #f15c2a;
+}
+body.dark-mode .pricing-toggle-pill.active:hover {
+  background: #d94a1e;
 }
 body.dark-mode .cta-button:hover {
   background: #d94a1e;

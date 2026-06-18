@@ -129,7 +129,7 @@
               
             </div>
             <div class="pricing-card-price">
-              <span class="amount">$19</span><span class="period">/mo</span>
+              <span class="amount" data-monthly="$19" data-yearly="$182">$19</span><span class="period">/mo</span>
             </div>
             <p class="pricing-card-desc">
               Everything you need to validate your idea and get your first
@@ -198,7 +198,7 @@
               
             </div>
             <div class="pricing-card-price">
-              <span class="amount">$49</span><span class="period">/mo</span>
+              <span class="amount" data-monthly="$49" data-yearly="$470">$49</span><span class="period">/mo</span>
             </div>
             <p class="pricing-card-desc">
               Everything you need to validate your idea and get your first
@@ -265,7 +265,7 @@
                 >Volume discounts available</span
               >
             </div>
-            <div class="pricing-card-price custom-price">Custom</div>
+            <div class="pricing-card-price custom-price" data-monthly="Custom" data-yearly="Custom">Custom</div>
             <p class="pricing-card-desc">
               Everything you need to validate your idea and get your first
               customers.
@@ -530,7 +530,7 @@
                 <span class="comparison-col-plan-sub">14-day free trial</span>
               </div>
               <div class="comparison-col-price">
-                <span class="amount">$19</span><span class="period">/mo</span>
+                <span class="amount" data-monthly="$19" data-yearly="$182">$19</span><span class="period">/mo</span>
               </div>
               <a href="#" class="comparison-col-cta">
                 Start for free trial
@@ -668,7 +668,7 @@
                 >
               </div>
               <div class="comparison-col-price">
-                <span class="amount">$49</span><span class="period">/mo</span>
+                <span class="amount" data-monthly="$49" data-yearly="$470">$49</span><span class="period">/mo</span>
               </div>
               <a href="#" class="comparison-col-cta primary">
                 Start for free trial
@@ -1127,6 +1127,20 @@
       }
     </script>
      <script>
+      document.querySelectorAll(".pricing-toggle .toggle-btn").forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          var parent = this.closest(".pricing-toggle");
+          parent.querySelectorAll(".toggle-btn").forEach(function(b) { b.classList.remove("active"); });
+          this.classList.add("active");
+          var isAnnual = this.textContent.trim().toLowerCase().indexOf("annual") !== -1;
+          document.querySelectorAll(".amount[data-monthly]").forEach(function(el) {
+            el.textContent = isAnnual ? el.getAttribute("data-yearly") : el.getAttribute("data-monthly");
+          });
+          document.querySelectorAll(".period").forEach(function(el) {
+            el.textContent = isAnnual ? "/yr" : "/mo";
+          });
+        });
+      });
 
       function w3_open() {
         document.getElementById("mySidebar").style.display = "block";

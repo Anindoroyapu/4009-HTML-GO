@@ -131,10 +131,17 @@ body.dark-mode-pricing .pricing-toggle {
 body.dark-mode-pricing .toggle-btn {
   color: #ffffff;
 }
+body.dark-mode-pricing .toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
 
 body.dark-mode-pricing .toggle-btn.active {
   background: #f15c2a;
   border-color: rgba(241, 92, 42, 0.12);
+}
+body.dark-mode-pricing .toggle-btn.active:hover {
+  background: #d94a1e;
+  border-color: #d94a1e;
 }
 
 body.dark-mode-pricing .pricing-card {

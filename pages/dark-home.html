@@ -1360,7 +1360,7 @@
             <h3 class="pricing-plan-title"><img src="./assets/figma/pricing/plan-icon.svg" alt="">Starter</h3>
             <p class="pricing-plan-note">14-day free trial</p>
           </div>
-          <p class="pricing-plan-price">$19<span>/mo</span></p>
+          <p class="pricing-plan-price" data-monthly="$19" data-yearly="$182"><span class="price-amount">$19</span><span class="price-period">/mo</span></p>
           <p class="pricing-plan-desc">Everything you need to validate your idea and get your first customers.</p>
           <button class="pricing-plan-btn" type="button">Start for free trial <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M18.5 12H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1388,7 +1388,7 @@
             <h3 class="pricing-plan-title"><img src="./assets/figma/pricing/plan-icon.svg" alt="">Growth</h3>
             <p class="pricing-plan-note">Most value for money</p>
           </div>
-          <p class="pricing-plan-price">$49<span>/mo</span></p>
+          <p class="pricing-plan-price" data-monthly="$49" data-yearly="$470"><span class="price-amount">$49</span><span class="price-period">/mo</span></p>
           <p class="pricing-plan-desc">Everything you need to validate your idea and get your first customers.</p>
           <button class="pricing-plan-btn featured" type="button">Start for free trial <img
               src="./assets/figma/pricing/arrow-light.svg" alt=""></button>
@@ -1412,7 +1412,7 @@
             <h3 class="pricing-plan-title"><img src="./assets/figma/pricing/plan-icon.svg" alt="">Scale</h3>
             <p class="pricing-plan-note">Volume discounts available</p>
           </div>
-          <p class="pricing-plan-price">Custom</p>
+          <p class="pricing-plan-price" data-monthly="Custom" data-yearly="Custom">Custom</p>
           <p class="pricing-plan-desc">Everything you need to validate your idea and get your first customers.</p>
           <button class="pricing-plan-btn" type="button">Contact Sales <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
 <path d="M18.5 12H5" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -1481,7 +1481,7 @@
         <h2 class="xqv9r-0175" style="font-family: Bricolage Grotesque, sans-serif;">Frequently Asked <br> Questions</h2>
         <p class="xqv9r-0030">Everything you need to know before getting started.</p>
 
-        <button class="contact-btn">Contact Us</button>
+        <a href="pages/dark-contact.html" class="contact-btn">Contact Us</a>
       </div>
 
       <div class="faq-divider-art" aria-hidden="true">
@@ -1803,6 +1803,25 @@
       });
     });
 
+    document.querySelectorAll(".pricing-figma-toggle .pricing-toggle-pill").forEach(function(btn) {
+      btn.addEventListener("click", function() {
+        var parent = this.closest(".pricing-figma-toggle");
+        parent.querySelectorAll(".pricing-toggle-pill").forEach(function(b) { b.classList.remove("active"); });
+        this.classList.add("active");
+        var isAnnual = this.textContent.trim().toLowerCase().indexOf("annual") !== -1;
+        document.querySelectorAll(".pricing-plan-price").forEach(function(el) {
+          var amount = el.querySelector(".price-amount");
+          var period = el.querySelector(".price-period");
+          if (isAnnual) {
+            if (amount) amount.textContent = el.getAttribute("data-yearly");
+            if (period) period.textContent = "/yr";
+          } else {
+            if (amount) amount.textContent = el.getAttribute("data-monthly");
+            if (period) period.textContent = "/mo";
+          }
+        });
+      });
+    });
 
     function w3_open() {
       document.getElementById("mySidebar").style.display = "block";

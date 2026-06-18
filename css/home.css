@@ -2100,11 +2100,18 @@ h3{
       display: inline-flex;
       align-items: center;
       gap: 10px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+    .pricing-toggle-pill:hover {
+      background: rgba(241, 92, 42, 0.1);
     }
 
     .pricing-toggle-pill.active {
       background: #f15c2a;
       color: #fff;
+    }
+    .pricing-toggle-pill.active:hover {
+      background: #d94a1e;
     }
 
     .pricing-toggle-save {
@@ -2506,6 +2513,7 @@ h3{
       font-weight: 500;
       line-height: 24px;
       cursor: pointer;
+      text-decoration: none;
     }
 
     .faq-divider-art {
