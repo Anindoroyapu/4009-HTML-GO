@@ -227,8 +227,6 @@ body.dark-mode .contact-btn:hover {
 body.dark-mode .cta-button:hover {
   background: #d94a1e;
   border-color: #d94a1e;
-}
-  border-color: #f1762a;
   color: #ffffff;
 }
 
@@ -251,7 +249,7 @@ body.dark-mode .xqv9r-0121,
 body.dark-mode .xqv9r-0124,
 body.dark-mode .xqv9r-0163,
 body.dark-mode .xqv9r-0167 {
-  color: var(--dm-text);
+  color: var(--dm-text) ;
 }
 
 body.dark-mode .mobile-header {
