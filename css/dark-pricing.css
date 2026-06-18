@@ -118,6 +118,10 @@ body.dark-mode-pricing .footer-copyright,
 body.dark-mode-pricing .footer-legal a {
   color: var(--dm-muted);
 }
+body.dark-mode-pricing .footer-col ul li a:hover,
+body.dark-mode-pricing .footer-legal a:hover {
+  color: #f1762a;
+}
 
 body.dark-mode-pricing .pricing-toggle {
   background: rgba(255, 255, 255, 0.16);

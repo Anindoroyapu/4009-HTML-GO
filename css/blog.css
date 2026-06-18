@@ -631,6 +631,9 @@
   font-size: 20px;
   line-height: 1.5;
 }
+.blog-footer-links a:hover {
+  color: #f1762a;
+}
 
 .blog-footer-bottom {
   margin-top: 48px;
@@ -647,6 +650,9 @@
   color: #888;
   font-size: 16px;
   text-decoration: none;
+}
+.blog-footer-bottom a:hover {
+  color: #f1762a;
 }
 
 .blog-footer-bottom div {

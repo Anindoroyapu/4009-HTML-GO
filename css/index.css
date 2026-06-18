@@ -1181,6 +1181,9 @@
       font-size: 20px;
       font-weight: 400;
     }
+    .footer-column a:hover {
+      color: #f1762a;
+    }
 
     /* Footer bottom */
     .footer-bottom {
@@ -1835,6 +1838,9 @@
     color: #666666;
     text-decoration: none;
     margin-bottom: 4px;
+  }
+  .cosmo-footer-column a:hover {
+    color: #f1762a;
   }
 
   .cosmo-footer-bottom {

@@ -255,6 +255,9 @@ body.dark-mode-contact .footer-col-title {
 body.dark-mode-contact .footer-link {
   color: #b1b1b1;
 }
+body.dark-mode-contact .footer-link:hover {
+  color: #f1762a;
+}
 
 body.dark-mode-contact .copyright {
   color: #4B5563;
@@ -262,6 +265,9 @@ body.dark-mode-contact .copyright {
 
 body.dark-mode-contact .legal-link {
   color: #4B5563;
+}
+body.dark-mode-contact .legal-link:hover {
+  color: #f1762a;
 }
 
 body.dark-mode-contact .footer-divider {

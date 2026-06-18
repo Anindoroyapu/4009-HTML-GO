@@ -105,6 +105,10 @@ body.dark-mode-features .footer-copyright,
 body.dark-mode-features .footer-legal a {
   color: var(--dm-muted);
 }
+body.dark-mode-features .footer-col ul li a:hover,
+body.dark-mode-features .footer-legal a:hover {
+  color: #f1762a;
+}
 
 body.dark-mode-features .feature-card-preview,
 body.dark-mode-features .feature-card-content,

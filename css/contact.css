@@ -571,6 +571,9 @@
       color: #aaaaaa;
       text-decoration: none;
     }
+    .footer-link:hover {
+      color: #f1762a;
+    }
 
     .footer-bottom {
       width: 95%;
@@ -598,6 +601,9 @@
       color: #4B5563;
       text-decoration: none;
       font-size: 16px;
+    }
+    .legal-link:hover {
+      color: #f1762a;
     }
 
     .footer-divider {

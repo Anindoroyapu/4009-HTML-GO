@@ -145,6 +145,10 @@ body.dark-mode .footer-copyright,
 body.dark-mode .footer-legal a {
   color: var(--dm-text-soft);
 }
+body.dark-mode .footer-col ul li a:hover,
+body.dark-mode .footer-legal a:hover {
+  color: #f1762a;
+}
 body.dark-mode .xqv9r-0030{
   color: #ffffff;
 }

@@ -130,6 +130,10 @@ body.dark-mode-about .saas-text,
 body.dark-mode-about .trusted-stat-label {
   color: var(--dm-muted);
 }
+body.dark-mode-about .footer-col ul li a:hover,
+body.dark-mode-about .footer-legal a:hover {
+  color: #f1762a;
+}
 
 body.dark-mode-about .journey-card,
 body.dark-mode-about .milestones-card,

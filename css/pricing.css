@@ -1090,7 +1090,7 @@
       }
 
       .footer-col ul li a:hover {
-        color: var(--white);
+        color: #f1762a;
       }
 
       .footer-bottom {
@@ -1122,7 +1122,7 @@
       }
 
       .footer-legal a:hover {
-        color: var(--white);
+        color: #f1762a;
       }
 
       .footer-legal-sep {
