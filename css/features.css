@@ -702,6 +702,7 @@
         letter-spacing: -1.44px;
         color: var(--dark);
         text-align: center;
+          font-family: 'General Sans', sans-serif;
       }
 
       .cta-desc {
