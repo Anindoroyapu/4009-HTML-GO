@@ -1041,6 +1041,12 @@
         justify-content: center;
         overflow: hidden;
         box-shadow: var(--shadow-card);
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+
+      .social-icon:hover {
+        background: #f1762a;
       }
 
       .social-icon.rotated-neg {

@@ -74,6 +74,9 @@ body.dark-mode .footer-social .social-icon {
   border-color: var(--dm-border);
   box-shadow: var(--dm-shadow);
 }
+body.dark-mode .footer-social .social-icon:hover {
+  background: #f1762a;
+}
 body.dark-mode .xqv9r-0109,
 body.dark-mode .xqv9r-0111,
 body.dark-mode .xqv9r-0113{

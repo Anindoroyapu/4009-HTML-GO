@@ -162,6 +162,9 @@ body.dark-mode-features .social-icon {
   background: rgba(255, 255, 255, 0.16);
   border-color: rgba(255, 255, 255, 0.12);
 }
+body.dark-mode-features .social-icon:hover {
+  background: #f1762a;
+}
 
 body.dark-mode-features .footer-legal-sep {
   background: #4B5563;

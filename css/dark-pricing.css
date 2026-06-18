@@ -217,6 +217,9 @@ body.dark-mode-pricing .social-icon {
   background: rgba(255, 255, 255, 0.16);
   border-color: rgba(255, 255, 255, 0.12);
 }
+body.dark-mode-pricing .social-icon:hover {
+  background: #f1762a;
+}
 
 body.dark-mode-pricing .footer-copyright,
 body.dark-mode-pricing .footer-legal a,

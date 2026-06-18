@@ -535,6 +535,12 @@
       justify-content: center;
       color: white;
       text-decoration: none;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .social-icon:hover {
+      background: #f1762a;
     }
 
     .footer-links {

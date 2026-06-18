@@ -244,6 +244,9 @@ body.dark-mode-contact .social-icon {
   border-color: rgba(255, 255, 255, 0.12);
   color: #ffffff;
 }
+body.dark-mode-contact .social-icon:hover {
+  background: #f1762a;
+}
 
 body.dark-mode-contact .footer-col-title {
   color: #ffffff;
